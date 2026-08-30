@@ -13,44 +13,49 @@
 }
 
 body{
-    font-family:Arial,Tahoma,sans-serif;
+    font-family:Tahoma,Arial,sans-serif;
     background:#fff;
     color:#222;
 }
 
-/* Header */
+button,input,select,textarea{
+    font-family:inherit;
+}
+
+/* ================= HEADER ================= */
+
 header{
     height:80px;
-    border-bottom:1px solid #f1dce3;
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:0 25px;
+    background:#fff;
+    border-bottom:1px solid #f1dce3;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-.menu{
-    width:30px;
+.menu-button{
+    width:35px;
+    border:0;
+    background:none;
+    cursor:pointer;
 }
 
-.menu span{
+.menu-button span{
     display:block;
-    height:2px;
     width:25px;
+    height:2px;
     background:#222;
-    margin:5px 0;
-}
-
-.icons{
-    display:flex;
-    gap:18px;
-    font-size:22px;
+    margin:6px 0;
 }
 
 .header-logo{
     text-align:center;
 }
 
-/* لوگوی بالای سایت */
 .l-logo{
     position:relative;
     width:60px;
@@ -82,47 +87,130 @@ header{
     letter-spacing:3px;
 }
 
-/* صفحه اصلی */
+.icons{
+    display:flex;
+    gap:15px;
+}
+
+.icon-button{
+    border:0;
+    background:none;
+    font-size:22px;
+    cursor:pointer;
+}
+
+/* ================= MENU ================= */
+
+.menu-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.25);
+    z-index:200;
+}
+
+.menu-overlay.show{
+    display:block;
+}
+
+.side-menu{
+    position:fixed;
+    top:0;
+    right:-320px;
+    width:300px;
+    height:100vh;
+    background:#fff;
+    z-index:300;
+    padding:25px;
+    box-shadow:-5px 0 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.side-menu.open{
+    right:0;
+}
+
+.menu-close{
+    border:0;
+    background:none;
+    font-size:30px;
+    cursor:pointer;
+    margin-bottom:25px;
+}
+
+.side-menu a{
+    display:block;
+    padding:17px 5px;
+    color:#222;
+    text-decoration:none;
+    border-bottom:1px solid #f2e0e5;
+}
+
+.side-menu a:hover{
+    color:#d58ca2;
+}
+
+/* ================= SEARCH ================= */
+
+.search-box{
+    display:none;
+    padding:18px;
+    background:#fff7f9;
+    border-bottom:1px solid #f1dce3;
+}
+
+.search-box.show{
+    display:block;
+}
+
+.search-box input{
+    display:block;
+    width:100%;
+    max-width:600px;
+    margin:auto;
+    padding:13px 16px;
+    border:1px solid #e5cbd4;
+    outline:none;
+}
+
+/* ================= HERO ================= */
+
 .hero{
     min-height:520px;
     background:#fff7f9;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:40px 20px;
+    padding:50px 20px;
 }
 
-/* لوگوی اصلی */
 .main-logo{
-    margin-bottom:28px;
+    margin-bottom:30px;
 }
 
 .main-logo-top{
     position:relative;
-    width:90px;
-    height:72px;
+    width:100px;
+    height:75px;
     margin:auto;
 }
 
 .main-l-black{
     position:absolute;
-    left:12px;
+    left:14px;
     top:0;
     font-family:Georgia,serif;
-    font-size:65px;
+    font-size:68px;
     font-weight:bold;
-    line-height:1;
-    color:#222;
 }
 
 .main-l-pink{
     position:absolute;
-    left:29px;
-    top:12px;
+    left:32px;
+    top:13px;
     font-family:cursive;
-    font-size:48px;
-    line-height:1;
+    font-size:50px;
     color:#d58ca2;
     z-index:2;
 }
@@ -131,19 +219,17 @@ header{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:8px;
+    gap:9px;
     font-family:Georgia,serif;
-    font-size:13px;
+    font-size:14px;
     letter-spacing:3px;
-    margin-top:2px;
-    white-space:nowrap;
 }
 
-.logo-bow{
-    font-size:15px;
+.main-logo-name span:first-child,
+.main-logo-name span:last-child{
+    font-size:17px;
 }
 
-/* شعار */
 .slogan{
     font-family:Georgia,serif;
     font-size:20px;
@@ -151,18 +237,18 @@ header{
     color:#444;
 }
 
-/* دکمه */
 .button{
     display:inline-block;
     margin-top:30px;
+    padding:13px 35px;
     background:#222;
     color:#fff;
     text-decoration:none;
-    padding:13px 35px;
     font-size:13px;
 }
 
-/* بخش ها */
+/* ================= SECTION ================= */
+
 section{
     padding:65px 20px;
 }
@@ -174,9 +260,10 @@ section{
     margin-bottom:35px;
 }
 
-/* دسته بندی */
+/* ================= CATEGORIES ================= */
+
 .categories{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
     display:grid;
     grid-template-columns:repeat(5,1fr);
@@ -184,17 +271,23 @@ section{
 }
 
 .category{
-    height:170px;
+    min-height:170px;
     background:#fff8fa;
     border:1px solid #f0dce3;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.category:hover{
+    transform:translateY(-3px);
 }
 
 .category-icon{
-    font-size:35px;
+    font-size:38px;
     margin-bottom:12px;
 }
 
@@ -203,9 +296,10 @@ section{
     font-size:17px;
 }
 
-/* محصولات */
+/* ================= PRODUCTS ================= */
+
 .products{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -213,25 +307,60 @@ section{
 }
 
 .product{
-    height:270px;
+    background:#fff;
     border:1px solid #f0dce3;
+    overflow:hidden;
+}
+
+.product-image{
+    height:250px;
+    background:#fff7f9;
     display:flex;
     align-items:center;
     justify-content:center;
-    text-align:center;
-    background:#fff;
+    overflow:hidden;
+    font-size:55px;
 }
 
-.product-icon{
-    font-size:45px;
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:18px;
+    text-align:center;
 }
 
 .product-name{
-    margin-top:15px;
     font-family:Georgia,serif;
+    font-size:17px;
+    margin-bottom:10px;
 }
 
-/* تخفیفات */
+.product-category{
+    font-size:12px;
+    color:#999;
+    margin-bottom:10px;
+}
+
+.product-price{
+    color:#d58ca2;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.add-cart{
+    border:0;
+    background:#222;
+    color:#fff;
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+/* ================= DISCOUNT ================= */
+
 .discount{
     background:#fff7f9;
     text-align:center;
@@ -247,16 +376,166 @@ section{
     color:#777;
 }
 
-/* درباره */
+/* ================= ABOUT ================= */
+
 .about{
     max-width:700px;
     margin:auto;
     text-align:center;
+    line-height:2.2;
     color:#777;
-    line-height:2;
 }
 
-/* Footer */
+/* ================= CART ================= */
+
+.cart-panel{
+    position:fixed;
+    top:0;
+    left:-380px;
+    width:360px;
+    max-width:90%;
+    height:100vh;
+    background:#fff;
+    z-index:500;
+    padding:25px;
+    box-shadow:5px 0 20px rgba(0,0,0,.12);
+    transition:.3s;
+    overflow-y:auto;
+}
+
+.cart-panel.open{
+    left:0;
+}
+
+.cart-close{
+    border:0;
+    background:none;
+    font-size:30px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+.cart-item{
+    padding:16px 0;
+    border-bottom:1px solid #f1dce3;
+}
+
+.cart-item-name{
+    font-family:Georgia,serif;
+    margin-bottom:8px;
+}
+
+.cart-controls{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:10px;
+}
+
+.cart-controls button{
+    border:1px solid #e4cbd3;
+    background:#fff;
+    padding:5px 9px;
+    cursor:pointer;
+}
+
+.cart-total{
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid #f1dce3;
+    font-weight:bold;
+}
+
+/* ================= ADMIN ================= */
+
+.admin-page{
+    display:none;
+    min-height:100vh;
+    background:#fff7f9;
+    padding:30px 20px;
+}
+
+.admin-page.show{
+    display:block;
+}
+
+.admin-container{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border:1px solid #f0dce3;
+}
+
+.admin-title{
+    text-align:center;
+    font-family:Georgia,serif;
+    font-size:28px;
+    margin-bottom:30px;
+}
+
+.form-group{
+    margin-bottom:17px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    font-size:14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #e5ccd4;
+    outline:none;
+}
+
+.form-group textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.admin-button{
+    background:#222;
+    color:#fff;
+    border:0;
+    padding:12px 25px;
+    cursor:pointer;
+}
+
+.admin-products{
+    margin-top:35px;
+}
+
+.admin-product{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    padding:15px 0;
+    border-bottom:1px solid #f1dce3;
+}
+
+.delete-button{
+    background:#d58ca2;
+    color:#fff;
+    border:0;
+    padding:8px 14px;
+    cursor:pointer;
+}
+
+.close-admin{
+    border:0;
+    background:none;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+/* ================= FOOTER ================= */
+
 footer{
     background:#222;
     color:#fff;
@@ -275,51 +554,57 @@ footer p{
     font-size:12px;
 }
 
-/* موبایل */
-@media(max-width:800px){
-    .categories{
-        grid-template-columns:repeat(2,1fr);
-    }
+/* ================= MOBILE ================= */
 
-    .products{
-        grid-template-columns:repeat(2,1fr);
-    }
+@media(max-width:850px){
+
+.categories{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.products{
+    grid-template-columns:repeat(2,1fr);
+}
+
 }
 
 @media(max-width:500px){
-    header{
-        height:75px;
-        padding:0 15px;
-    }
 
-    .hero{
-        min-height:470px;
-    }
+header{
+    padding:0 15px;
+}
 
-    .slogan{
-        font-size:17px;
-    }
+.hero{
+    min-height:470px;
+}
 
-    .categories{
-        gap:10px;
-    }
+.slogan{
+    font-size:17px;
+}
 
-    .products{
-        gap:10px;
-    }
+.products{
+    grid-template-columns:1fr;
+}
+
+.admin-container{
+    padding:20px;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- ================= HEADER ================= -->
 
-<div class="menu">
+<header id="header">
+
+<button class="menu-button" id="menuButton">
 <span></span>
 <span></span>
 <span></span>
-</div>
+</button>
 
 <div class="header-logo">
 
@@ -335,37 +620,80 @@ LORA COLLECTION
 </div>
 
 <div class="icons">
-<span>⌕</span>
-<span>🛒</span>
+
+<button class="icon-button" id="searchButton">
+⌕
+</button>
+
+<button class="icon-button" id="cartButton">
+🛒
+</button>
+
 </div>
 
 </header>
 
 
-<!-- صفحه اصلی -->
-<div class="hero">
+<!-- ================= MENU ================= -->
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<nav class="side-menu" id="sideMenu">
+
+<button class="menu-close" id="menuClose">×</button>
+
+<a href="#home">خانه</a>
+<a href="#clothes">لباس</a>
+<a href="#accessories">اکسسوری</a>
+<a href="#bags">کیف</a>
+<a href="#beauty">لوازم آرایشی</a>
+<a href="#discounts">تخفیفات</a>
+
+</nav>
+
+
+<!-- ================= SEARCH ================= -->
+
+<div class="search-box" id="searchBox">
+
+<input
+type="text"
+id="searchInput"
+placeholder="جستجوی محصول..."
+>
+
+</div>
+
+
+<!-- ================= STORE ================= -->
+
+<main id="store">
+
+<!-- HERO -->
+
+<div class="hero" id="home">
 
 <div>
 
 <div class="main-logo">
 
-<!-- L مشکی و L صورتی روی هم -->
 <div class="main-logo-top">
+
 <div class="main-l-black">L</div>
 <div class="main-l-pink">L</div>
+
 </div>
 
-<!-- پاپیون ها دو طرف نوشته -->
 <div class="main-logo-name">
-<span class="logo-bow">🎀</span>
+
+<span>🎀</span>
 <span>LORA COLLECTION</span>
-<span class="logo-bow">🎀</span>
-</div>
+<span>🎀</span>
 
 </div>
 
+</div>
 
-<!-- شعار -->
 <div class="slogan">
 
 لورا کالکشن،<br>
@@ -373,7 +701,6 @@ LORA COLLECTION
 زیبایی، بخشی از داستان توست.
 
 </div>
-
 
 <a href="#products" class="button">
 مشاهده محصولات
@@ -384,7 +711,8 @@ LORA COLLECTION
 </div>
 
 
-<!-- دسته بندی -->
+<!-- CATEGORIES -->
+
 <section>
 
 <h2 class="section-title">
@@ -393,35 +721,35 @@ LORA COLLECTION
 
 <div class="categories">
 
-<div class="category">
+<div class="category" id="clothes">
 <div>
 <div class="category-icon">👗</div>
 <div class="category-name">لباس</div>
 </div>
 </div>
 
-<div class="category">
+<div class="category" id="accessories">
 <div>
 <div class="category-icon">💎</div>
 <div class="category-name">اکسسوری</div>
 </div>
 </div>
 
-<div class="category">
+<div class="category" id="bags">
 <div>
 <div class="category-icon">👜</div>
 <div class="category-name">کیف</div>
 </div>
 </div>
 
-<div class="category">
+<div class="category" id="beauty">
 <div>
 <div class="category-icon">💄</div>
 <div class="category-name">لوازم آرایشی</div>
 </div>
 </div>
 
-<div class="category">
+<div class="category" id="discounts">
 <div>
 <div class="category-icon">🏷️</div>
 <div class="category-name">تخفیفات</div>
@@ -433,50 +761,22 @@ LORA COLLECTION
 </section>
 
 
-<!-- محصولات -->
+<!-- PRODUCTS -->
+
 <section id="products">
 
 <h2 class="section-title">
-محصولات جدید
+محصولات
 </h2>
 
-<div class="products">
-
-<div class="product">
-<div>
-<div class="product-icon">👗</div>
-<div class="product-name">لباس</div>
-</div>
-</div>
-
-<div class="product">
-<div>
-<div class="product-icon">👜</div>
-<div class="product-name">کیف</div>
-</div>
-</div>
-
-<div class="product">
-<div>
-<div class="product-icon">💎</div>
-<div class="product-name">اکسسوری</div>
-</div>
-</div>
-
-<div class="product">
-<div>
-<div class="product-icon">💄</div>
-<div class="product-name">لوازم آرایشی</div>
-</div>
-</div>
-
-</div>
+<div class="products" id="productList"></div>
 
 </section>
 
 
-<!-- تخفیفات -->
-<section class="discount">
+<!-- DISCOUNTS -->
+
+<section class="discount" id="discountsSection">
 
 <h2>
 تخفیفات LORA
@@ -486,14 +786,11 @@ LORA COLLECTION
 محصولات منتخب با قیمت ویژه
 </p>
 
-<a href="#products" class="button">
-مشاهده تخفیفات
-</a>
-
 </section>
 
 
-<!-- درباره -->
+<!-- ABOUT -->
+
 <section>
 
 <h2 class="section-title">
@@ -501,14 +798,161 @@ LORA COLLECTION
 </h2>
 
 <div class="about">
+
 LORA COLLECTION با عشق به ظرافت،
 سادگی و انتخاب‌های خاص شکل گرفته است.
+
+<br>
+
+زیبایی، بخشی از داستان توست.
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= CART ================= -->
+
+<div class="cart-panel" id="cartPanel">
+
+<button class="cart-close" id="cartClose">
+×
+</button>
+
+<h2>
+سبد خرید
+</h2>
+
+<div id="cartItems">
+
+<p style="margin-top:20px;color:#777">
+سبد خرید شما خالی است.
+</p>
+
+</div>
+
+<div class="cart-total" id="cartTotal">
+</div>
+
+</div>
+
+
+<!-- ================= ADMIN ================= -->
+
+<section class="admin-page" id="adminPage">
+
+<div class="admin-container">
+
+<button class="close-admin" id="closeAdmin">
+← بازگشت به فروشگاه
+</button>
+
+<h1 class="admin-title">
+مدیریت LORA COLLECTION
+</h1>
+
+<div class="form-group">
+
+<label>
+نام محصول
+</label>
+
+<input
+type="text"
+id="adminName"
+placeholder="مثلاً مانتوی مشکی"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+قیمت
+</label>
+
+<input
+type="text"
+id="adminPrice"
+placeholder="مثلاً ۱,۵۰۰,۰۰۰ تومان"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+دسته‌بندی
+</label>
+
+<select id="adminCategory">
+
+<option value="لباس">لباس</option>
+<option value="اکسسوری">اکسسوری</option>
+<option value="کیف">کیف</option>
+<option value="لوازم آرایشی">لوازم آرایشی</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+آدرس عکس محصول
+</label>
+
+<input
+type="text"
+id="adminImage"
+placeholder="آدرس تصویر محصول"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+توضیحات محصول
+</label>
+
+<textarea
+id="adminDescription"
+placeholder="توضیحات محصول"
+></textarea>
+
+</div>
+
+
+<button class="admin-button" id="addProduct">
++ اضافه کردن محصول
+</button>
+
+
+<div class="admin-products">
+
+<h3>
+محصولات ثبت‌شده
+</h3>
+
+<div id="adminProductList"></div>
+
+</div>
+
 </div>
 
 </section>
 
 
-<footer>
+<!-- ================= FOOTER ================= -->
+
+<footer id="footer">
 
 <h3>
 LORA COLLECTION
@@ -519,6 +963,529 @@ LORA COLLECTION
 </p>
 
 </footer>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded",function(){
+
+/* عناصر */
+
+const menuButton=document.getElementById("menuButton");
+const menuClose=document.getElementById("menuClose");
+const menuOverlay=document.getElementById("menuOverlay");
+const sideMenu=document.getElementById("sideMenu");
+
+const searchButton=document.getElementById("searchButton");
+const searchBox=document.getElementById("searchBox");
+const searchInput=document.getElementById("searchInput");
+
+const cartButton=document.getElementById("cartButton");
+const cartClose=document.getElementById("cartClose");
+const cartPanel=document.getElementById("cartPanel");
+
+const store=document.getElementById("store");
+const header=document.getElementById("header");
+const footer=document.getElementById("footer");
+
+const adminPage=document.getElementById("adminPage");
+
+
+/* ================= MENU ================= */
+
+menuButton.addEventListener("click",function(){
+
+sideMenu.classList.add("open");
+menuOverlay.classList.add("show");
+
+});
+
+function closeMenu(){
+
+sideMenu.classList.remove("open");
+menuOverlay.classList.remove("show");
+
+}
+
+menuClose.addEventListener("click",closeMenu);
+menuOverlay.addEventListener("click",closeMenu);
+
+document.querySelectorAll(".side-menu a").forEach(function(link){
+
+link.addEventListener("click",closeMenu);
+
+});
+
+
+/* ================= SEARCH ================= */
+
+searchButton.addEventListener("click",function(){
+
+searchBox.classList.toggle("show");
+
+if(searchBox.classList.contains("show")){
+searchInput.focus();
+}
+
+});
+
+searchInput.addEventListener("input",function(){
+
+const text=searchInput.value.toLowerCase().trim();
+
+document.querySelectorAll(".product-card").forEach(function(card){
+
+const name=card
+.querySelector(".product-name")
+.textContent
+.toLowerCase();
+
+if(name.includes(text)){
+card.style.display="";
+}else{
+card.style.display="none";
+}
+
+});
+
+});
+
+
+/* ================= CART ================= */
+
+let cart=[];
+
+cartButton.addEventListener("click",function(){
+cartPanel.classList.add("open");
+});
+
+cartClose.addEventListener("click",function(){
+cartPanel.classList.remove("open");
+});
+
+
+function renderCart(){
+
+const cartItems=document.getElementById("cartItems");
+const cartTotal=document.getElementById("cartTotal");
+
+if(cart.length===0){
+
+cartItems.innerHTML=
+'<p style="margin-top:20px;color:#777">سبد خرید شما خالی است.</p>';
+
+cartTotal.textContent="";
+
+return;
+
+}
+
+cartItems.innerHTML="";
+
+let count=0;
+
+cart.forEach(function(item,index){
+
+count+=item.quantity;
+
+const div=document.createElement("div");
+
+div.className="cart-item";
+
+div.innerHTML=
+
+'<div class="cart-item-name">'+
+item.name+
+'</div>'+
+
+'<div>'+
+item.price+
+'</div>'+
+
+'<div class="cart-controls">'+
+
+'<button data-index="'+index+'" data-action="minus">−</button>'+
+
+'<span>'+item.quantity+'</span>'+
+
+'<button data-index="'+index+'" data-action="plus">+</button>'+
+
+'<button data-index="'+index+'" data-action="remove">حذف</button>'+
+
+'</div>';
+
+cartItems.appendChild(div);
+
+});
+
+cartTotal.textContent=
+"تعداد محصولات: "+count;
+
+}
+
+
+document.getElementById("cartItems").addEventListener("click",function(event){
+
+const button=event.target.closest("button");
+
+if(!button)return;
+
+const index=Number(button.dataset.index);
+const action=button.dataset.action;
+
+if(action==="plus"){
+cart[index].quantity++;
+}
+
+if(action==="minus"){
+
+cart[index].quantity--;
+
+if(cart[index].quantity<=0){
+cart.splice(index,1);
+}
+
+}
+
+if(action==="remove"){
+cart.splice(index,1);
+}
+
+renderCart();
+
+});
+
+
+/* ================= PRODUCTS ================= */
+
+let products=JSON.parse(
+localStorage.getItem("lora_products") || "[]"
+);
+
+
+function saveProducts(){
+
+localStorage.setItem(
+"lora_products",
+JSON.stringify(products)
+);
+
+}
+
+
+function renderProducts(){
+
+const productList=document.getElementById("productList");
+
+productList.innerHTML="";
+
+if(products.length===0){
+
+productList.innerHTML=
+'<p style="grid-column:1/-1;text-align:center;color:#777;padding:40px;">هنوز محصولی اضافه نشده است.</p>';
+
+return;
+
+}
+
+
+products.forEach(function(product,index){
+
+const card=document.createElement("div");
+
+card.className="product product-card";
+
+let image="🛍️";
+
+if(product.image){
+
+image=
+'<img src="'+product.image+'" alt="'+product.name+'">';
+
+}
+
+
+card.innerHTML=
+
+'<div class="product-image">'+
+image+
+'</div>'+
+
+'<div class="product-info">'+
+
+'<div class="product-name">'+
+product.name+
+'</div>'+
+
+'<div class="product-category">'+
+product.category+
+'</div>'+
+
+'<div class="product-price">'+
+product.price+
+'</div>'+
+
+'<button class="add-cart" data-index="'+index+'">'+
+'افزودن به سبد'+
+'</button>'+
+
+'</div>';
+
+
+productList.appendChild(card);
+
+});
+
+
+document.querySelectorAll(".add-cart").forEach(function(button){
+
+button.addEventListener("click",function(){
+
+const index=Number(button.dataset.index);
+
+const product=products[index];
+
+const existing=cart.find(function(item){
+return item.name===product.name;
+});
+
+if(existing){
+
+existing.quantity++;
+
+}else{
+
+cart.push({
+name:product.name,
+price:product.price,
+quantity:1
+});
+
+}
+
+renderCart();
+
+cartPanel.classList.add("open");
+
+});
+
+});
+
+}
+
+
+renderProducts();
+renderCart();
+
+
+/* ================= ADMIN ================= */
+
+/*
+ورود مدیریت:
+Ctrl + Shift + L
+
+رمز:
+LORA1405
+*/
+
+function openAdmin(){
+
+const password=prompt(
+"رمز ورود مدیریت را وارد کنید:"
+);
+
+if(password!=="LORA1405"){
+
+alert("رمز ورود اشتباه است.");
+return;
+
+}
+
+
+store.style.display="none";
+header.style.display="none";
+footer.style.display="none";
+searchBox.classList.remove("show");
+
+adminPage.classList.add("show");
+
+renderAdminProducts();
+
+}
+
+
+function closeAdmin(){
+
+adminPage.classList.remove("show");
+
+store.style.display="block";
+header.style.display="flex";
+footer.style.display="block";
+
+}
+
+
+document.addEventListener("keydown",function(event){
+
+if(
+event.ctrlKey &&
+event.shiftKey &&
+event.key.toLowerCase()==="l"
+){
+
+openAdmin();
+
+}
+
+});
+
+
+document.getElementById("closeAdmin")
+.addEventListener("click",closeAdmin);
+
+
+/* ================= ADD PRODUCT ================= */
+
+document.getElementById("addProduct")
+.addEventListener("click",function(){
+
+const name=document
+.getElementById("adminName")
+.value
+.trim();
+
+const price=document
+.getElementById("adminPrice")
+.value
+.trim();
+
+const category=document
+.getElementById("adminCategory")
+.value;
+
+const image=document
+.getElementById("adminImage")
+.value
+.trim();
+
+const description=document
+.getElementById("adminDescription")
+.value
+.trim();
+
+
+if(name===""){
+
+alert("نام محصول را وارد کنید.");
+return;
+
+}
+
+
+products.push({
+
+name:name,
+
+price:price || "قیمت اعلام نشده",
+
+category:category,
+
+image:image,
+
+description:description
+
+});
+
+
+saveProducts();
+
+renderProducts();
+
+renderAdminProducts();
+
+
+document.getElementById("adminName").value="";
+document.getElementById("adminPrice").value="";
+document.getElementById("adminImage").value="";
+document.getElementById("adminDescription").value="";
+
+
+alert("محصول با موفقیت اضافه شد.");
+
+});
+
+
+/* ================= ADMIN LIST ================= */
+
+function renderAdminProducts(){
+
+const list=document.getElementById("adminProductList");
+
+list.innerHTML="";
+
+if(products.length===0){
+
+list.innerHTML=
+'<p style="margin-top:20px;color:#777">محصولی ثبت نشده است.</p>';
+
+return;
+
+}
+
+
+products.forEach(function(product,index){
+
+const row=document.createElement("div");
+
+row.className="admin-product";
+
+row.innerHTML=
+
+'<div>'+
+'<strong>'+product.name+'</strong>'+
+'<br>'+
+'<small>'+product.price+'</small>'+
+'<br>'+
+'<small>'+product.category+'</small>'+
+'</div>'+
+
+'<button class="delete-button" data-index="'+index+'">'+
+'حذف'+
+'</button>';
+
+list.appendChild(row);
+
+});
+
+
+document.querySelectorAll(".delete-button")
+.forEach(function(button){
+
+button.addEventListener("click",function(){
+
+const index=Number(button.dataset.index);
+
+if(confirm("این محصول حذف شود؟")){
+
+products.splice(index,1);
+
+saveProducts();
+
+renderProducts();
+
+renderAdminProducts();
+
+}
+
+});
+
+});
+
+}
+
+});
+
+</script>
 
 </body>
     </html>
