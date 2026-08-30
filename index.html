@@ -32,7 +32,7 @@ header{
     z-index:1000;
 }
 
-/* MENU BUTTON */
+/* MENU */
 .menu-button{
     width:42px;
     height:42px;
@@ -52,7 +52,7 @@ header{
     background:#292629;
 }
 
-/* LOGO */
+/* LOGO L */
 .logo{
     position:absolute;
     left:50%;
@@ -60,21 +60,45 @@ header{
     text-align:center;
 }
 
-.logo-name{
-    font-family:Georgia,serif;
-    font-size:25px;
-    letter-spacing:5px;
+.logo-mark{
+    position:relative;
+    width:58px;
+    height:48px;
+    margin:auto;
 }
 
-.logo-sub{
+.logo-L{
+    position:absolute;
+    left:5px;
+    top:0;
+    font-family:Georgia,serif;
+    font-size:52px;
+    line-height:45px;
+    font-weight:bold;
+    color:#292629;
+}
+
+.logo-pink-L{
+    position:absolute;
+    left:18px;
+    top:10px;
+    font-family:cursive;
+    font-size:39px;
+    line-height:35px;
     color:#d58ca2;
+    font-weight:normal;
+}
+
+/* LORA COLLECTION زیر لوگو */
+.logo-text{
+    margin-top:2px;
     font-family:Georgia,serif;
     font-size:9px;
-    letter-spacing:4px;
-    margin-top:4px;
+    letter-spacing:3px;
+    color:#292629;
 }
 
-/* HEADER ICONS */
+/* ICONS */
 .header-icons{
     display:flex;
     align-items:center;
@@ -176,4 +200,68 @@ header{
     font-family:Tahoma;
 }
 
-.search-box input:
+.search-box input:focus{
+    border-color:#d58ca2;
+}
+
+/* HERO */
+.hero{
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+    background:linear-gradient(135deg,#fffafb,#fff2f6);
+}
+
+.hero-small{
+    color:#d58ca2;
+    font-size:11px;
+    letter-spacing:4px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:52px;
+    letter-spacing:6px;
+    margin-bottom:28px;
+}
+
+.hero-slogan{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:21px;
+    line-height:2;
+    color:#444;
+    margin-bottom:30px;
+}
+
+.hero-button{
+    display:inline-block;
+    padding:14px 38px;
+    background:#292629;
+    color:#fff;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.hero-button:hover{
+    background:#d58ca2;
+}
+
+/* SECTIONS */
+.section{
+    padding:70px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-family:Georgia,serif;
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#999;
