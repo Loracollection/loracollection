@@ -6,7 +6,11 @@
 <title>LORA COLLECTION</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
 body{
     background:#fff;
@@ -16,128 +20,59 @@ body{
 
 /* HEADER */
 header{
-    text-align:center;
-    padding:30px 15px 22px;
-    border-bottom:1px solid #f1dfe6;
     background:#fff;
+    text-align:center;
+    padding:35px 15px 22px;
+    border-bottom:1px solid #f2dfe6;
 }
 
 /* LOGO */
-.logo{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
 .logo-mark{
     position:relative;
-    width:210px;
-    height:165px;
+    width:180px;
+    height:155px;
     margin:auto;
 }
 
 /* L بزرگ مشکی */
-.black-l{
+.black-l-vertical{
     position:absolute;
-    left:92px;
-    top:8px;
+    left:78px;
+    top:5px;
     width:6px;
-    height:120px;
+    height:115px;
     background:#222;
 }
 
-.black-l-bottom{
+.black-l-horizontal{
     position:absolute;
-    left:92px;
-    top:122px;
-    width:85px;
+    left:78px;
+    top:115px;
+    width:78px;
     height:6px;
     background:#222;
 }
 
-/* L صورتی دست نویس
-   پایین L روی خط مشکی قرار می‌گیرد */
+/* L صورتی
+   پایین آن روی خط افقی L مشکی قرار می‌گیرد */
 .pink-l{
     position:absolute;
-    left:99px;
-    top:54px;
-    z-index:5;
+    left:88px;
+    top:48px;
+    z-index:2;
 
-    font-family:"Brush Script MT","Segoe Script",cursive;
+    color:#d58ca2;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
     font-size:82px;
     font-weight:normal;
     line-height:.8;
 
-    color:#d58ca2;
     transform:rotate(-7deg);
-}
-
-/* شاخه صورتی از بالای L به سمت چپ */
-.branch{
-    position:absolute;
-    left:30px;
-    top:18px;
-    width:105px;
-    height:75px;
-    z-index:4;
-    transform:rotate(-8deg);
-}
-
-/* ساقه */
-.branch-stem{
-    position:absolute;
-    right:2px;
-    top:48px;
-    width:105px;
-    height:2px;
-    background:#d58ca2;
-    transform:rotate(-24deg);
-    transform-origin:right center;
-}
-
-/* برگ‌ها */
-.branch-leaf{
-    position:absolute;
-    width:32px;
-    height:13px;
-    border:2px solid #d58ca2;
-    border-radius:100% 0 100% 0;
-    background:#fff;
-}
-
-.leaf-a{
-    right:62px;
-    top:24px;
-    transform:rotate(25deg);
-}
-
-.leaf-b{
-    right:43px;
-    top:13px;
-    transform:rotate(-35deg);
-}
-
-.leaf-c{
-    right:27px;
-    top:35px;
-    transform:rotate(28deg);
-}
-
-.leaf-d{
-    right:7px;
-    top:25px;
-    transform:rotate(-38deg);
-}
-
-/* رگبرگ ظریف */
-.branch-leaf::after{
-    content:"";
-    position:absolute;
-    left:4px;
-    top:5px;
-    width:23px;
-    height:1px;
-    background:#d58ca2;
 }
 
 /* نام برند */
@@ -145,25 +80,26 @@ header{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
-    margin-top:-2px;
+    gap:14px;
 }
 
 .bow{
-    font-size:25px;
+    font-size:24px;
+    line-height:1;
 }
 
 .brand-name{
     font-family:Georgia,"Times New Roman",serif;
     font-size:28px;
     letter-spacing:7px;
+    color:#222;
 }
 
 .brand-sub{
     font-family:Georgia,"Times New Roman",serif;
-    color:#d58ca2;
     font-size:10px;
     letter-spacing:5px;
+    color:#d58ca2;
     margin-top:5px;
 }
 
@@ -190,12 +126,13 @@ nav a{
     align-items:center;
     justify-content:center;
     text-align:center;
+    padding:40px 20px;
 }
 
 .hero-small{
     color:#d58ca2;
-    letter-spacing:4px;
     font-size:11px;
+    letter-spacing:4px;
 }
 
 .hero h1{
@@ -212,10 +149,10 @@ nav a{
 
 .button{
     display:inline-block;
-    padding:14px 38px;
     background:#222;
     color:#fff;
     text-decoration:none;
+    padding:14px 38px;
     font-size:13px;
 }
 
@@ -240,15 +177,15 @@ nav a{
 .categories{
     display:flex;
     justify-content:center;
-    gap:20px;
     flex-wrap:wrap;
+    gap:20px;
 }
 
 .category{
     width:280px;
     height:210px;
     background:#fff4f7;
-    border:1px solid #f1dfe6;
+    border:1px solid #f2dfe6;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -270,7 +207,7 @@ footer{
     background:#fff7fa;
     text-align:center;
     padding:40px 20px;
-    border-top:1px solid #f1dfe6;
+    border-top:1px solid #f2dfe6;
 }
 
 footer strong{
@@ -330,32 +267,18 @@ footer p{
 
 <header>
 
-<div class="logo">
-
     <div class="logo-mark">
 
         <!-- L مشکی -->
-        <div class="black-l"></div>
-        <div class="black-l-bottom"></div>
+        <div class="black-l-vertical"></div>
+        <div class="black-l-horizontal"></div>
 
         <!-- L صورتی -->
         <div class="pink-l">L</div>
 
-        <!-- شاخه ظریف صورتی -->
-        <div class="branch">
-
-            <div class="branch-stem"></div>
-
-            <div class="branch-leaf leaf-a"></div>
-            <div class="branch-leaf leaf-b"></div>
-            <div class="branch-leaf leaf-c"></div>
-            <div class="branch-leaf leaf-d"></div>
-
-        </div>
-
     </div>
 
-    <!-- پاپیون‌ها -->
+    <!-- LORA COLLECTION با پاپیون دو طرف -->
     <div class="brand">
 
         <span class="bow">🎀</span>
@@ -369,77 +292,34 @@ footer p{
 
     </div>
 
-</div>
-
-<nav>
-    <a href="#">خانه</a>
-    <a href="#">لباس</a>
-    <a href="#">اکسسوری</a>
-    <a href="#">لوازم آرایشی</a>
-    <a href="#">تخفیف‌ها</a>
-</nav>
+    <nav>
+        <a href="#">خانه</a>
+        <a href="#">لباس</a>
+        <a href="#">اکسسوری</a>
+        <a href="#">لوازم آرایشی</a>
+        <a href="#">تخفیف‌ها</a>
+    </nav>
 
 </header>
 
-
 <section class="hero">
 
-<div>
+    <div>
 
-    <div class="hero-small">NEW COLLECTION</div>
+        <div class="hero-small">NEW COLLECTION</div>
 
-    <h1>LORA</h1>
+        <h1>LORA</h1>
 
-    <p>ظرافت در سادگی</p>
+        <p>ظرافت در سادگی</p>
 
-    <a href="#" class="button">مشاهده محصولات</a>
+        <a href="#" class="button">
+            مشاهده محصولات
+        </a>
 
-</div>
+    </div>
 
 </section>
-
 
 <section class="categories-section">
 
-<h2>دسته‌بندی محصولات</h2>
-
-<p>انتخابی برای استایل خاص تو</p>
-
-<div class="categories">
-
-<div class="category">
-    <div>
-        <h3>لباس</h3>
-        <p>استایل‌های خاص و شیک</p>
-    </div>
-</div>
-
-<div class="category">
-    <div>
-        <h3>اکسسوری</h3>
-        <p>جزئیات کوچک، تأثیر بزرگ</p>
-    </div>
-</div>
-
-<div class="category">
-    <div>
-        <h3>لوازم آرایشی</h3>
-        <p>زیبایی و مراقبت</p>
-    </div>
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<strong>LORA COLLECTION</strong>
-
-<p>زیبایی در سادگی</p>
-
-</footer>
-
-</body>
-    </html>
+    <h2
