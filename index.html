@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,355 +16,540 @@
 }
 
 body{
-    background:#fff;
+    background:#ffffff;
     color:#292629;
-    font-family:Tahoma,Arial,sans-serif;
+    font-family:Tahoma, Arial, sans-serif;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
     background:#fff;
-    border-bottom:1px solid #f3e3e9;
-    padding:28px 20px 20px;
+    border-bottom:1px solid #f2dfe6;
+    padding:30px 15px 22px;
     text-align:center;
 }
 
-/* LOGO */
+/* =========================
+   LOGO SYMBOL
+========================= */
 
-.logo{
-    display:inline-flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-/* علامت اصلی */
-
-.logo-mark{
+.logo-symbol{
     position:relative;
-    width:145px;
-    height:125px;
+    width:170px;
+    height:145px;
+    margin:0 auto 3px;
 }
 
 /* L بزرگ مشکی */
 
-.l-vertical{
+.black-l-vertical{
     position:absolute;
-    left:55px;
+    left:67px;
     top:5px;
     width:5px;
-    height:92px;
+    height:108px;
     background:#222;
 }
 
-.l-horizontal{
+.black-l-horizontal{
     position:absolute;
-    left:55px;
-    top:92px;
-    width:68px;
+    left:67px;
+    top:108px;
+    width:76px;
     height:5px;
     background:#222;
 }
 
-/* L صورتی دست نویس
-   انتهای L روی خط افقی قرار می گیرد */
+/* L صورتی دست‌نویس */
 
 .pink-l{
     position:absolute;
-    left:67px;
-    top:24px;
-    color:#d28da3;
-    font-family:"Brush Script MT","Segoe Script",cursive;
-    font-size:68px;
-    line-height:1;
+    left:78px;
+    top:27px;
+
+    color:#d18ba1;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size:78px;
     font-weight:normal;
-    transform:rotate(-5deg);
+    line-height:1;
+
+    transform:rotate(-7deg);
+
+    z-index:3;
 }
 
-/* گل ظریف کنار L */
+/* =========================
+   شاخه و برگ ظریف
+   برعکس 🌿
+========================= */
 
-.flower{
+.branch{
     position:absolute;
-    left:30px;
-    top:48px;
-    width:38px;
-    height:38px;
+    left:28px;
+    top:45px;
+    width:45px;
+    height:75px;
+
+    transform:scaleX(-1) rotate(-8deg);
+
+    z-index:2;
 }
 
-.petal{
+/* ساقه */
+
+.branch-stem{
     position:absolute;
-    width:13px;
-    height:22px;
-    border:1.5px solid #d28da3;
+
+    left:21px;
+    top:5px;
+
+    width:2px;
+    height:68px;
+
+    background:#d18ba1;
+
+    transform:rotate(-17deg);
+
+    transform-origin:bottom;
+}
+
+/* برگ اول */
+
+.leaf-one{
+    position:absolute;
+
+    left:9px;
+    top:28px;
+
+    width:17px;
+    height:31px;
+
+    border:1.5px solid #d18ba1;
+
+    border-radius:
+        100% 0
+        100% 0;
+
+    transform:rotate(-28deg);
+}
+
+/* برگ دوم */
+
+.leaf-two{
+    position:absolute;
+
+    left:20px;
+    top:47px;
+
+    width:15px;
+    height:27px;
+
+    border:1.5px solid #d18ba1;
+
+    border-radius:
+        0 100%
+        0 100%;
+
+    transform:rotate(25deg);
+}
+
+/* گل کوچک انتهای ساقه */
+
+.flower-head{
+    position:absolute;
+
+    left:14px;
+    top:-3px;
+
+    width:23px;
+    height:23px;
+}
+
+/* گلبرگ‌ها */
+
+.flower-petal{
+    position:absolute;
+
+    width:10px;
+    height:17px;
+
+    border:1.5px solid #d18ba1;
+
     border-radius:80% 20% 80% 20%;
 }
 
-.p1{
-    left:12px;
+.fp1{
+    left:7px;
     top:0;
     transform:rotate(0deg);
 }
 
-.p2{
-    left:23px;
-    top:9px;
+.fp2{
+    left:13px;
+    top:5px;
     transform:rotate(72deg);
 }
 
-.p3{
-    left:19px;
-    top:21px;
+.fp3{
+    left:11px;
+    top:12px;
     transform:rotate(144deg);
 }
 
-.p4{
-    left:5px;
-    top:21px;
+.fp4{
+    left:2px;
+    top:12px;
     transform:rotate(216deg);
 }
 
-.p5{
+.fp5{
     left:0;
-    top:9px;
+    top:5px;
     transform:rotate(288deg);
 }
 
 .flower-center{
     position:absolute;
-    width:7px;
-    height:7px;
+
+    width:5px;
+    height:5px;
+
+    background:#d18ba1;
+
     border-radius:50%;
-    background:#d28da3;
-    left:16px;
-    top:16px;
+
+    left:9px;
+    top:9px;
 }
 
-/* برگ ظریف */
+/* =========================
+   BRAND
+========================= */
 
-.leaf{
-    position:absolute;
-    left:27px;
-    top:77px;
-    width:15px;
-    height:28px;
-    border:1.5px solid #d28da3;
-    border-radius:100% 0 100% 0;
-    transform:rotate(25deg);
-}
+.brand-line{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-.leaf-line{
-    position:absolute;
-    left:34px;
-    top:79px;
-    width:1px;
-    height:25px;
-    background:#d28da3;
-    transform:rotate(25deg);
-}
+    gap:12px;
 
-/* نوشته */
-
-.brand-name{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:28px;
-    letter-spacing:7px;
-    color:#222;
-}
-
-.brand-sub{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:11px;
-    letter-spacing:5px;
-    color:#d28da3;
-    margin-top:6px;
+    margin-top:2px;
 }
 
 /* پاپیون */
 
 .bow{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:3px;
-    margin-top:10px;
+    color:#e09aae;
+
+    font-size:25px;
+
+    line-height:1;
+
+    display:inline-block;
+
+    transform:translateY(-2px);
 }
 
-.bow-left,
-.bow-right{
-    width:17px;
-    height:11px;
-    border:2px solid #d28da3;
+.brand-name{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:27px;
+
+    letter-spacing:7px;
+
+    color:#222;
 }
 
-.bow-left{
-    border-radius:80% 20% 50% 50%;
-    transform:rotate(18deg);
+.brand-sub{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    color:#d18ba1;
+
+    margin-top:6px;
 }
 
-.bow-right{
-    border-radius:20% 80% 50% 50%;
-    transform:rotate(-18deg);
-}
-
-.bow-center{
-    width:7px;
-    height:7px;
-    background:#d28da3;
-    border-radius:50%;
-}
-
-/* MENU */
+/* =========================
+   MENU
+========================= */
 
 nav{
-    margin-top:24px;
+    margin-top:25px;
+
+    display:flex;
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
 }
 
 nav a{
     text-decoration:none;
+
     color:#444;
+
     font-size:13px;
-    margin:0 12px;
+
+    padding:5px 8px;
 }
 
 nav a:hover{
-    color:#d28da3;
+    color:#d18ba1;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    min-height:470px;
-    background:#fff8fa;
+    min-height:480px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff9fb,
+            #fff3f7
+        );
+
     display:flex;
-    justify-content:center;
+
     align-items:center;
+
+    justify-content:center;
+
     text-align:center;
+
     padding:40px 20px;
 }
 
+.hero-content{
+    max-width:600px;
+}
+
 .hero-small{
-    color:#d28da3;
+    color:#d18ba1;
+
     font-size:11px;
+
     letter-spacing:4px;
+
+    margin-bottom:15px;
 }
 
 .hero h1{
-    font-family:Georgia,"Times New Roman",serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size:58px;
+
     letter-spacing:9px;
-    margin:18px 0 10px;
+
+    color:#222;
+
+    margin-bottom:12px;
 }
 
 .hero p{
     color:#777;
+
     font-size:16px;
+
     margin-bottom:30px;
 }
 
 .shop-button{
     display:inline-block;
-    padding:14px 38px;
+
     background:#292629;
+
     color:#fff;
+
     text-decoration:none;
+
+    padding:14px 38px;
+
     font-size:13px;
+
+    transition:.3s;
 }
 
 .shop-button:hover{
-    background:#d28da3;
+    background:#d18ba1;
 }
 
-/* CATEGORIES */
+/* =========================
+   CATEGORIES
+========================= */
 
 .categories-section{
     padding:75px 20px;
+
     text-align:center;
+
+    background:#fff;
 }
 
 .section-title{
-    font-family:Georgia,"Times New Roman",serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size:29px;
+
+    color:#222;
+
     margin-bottom:10px;
 }
 
 .section-subtitle{
     color:#999;
+
     font-size:13px;
+
     margin-bottom:40px;
 }
 
 .categories{
     display:flex;
+
     justify-content:center;
-    gap:20px;
+
     flex-wrap:wrap;
+
+    gap:20px;
 }
 
 .category{
     width:280px;
     height:220px;
-    background:#fff4f7;
-    border:1px solid #f4e1e8;
+
+    background:#fff5f8;
+
+    border:1px solid #f2dfe6;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
+    transition:.3s;
 }
 
-.category:nth-child(2){
-    background:#fffafb;
-}
-
-.category:nth-child(3){
-    background:#fdf0f4;
+.category:hover{
+    transform:translateY(-5px);
 }
 
 .category h3{
-    font-family:Georgia,"Times New Roman",serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size:25px;
+
+    color:#333;
+
     margin-bottom:10px;
 }
 
 .category p{
     color:#999;
+
     font-size:12px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#fff8fa;
-    border-top:1px solid #f3e3e9;
+
+    border-top:1px solid #f2dfe6;
+
     text-align:center;
+
     padding:45px 20px;
 }
 
 .footer-name{
-    font-family:Georgia,"Times New Roman",serif;
-    letter-spacing:4px;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size:20px;
+
+    letter-spacing:4px;
+
+    color:#333;
 }
 
 footer p{
     color:#999;
+
     font-size:12px;
+
     margin-top:10px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:600px){
 
-    .logo-mark{
+    header{
+        padding-top:25px;
+    }
+
+    .logo-symbol{
         transform:scale(.9);
         margin-bottom:-5px;
     }
 
+    .brand-name{
+        font-size:24px;
+        letter-spacing:5px;
+    }
+
+    .brand-line{
+        gap:7px;
+    }
+
+    .bow{
+        font-size:21px;
+    }
+
     nav{
-        line-height:30px;
+        margin-top:20px;
     }
 
     nav a{
-        margin:0 7px;
+        font-size:12px;
+        padding:4px 5px;
     }
 
     .hero{
@@ -375,130 +561,230 @@ footer p{
         letter-spacing:6px;
     }
 
+    .hero p{
+        font-size:14px;
+    }
+
     .category{
         width:100%;
         max-width:330px;
     }
+
 }
 
 </style>
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER + LOGO
+========================= -->
 
 <header>
 
-<div class="logo">
+    <div class="logo">
 
-    <div class="logo-mark">
+        <div class="logo-symbol">
 
-        <div class="l-vertical"></div>
-        <div class="l-horizontal"></div>
+            <!-- L مشکی -->
+            <div class="black-l-vertical"></div>
+            <div class="black-l-horizontal"></div>
 
-        <div class="pink-l">L</div>
+            <!-- L صورتی -->
+            <div class="pink-l">L</div>
 
-        <div class="flower">
-            <div class="petal p1"></div>
-            <div class="petal p2"></div>
-            <div class="petal p3"></div>
-            <div class="petal p4"></div>
-            <div class="petal p5"></div>
-            <div class="flower-center"></div>
+            <!-- شاخه برعکس -->
+            <div class="branch">
+
+                <div class="branch-stem"></div>
+
+                <div class="leaf-one"></div>
+
+                <div class="leaf-two"></div>
+
+                <div class="flower-head">
+
+                    <div class="flower-petal fp1"></div>
+                    <div class="flower-petal fp2"></div>
+                    <div class="flower-petal fp3"></div>
+                    <div class="flower-petal fp4"></div>
+                    <div class="flower-petal fp5"></div>
+
+                    <div class="flower-center"></div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="leaf"></div>
-        <div class="leaf-line"></div>
+
+        <!-- نام برند + دو پاپیون -->
+
+        <div class="brand-line">
+
+            <span class="bow">🎀</span>
+
+            <div>
+
+                <div class="brand-name">
+                    LORA
+                </div>
+
+                <div class="brand-sub">
+                    COLLECTION
+                </div>
+
+            </div>
+
+            <span class="bow">🎀</span>
+
+        </div>
 
     </div>
 
-    <div class="brand-name">LORA</div>
-    <div class="brand-sub">COLLECTION</div>
 
-    <div class="bow">
-        <div class="bow-left"></div>
-        <div class="bow-center"></div>
-        <div class="bow-right"></div>
-    </div>
+    <!-- منو -->
 
-</div>
+    <nav>
 
-<nav>
-    <a href="#">خانه</a>
-    <a href="#">لباس</a>
-    <a href="#">اکسسوری</a>
-    <a href="#">آرایشی</a>
-    <a href="#">تخفیف‌ها</a>
-</nav>
+        <a href="#">خانه</a>
+
+        <a href="#">لباس</a>
+
+        <a href="#">اکسسوری</a>
+
+        <a href="#">لوازم آرایشی</a>
+
+        <a href="#">تخفیف‌ها</a>
+
+    </nav>
 
 </header>
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
-<div>
+    <div class="hero-content">
 
-    <div class="hero-small">NEW COLLECTION</div>
+        <div class="hero-small">
+            NEW COLLECTION
+        </div>
 
-    <h1>LORA</h1>
+        <h1>
+            LORA
+        </h1>
 
-    <p>ظرافت در سادگی</p>
+        <p>
+            ظرافت در سادگی
+        </p>
 
-    <a href="#" class="shop-button">
-        مشاهده محصولات
-    </a>
+        <a href="#" class="shop-button">
+            مشاهده محصولات
+        </a>
 
-</div>
+    </div>
 
 </section>
 
+
+<!-- =========================
+     CATEGORIES
+========================= -->
 
 <section class="categories-section">
 
-<h2 class="section-title">
-    دسته‌بندی محصولات
-</h2>
+    <h2 class="section-title">
+        دسته‌بندی محصولات
+    </h2>
 
-<p class="section-subtitle">
-    انتخابی برای استایل خاص تو
-</p>
+    <p class="section-subtitle">
+        انتخابی برای استایل خاص تو
+    </p>
 
-<div class="categories">
 
-<div class="category">
-    <div>
-        <h3>لباس</h3>
-        <p>استایل‌های خاص و شیک</p>
+    <div class="categories">
+
+
+        <div class="category">
+
+            <div>
+
+                <h3>
+                    لباس
+                </h3>
+
+                <p>
+                    استایل‌های خاص و شیک
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="category">
+
+            <div>
+
+                <h3>
+                    اکسسوری
+                </h3>
+
+                <p>
+                    جزئیات کوچک، تأثیر بزرگ
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="category">
+
+            <div>
+
+                <h3>
+                    لوازم آرایشی
+                </h3>
+
+                <p>
+                    زیبایی و مراقبت
+                </p>
+
+            </div>
+
+        </div>
+
+
     </div>
-</div>
-
-<div class="category">
-    <div>
-        <h3>اکسسوری</h3>
-        <p>جزئیات کوچک، تأثیر بزرگ</p>
-    </div>
-</div>
-
-<div class="category">
-    <div>
-        <h3>لوازم آرایشی</h3>
-        <p>زیبایی و مراقبت</p>
-    </div>
-</div>
-
-</div>
 
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-<div class="footer-name">
-    LORA COLLECTION
-</div>
+    <div class="footer-name">
+        LORA COLLECTION
+    </div>
 
-<p>زیبایی در سادگی</p>
+    <p>
+        زیبایی در سادگی
+    </p>
 
 </footer>
+
 
 </body>
     </html>
