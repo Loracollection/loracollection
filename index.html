@@ -3,105 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>LORA COLLECTION</title>
 
 <style>
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 body{
+    font-family:Arial,Tahoma,sans-serif;
     background:#fff;
     color:#222;
-    font-family:Tahoma,Arial,sans-serif;
 }
 
-/* HEADER */
+/* Header */
 header{
-    height:85px;
-    border-bottom:1px solid #f1dfe5;
+    height:80px;
+    border-bottom:1px solid #f1dce3;
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:0 25px;
-    position:relative;
 }
 
 .menu{
-    width:35px;
+    width:30px;
 }
 
 .menu span{
     display:block;
-    width:26px;
     height:2px;
+    width:25px;
     background:#222;
-    margin:6px 0;
+    margin:5px 0;
 }
 
-.logo{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
+.icons{
+    display:flex;
+    gap:18px;
+    font-size:22px;
+}
+
+.header-logo{
     text-align:center;
 }
 
-.logo-design{
+/* لوگوی L */
+.l-logo{
     position:relative;
-    width:115px;
-    height:55px;
+    width:60px;
+    height:45px;
     margin:auto;
 }
 
-.black-l{
+.l-black{
     position:absolute;
-    left:30px;
-    top:-5px;
+    left:7px;
+    top:-8px;
     font-family:Georgia,serif;
     font-size:58px;
     font-weight:bold;
-    color:#222;
 }
 
-.pink-l{
+.l-pink{
     position:absolute;
-    left:47px;
-    top:8px;
-    font-family:"Brush Script MT",cursive;
-    font-size:43px;
+    left:23px;
+    top:7px;
+    font-family:cursive;
+    font-size:42px;
     color:#d58ca2;
 }
 
-.bow-left,
-.bow-right{
-    position:absolute;
-    top:22px;
-    font-size:15px;
-}
-
-.bow-left{left:0;}
-.bow-right{right:0;}
-
-.logo-name{
-    font-family:"Times New Roman",Georgia,serif;
+/* نام زیر لوگو */
+.logo-title{
+    font-family:Georgia,serif;
     font-size:9px;
     letter-spacing:3px;
 }
 
-/* ICONS */
-.icons{
-    display:flex;
-    gap:18px;
-    align-items:center;
-}
-
-.icon{
-    font-size:23px;
-}
-
-/* HERO */
+/* صفحه اصلی */
 .hero{
     min-height:520px;
     background:#fff7f9;
@@ -112,44 +95,105 @@ header{
     padding:40px 20px;
 }
 
-/* لوگوی داخل صفحه اصلی */
-.hero-logo{
-    text-align:center;
-    margin-bottom:30px;
+/* لوگوی اصلی */
+.main-logo{
+    margin-bottom:28px;
 }
 
-.hero-logo-mark{
-    height:68px;
+.main-logo-top{
     display:flex;
-    align-items:center;
     justify-content:center;
-    gap:14px;
+    align-items:center;
+    gap:10px;
+    height:65px;
 }
 
-.hero-black-l{
-    font-family:Georgia,serif;
-    font-size:64px;
-    font-weight:bold;
-    color:#222;
-    line-height:1;
-}
-
-.hero-pink-l{
-    font-family:"Brush Script MT",cursive;
-    font-size:49px;
-    color:#d58ca2;
-    line-height:1;
-    margin-left:-30px;
-    margin-top:13px;
-}
-
-.hero-bow{
+.bow{
     font-size:18px;
 }
 
-.hero-logo-name{
-    font-family:"Times New Roman",Georgia,serif;
+.main-l-black{
+    font-family:Georgia,serif;
+    font-size:65px;
+    font-weight:bold;
+    line-height:1;
+}
+
+.main-l-pink{
+    font-family:cursive;
+    font-size:48px;
+    color:#d58ca2;
+    margin-left:-27px;
+    margin-top:12px;
+}
+
+.main-logo-name{
+    font-family:Georgia,serif;
     font-size:13px;
     letter-spacing:4px;
-    color:#222;
-    margin-top:5
+    margin-top:4px;
+}
+
+/* شعار */
+.slogan{
+    font-family:Georgia,serif;
+    font-size:20px;
+    line-height:2.2;
+    color:#444;
+}
+
+/* دکمه */
+.button{
+    display:inline-block;
+    margin-top:30px;
+    background:#222;
+    color:#fff;
+    text-decoration:none;
+    padding:13px 35px;
+    font-size:13px;
+}
+
+/* بخش ها */
+section{
+    padding:65px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-family:Georgia,serif;
+    font-size:28px;
+    margin-bottom:35px;
+}
+
+/* دسته بندی */
+.categories{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.category{
+    height:170px;
+    background:#fff8fa;
+    border:1px solid #f0dce3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.category-icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.category-name{
+    font-family:Georgia,serif;
+    font-size:17px;
+}
+
+/* محصولات */
+.products{
+    max-width:
