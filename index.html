@@ -232,4 +232,273 @@ nav a:hover{
 /* HERO */
 
 .hero{
-   
+    min-height:470px;
+    background:#fff8fa;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero-small{
+    color:#d28da3;
+    font-size:11px;
+    letter-spacing:4px;
+}
+
+.hero h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:58px;
+    letter-spacing:9px;
+    margin:18px 0 10px;
+}
+
+.hero p{
+    color:#777;
+    font-size:16px;
+    margin-bottom:30px;
+}
+
+.shop-button{
+    display:inline-block;
+    padding:14px 38px;
+    background:#292629;
+    color:#fff;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.shop-button:hover{
+    background:#d28da3;
+}
+
+/* CATEGORIES */
+
+.categories-section{
+    padding:75px 20px;
+    text-align:center;
+}
+
+.section-title{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:29px;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    color:#999;
+    font-size:13px;
+    margin-bottom:40px;
+}
+
+.categories{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.category{
+    width:280px;
+    height:220px;
+    background:#fff4f7;
+    border:1px solid #f4e1e8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.category:nth-child(2){
+    background:#fffafb;
+}
+
+.category:nth-child(3){
+    background:#fdf0f4;
+}
+
+.category h3{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.category p{
+    color:#999;
+    font-size:12px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#fff8fa;
+    border-top:1px solid #f3e3e9;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.footer-name{
+    font-family:Georgia,"Times New Roman",serif;
+    letter-spacing:4px;
+    font-size:20px;
+}
+
+footer p{
+    color:#999;
+    font-size:12px;
+    margin-top:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .logo-mark{
+        transform:scale(.9);
+        margin-bottom:-5px;
+    }
+
+    nav{
+        line-height:30px;
+    }
+
+    nav a{
+        margin:0 7px;
+    }
+
+    .hero{
+        min-height:420px;
+    }
+
+    .hero h1{
+        font-size:43px;
+        letter-spacing:6px;
+    }
+
+    .category{
+        width:100%;
+        max-width:330px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+    <div class="logo-mark">
+
+        <div class="l-vertical"></div>
+        <div class="l-horizontal"></div>
+
+        <div class="pink-l">L</div>
+
+        <div class="flower">
+            <div class="petal p1"></div>
+            <div class="petal p2"></div>
+            <div class="petal p3"></div>
+            <div class="petal p4"></div>
+            <div class="petal p5"></div>
+            <div class="flower-center"></div>
+        </div>
+
+        <div class="leaf"></div>
+        <div class="leaf-line"></div>
+
+    </div>
+
+    <div class="brand-name">LORA</div>
+    <div class="brand-sub">COLLECTION</div>
+
+    <div class="bow">
+        <div class="bow-left"></div>
+        <div class="bow-center"></div>
+        <div class="bow-right"></div>
+    </div>
+
+</div>
+
+<nav>
+    <a href="#">خانه</a>
+    <a href="#">لباس</a>
+    <a href="#">اکسسوری</a>
+    <a href="#">آرایشی</a>
+    <a href="#">تخفیف‌ها</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div>
+
+    <div class="hero-small">NEW COLLECTION</div>
+
+    <h1>LORA</h1>
+
+    <p>ظرافت در سادگی</p>
+
+    <a href="#" class="shop-button">
+        مشاهده محصولات
+    </a>
+
+</div>
+
+</section>
+
+
+<section class="categories-section">
+
+<h2 class="section-title">
+    دسته‌بندی محصولات
+</h2>
+
+<p class="section-subtitle">
+    انتخابی برای استایل خاص تو
+</p>
+
+<div class="categories">
+
+<div class="category">
+    <div>
+        <h3>لباس</h3>
+        <p>استایل‌های خاص و شیک</p>
+    </div>
+</div>
+
+<div class="category">
+    <div>
+        <h3>اکسسوری</h3>
+        <p>جزئیات کوچک، تأثیر بزرگ</p>
+    </div>
+</div>
+
+<div class="category">
+    <div>
+        <h3>لوازم آرایشی</h3>
+        <p>زیبایی و مراقبت</p>
+    </div>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-name">
+    LORA COLLECTION
+</div>
+
+<p>زیبایی در سادگی</p>
+
+</footer>
+
+</body>
+    </html>
