@@ -89,4 +89,1037 @@ header{
 .icon-button{
     border:none;
     background:none;
-    cursor:pointer
+    cursor:pointer;
+    font-size:23px;
+    color:#292629;
+}
+
+.cart-count{
+    position:absolute;
+    margin-top:-25px;
+    margin-right:-8px;
+    background:#d58ca2;
+    color:white;
+    width:17px;
+    height:17px;
+    border-radius:50%;
+    font-size:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* ================= MENU ================= */
+
+.side-menu{
+    position:fixed;
+    top:0;
+    left:-300px;
+    width:280px;
+    height:100vh;
+    background:#fff;
+    box-shadow:5px 0 20px rgba(0,0,0,.08);
+    z-index:2000;
+    transition:.35s;
+    padding:30px 25px;
+}
+
+.side-menu.open{
+    left:0;
+}
+
+.close-menu{
+    border:none;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+    margin-bottom:35px;
+}
+
+.side-menu a{
+    display:block;
+    text-decoration:none;
+    color:#333;
+    font-size:15px;
+    padding:17px 5px;
+    border-bottom:1px solid #f5e5eb;
+}
+
+.side-menu a:hover{
+    color:#d58ca2;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.25);
+    z-index:1500;
+    display:none;
+}
+
+.overlay.show{
+    display:block;
+}
+
+/* ================= SEARCH ================= */
+
+.search-box{
+    display:none;
+    padding:15px 20px;
+    background:#fff8fa;
+    border-bottom:1px solid #f2dfe6;
+}
+
+.search-box.show{
+    display:block;
+}
+
+.search-box input{
+    width:100%;
+    padding:13px 15px;
+    border:1px solid #ead4dc;
+    outline:none;
+    font-family:Tahoma;
+}
+
+.search-box input:focus{
+    border-color:#d58ca2;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fffafb,
+        #fff2f6
+    );
+}
+
+.hero-small{
+    color:#d58ca2;
+    font-size:11px;
+    letter-spacing:4px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:52px;
+    letter-spacing:6px;
+    margin-bottom:28px;
+}
+
+.hero-slogan{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:21px;
+    line-height:2;
+    color:#444;
+    margin-bottom:30px;
+}
+
+.hero-button{
+    display:inline-block;
+    padding:14px 38px;
+    background:#292629;
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.hero-button:hover{
+    background:#d58ca2;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:70px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-family:Georgia,serif;
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#999;
+    font-size:13px;
+    margin-bottom:40px;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+    max-width:1050px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.category{
+    min-height:180px;
+    background:#fff7f9;
+    border:1px solid #f0dce4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+    border-color:#d58ca2;
+}
+
+.category-icon{
+    font-size:38px;
+    margin-bottom:14px;
+}
+
+.category h3{
+    font-family:Georgia,serif;
+    font-size:19px;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product{
+    border:1px solid #f0dce4;
+    background:#fff;
+    overflow:hidden;
+}
+
+.product-image{
+    height:250px;
+    background:#fff5f7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+}
+
+.product-info{
+    text-align:center;
+    padding:18px;
+}
+
+.product-name{
+    font-family:Georgia,serif;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.product-price{
+    color:#d58ca2;
+    font-weight:bold;
+    margin:12px 0;
+}
+
+.add-button{
+    width:100%;
+    border:none;
+    background:#292629;
+    color:white;
+    padding:11px;
+    cursor:pointer;
+    font-family:Tahoma;
+}
+
+.add-button:hover{
+    background:#d58ca2;
+}
+
+/* ================= DISCOUNT ================= */
+
+.discount-section{
+    background:#fff7f9;
+}
+
+.discount-banner{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    padding:40px 20px;
+    border:1px solid #f0dce4;
+}
+
+.discount-banner h2{
+    font-family:Georgia,serif;
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.discount-banner p{
+    color:#777;
+    margin-bottom:20px;
+}
+
+/* ================= CART ================= */
+
+.cart{
+    max-width:700px;
+    margin:auto;
+    border:1px solid #f0dce4;
+    padding:25px;
+}
+
+.empty-cart{
+    text-align:center;
+    color:#999;
+    padding:20px;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 0;
+    border-bottom:1px solid #f3e5ea;
+}
+
+.cart-total{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+.order-button{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    background:#292629;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-family:Tahoma;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    max-width:750px;
+    margin:auto;
+    text-align:center;
+    line-height:2.2;
+    color:#777;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#292629;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h3{
+    font-family:Georgia,serif;
+    letter-spacing:4px;
+}
+
+footer p{
+    color:#bbb;
+    font-size:12px;
+    margin-top:10px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    header{
+        height:75px;
+        padding:0 12px;
+    }
+
+    .logo-name{
+        font-size:20px;
+    }
+
+    .logo-sub{
+        font-size:7px;
+    }
+
+    .header-icons{
+        gap:10px;
+    }
+
+    .icon-button{
+        font-size:20px;
+    }
+
+    .hero{
+        min-height:480px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero-slogan{
+        font-size:17px;
+    }
+
+    .categories{
+        gap:10px;
+    }
+
+    .category{
+        min-height:150px;
+    }
+
+    .category-icon{
+        font-size:30px;
+    }
+
+    .category h3{
+        font-size:16px;
+    }
+
+    .products{
+        gap:10px;
+    }
+
+    .product-image{
+        height:180px;
+    }
+
+    .product-name{
+        font-size:15px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= MENU ================= -->
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<div class="side-menu" id="sideMenu">
+
+<button class="close-menu" onclick="closeMenu()">×</button>
+
+<a href="#home" onclick="closeMenu()">خانه</a>
+<a href="#clothes" onclick="closeMenu()">لباس</a>
+<a href="#accessories" onclick="closeMenu()">اکسسوری</a>
+<a href="#bags" onclick="closeMenu()">کیف</a>
+<a href="#beauty" onclick="closeMenu()">لوازم آرایشی</a>
+<a href="#discounts" onclick="closeMenu()">تخفیفات</a>
+
+</div>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<button class="menu-button" onclick="openMenu()">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+
+<div class="logo">
+
+<div class="logo-name">
+LORA
+</div>
+
+<div class="logo-sub">
+COLLECTION
+</div>
+
+</div>
+
+
+<div class="header-icons">
+
+<button class="icon-button" onclick="toggleSearch()">
+⌕
+</button>
+
+<button class="icon-button" onclick="goToCart()">
+🛒
+<span class="cart-count" id="cartCount">0</span>
+</button>
+
+</div>
+
+</header>
+
+
+<!-- ================= SEARCH ================= -->
+
+<div class="search-box" id="searchBox">
+
+<input
+type="text"
+id="searchInput"
+placeholder="جستجوی محصول..."
+onkeyup="searchProducts()">
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div>
+
+<div class="hero-small">
+WELCOME TO LORA COLLECTION
+</div>
+
+<h1>
+LORA COLLECTION
+</h1>
+
+<div class="hero-slogan">
+
+لورا کالکشن،<br>
+سادگی، آغاز زیبایی است؛<br>
+زیبایی، بخشی از داستان توست.
+
+</div>
+
+<a href="#products" class="hero-button">
+مشاهده محصولات
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="section">
+
+<h2 class="section-title">
+دسته‌بندی‌ها
+</h2>
+
+<p class="section-subtitle">
+انتخاب کن، استایل خودت را بساز
+</p>
+
+
+<div class="categories">
+
+<div class="category" id="clothes">
+<div>
+<div class="category-icon">👗</div>
+<h3>لباس</h3>
+</div>
+</div>
+
+<div class="category" id="accessories">
+<div>
+<div class="category-icon">💎</div>
+<h3>اکسسوری</h3>
+</div>
+</div>
+
+<div class="category" id="bags">
+<div>
+<div class="category-icon">👜</div>
+<h3>کیف</h3>
+</div>
+</div>
+
+<div class="category" id="beauty">
+<div>
+<div class="category-icon">💄</div>
+<h3>لوازم آرایشی</h3>
+</div>
+</div>
+
+<div class="category" id="discounts">
+<div>
+<div class="category-icon">🏷️</div>
+<h3>تخفیفات</h3>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="section" id="products">
+
+<h2 class="section-title">
+محصولات جدید
+</h2>
+
+<p class="section-subtitle">
+جدیدترین انتخاب‌های LORA COLLECTION
+</p>
+
+
+<div class="products" id="productList">
+
+
+<div class="product">
+
+<div class="product-image">
+👗
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+مانتوی مشکی
+</div>
+
+<div class="product-price">
+۱,۸۵۰,۰۰۰ تومان
+</div>
+
+<button class="add-button"
+onclick="addToCart('مانتوی مشکی',1850000)">
+افزودن به سبد خرید
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+👜
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+کیف دستی
+</div>
+
+<div class="product-price">
+۹۸۰,۰۰۰ تومان
+</div>
+
+<button class="add-button"
+onclick="addToCart('کیف دستی',980000)">
+افزودن به سبد خرید
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+💎
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+گردنبند ظریف
+</div>
+
+<div class="product-price">
+۵۹۰,۰۰۰ تومان
+</div>
+
+<button class="add-button"
+onclick="addToCart('گردنبند ظریف',590000)">
+افزودن به سبد خرید
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+💄
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+ست آرایشی
+</div>
+
+<div class="product-price">
+۷۹۰,۰۰۰ تومان
+</div>
+
+<button class="add-button"
+onclick="addToCart('ست آرایشی',790000)">
+افزودن به سبد خرید
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= DISCOUNT ================= -->
+
+<section class="section discount-section">
+
+<div class="discount-banner">
+
+<h2>
+تخفیفات LORA
+</h2>
+
+<p>
+محصولات منتخب با قیمت ویژه
+</p>
+
+<a href="#products" class="hero-button">
+مشاهده تخفیفات
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= CART ================= -->
+
+<section class="section" id="cart">
+
+<h2 class="section-title">
+سبد خرید 🛒
+</h2>
+
+<p class="section-subtitle">
+محصولات انتخاب‌شده شما
+</p>
+
+<div class="cart">
+
+<div id="cartItems" class="empty-cart">
+سبد خرید شما خالی است.
+</div>
+
+<div class="cart-total">
+
+<span>
+مجموع
+</span>
+
+<span id="cartTotal">
+۰ تومان
+</span>
+
+</div>
+
+<button class="order-button" onclick="placeOrder()">
+ثبت سفارش
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section">
+
+<h2 class="section-title">
+درباره LORA COLLECTION
+</h2>
+
+<p class="section-subtitle">
+داستان ما
+</p>
+
+<div class="about">
+
+LORA COLLECTION با عشق به ظرافت،
+سادگی و انتخاب‌های خاص شکل گرفته است.
+هدف ما این است که محصولاتی را ارائه کنیم
+که بخشی از استایل و داستان شخصی شما باشند.
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h3>
+LORA COLLECTION
+</h3>
+
+<p>
+زیبایی، بخشی از داستان توست.
+</p>
+
+</footer>
+
+
+<script>
+
+/* MENU */
+
+function openMenu(){
+
+document.getElementById("sideMenu")
+.classList.add("open");
+
+document.getElementById("overlay")
+.classList.add("show");
+
+}
+
+function closeMenu(){
+
+document.getElementById("sideMenu")
+.classList.remove("open");
+
+document.getElementById("overlay")
+.classList.remove("show");
+
+}
+
+
+/* SEARCH */
+
+function toggleSearch(){
+
+const search =
+document.getElementById("searchBox");
+
+search.classList.toggle("show");
+
+if(search.classList.contains("show")){
+
+document.getElementById("searchInput").focus();
+
+}
+
+}
+
+
+function searchProducts(){
+
+const input =
+document.getElementById("searchInput")
+.value
+.toLowerCase();
+
+const products =
+document.querySelectorAll(".product");
+
+products.forEach(function(product){
+
+const name =
+product.querySelector(".product-name")
+.innerText
+.toLowerCase();
+
+product.style.display =
+name.includes(input)
+? ""
+: "none";
+
+});
+
+}
+
+
+/* CART */
+
+let cart = [];
+
+
+function addToCart(name,price){
+
+cart.push({
+name:name,
+price:price
+});
+
+updateCart();
+
+alert("محصول به سبد خرید اضافه شد.");
+
+}
+
+
+function updateCart(){
+
+const items =
+document.getElementById("cartItems");
+
+const total =
+document.getElementById("cartTotal");
+
+const count =
+document.getElementById("cartCount");
+
+
+count.innerText = cart.length;
+
+
+if(cart.length === 0){
+
+items.className="empty-cart";
+
+items.innerHTML=
+"سبد خرید شما خالی است.";
+
+total.innerText="۰ تومان";
+
+return;
+
+}
+
+
+items.className="";
+
+
+let html="";
+let sum=0;
+
+
+cart.forEach(function(item,index){
+
+sum += item.price;
+
+html += `
+
+<div class="cart-item">
+
+<span>
+${item.name}
+</span>
+
+<span>
+${item.price.toLocaleString("fa-IR")} تومان
+</span>
+
+<button
+onclick="removeItem(${index})"
+style="
+border:none;
+background:none;
+color:#c77;
+cursor:pointer;
+">
+
+حذف
+
+</button>
+
+</div>
+
+`;
+
+});
+
+
+items.innerHTML=html;
+
+total.innerText=
+sum.toLocaleString("fa-IR")
++" تومان";
+
+}
+
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+updateCart();
+
+}
+
+
+function goToCart(){
+
+document.getElementById("cart")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function placeOrder(){
+
+if(cart.length===0){
+
+alert("سبد خرید شما خالی است.");
+
+return;
+
+}
+
+alert(
+"سفارش شما آماده ثبت است.\
+nدر مرحله بعد اطلاعات مشتری و پرداخت را اضافه می‌کنیم."
+);
+
+}
+
+</script>
+
+</body>
+    </html>
