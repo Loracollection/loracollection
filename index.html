@@ -12,6 +12,10 @@
     padding:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Tahoma,Arial,sans-serif;
     background:#fff;
@@ -378,12 +382,125 @@ section{
 
 /* ================= ABOUT ================= */
 
+.about-section{
+    background:#fff;
+}
+
 .about{
-    max-width:700px;
+    max-width:850px;
     margin:auto;
+    line-height:2.4;
+    color:#555;
+    text-align:right;
+}
+
+.about-title{
     text-align:center;
-    line-height:2.2;
+    font-family:Georgia,serif;
+    font-size:27px;
+    margin-bottom:30px;
+}
+
+/* ================= TRUST ================= */
+
+.trust-section{
+    background:#fff7f9;
+}
+
+.trust-boxes{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.trust-box{
+    background:#fff;
+    border:1px solid #f0dce3;
+    padding:25px 15px;
+    text-align:center;
+}
+
+.trust-icon{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.trust-box h3{
+    font-family:Georgia,serif;
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.trust-box p{
+    color:#888;
+    font-size:12px;
+    line-height:1.8;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section{
+    background:#fff;
+}
+
+.contact{
+    max-width:850px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-box{
+    border:1px solid #f0dce3;
+    padding:25px;
+    text-align:center;
+}
+
+.contact-box h3{
+    font-family:Georgia,serif;
+    margin-bottom:12px;
+}
+
+.contact-box p{
     color:#777;
+    font-size:13px;
+    line-height:2;
+}
+
+/* ================= SYMBOLS ================= */
+
+.symbols{
+    text-align:center;
+    padding:45px 20px;
+    background:#fff;
+    border-top:1px solid #f1dce3;
+}
+
+.symbols h2{
+    font-family:Georgia,serif;
+    font-size:24px;
+    margin-bottom:25px;
+}
+
+.samandehi-box{
+    width:150px;
+    min-height:100px;
+    margin:auto;
+    border:1px solid #e5d3d9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:8px;
+    color:#777;
+    font-size:12px;
+}
+
+.samandehi-box strong{
+    color:#555;
 }
 
 /* ================= CART ================= */
@@ -444,6 +561,35 @@ section{
     padding-top:20px;
     border-top:1px solid #f1dce3;
     font-weight:bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:35px 20px 15px;
+}
+
+footer h3{
+    font-family:Georgia,serif;
+    letter-spacing:4px;
+}
+
+footer p{
+    margin-top:10px;
+    color:#ccc;
+    font-size:12px;
+}
+
+.copyright{
+    max-width:900px;
+    margin:30px auto 0;
+    padding:11px 10px;
+    border:1px solid rgba(255,255,255,.25);
+    color:#bbb;
+    font-size:11px;
 }
 
 /* ================= ADMIN ================= */
@@ -534,62 +680,57 @@ section{
     margin-bottom:20px;
 }
 
-/* ================= FOOTER ================= */
-
-footer{
-    background:#222;
-    color:#fff;
-    text-align:center;
-    padding:40px 20px;
-}
-
-footer h3{
-    font-family:Georgia,serif;
-    letter-spacing:4px;
-}
-
-footer p{
-    margin-top:10px;
-    color:#ccc;
-    font-size:12px;
-}
-
 /* ================= MOBILE ================= */
 
 @media(max-width:850px){
 
-.categories{
-    grid-template-columns:repeat(2,1fr);
-}
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-.products{
-    grid-template-columns:repeat(2,1fr);
-}
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
 
+    .trust-boxes{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact{
+        grid-template-columns:1fr;
+    }
 }
 
 @media(max-width:500px){
 
-header{
-    padding:0 15px;
-}
+    header{
+        padding:0 15px;
+    }
 
-.hero{
-    min-height:470px;
-}
+    .hero{
+        min-height:470px;
+    }
 
-.slogan{
-    font-size:17px;
-}
+    .slogan{
+        font-size:17px;
+    }
 
-.products{
-    grid-template-columns:1fr;
-}
+    .products{
+        grid-template-columns:1fr;
+    }
 
-.admin-container{
-    padding:20px;
-}
+    .trust-boxes{
+        grid-template-columns:1fr;
+    }
 
+    .about{
+        text-align:right;
+        font-size:13px;
+    }
+
+    .admin-container{
+        padding:20px;
+    }
 }
 </style>
 </head>
@@ -621,13 +762,9 @@ LORA COLLECTION
 
 <div class="icons">
 
-<button class="icon-button" id="searchButton">
-⌕
-</button>
+<button class="icon-button" id="searchButton">⌕</button>
 
-<button class="icon-button" id="cartButton">
-🛒
-</button>
+<button class="icon-button" id="cartButton">🛒</button>
 
 </div>
 
@@ -648,6 +785,8 @@ LORA COLLECTION
 <a href="#bags">کیف</a>
 <a href="#beauty">لوازم آرایشی</a>
 <a href="#discounts">تخفیفات</a>
+<a href="#about">درباره ما</a>
+<a href="#contact">تماس با ما</a>
 
 </nav>
 
@@ -711,7 +850,7 @@ placeholder="جستجوی محصول..."
 </div>
 
 
-<!-- CATEGORIES -->
+<!-- ================= CATEGORIES ================= -->
 
 <section>
 
@@ -761,7 +900,7 @@ placeholder="جستجوی محصول..."
 </section>
 
 
-<!-- PRODUCTS -->
+<!-- ================= PRODUCTS ================= -->
 
 <section id="products">
 
@@ -774,7 +913,7 @@ placeholder="جستجوی محصول..."
 </section>
 
 
-<!-- DISCOUNTS -->
+<!-- ================= DISCOUNTS ================= -->
 
 <section class="discount" id="discountsSection">
 
@@ -789,26 +928,135 @@ placeholder="جستجوی محصول..."
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
-<section>
+<section class="about-section" id="about">
 
-<h2 class="section-title">
+<h2 class="about-title">
 درباره LORA COLLECTION
 </h2>
 
 <div class="about">
 
-LORA COLLECTION با عشق به ظرافت،
-سادگی و انتخاب‌های خاص شکل گرفته است.
+<p>
+به LORA COLLECTION خوش آمدید.
+</p>
 
-<br>
+<p>
+LORA COLLECTION با هدف ارائه‌ی اکسسوری، زیورآلات، کیف، پوشاک زنانه و محصولات زیبایی شیک و به‌روز فعالیت خود را آغاز کرده است. ما باور داریم که انتخاب یک محصول زیبا و خاص می‌تواند بخشی از زیبایی و حس خوب هر روز شما باشد.
+</p>
 
-زیبایی، بخشی از داستان توست.
+<p>
+در LORA COLLECTION تلاش می‌کنیم محصولاتی با طراحی زیبا، کیفیت مناسب و قیمت منطقی انتخاب کنیم تا تجربه‌ای لذت‌بخش و آسان از خرید اینترنتی برای شما فراهم شود. محصولات با دقت انتخاب می‌شوند تا پاسخگوی سلیقه‌ها و سبک‌های مختلف باشند.
+</p>
+
+<p>
+رضایت و اعتماد شما برای ما اهمیت زیادی دارد؛ به همین دلیل تلاش می‌کنیم خریدی ساده، مطمئن و دلنشین را در کنار پشتیبانی مناسب و ارسال منظم برای شما فراهم کنیم.
+</p>
+
+<p>
+از اینکه LORA COLLECTION را برای انتخاب محصولات و همراهی با استایل خود انتخاب کرده‌اید، سپاسگزاریم. امیدواریم هر انتخاب از LORA COLLECTION، بخش زیبایی از داستان شما باشد.
+</p>
 
 </div>
 
 </section>
+
+
+<!-- ================= TRUST ================= -->
+
+<section class="trust-section">
+
+<h2 class="section-title">
+چرا LORA COLLECTION؟
+</h2>
+
+<div class="trust-boxes">
+
+<div class="trust-box">
+<div class="trust-icon">🔒</div>
+<h3>خرید مطمئن</h3>
+<p>تلاش ما ایجاد تجربه‌ای امن و آسان برای خرید شماست.</p>
+</div>
+
+<div class="trust-box">
+<div class="trust-icon">📦</div>
+<h3>ارسال سفارش</h3>
+<p>سفارش‌ها با دقت آماده و برای شما ارسال می‌شوند.</p>
+</div>
+
+<div class="trust-box">
+<div class="trust-icon">💬</div>
+<h3>پشتیبانی</h3>
+<p>برای پاسخگویی و پیگیری سفارش در کنار شما هستیم.</p>
+</div>
+
+<div class="trust-box">
+<div class="trust-icon">✨</div>
+<h3>محصولات منتخب</h3>
+<p>محصولات با توجه به کیفیت، زیبایی و سلیقه روز انتخاب می‌شوند.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact-section" id="contact">
+
+<h2 class="section-title">
+تماس با ما
+</h2>
+
+<div class="contact">
+
+<div class="contact-box">
+<h3>📞 تلفن</h3>
+<p>
+شماره تماس فروشگاه
+</p>
+</div>
+
+<div class="contact-box">
+<h3>💬 پیام‌رسان</h3>
+<p>
+تلگرام و پیام‌رسان‌های LORA COLLECTION
+</p>
+</div>
+
+<div class="contact-box">
+<h3>📷 شبکه اجتماعی</h3>
+<p>
+اینستاگرام LORA COLLECTION
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SYMBOLS ================= -->
+
+<div class="symbols">
+
+<h2>
+نمادها و مجوزها
+</h2>
+
+<div class="samandehi-box">
+
+<strong>نماد ساماندهی</strong>
+
+<span>
+کد رسمی نماد پس از دریافت درج می‌شود
+</span>
+
+</div>
+
+</div>
 
 </main>
 
@@ -833,10 +1081,28 @@ LORA COLLECTION با عشق به ظرافت،
 
 </div>
 
-<div class="cart-total" id="cartTotal">
-</div>
+<div class="cart-total" id="cartTotal"></div>
 
 </div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="footer">
+
+<h3>
+LORA COLLECTION
+</h3>
+
+<p>
+زیبایی، بخشی از داستان توست.
+</p>
+
+<div class="copyright">
+کلیه حقوق مادی و معنوی این وب‌سایت متعلق به LORA COLLECTION می‌باشد.
+</div>
+
+</footer>
 
 
 <!-- ================= ADMIN ================= -->
@@ -855,9 +1121,7 @@ LORA COLLECTION با عشق به ظرافت،
 
 <div class="form-group">
 
-<label>
-نام محصول
-</label>
+<label>نام محصول</label>
 
 <input
 type="text"
@@ -867,12 +1131,9 @@ placeholder="مثلاً مانتوی مشکی"
 
 </div>
 
-
 <div class="form-group">
 
-<label>
-قیمت
-</label>
+<label>قیمت</label>
 
 <input
 type="text"
@@ -882,12 +1143,9 @@ placeholder="مثلاً ۱,۵۰۰,۰۰۰ تومان"
 
 </div>
 
-
 <div class="form-group">
 
-<label>
-دسته‌بندی
-</label>
+<label>دسته‌بندی</label>
 
 <select id="adminCategory">
 
@@ -900,12 +1158,9 @@ placeholder="مثلاً ۱,۵۰۰,۰۰۰ تومان"
 
 </div>
 
-
 <div class="form-group">
 
-<label>
-آدرس عکس محصول
-</label>
+<label>آدرس عکس محصول</label>
 
 <input
 type="text"
@@ -915,12 +1170,9 @@ placeholder="آدرس تصویر محصول"
 
 </div>
 
-
 <div class="form-group">
 
-<label>
-توضیحات محصول
-</label>
+<label>توضیحات محصول</label>
 
 <textarea
 id="adminDescription"
@@ -929,11 +1181,9 @@ placeholder="توضیحات محصول"
 
 </div>
 
-
 <button class="admin-button" id="addProduct">
 + اضافه کردن محصول
 </button>
-
 
 <div class="admin-products">
 
@@ -950,26 +1200,9 @@ placeholder="توضیحات محصول"
 </section>
 
 
-<!-- ================= FOOTER ================= -->
-
-<footer id="footer">
-
-<h3>
-LORA COLLECTION
-</h3>
-
-<p>
-زیبایی، بخشی از داستان توست.
-</p>
-
-</footer>
-
-
 <script>
 
 document.addEventListener("DOMContentLoaded",function(){
-
-/* عناصر */
 
 const menuButton=document.getElementById("menuButton");
 const menuClose=document.getElementById("menuClose");
@@ -987,289 +1220,249 @@ const cartPanel=document.getElementById("cartPanel");
 const store=document.getElementById("store");
 const header=document.getElementById("header");
 const footer=document.getElementById("footer");
-
 const adminPage=document.getElementById("adminPage");
 
 
-/* ================= MENU ================= */
+/* MENU */
 
 menuButton.addEventListener("click",function(){
-
-sideMenu.classList.add("open");
-menuOverlay.classList.add("show");
-
+    sideMenu.classList.add("open");
+    menuOverlay.classList.add("show");
 });
 
 function closeMenu(){
-
-sideMenu.classList.remove("open");
-menuOverlay.classList.remove("show");
-
+    sideMenu.classList.remove("open");
+    menuOverlay.classList.remove("show");
 }
 
 menuClose.addEventListener("click",closeMenu);
 menuOverlay.addEventListener("click",closeMenu);
 
 document.querySelectorAll(".side-menu a").forEach(function(link){
-
-link.addEventListener("click",closeMenu);
-
+    link.addEventListener("click",closeMenu);
 });
 
 
-/* ================= SEARCH ================= */
+/* SEARCH */
 
 searchButton.addEventListener("click",function(){
 
-searchBox.classList.toggle("show");
+    searchBox.classList.toggle("show");
 
-if(searchBox.classList.contains("show")){
-searchInput.focus();
-}
+    if(searchBox.classList.contains("show")){
+        searchInput.focus();
+    }
 
 });
 
 searchInput.addEventListener("input",function(){
 
-const text=searchInput.value.toLowerCase().trim();
+    const text=searchInput.value.toLowerCase().trim();
 
-document.querySelectorAll(".product-card").forEach(function(card){
+    document.querySelectorAll(".product-card").forEach(function(card){
 
-const name=card
-.querySelector(".product-name")
-.textContent
-.toLowerCase();
+        const name=card
+        .querySelector(".product-name")
+        .textContent
+        .toLowerCase();
 
-if(name.includes(text)){
-card.style.display="";
-}else{
-card.style.display="none";
-}
+        card.style.display=name.includes(text) ? "" : "none";
 
-});
+    });
 
 });
 
 
-/* ================= CART ================= */
+/* CART */
 
 let cart=[];
 
 cartButton.addEventListener("click",function(){
-cartPanel.classList.add("open");
+    cartPanel.classList.add("open");
 });
 
 cartClose.addEventListener("click",function(){
-cartPanel.classList.remove("open");
+    cartPanel.classList.remove("open");
 });
 
 
 function renderCart(){
 
-const cartItems=document.getElementById("cartItems");
-const cartTotal=document.getElementById("cartTotal");
+    const cartItems=document.getElementById("cartItems");
+    const cartTotal=document.getElementById("cartTotal");
 
-if(cart.length===0){
+    if(cart.length===0){
 
-cartItems.innerHTML=
-'<p style="margin-top:20px;color:#777">سبد خرید شما خالی است.</p>';
+        cartItems.innerHTML=
+        '<p style="margin-top:20px;color:#777">سبد خرید شما خالی است.</p>';
 
-cartTotal.textContent="";
+        cartTotal.textContent="";
+        return;
+    }
 
-return;
+    cartItems.innerHTML="";
 
-}
+    let count=0;
 
-cartItems.innerHTML="";
+    cart.forEach(function(item,index){
 
-let count=0;
+        count+=item.quantity;
 
-cart.forEach(function(item,index){
+        const div=document.createElement("div");
 
-count+=item.quantity;
+        div.className="cart-item";
 
-const div=document.createElement("div");
+        div.innerHTML=
+        '<div class="cart-item-name">'+item.name+'</div>'+
+        '<div>'+item.price+'</div>'+
+        '<div class="cart-controls">'+
+        '<button data-index="'+index+'" data-action="minus">−</button>'+
+        '<span>'+item.quantity+'</span>'+
+        '<button data-index="'+index+'" data-action="plus">+</button>'+
+        '<button data-index="'+index+'" data-action="remove">حذف</button>'+
+        '</div>';
 
-div.className="cart-item";
+        cartItems.appendChild(div);
 
-div.innerHTML=
+    });
 
-'<div class="cart-item-name">'+
-item.name+
-'</div>'+
-
-'<div>'+
-item.price+
-'</div>'+
-
-'<div class="cart-controls">'+
-
-'<button data-index="'+index+'" data-action="minus">−</button>'+
-
-'<span>'+item.quantity+'</span>'+
-
-'<button data-index="'+index+'" data-action="plus">+</button>'+
-
-'<button data-index="'+index+'" data-action="remove">حذف</button>'+
-
-'</div>';
-
-cartItems.appendChild(div);
-
-});
-
-cartTotal.textContent=
-"تعداد محصولات: "+count;
-
+    cartTotal.textContent="تعداد محصولات: "+count;
 }
 
 
 document.getElementById("cartItems").addEventListener("click",function(event){
 
-const button=event.target.closest("button");
+    const button=event.target.closest("button");
 
-if(!button)return;
+    if(!button)return;
 
-const index=Number(button.dataset.index);
-const action=button.dataset.action;
+    const index=Number(button.dataset.index);
+    const action=button.dataset.action;
 
-if(action==="plus"){
-cart[index].quantity++;
-}
+    if(action==="plus"){
+        cart[index].quantity++;
+    }
 
-if(action==="minus"){
+    if(action==="minus"){
 
-cart[index].quantity--;
+        cart[index].quantity--;
 
-if(cart[index].quantity<=0){
-cart.splice(index,1);
-}
+        if(cart[index].quantity<=0){
+            cart.splice(index,1);
+        }
+    }
 
-}
+    if(action==="remove"){
+        cart.splice(index,1);
+    }
 
-if(action==="remove"){
-cart.splice(index,1);
-}
-
-renderCart();
+    renderCart();
 
 });
 
 
-/* ================= PRODUCTS ================= */
+/* PRODUCTS */
 
 let products=JSON.parse(
-localStorage.getItem("lora_products") || "[]"
+    localStorage.getItem("lora_products") || "[]"
 );
 
 
 function saveProducts(){
 
-localStorage.setItem(
-"lora_products",
-JSON.stringify(products)
-);
+    localStorage.setItem(
+        "lora_products",
+        JSON.stringify(products)
+    );
 
 }
 
 
 function renderProducts(){
 
-const productList=document.getElementById("productList");
+    const productList=document.getElementById("productList");
 
-productList.innerHTML="";
+    productList.innerHTML="";
 
-if(products.length===0){
+    if(products.length===0){
 
-productList.innerHTML=
-'<p style="grid-column:1/-1;text-align:center;color:#777;padding:40px;">هنوز محصولی اضافه نشده است.</p>';
+        productList.innerHTML=
+        '<p style="grid-column:1/-1;text-align:center;color:#777;padding:40px;">هنوز محصولی اضافه نشده است.</p>';
 
-return;
-
-}
-
-
-products.forEach(function(product,index){
-
-const card=document.createElement("div");
-
-card.className="product product-card";
-
-let image="🛍️";
-
-if(product.image){
-
-image=
-'<img src="'+product.image+'" alt="'+product.name+'">';
-
-}
+        return;
+    }
 
 
-card.innerHTML=
+    products.forEach(function(product,index){
 
-'<div class="product-image">'+
-image+
-'</div>'+
+        const card=document.createElement("div");
 
-'<div class="product-info">'+
+        card.className="product product-card";
 
-'<div class="product-name">'+
-product.name+
-'</div>'+
+        let image="🛍️";
 
-'<div class="product-category">'+
-product.category+
-'</div>'+
+        if(product.image){
 
-'<div class="product-price">'+
-product.price+
-'</div>'+
+            image=
+            '<img src="'+product.image+'" alt="'+product.name+'">';
 
-'<button class="add-cart" data-index="'+index+'">'+
-'افزودن به سبد'+
-'</button>'+
-
-'</div>';
+        }
 
 
-productList.appendChild(card);
+        card.innerHTML=
 
-});
+        '<div class="product-image">'+image+'</div>'+
+
+        '<div class="product-info">'+
+
+        '<div class="product-name">'+product.name+'</div>'+
+
+        '<div class="product-category">'+product.category+'</div>'+
+
+        '<div class="product-price">'+product.price+'</div>'+
+
+        '<button class="add-cart" data-index="'+index+'">'+
+        'افزودن به سبد'+
+        '</button>'+
+
+        '</div>';
 
 
-document.querySelectorAll(".add-cart").forEach(function(button){
+        productList.appendChild(card);
 
-button.addEventListener("click",function(){
+    });
 
-const index=Number(button.dataset.index);
 
-const product=products[index];
+    document.querySelectorAll(".add-cart").forEach(function(button){
 
-const existing=cart.find(function(item){
-return item.name===product.name;
-});
+        button.addEventListener("click",function(){
 
-if(existing){
+            const index=Number(button.dataset.index);
+            const product=products[index];
 
-existing.quantity++;
+            const existing=cart.find(function(item){
+                return item.name===product.name;
+            });
 
-}else{
+            if(existing){
+                existing.quantity++;
+            }else{
 
-cart.push({
-name:product.name,
-price:product.price,
-quantity:1
-});
+                cart.push({
+                    name:product.name,
+                    price:product.price,
+                    quantity:1
+                });
 
-}
+            }
 
-renderCart();
+            renderCart();
 
-cartPanel.classList.add("open");
+            cartPanel.classList.add("open");
 
-});
+        });
 
-});
+    });
 
 }
 
@@ -1278,64 +1471,53 @@ renderProducts();
 renderCart();
 
 
-/* ================= ADMIN ================= */
-
-/*
-ورود مدیریت:
-Ctrl + Shift + L
-
-رمز:
-LORA1405
-*/
+/* ADMIN */
 
 function openAdmin(){
 
-const password=prompt(
-"رمز ورود مدیریت را وارد کنید:"
-);
+    const password=prompt("رمز ورود مدیریت را وارد کنید:");
 
-if(password!=="LORA1405"){
+    if(password!=="LORA1405"){
 
-alert("رمز ورود اشتباه است.");
-return;
+        alert("رمز ورود اشتباه است.");
+        return;
 
-}
+    }
 
+    store.style.display="none";
+    header.style.display="none";
+    footer.style.display="none";
+    searchBox.classList.remove("show");
 
-store.style.display="none";
-header.style.display="none";
-footer.style.display="none";
-searchBox.classList.remove("show");
+    adminPage.classList.add("show");
 
-adminPage.classList.add("show");
-
-renderAdminProducts();
+    renderAdminProducts();
 
 }
 
 
 function closeAdmin(){
 
-adminPage.classList.remove("show");
+    adminPage.classList.remove("show");
 
-store.style.display="block";
-header.style.display="flex";
-footer.style.display="block";
+    store.style.display="block";
+    header.style.display="flex";
+    footer.style.display="block";
 
 }
 
 
 document.addEventListener("keydown",function(event){
 
-if(
-event.ctrlKey &&
-event.shiftKey &&
-event.key.toLowerCase()==="l"
-){
+    if(
+        event.ctrlKey &&
+        event.shiftKey &&
+        event.key.toLowerCase()==="l"
+    ){
 
-openAdmin();
+        openAdmin();
 
-}
+    }
 
 });
 
@@ -1344,148 +1526,123 @@ document.getElementById("closeAdmin")
 .addEventListener("click",closeAdmin);
 
 
-/* ================= ADD PRODUCT ================= */
+/* ADD PRODUCT */
 
 document.getElementById("addProduct")
 .addEventListener("click",function(){
 
-const name=document
-.getElementById("adminName")
-.value
-.trim();
+    const name=document.getElementById("adminName").value.trim();
+    const price=document.getElementById("adminPrice").value.trim();
+    const category=document.getElementById("adminCategory").value;
+    const image=document.getElementById("adminImage").value.trim();
+    const description=document.getElementById("adminDescription").value.trim();
 
-const price=document
-.getElementById("adminPrice")
-.value
-.trim();
+    if(name===""){
 
-const category=document
-.getElementById("adminCategory")
-.value;
+        alert("نام محصول را وارد کنید.");
+        return;
 
-const image=document
-.getElementById("adminImage")
-.value
-.trim();
-
-const description=document
-.getElementById("adminDescription")
-.value
-.trim();
+    }
 
 
-if(name===""){
+    products.push({
 
-alert("نام محصول را وارد کنید.");
-return;
+        name:name,
+        price:price || "قیمت اعلام نشده",
+        category:category,
+        image:image,
+        description:description
 
-}
+    });
 
 
-products.push({
+    saveProducts();
 
-name:name,
+    renderProducts();
+    renderAdminProducts();
 
-price:price || "قیمت اعلام نشده",
 
-category:category,
+    document.getElementById("adminName").value="";
+    document.getElementById("adminPrice").value="";
+    document.getElementById("adminImage").value="";
+    document.getElementById("adminDescription").value="";
 
-image:image,
 
-description:description
+    alert("محصول با موفقیت اضافه شد.");
 
 });
 
 
-saveProducts();
-
-renderProducts();
-
-renderAdminProducts();
-
-
-document.getElementById("adminName").value="";
-document.getElementById("adminPrice").value="";
-document.getElementById("adminImage").value="";
-document.getElementById("adminDescription").value="";
-
-
-alert("محصول با موفقیت اضافه شد.");
-
-});
-
-
-/* ================= ADMIN LIST ================= */
+/* ADMIN LIST */
 
 function renderAdminProducts(){
 
-const list=document.getElementById("adminProductList");
+    const list=document.getElementById("adminProductList");
 
-list.innerHTML="";
+    list.innerHTML="";
 
-if(products.length===0){
+    if(products.length===0){
 
-list.innerHTML=
-'<p style="margin-top:20px;color:#777">محصولی ثبت نشده است.</p>';
+        list.innerHTML=
+        '<p style="margin-top:20px;color:#777">محصولی ثبت نشده است.</p>';
 
-return;
+        return;
+
+    }
+
+
+    products.forEach(function(product,index){
+
+        const row=document.createElement("div");
+
+        row.className="admin-product";
+
+        row.innerHTML=
+
+        '<div>'+
+        '<strong>'+product.name+'</strong>'+
+        '<br>'+
+        '<small>'+product.price+'</small>'+
+        '<br>'+
+        '<small>'+product.category+'</small>'+
+        '</div>'+
+
+        '<button class="delete-button" data-index="'+index+'">'+
+        'حذف'+
+        '</button>';
+
+
+        list.appendChild(row);
+
+    });
+
+
+    document.querySelectorAll(".delete-button")
+    .forEach(function(button){
+
+        button.addEventListener("click",function(){
+
+            const index=Number(button.dataset.index);
+
+            if(confirm("این محصول حذف شود؟")){
+
+                products.splice(index,1);
+
+                saveProducts();
+
+                renderProducts();
+                renderAdminProducts();
+
+            }
+
+        });
+
+    });
 
 }
 
-
-products.forEach(function(product,index){
-
-const row=document.createElement("div");
-
-row.className="admin-product";
-
-row.innerHTML=
-
-'<div>'+
-'<strong>'+product.name+'</strong>'+
-'<br>'+
-'<small>'+product.price+'</small>'+
-'<br>'+
-'<small>'+product.category+'</small>'+
-'</div>'+
-
-'<button class="delete-button" data-index="'+index+'">'+
-'حذف'+
-'</button>';
-
-list.appendChild(row);
-
 });
-
-
-document.querySelectorAll(".delete-button")
-.forEach(function(button){
-
-button.addEventListener("click",function(){
-
-const index=Number(button.dataset.index);
-
-if(confirm("این محصول حذف شود؟")){
-
-products.splice(index,1);
-
-saveProducts();
-
-renderProducts();
-
-renderAdminProducts();
-
-}
-
-});
-
-});
-
-}
-
-});
-
 </script>
 
 </body>
-    </html>
+</html>
