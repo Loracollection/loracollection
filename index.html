@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>LORA COLLECTION</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -16,13 +13,12 @@
 }
 
 body{
-    background:#ffffff;
+    background:#fff;
     color:#222;
-    font-family:Tahoma, Arial, sans-serif;
+    font-family:Tahoma,Arial,sans-serif;
 }
 
 /* HEADER */
-
 header{
     height:85px;
     border-bottom:1px solid #f1dfe5;
@@ -32,8 +28,6 @@ header{
     padding:0 25px;
     position:relative;
 }
-
-/* سه خط */
 
 .menu{
     width:35px;
@@ -47,8 +41,6 @@ header{
     margin:6px 0;
 }
 
-/* LOGO */
-
 .logo{
     position:absolute;
     left:50%;
@@ -59,69 +51,46 @@ header{
 .logo-design{
     position:relative;
     width:115px;
-    height:62px;
+    height:55px;
     margin:auto;
 }
 
-/* L بزرگ مشکی */
-
 .black-l{
     position:absolute;
-    left:25px;
-    top:-4px;
+    left:30px;
+    top:-5px;
     font-family:Georgia,serif;
-    font-size:62px;
-    line-height:60px;
+    font-size:58px;
     font-weight:bold;
     color:#222;
 }
 
-/* L صورتی متصل به قسمت پایین L */
-
 .pink-l{
     position:absolute;
-    left:43px;
-    top:10px;
+    left:47px;
+    top:8px;
     font-family:"Brush Script MT",cursive;
-    font-size:48px;
-    line-height:48px;
-    font-weight:normal;
+    font-size:43px;
     color:#d58ca2;
-    z-index:2;
 }
 
-/* پاپیون سمت چپ */
-
-.bow-left{
-    position:absolute;
-    left:0;
-    top:23px;
-    color:#d58ca2;
-    font-size:17px;
-}
-
-/* پاپیون سمت راست */
-
+.bow-left,
 .bow-right{
     position:absolute;
-    right:0;
-    top:23px;
-    color:#d58ca2;
-    font-size:17px;
+    top:22px;
+    font-size:15px;
 }
 
-/* نوشته زیر لوگو */
+.bow-left{left:0;}
+.bow-right{right:0;}
 
 .logo-name{
     font-family:"Times New Roman",Georgia,serif;
-    font-size:10px;
+    font-size:9px;
     letter-spacing:3px;
-    color:#222;
-    margin-top:0;
 }
 
 /* ICONS */
-
 .icons{
     display:flex;
     gap:18px;
@@ -133,7 +102,6 @@ header{
 }
 
 /* HERO */
-
 .hero{
     min-height:520px;
     background:#fff7f9;
@@ -144,510 +112,44 @@ header{
     padding:40px 20px;
 }
 
-.hero-small{
-    color:#d58ca2;
-    font-size:11px;
-    letter-spacing:3px;
-    margin-bottom:25px;
-}
-
-.hero h1{
-    font-family:Georgia,serif;
-    font-size:45px;
-    letter-spacing:5px;
+/* لوگوی داخل صفحه اصلی */
+.hero-logo{
+    text-align:center;
     margin-bottom:30px;
 }
 
-.slogan{
-    font-family:Georgia,serif;
-    font-size:20px;
-    line-height:2.2;
-    color:#444;
+.hero-logo-mark{
+    height:68px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
 }
 
-/* BUTTON */
+.hero-black-l{
+    font-family:Georgia,serif;
+    font-size:64px;
+    font-weight:bold;
+    color:#222;
+    line-height:1;
+}
 
-.button{
-    display:inline-block;
-    margin-top:30px;
-    padding:13px 35px;
-    background:#222;
-    color:white;
-    text-decoration:none;
+.hero-pink-l{
+    font-family:"Brush Script MT",cursive;
+    font-size:49px;
+    color:#d58ca2;
+    line-height:1;
+    margin-left:-30px;
+    margin-top:13px;
+}
+
+.hero-bow{
+    font-size:18px;
+}
+
+.hero-logo-name{
+    font-family:"Times New Roman",Georgia,serif;
     font-size:13px;
-}
-
-/* SECTIONS */
-
-section{
-    padding:65px 20px;
-}
-
-.title{
-    text-align:center;
-    font-family:Georgia,serif;
-    font-size:28px;
-    margin-bottom:35px;
-}
-
-/* CATEGORIES */
-
-.categories{
-    max-width:1000px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:15px;
-}
-
-.category{
-    height:170px;
-    background:#fff8fa;
-    border:1px solid #f0dce3;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.category-icon{
-    font-size:35px;
-    margin-bottom:12px;
-}
-
-.category-name{
-    font-family:Georgia,serif;
-    font-size:17px;
-}
-
-/* DISCOUNT */
-
-.discount{
-    background:#fff7f9;
-    text-align:center;
-}
-
-.discount h2{
-    font-family:Georgia,serif;
-    font-size:30px;
-    margin-bottom:15px;
-}
-
-.discount p{
-    color:#777;
-}
-
-/* PRODUCTS */
-
-.products{
-    max-width:1000px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.product{
-    height:280px;
-    border:1px solid #f0dce3;
-    background:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.product-placeholder{
-    font-size:45px;
-}
-
-.product-name{
-    margin-top:15px;
-    font-family:Georgia,serif;
-}
-
-/* FOOTER */
-
-footer{
-    background:#222;
-    color:#fff;
-    text-align:center;
-    padding:40px 20px;
-}
-
-footer h3{
-    font-family:Georgia,serif;
     letter-spacing:4px;
-}
-
-footer p{
-    margin-top:12px;
-    color:#ccc;
-    font-size:12px;
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-    .categories{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .products{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:500px){
-
-    header{
-        height:75px;
-        padding:0 15px;
-    }
-
-    .logo-design{
-        transform:scale(.85);
-    }
-
-    .hero{
-        min-height:470px;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
-
-    .slogan{
-        font-size:17px;
-    }
-
-    .categories{
-        gap:10px;
-    }
-
-    .category{
-        height:145px;
-    }
-
-    .products{
-        gap:10px;
-    }
-
-}
-
-</style>
-</head>
-
-
-<body>
-
-
-<!-- HEADER -->
-
-<header>
-
-<div class="menu">
-
-<span></span>
-<span></span>
-<span></span>
-
-</div>
-
-
-<!-- لوگوی LORA COLLECTION -->
-
-<div class="logo">
-
-<div class="logo-design">
-
-<div class="bow-left">🎀</div>
-
-<div class="black-l">L</div>
-
-<div class="pink-l">L</div>
-
-<div class="bow-right">🎀</div>
-
-</div>
-
-<div class="logo-name">
-LORA COLLECTION
-</div>
-
-</div>
-
-
-<div class="icons">
-
-<div class="icon">⌕</div>
-
-<div class="icon">🛒</div>
-
-</div>
-
-</header>
-
-
-
-<!-- صفحه اصلی -->
-
-<div class="hero">
-
-<div>
-
-<div class="hero-small">
-WELCOME TO LORA COLLECTION
-</div>
-
-<h1>
-LORA COLLECTION
-</h1>
-
-<div class="slogan">
-
-لورا کالکشن،<br>
-سادگی، آغاز زیبایی است؛<br>
-زیبایی، بخشی از داستان توست.
-
-</div>
-
-<a href="#products" class="button">
-مشاهده محصولات
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- دسته بندی -->
-
-<section>
-
-<h2 class="title">
-دسته‌بندی‌ها
-</h2>
-
-
-<div class="categories">
-
-
-<div class="category">
-
-<div>
-
-<div class="category-icon">👗</div>
-
-<div class="category-name">
-لباس
-</div>
-
-</div>
-
-</div>
-
-
-<div class="category">
-
-<div>
-
-<div class="category-icon">💎</div>
-
-<div class="category-name">
-اکسسوری
-</div>
-
-</div>
-
-</div>
-
-
-<div class="category">
-
-<div>
-
-<div class="category-icon">👜</div>
-
-<div class="category-name">
-کیف
-</div>
-
-</div>
-
-</div>
-
-
-<div class="category">
-
-<div>
-
-<div class="category-icon">💄</div>
-
-<div class="category-name">
-لوازم آرایشی
-</div>
-
-</div>
-
-</div>
-
-
-<div class="category">
-
-<div>
-
-<div class="category-icon">🏷️</div>
-
-<div class="category-name">
-تخفیفات
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- محصولات -->
-
-<section id="products">
-
-<h2 class="title">
-محصولات جدید
-</h2>
-
-
-<div class="products">
-
-
-<div class="product">
-
-<div>
-
-<div class="product-placeholder">👗</div>
-
-<div class="product-name">
-لباس
-</div>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<div>
-
-<div class="product-placeholder">👜</div>
-
-<div class="product-name">
-کیف
-</div>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<div>
-
-<div class="product-placeholder">💎</div>
-
-<div class="product-name">
-اکسسوری
-</div>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<div>
-
-<div class="product-placeholder">💄</div>
-
-<div class="product-name">
-لوازم آرایشی
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- تخفیفات -->
-
-<section class="discount">
-
-<h2>
-تخفیفات LORA
-</h2>
-
-<p>
-محصولات منتخب با قیمت ویژه
-</p>
-
-<a href="#products" class="button">
-مشاهده تخفیفات
-</a>
-
-</section>
-
-
-
-<!-- درباره -->
-
-<section>
-
-<h2 class="title">
-درباره LORA COLLECTION
-</h2>
-
-<p style="text-align:center;max-width:700px;margin:auto;line-height:2;color:#777;">
-
-LORA COLLECTION با عشق به ظرافت،
-سادگی و انتخاب‌های خاص شکل گرفته است.
-
-</p>
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<h3>
-LORA COLLECTION
-</h3>
-
-<p>
-زیبایی، بخشی از داستان توست.
-</p>
-
-</footer>
-
-
-</body>
-    </html>
+    color:#222;
+    margin-top:5
