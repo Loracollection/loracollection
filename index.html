@@ -47,7 +47,7 @@ header{
     margin:6px 0;
 }
 
-/* لوگو */
+/* LOGO */
 
 .logo{
     position:absolute;
@@ -56,41 +56,71 @@ header{
     text-align:center;
 }
 
-.logo-l{
+.logo-design{
     position:relative;
-    height:48px;
-    width:65px;
+    width:115px;
+    height:62px;
     margin:auto;
 }
 
+/* L بزرگ مشکی */
+
 .black-l{
     position:absolute;
-    left:4px;
-    top:0;
+    left:25px;
+    top:-4px;
     font-family:Georgia,serif;
-    font-size:52px;
+    font-size:62px;
+    line-height:60px;
     font-weight:bold;
-    line-height:48px;
+    color:#222;
 }
+
+/* L صورتی متصل به قسمت پایین L */
 
 .pink-l{
     position:absolute;
-    left:20px;
+    left:43px;
     top:10px;
-    font-family:cursive;
-    font-size:38px;
+    font-family:"Brush Script MT",cursive;
+    font-size:48px;
+    line-height:48px;
+    font-weight:normal;
     color:#d58ca2;
-    line-height:35px;
+    z-index:2;
 }
+
+/* پاپیون سمت چپ */
+
+.bow-left{
+    position:absolute;
+    left:0;
+    top:23px;
+    color:#d58ca2;
+    font-size:17px;
+}
+
+/* پاپیون سمت راست */
+
+.bow-right{
+    position:absolute;
+    right:0;
+    top:23px;
+    color:#d58ca2;
+    font-size:17px;
+}
+
+/* نوشته زیر لوگو */
 
 .logo-name{
-    font-family:Georgia,serif;
-    font-size:9px;
+    font-family:"Times New Roman",Georgia,serif;
+    font-size:10px;
     letter-spacing:3px;
-    margin-top:2px;
+    color:#222;
+    margin-top:0;
 }
 
-/* آیکون ها */
+/* ICONS */
 
 .icons{
     display:flex;
@@ -277,6 +307,10 @@ footer p{
         padding:0 15px;
     }
 
+    .logo-design{
+        transform:scale(.85);
+    }
+
     .hero{
         min-height:470px;
     }
@@ -323,13 +357,19 @@ footer p{
 </div>
 
 
+<!-- لوگوی LORA COLLECTION -->
+
 <div class="logo">
 
-<div class="logo-l">
+<div class="logo-design">
+
+<div class="bow-left">🎀</div>
 
 <div class="black-l">L</div>
 
 <div class="pink-l">L</div>
+
+<div class="bow-right">🎀</div>
 
 </div>
 
