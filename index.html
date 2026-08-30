@@ -6,15 +6,9 @@
 <title>LORA COLLECTION</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-html{
-    scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
     font-family:Tahoma,Arial,sans-serif;
@@ -22,12 +16,9 @@ body{
     color:#222;
 }
 
-button,input,select,textarea{
-    font-family:inherit;
-}
+button,input,select,textarea{font-family:inherit}
 
-/* ================= HEADER ================= */
-
+/* HEADER */
 header{
     height:80px;
     display:flex;
@@ -56,9 +47,7 @@ header{
     margin:6px 0;
 }
 
-.header-logo{
-    text-align:center;
-}
+.header-logo{text-align:center}
 
 .l-logo{
     position:relative;
@@ -103,8 +92,7 @@ header{
     cursor:pointer;
 }
 
-/* ================= MENU ================= */
-
+/* MENU */
 .menu-overlay{
     display:none;
     position:fixed;
@@ -113,9 +101,7 @@ header{
     z-index:200;
 }
 
-.menu-overlay.show{
-    display:block;
-}
+.menu-overlay.show{display:block}
 
 .side-menu{
     position:fixed;
@@ -130,9 +116,7 @@ header{
     transition:.3s;
 }
 
-.side-menu.open{
-    right:0;
-}
+.side-menu.open{right:0}
 
 .menu-close{
     border:0;
@@ -150,12 +134,7 @@ header{
     border-bottom:1px solid #f2e0e5;
 }
 
-.side-menu a:hover{
-    color:#d58ca2;
-}
-
-/* ================= SEARCH ================= */
-
+/* SEARCH */
 .search-box{
     display:none;
     padding:18px;
@@ -163,9 +142,7 @@ header{
     border-bottom:1px solid #f1dce3;
 }
 
-.search-box.show{
-    display:block;
-}
+.search-box.show{display:block}
 
 .search-box input{
     display:block;
@@ -177,8 +154,7 @@ header{
     outline:none;
 }
 
-/* ================= HERO ================= */
-
+/* HERO */
 .hero{
     min-height:520px;
     background:#fff7f9;
@@ -189,9 +165,7 @@ header{
     padding:50px 20px;
 }
 
-.main-logo{
-    margin-bottom:30px;
-}
+.main-logo{margin-bottom:30px}
 
 .main-logo-top{
     position:relative;
@@ -251,11 +225,8 @@ header{
     font-size:13px;
 }
 
-/* ================= SECTION ================= */
-
-section{
-    padding:65px 20px;
-}
+/* SECTIONS */
+section{padding:65px 20px}
 
 .section-title{
     text-align:center;
@@ -264,8 +235,7 @@ section{
     margin-bottom:35px;
 }
 
-/* ================= CATEGORIES ================= */
-
+/* CATEGORIES */
 .categories{
     max-width:1100px;
     margin:auto;
@@ -286,9 +256,7 @@ section{
     transition:.2s;
 }
 
-.category:hover{
-    transform:translateY(-3px);
-}
+.category:hover{transform:translateY(-3px)}
 
 .category-icon{
     font-size:38px;
@@ -300,8 +268,7 @@ section{
     font-size:17px;
 }
 
-/* ================= PRODUCTS ================= */
-
+/* PRODUCTS */
 .products{
     max-width:1100px;
     margin:auto;
@@ -363,8 +330,7 @@ section{
     cursor:pointer;
 }
 
-/* ================= DISCOUNT ================= */
-
+/* DISCOUNT */
 .discount{
     background:#fff7f9;
     text-align:center;
@@ -376,15 +342,10 @@ section{
     margin-bottom:15px;
 }
 
-.discount p{
-    color:#777;
-}
+.discount p{color:#777}
 
-/* ================= ABOUT ================= */
-
-.about-section{
-    background:#fff;
-}
+/* ABOUT */
+.about-section{background:#fff}
 
 .about{
     max-width:850px;
@@ -401,11 +362,8 @@ section{
     margin-bottom:30px;
 }
 
-/* ================= TRUST ================= */
-
-.trust-section{
-    background:#fff7f9;
-}
+/* TRUST */
+.trust-section{background:#fff7f9}
 
 .trust-boxes{
     max-width:1000px;
@@ -439,17 +397,14 @@ section{
     line-height:1.8;
 }
 
-/* ================= CONTACT ================= */
-
-.contact-section{
-    background:#fff;
-}
+/* CONTACT */
+.contact-section{background:#fff}
 
 .contact{
     max-width:850px;
     margin:auto;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:1fr 1fr;
     gap:20px;
 }
 
@@ -461,17 +416,62 @@ section{
 
 .contact-box h3{
     font-family:Georgia,serif;
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
-.contact-box p{
-    color:#777;
-    font-size:13px;
-    line-height:2;
+.phone-link{
+    color:#333;
+    text-decoration:none;
+    direction:ltr;
+    display:inline-block;
+    font-size:15px;
 }
 
-/* ================= SYMBOLS ================= */
+/* SOCIAL ICONS */
+.social-box{
+    grid-column:1 / -1;
+}
 
+.social-icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:22px;
+    margin-top:10px;
+}
+
+.social-link{
+    width:54px;
+    height:54px;
+    border:1px solid #ead5dc;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    background:#fff;
+    transition:.2s;
+}
+
+.social-link:hover{
+    transform:translateY(-3px);
+    background:#fff7f9;
+}
+
+.social-link svg{
+    width:28px;
+    height:28px;
+}
+
+.social-id{
+    margin-top:14px;
+    font-family:Georgia,serif;
+    letter-spacing:1px;
+    color:#555;
+    direction:ltr;
+}
+
+/* SYMBOLS */
 .symbols{
     text-align:center;
     padding:45px 20px;
@@ -499,12 +499,7 @@ section{
     font-size:12px;
 }
 
-.samandehi-box strong{
-    color:#555;
-}
-
-/* ================= CART ================= */
-
+/* CART */
 .cart-panel{
     position:fixed;
     top:0;
@@ -520,9 +515,7 @@ section{
     overflow-y:auto;
 }
 
-.cart-panel.open{
-    left:0;
-}
+.cart-panel.open{left:0}
 
 .cart-close{
     border:0;
@@ -563,8 +556,7 @@ section{
     font-weight:bold;
 }
 
-/* ================= FOOTER ================= */
-
+/* FOOTER */
 footer{
     background:#222;
     color:#fff;
@@ -592,8 +584,7 @@ footer p{
     font-size:11px;
 }
 
-/* ================= ADMIN ================= */
-
+/* ADMIN */
 .admin-page{
     display:none;
     min-height:100vh;
@@ -601,9 +592,7 @@ footer p{
     padding:30px 20px;
 }
 
-.admin-page.show{
-    display:block;
-}
+.admin-page.show{display:block}
 
 .admin-container{
     max-width:900px;
@@ -620,9 +609,7 @@ footer p{
     margin-bottom:30px;
 }
 
-.form-group{
-    margin-bottom:17px;
-}
+.form-group{margin-bottom:17px}
 
 .form-group label{
     display:block;
@@ -652,9 +639,7 @@ footer p{
     cursor:pointer;
 }
 
-.admin-products{
-    margin-top:35px;
-}
+.admin-products{margin-top:35px}
 
 .admin-product{
     display:flex;
@@ -680,8 +665,7 @@ footer p{
     margin-bottom:20px;
 }
 
-/* ================= MOBILE ================= */
-
+/* MOBILE */
 @media(max-width:850px){
 
     .categories{
@@ -695,53 +679,39 @@ footer p{
     .trust-boxes{
         grid-template-columns:repeat(2,1fr);
     }
-
-    .contact{
-        grid-template-columns:1fr;
-    }
 }
 
-@media(max-width:500px){
+@media(max-width:600px){
 
-    header{
-        padding:0 15px;
-    }
+    header{padding:0 15px}
 
-    .hero{
-        min-height:470px;
-    }
+    .hero{min-height:470px}
 
-    .slogan{
-        font-size:17px;
-    }
+    .slogan{font-size:17px}
 
-    .products{
-        grid-template-columns:1fr;
-    }
+    .products{grid-template-columns:1fr}
 
-    .trust-boxes{
-        grid-template-columns:1fr;
-    }
+    .trust-boxes{grid-template-columns:1fr}
+
+    .contact{grid-template-columns:1fr}
+
+    .social-box{grid-column:auto}
 
     .about{
         text-align:right;
         font-size:13px;
     }
 
-    .admin-container{
-        padding:20px;
-    }
+    .admin-container{padding:20px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header id="header">
 
-<button class="menu-button" id="menuButton">
+<button class="menu-button" id="menuButton" aria-label="منو">
 <span></span>
 <span></span>
 <span></span>
@@ -754,24 +724,20 @@ footer p{
 <div class="l-pink">L</div>
 </div>
 
-<div class="logo-title">
-LORA COLLECTION
-</div>
+<div class="logo-title">LORA COLLECTION</div>
 
 </div>
 
 <div class="icons">
 
-<button class="icon-button" id="searchButton">⌕</button>
+<button class="icon-button" id="searchButton" aria-label="جستجو">⌕</button>
 
-<button class="icon-button" id="cartButton">🛒</button>
+<button class="icon-button" id="cartButton" aria-label="سبد خرید">🛒</button>
 
 </div>
 
 </header>
 
-
-<!-- ================= MENU ================= -->
 
 <div class="menu-overlay" id="menuOverlay"></div>
 
@@ -784,31 +750,21 @@ LORA COLLECTION
 <a href="#accessories">اکسسوری</a>
 <a href="#bags">کیف</a>
 <a href="#beauty">لوازم آرایشی</a>
-<a href="#discounts">تخفیفات</a>
+<a href="#discountsSection">تخفیفات</a>
 <a href="#about">درباره ما</a>
 <a href="#contact">تماس با ما</a>
 
 </nav>
 
 
-<!-- ================= SEARCH ================= -->
-
 <div class="search-box" id="searchBox">
 
-<input
-type="text"
-id="searchInput"
-placeholder="جستجوی محصول..."
->
+<input type="text" id="searchInput" placeholder="جستجوی محصول...">
 
 </div>
 
 
-<!-- ================= STORE ================= -->
-
 <main id="store">
-
-<!-- HERO -->
 
 <div class="hero" id="home">
 
@@ -841,22 +797,16 @@ placeholder="جستجوی محصول..."
 
 </div>
 
-<a href="#products" class="button">
-مشاهده محصولات
-</a>
+<a href="#products" class="button">مشاهده محصولات</a>
 
 </div>
 
 </div>
 
-
-<!-- ================= CATEGORIES ================= -->
 
 <section>
 
-<h2 class="section-title">
-دسته‌بندی‌ها
-</h2>
+<h2 class="section-title">دسته‌بندی‌ها</h2>
 
 <div class="categories">
 
@@ -900,47 +850,31 @@ placeholder="جستجوی محصول..."
 </section>
 
 
-<!-- ================= PRODUCTS ================= -->
-
 <section id="products">
 
-<h2 class="section-title">
-محصولات
-</h2>
+<h2 class="section-title">محصولات</h2>
 
 <div class="products" id="productList"></div>
 
 </section>
 
 
-<!-- ================= DISCOUNTS ================= -->
-
 <section class="discount" id="discountsSection">
 
-<h2>
-تخفیفات LORA
-</h2>
+<h2>تخفیفات LORA</h2>
 
-<p>
-محصولات منتخب با قیمت ویژه
-</p>
+<p>محصولات منتخب با قیمت ویژه</p>
 
 </section>
 
 
-<!-- ================= ABOUT ================= -->
-
 <section class="about-section" id="about">
 
-<h2 class="about-title">
-درباره LORA COLLECTION
-</h2>
+<h2 class="about-title">درباره LORA COLLECTION</h2>
 
 <div class="about">
 
-<p>
-به LORA COLLECTION خوش آمدید.
-</p>
+<p>به LORA COLLECTION خوش آمدید.</p>
 
 <p>
 LORA COLLECTION با هدف ارائه‌ی اکسسوری، زیورآلات، کیف، پوشاک زنانه و محصولات زیبایی شیک و به‌روز فعالیت خود را آغاز کرده است. ما باور داریم که انتخاب یک محصول زیبا و خاص می‌تواند بخشی از زیبایی و حس خوب هر روز شما باشد.
@@ -963,13 +897,9 @@ LORA COLLECTION با هدف ارائه‌ی اکسسوری، زیورآلات، 
 </section>
 
 
-<!-- ================= TRUST ================= -->
-
 <section class="trust-section">
 
-<h2 class="section-title">
-چرا LORA COLLECTION؟
-</h2>
+<h2 class="section-title">چرا LORA COLLECTION؟</h2>
 
 <div class="trust-boxes">
 
@@ -1002,35 +932,67 @@ LORA COLLECTION با هدف ارائه‌ی اکسسوری، زیورآلات، 
 </section>
 
 
-<!-- ================= CONTACT ================= -->
-
 <section class="contact-section" id="contact">
 
-<h2 class="section-title">
-تماس با ما
-</h2>
+<h2 class="section-title">تماس با ما</h2>
 
 <div class="contact">
 
 <div class="contact-box">
-<h3>📞 تلفن</h3>
-<p>
-شماره تماس فروشگاه
-</p>
+
+<h3>📞 تماس با ما</h3>
+
+<a class="phone-link" href="tel:09300797179">
+09300797179
+</a>
+
 </div>
 
-<div class="contact-box">
-<h3>💬 پیام‌رسان</h3>
-<p>
-تلگرام و پیام‌رسان‌های LORA COLLECTION
-</p>
+
+<div class="contact-box social-box">
+
+<h3>شبکه‌های اجتماعی</h3>
+
+<div class="social-icons">
+
+<!-- Instagram -->
+<a class="social-link" href="#" aria-label="اینستاگرام">
+
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+<rect x="3" y="3" width="18" height="18" rx="5"></rect>
+<circle cx="12" cy="12" r="4"></circle>
+<circle cx="17.5" cy="6.5" r="1"></circle>
+</svg>
+
+</a>
+
+
+<!-- Telegram -->
+<a class="social-link" href="#" aria-label="تلگرام">
+
+<svg viewBox="0 0 24 24" fill="currentColor">
+<path d="M21.5 3.7 18.2 20c-.25 1.15-.94 1.43-1.9.9l-5.25-3.87-2.53 2.43c-.28.28-.52.52-1.06.52l.38-5.35 9.74-8.8c.42-.38-.09-.59-.65-.21L4.89 13.28.02 11.76c-1.06-.33-1.08-1.06.22-1.57L19.27 3.1c.87-.32 1.63.2 2.23.6z"></path>
+</svg>
+
+</a>
+
+
+<!-- Rubika -->
+<a class="social-link" href="#" aria-label="روبیکا">
+
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+<rect x="4" y="4" width="16" height="16" rx="4"></rect>
+<path d="M8 9.5h8M8 12h6M8 14.5h4"></path>
+</svg>
+
+</a>
+
 </div>
 
-<div class="contact-box">
-<h3>📷 شبکه اجتماعی</h3>
-<p>
-اینستاگرام LORA COLLECTION
-</p>
+<div class="social-id">
+loracollection
+</div>
+
 </div>
 
 </div>
@@ -1038,21 +1000,15 @@ LORA COLLECTION با هدف ارائه‌ی اکسسوری، زیورآلات، 
 </section>
 
 
-<!-- ================= SYMBOLS ================= -->
-
 <div class="symbols">
 
-<h2>
-نمادها و مجوزها
-</h2>
+<h2>نمادها و مجوزها</h2>
 
 <div class="samandehi-box">
 
 <strong>نماد ساماندهی</strong>
 
-<span>
-کد رسمی نماد پس از دریافت درج می‌شود
-</span>
+<span>کد رسمی نماد پس از دریافت درج می‌شود</span>
 
 </div>
 
@@ -1061,17 +1017,11 @@ LORA COLLECTION با هدف ارائه‌ی اکسسوری، زیورآلات، 
 </main>
 
 
-<!-- ================= CART ================= -->
-
 <div class="cart-panel" id="cartPanel">
 
-<button class="cart-close" id="cartClose">
-×
-</button>
+<button class="cart-close" id="cartClose">×</button>
 
-<h2>
-سبد خرید
-</h2>
+<h2>سبد خرید</h2>
 
 <div id="cartItems">
 
@@ -1086,17 +1036,11 @@ LORA COLLECTION با هدف ارائه‌ی اکسسوری، زیورآلات، 
 </div>
 
 
-<!-- ================= FOOTER ================= -->
-
 <footer id="footer">
 
-<h3>
-LORA COLLECTION
-</h3>
+<h3>LORA COLLECTION</h3>
 
-<p>
-زیبایی، بخشی از داستان توست.
-</p>
+<p>زیبایی، بخشی از داستان توست.</p>
 
 <div class="copyright">
 کلیه حقوق مادی و معنوی این وب‌سایت متعلق به LORA COLLECTION می‌باشد.
@@ -1104,8 +1048,6 @@ LORA COLLECTION
 
 </footer>
 
-
-<!-- ================= ADMIN ================= -->
 
 <section class="admin-page" id="adminPage">
 
@@ -1115,19 +1057,13 @@ LORA COLLECTION
 ← بازگشت به فروشگاه
 </button>
 
-<h1 class="admin-title">
-مدیریت LORA COLLECTION
-</h1>
+<h1 class="admin-title">مدیریت LORA COLLECTION</h1>
 
 <div class="form-group">
 
 <label>نام محصول</label>
 
-<input
-type="text"
-id="adminName"
-placeholder="مثلاً مانتوی مشکی"
->
+<input type="text" id="adminName" placeholder="مثلاً مانتوی مشکی">
 
 </div>
 
@@ -1135,11 +1071,7 @@ placeholder="مثلاً مانتوی مشکی"
 
 <label>قیمت</label>
 
-<input
-type="text"
-id="adminPrice"
-placeholder="مثلاً ۱,۵۰۰,۰۰۰ تومان"
->
+<input type="text" id="adminPrice" placeholder="مثلاً ۱,۵۰۰,۰۰۰ تومان">
 
 </div>
 
@@ -1162,11 +1094,7 @@ placeholder="مثلاً ۱,۵۰۰,۰۰۰ تومان"
 
 <label>آدرس عکس محصول</label>
 
-<input
-type="text"
-id="adminImage"
-placeholder="آدرس تصویر محصول"
->
+<input type="text" id="adminImage" placeholder="آدرس تصویر محصول">
 
 </div>
 
@@ -1174,10 +1102,7 @@ placeholder="آدرس تصویر محصول"
 
 <label>توضیحات محصول</label>
 
-<textarea
-id="adminDescription"
-placeholder="توضیحات محصول"
-></textarea>
+<textarea id="adminDescription" placeholder="توضیحات محصول"></textarea>
 
 </div>
 
@@ -1187,9 +1112,7 @@ placeholder="توضیحات محصول"
 
 <div class="admin-products">
 
-<h3>
-محصولات ثبت‌شده
-</h3>
+<h3>محصولات ثبت‌شده</h3>
 
 <div id="adminProductList"></div>
 
@@ -1421,9 +1344,7 @@ function renderProducts(){
 
         '<div class="product-price">'+product.price+'</div>'+
 
-        '<button class="add-cart" data-index="'+index+'">'+
-        'افزودن به سبد'+
-        '</button>'+
+        '<button class="add-cart" data-index="'+index+'">افزودن به سبد</button>'+
 
         '</div>';
 
@@ -1607,9 +1528,7 @@ function renderAdminProducts(){
         '<small>'+product.category+'</small>'+
         '</div>'+
 
-        '<button class="delete-button" data-index="'+index+'">'+
-        'حذف'+
-        '</button>';
+        '<button class="delete-button" data-index="'+index+'">حذف</button>';
 
 
         list.appendChild(row);
