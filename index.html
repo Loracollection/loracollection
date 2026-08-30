@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>LORA COLLECTION</title>
 
 <style>
+
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    font-family:Tahoma,Arial,sans-serif;
-    background:#fff;
-    color:#292629;
+    background:#ffffff;
+    color:#222;
+    font-family:Tahoma, Arial, sans-serif;
 }
 
 /* HEADER */
+
 header{
     height:85px;
+    border-bottom:1px solid #f1dfe5;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 22px;
-    background:#fff;
-    border-bottom:1px solid #f2dfe6;
-    position:sticky;
-    top:0;
-    z-index:1000;
+    padding:0 25px;
+    position:relative;
 }
 
-/* MENU */
-.menu-button{
-    width:42px;
-    height:42px;
-    border:none;
-    background:none;
-    cursor:pointer;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    gap:6px;
+/* سه خط */
+
+.menu{
+    width:35px;
 }
 
-.menu-button span{
+.menu span{
     display:block;
-    width:27px;
+    width:26px;
     height:2px;
-    background:#292629;
+    background:#222;
+    margin:6px 0;
 }
 
-/* LOGO L */
+/* لوگو */
+
 .logo{
     position:absolute;
     left:50%;
@@ -60,208 +56,558 @@ header{
     text-align:center;
 }
 
-.logo-mark{
+.logo-l{
     position:relative;
-    width:58px;
     height:48px;
+    width:65px;
     margin:auto;
 }
 
-.logo-L{
+.black-l{
     position:absolute;
-    left:5px;
+    left:4px;
     top:0;
     font-family:Georgia,serif;
     font-size:52px;
-    line-height:45px;
     font-weight:bold;
-    color:#292629;
+    line-height:48px;
 }
 
-.logo-pink-L{
+.pink-l{
     position:absolute;
-    left:18px;
+    left:20px;
     top:10px;
     font-family:cursive;
-    font-size:39px;
-    line-height:35px;
+    font-size:38px;
     color:#d58ca2;
-    font-weight:normal;
+    line-height:35px;
 }
 
-/* LORA COLLECTION زیر لوگو */
-.logo-text{
-    margin-top:2px;
+.logo-name{
     font-family:Georgia,serif;
     font-size:9px;
     letter-spacing:3px;
-    color:#292629;
+    margin-top:2px;
 }
 
-/* ICONS */
-.header-icons{
+/* آیکون ها */
+
+.icons{
     display:flex;
-    align-items:center;
     gap:18px;
-}
-
-.icon-button{
-    border:none;
-    background:none;
-    cursor:pointer;
-    font-size:23px;
-    color:#292629;
-    position:relative;
-}
-
-.cart-count{
-    position:absolute;
-    top:-5px;
-    right:-8px;
-    background:#d58ca2;
-    color:#fff;
-    width:17px;
-    height:17px;
-    border-radius:50%;
-    font-size:10px;
-    display:flex;
     align-items:center;
-    justify-content:center;
 }
 
-/* SIDE MENU */
-.side-menu{
-    position:fixed;
-    top:0;
-    left:-300px;
-    width:280px;
-    height:100vh;
-    background:#fff;
-    box-shadow:5px 0 20px rgba(0,0,0,.08);
-    z-index:2000;
-    transition:.35s;
-    padding:30px 25px;
-}
-
-.side-menu.open{
-    left:0;
-}
-
-.close-menu{
-    border:none;
-    background:none;
-    font-size:30px;
-    cursor:pointer;
-    margin-bottom:25px;
-}
-
-.side-menu a{
-    display:block;
-    text-decoration:none;
-    color:#333;
-    font-size:15px;
-    padding:17px 5px;
-    border-bottom:1px solid #f5e5eb;
-}
-
-.side-menu a:hover{
-    color:#d58ca2;
-}
-
-.overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.25);
-    z-index:1500;
-    display:none;
-}
-
-.overlay.show{
-    display:block;
-}
-
-/* SEARCH */
-.search-box{
-    display:none;
-    padding:15px 20px;
-    background:#fff8fa;
-    border-bottom:1px solid #f2dfe6;
-}
-
-.search-box.show{
-    display:block;
-}
-
-.search-box input{
-    width:100%;
-    padding:13px 15px;
-    border:1px solid #ead4dc;
-    outline:none;
-    font-family:Tahoma;
-}
-
-.search-box input:focus{
-    border-color:#d58ca2;
+.icon{
+    font-size:23px;
 }
 
 /* HERO */
+
 .hero{
     min-height:520px;
+    background:#fff7f9;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:50px 20px;
-    background:linear-gradient(135deg,#fffafb,#fff2f6);
+    padding:40px 20px;
 }
 
 .hero-small{
     color:#d58ca2;
     font-size:11px;
-    letter-spacing:4px;
+    letter-spacing:3px;
     margin-bottom:25px;
 }
 
 .hero h1{
     font-family:Georgia,serif;
-    font-size:52px;
-    letter-spacing:6px;
-    margin-bottom:28px;
-}
-
-.hero-slogan{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:21px;
-    line-height:2;
-    color:#444;
+    font-size:45px;
+    letter-spacing:5px;
     margin-bottom:30px;
 }
 
-.hero-button{
+.slogan{
+    font-family:Georgia,serif;
+    font-size:20px;
+    line-height:2.2;
+    color:#444;
+}
+
+/* BUTTON */
+
+.button{
     display:inline-block;
-    padding:14px 38px;
-    background:#292629;
-    color:#fff;
+    margin-top:30px;
+    padding:13px 35px;
+    background:#222;
+    color:white;
     text-decoration:none;
     font-size:13px;
 }
 
-.hero-button:hover{
-    background:#d58ca2;
-}
-
 /* SECTIONS */
-.section{
-    padding:70px 20px;
+
+section{
+    padding:65px 20px;
 }
 
-.section-title{
+.title{
     text-align:center;
     font-family:Georgia,serif;
-    font-size:30px;
+    font-size:28px;
+    margin-bottom:35px;
+}
+
+/* CATEGORIES */
+
+.categories{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.category{
+    height:170px;
+    background:#fff8fa;
+    border:1px solid #f0dce3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.category-icon{
+    font-size:35px;
     margin-bottom:12px;
 }
 
-.section-subtitle{
+.category-name{
+    font-family:Georgia,serif;
+    font-size:17px;
+}
+
+/* DISCOUNT */
+
+.discount{
+    background:#fff7f9;
     text-align:center;
-    color:#999;
+}
+
+.discount h2{
+    font-family:Georgia,serif;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.discount p{
+    color:#777;
+}
+
+/* PRODUCTS */
+
+.products{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product{
+    height:280px;
+    border:1px solid #f0dce3;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.product-placeholder{
+    font-size:45px;
+}
+
+.product-name{
+    margin-top:15px;
+    font-family:Georgia,serif;
+}
+
+/* FOOTER */
+
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h3{
+    font-family:Georgia,serif;
+    letter-spacing:4px;
+}
+
+footer p{
+    margin-top:12px;
+    color:#ccc;
+    font-size:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    header{
+        height:75px;
+        padding:0 15px;
+    }
+
+    .hero{
+        min-height:470px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .slogan{
+        font-size:17px;
+    }
+
+    .categories{
+        gap:10px;
+    }
+
+    .category{
+        height:145px;
+    }
+
+    .products{
+        gap:10px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="menu">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+
+<div class="logo">
+
+<div class="logo-l">
+
+<div class="black-l">L</div>
+
+<div class="pink-l">L</div>
+
+</div>
+
+<div class="logo-name">
+LORA COLLECTION
+</div>
+
+</div>
+
+
+<div class="icons">
+
+<div class="icon">⌕</div>
+
+<div class="icon">🛒</div>
+
+</div>
+
+</header>
+
+
+
+<!-- صفحه اصلی -->
+
+<div class="hero">
+
+<div>
+
+<div class="hero-small">
+WELCOME TO LORA COLLECTION
+</div>
+
+<h1>
+LORA COLLECTION
+</h1>
+
+<div class="slogan">
+
+لورا کالکشن،<br>
+سادگی، آغاز زیبایی است؛<br>
+زیبایی، بخشی از داستان توست.
+
+</div>
+
+<a href="#products" class="button">
+مشاهده محصولات
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- دسته بندی -->
+
+<section>
+
+<h2 class="title">
+دسته‌بندی‌ها
+</h2>
+
+
+<div class="categories">
+
+
+<div class="category">
+
+<div>
+
+<div class="category-icon">👗</div>
+
+<div class="category-name">
+لباس
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<div>
+
+<div class="category-icon">💎</div>
+
+<div class="category-name">
+اکسسوری
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<div>
+
+<div class="category-icon">👜</div>
+
+<div class="category-name">
+کیف
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<div>
+
+<div class="category-icon">💄</div>
+
+<div class="category-name">
+لوازم آرایشی
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<div>
+
+<div class="category-icon">🏷️</div>
+
+<div class="category-name">
+تخفیفات
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- محصولات -->
+
+<section id="products">
+
+<h2 class="title">
+محصولات جدید
+</h2>
+
+
+<div class="products">
+
+
+<div class="product">
+
+<div>
+
+<div class="product-placeholder">👗</div>
+
+<div class="product-name">
+لباس
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div>
+
+<div class="product-placeholder">👜</div>
+
+<div class="product-name">
+کیف
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div>
+
+<div class="product-placeholder">💎</div>
+
+<div class="product-name">
+اکسسوری
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div>
+
+<div class="product-placeholder">💄</div>
+
+<div class="product-name">
+لوازم آرایشی
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- تخفیفات -->
+
+<section class="discount">
+
+<h2>
+تخفیفات LORA
+</h2>
+
+<p>
+محصولات منتخب با قیمت ویژه
+</p>
+
+<a href="#products" class="button">
+مشاهده تخفیفات
+</a>
+
+</section>
+
+
+
+<!-- درباره -->
+
+<section>
+
+<h2 class="title">
+درباره LORA COLLECTION
+</h2>
+
+<p style="text-align:center;max-width:700px;margin:auto;line-height:2;color:#777;">
+
+LORA COLLECTION با عشق به ظرافت،
+سادگی و انتخاب‌های خاص شکل گرفته است.
+
+</p>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+LORA COLLECTION
+</h3>
+
+<p>
+زیبایی، بخشی از داستان توست.
+</p>
+
+</footer>
+
+
+</body>
+    </html>
