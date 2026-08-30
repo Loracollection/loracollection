@@ -90,3 +90,376 @@ header{
 
 /* برگ‌های شاخه
    حالت برعکس 🌿 */
+.leaf{
+    position:absolute;
+    width:14px;
+    height:29px;
+    border:1.5px solid #d18ba1;
+    border-radius:100% 0 100% 0;
+    z-index:5;
+}
+
+.leaf-1{
+    left:30px;
+    top:22px;
+    transform:rotate(45deg);
+}
+
+.leaf-2{
+    left:18px;
+    top:34px;
+    transform:rotate(-20deg);
+}
+
+.leaf-3{
+    left:11px;
+    top:49px;
+    transform:rotate(43deg);
+}
+
+.leaf::after{
+    content:"";
+    position:absolute;
+    left:6px;
+    top:3px;
+    width:1px;
+    height:21px;
+    background:#d18ba1;
+}
+
+/* نام برند */
+.brand-line{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-top:0;
+}
+
+/* پاپیون‌ها */
+.bow{
+    font-size:25px;
+    line-height:1;
+}
+
+/* LORA */
+.brand-name{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:27px;
+    letter-spacing:7px;
+    color:#222;
+}
+
+/* COLLECTION */
+.brand-sub{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:10px;
+    letter-spacing:5px;
+    color:#d18ba1;
+    margin-top:6px;
+}
+
+/* MENU */
+nav{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#444;
+    font-size:13px;
+    padding:5px 8px;
+}
+
+nav a:hover{
+    color:#d18ba1;
+}
+
+/* HERO */
+.hero{
+    min-height:480px;
+    background:linear-gradient(135deg,#fff9fb,#fff3f7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero-small{
+    color:#d18ba1;
+    font-size:11px;
+    letter-spacing:4px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:58px;
+    letter-spacing:9px;
+    color:#222;
+    margin-bottom:12px;
+}
+
+.hero p{
+    color:#777;
+    font-size:16px;
+    margin-bottom:30px;
+}
+
+.shop-button{
+    display:inline-block;
+    background:#292629;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 38px;
+    font-size:13px;
+}
+
+.shop-button:hover{
+    background:#d18ba1;
+}
+
+/* CATEGORIES */
+.categories-section{
+    padding:75px 20px;
+    text-align:center;
+}
+
+.section-title{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:29px;
+    color:#222;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    color:#999;
+    font-size:13px;
+    margin-bottom:40px;
+}
+
+.categories{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.category{
+    width:280px;
+    height:220px;
+    background:#fff5f8;
+    border:1px solid #f2dfe6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+}
+
+.category h3{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:25px;
+    color:#333;
+    margin-bottom:10px;
+}
+
+.category p{
+    color:#999;
+    font-size:12px;
+}
+
+/* FOOTER */
+footer{
+    background:#fff8fa;
+    border-top:1px solid #f2dfe6;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.footer-name{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:20px;
+    letter-spacing:4px;
+    color:#333;
+}
+
+footer p{
+    color:#999;
+    font-size:12px;
+    margin-top:10px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .logo-symbol{
+        transform:scale(.9);
+        margin-bottom:-5px;
+    }
+
+    .brand-name{
+        font-size:24px;
+        letter-spacing:5px;
+    }
+
+    .brand-line{
+        gap:7px;
+    }
+
+    .bow{
+        font-size:21px;
+    }
+
+    nav{
+        margin-top:20px;
+    }
+
+    nav a{
+        font-size:12px;
+        padding:4px 5px;
+    }
+
+    .hero{
+        min-height:420px;
+    }
+
+    .hero h1{
+        font-size:43px;
+        letter-spacing:6px;
+    }
+
+    .category{
+        width:100%;
+        max-width:330px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+    <div class="logo-symbol">
+
+        <!-- L مشکی -->
+        <div class="black-l-vertical"></div>
+        <div class="black-l-horizontal"></div>
+
+        <!-- L صورتی -->
+        <div class="pink-l">L</div>
+
+        <!-- ساقه و شاخه -->
+        <div class="pink-stem"></div>
+
+        <!-- برگ‌ها -->
+        <div class="leaf leaf-1"></div>
+        <div class="leaf leaf-2"></div>
+        <div class="leaf leaf-3"></div>
+
+    </div>
+
+    <!-- دو پاپیون -->
+    <div class="brand-line">
+
+        <span class="bow">🎀</span>
+
+        <div>
+            <div class="brand-name">LORA</div>
+            <div class="brand-sub">COLLECTION</div>
+        </div>
+
+        <span class="bow">🎀</span>
+
+    </div>
+
+</div>
+
+<nav>
+    <a href="#">خانه</a>
+    <a href="#">لباس</a>
+    <a href="#">اکسسوری</a>
+    <a href="#">لوازم آرایشی</a>
+    <a href="#">تخفیف‌ها</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+    <div class="hero-small">NEW COLLECTION</div>
+
+    <h1>LORA</h1>
+
+    <p>ظرافت در سادگی</p>
+
+    <a href="#" class="shop-button">
+        مشاهده محصولات
+    </a>
+
+</div>
+
+</section>
+
+<section class="categories-section">
+
+<h2 class="section-title">
+    دسته‌بندی محصولات
+</h2>
+
+<p class="section-subtitle">
+    انتخابی برای استایل خاص تو
+</p>
+
+<div class="categories">
+
+<div class="category">
+    <div>
+        <h3>لباس</h3>
+        <p>استایل‌های خاص و شیک</p>
+    </div>
+</div>
+
+<div class="category">
+    <div>
+        <h3>اکسسوری</h3>
+        <p>جزئیات کوچک، تأثیر بزرگ</p>
+    </div>
+</div>
+
+<div class="category">
+    <div>
+        <h3>لوازم آرایشی</h3>
+        <p>زیبایی و مراقبت</p>
+    </div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-name">
+    LORA COLLECTION
+</div>
+
+<p>زیبایی در سادگی</p>
+
+</footer>
+
+</body>
+    </html>
