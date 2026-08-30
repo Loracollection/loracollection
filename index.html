@@ -6,24 +6,20 @@
 <title>LORA COLLECTION</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
     background:#fff;
-    color:#292629;
+    color:#222;
     font-family:Tahoma,Arial,sans-serif;
 }
 
 /* HEADER */
 header{
-    background:#fff;
-    border-bottom:1px solid #f2dfe6;
-    padding:28px 15px 20px;
     text-align:center;
+    padding:30px 15px 22px;
+    border-bottom:1px solid #f1dfe6;
+    background:#fff;
 }
 
 /* LOGO */
@@ -33,130 +29,142 @@ header{
     align-items:center;
 }
 
-/* علامت L */
-.logo-symbol{
+.logo-mark{
     position:relative;
-    width:190px;
-    height:150px;
+    width:210px;
+    height:165px;
     margin:auto;
 }
 
 /* L بزرگ مشکی */
-.black-l-vertical{
+.black-l{
     position:absolute;
-    left:82px;
-    top:5px;
-    width:5px;
-    height:112px;
+    left:92px;
+    top:8px;
+    width:6px;
+    height:120px;
     background:#222;
 }
 
-.black-l-horizontal{
+.black-l-bottom{
     position:absolute;
-    left:82px;
-    top:112px;
-    width:78px;
-    height:5px;
+    left:92px;
+    top:122px;
+    width:85px;
+    height:6px;
     background:#222;
 }
 
-/* L صورتی
-   پایین‌تر آمده و به خط افقی L مشکی می‌رسد */
+/* L صورتی دست نویس
+   پایین L روی خط مشکی قرار می‌گیرد */
 .pink-l{
     position:absolute;
-    left:91px;
-    top:48px;
-    color:#d18ba1;
-    font-family:"Brush Script MT","Segoe Script",cursive;
-    font-size:78px;
-    font-weight:normal;
-    line-height:1;
-    transform:rotate(-8deg);
-    z-index:4;
-}
-
-/* ساقه صورتی که از بالای L به سمت چپ می‌رود */
-.pink-stem{
-    position:absolute;
-    left:35px;
-    top:40px;
-    width:65px;
-    height:2px;
-    background:#d18ba1;
-    transform:rotate(-28deg);
-    transform-origin:right center;
-    z-index:3;
-}
-
-/* برگ‌های شاخه
-   حالت برعکس 🌿 */
-.leaf{
-    position:absolute;
-    width:14px;
-    height:29px;
-    border:1.5px solid #d18ba1;
-    border-radius:100% 0 100% 0;
+    left:99px;
+    top:54px;
     z-index:5;
+
+    font-family:"Brush Script MT","Segoe Script",cursive;
+    font-size:82px;
+    font-weight:normal;
+    line-height:.8;
+
+    color:#d58ca2;
+    transform:rotate(-7deg);
 }
 
-.leaf-1{
+/* شاخه صورتی از بالای L به سمت چپ */
+.branch{
+    position:absolute;
     left:30px;
-    top:22px;
-    transform:rotate(45deg);
+    top:18px;
+    width:105px;
+    height:75px;
+    z-index:4;
+    transform:rotate(-8deg);
 }
 
-.leaf-2{
-    left:18px;
-    top:34px;
-    transform:rotate(-20deg);
+/* ساقه */
+.branch-stem{
+    position:absolute;
+    right:2px;
+    top:48px;
+    width:105px;
+    height:2px;
+    background:#d58ca2;
+    transform:rotate(-24deg);
+    transform-origin:right center;
 }
 
-.leaf-3{
-    left:11px;
-    top:49px;
-    transform:rotate(43deg);
+/* برگ‌ها */
+.branch-leaf{
+    position:absolute;
+    width:32px;
+    height:13px;
+    border:2px solid #d58ca2;
+    border-radius:100% 0 100% 0;
+    background:#fff;
 }
 
-.leaf::after{
+.leaf-a{
+    right:62px;
+    top:24px;
+    transform:rotate(25deg);
+}
+
+.leaf-b{
+    right:43px;
+    top:13px;
+    transform:rotate(-35deg);
+}
+
+.leaf-c{
+    right:27px;
+    top:35px;
+    transform:rotate(28deg);
+}
+
+.leaf-d{
+    right:7px;
+    top:25px;
+    transform:rotate(-38deg);
+}
+
+/* رگبرگ ظریف */
+.branch-leaf::after{
     content:"";
     position:absolute;
-    left:6px;
-    top:3px;
-    width:1px;
-    height:21px;
-    background:#d18ba1;
+    left:4px;
+    top:5px;
+    width:23px;
+    height:1px;
+    background:#d58ca2;
 }
 
 /* نام برند */
-.brand-line{
+.brand{
     display:flex;
     align-items:center;
     justify-content:center;
     gap:12px;
-    margin-top:0;
+    margin-top:-2px;
 }
 
-/* پاپیون‌ها */
 .bow{
     font-size:25px;
-    line-height:1;
 }
 
-/* LORA */
 .brand-name{
     font-family:Georgia,"Times New Roman",serif;
-    font-size:27px;
+    font-size:28px;
     letter-spacing:7px;
-    color:#222;
 }
 
-/* COLLECTION */
 .brand-sub{
     font-family:Georgia,"Times New Roman",serif;
+    color:#d58ca2;
     font-size:10px;
     letter-spacing:5px;
-    color:#d18ba1;
-    margin-top:6px;
+    margin-top:5px;
 }
 
 /* MENU */
@@ -165,79 +173,65 @@ nav{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:8px;
+    gap:18px;
 }
 
 nav a{
     text-decoration:none;
     color:#444;
     font-size:13px;
-    padding:5px 8px;
-}
-
-nav a:hover{
-    color:#d18ba1;
 }
 
 /* HERO */
 .hero{
-    min-height:480px;
-    background:linear-gradient(135deg,#fff9fb,#fff3f7);
+    min-height:460px;
+    background:#fff7fa;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:40px 20px;
 }
 
 .hero-small{
-    color:#d18ba1;
-    font-size:11px;
+    color:#d58ca2;
     letter-spacing:4px;
-    margin-bottom:15px;
+    font-size:11px;
 }
 
 .hero h1{
     font-family:Georgia,"Times New Roman",serif;
     font-size:58px;
     letter-spacing:9px;
-    color:#222;
-    margin-bottom:12px;
+    margin:18px 0 12px;
 }
 
 .hero p{
     color:#777;
-    font-size:16px;
     margin-bottom:30px;
 }
 
-.shop-button{
+.button{
     display:inline-block;
-    background:#292629;
+    padding:14px 38px;
+    background:#222;
     color:#fff;
     text-decoration:none;
-    padding:14px 38px;
     font-size:13px;
-}
-
-.shop-button:hover{
-    background:#d18ba1;
 }
 
 /* CATEGORIES */
 .categories-section{
-    padding:75px 20px;
+    padding:70px 20px;
     text-align:center;
 }
 
-.section-title{
+.categories-section h2{
     font-family:Georgia,"Times New Roman",serif;
     font-size:29px;
-    color:#222;
     margin-bottom:10px;
 }
 
-.section-subtitle{
+.categories-section>p{
     color:#999;
     font-size:13px;
     margin-bottom:40px;
@@ -246,29 +240,23 @@ nav a:hover{
 .categories{
     display:flex;
     justify-content:center;
-    flex-wrap:wrap;
     gap:20px;
+    flex-wrap:wrap;
 }
 
 .category{
     width:280px;
-    height:220px;
-    background:#fff5f8;
-    border:1px solid #f2dfe6;
+    height:210px;
+    background:#fff4f7;
+    border:1px solid #f1dfe6;
     display:flex;
     align-items:center;
     justify-content:center;
-    transition:.3s;
-}
-
-.category:hover{
-    transform:translateY(-5px);
 }
 
 .category h3{
     font-family:Georgia,"Times New Roman",serif;
     font-size:25px;
-    color:#333;
     margin-bottom:10px;
 }
 
@@ -279,57 +267,50 @@ nav a:hover{
 
 /* FOOTER */
 footer{
-    background:#fff8fa;
-    border-top:1px solid #f2dfe6;
+    background:#fff7fa;
     text-align:center;
-    padding:45px 20px;
+    padding:40px 20px;
+    border-top:1px solid #f1dfe6;
 }
 
-.footer-name{
+footer strong{
     font-family:Georgia,"Times New Roman",serif;
-    font-size:20px;
     letter-spacing:4px;
-    color:#333;
 }
 
 footer p{
     color:#999;
     font-size:12px;
-    margin-top:10px;
+    margin-top:8px;
 }
 
 /* MOBILE */
 @media(max-width:600px){
 
-    .logo-symbol{
-        transform:scale(.9);
-        margin-bottom:-5px;
+    .logo-mark{
+        transform:scale(.85);
+        margin-bottom:-8px;
     }
 
     .brand-name{
-        font-size:24px;
+        font-size:23px;
         letter-spacing:5px;
     }
 
-    .brand-line{
-        gap:7px;
-    }
-
     .bow{
-        font-size:21px;
+        font-size:20px;
     }
 
     nav{
-        margin-top:20px;
+        gap:8px;
     }
 
     nav a{
         font-size:12px;
-        padding:4px 5px;
     }
 
     .hero{
-        min-height:420px;
+        min-height:410px;
     }
 
     .hero h1{
@@ -351,27 +332,31 @@ footer p{
 
 <div class="logo">
 
-    <div class="logo-symbol">
+    <div class="logo-mark">
 
         <!-- L مشکی -->
-        <div class="black-l-vertical"></div>
-        <div class="black-l-horizontal"></div>
+        <div class="black-l"></div>
+        <div class="black-l-bottom"></div>
 
         <!-- L صورتی -->
         <div class="pink-l">L</div>
 
-        <!-- ساقه و شاخه -->
-        <div class="pink-stem"></div>
+        <!-- شاخه ظریف صورتی -->
+        <div class="branch">
 
-        <!-- برگ‌ها -->
-        <div class="leaf leaf-1"></div>
-        <div class="leaf leaf-2"></div>
-        <div class="leaf leaf-3"></div>
+            <div class="branch-stem"></div>
+
+            <div class="branch-leaf leaf-a"></div>
+            <div class="branch-leaf leaf-b"></div>
+            <div class="branch-leaf leaf-c"></div>
+            <div class="branch-leaf leaf-d"></div>
+
+        </div>
 
     </div>
 
-    <!-- دو پاپیون -->
-    <div class="brand-line">
+    <!-- پاپیون‌ها -->
+    <div class="brand">
 
         <span class="bow">🎀</span>
 
@@ -396,6 +381,7 @@ footer p{
 
 </header>
 
+
 <section class="hero">
 
 <div>
@@ -406,23 +392,18 @@ footer p{
 
     <p>ظرافت در سادگی</p>
 
-    <a href="#" class="shop-button">
-        مشاهده محصولات
-    </a>
+    <a href="#" class="button">مشاهده محصولات</a>
 
 </div>
 
 </section>
 
+
 <section class="categories-section">
 
-<h2 class="section-title">
-    دسته‌بندی محصولات
-</h2>
+<h2>دسته‌بندی محصولات</h2>
 
-<p class="section-subtitle">
-    انتخابی برای استایل خاص تو
-</p>
+<p>انتخابی برای استایل خاص تو</p>
 
 <div class="categories">
 
@@ -451,11 +432,10 @@ footer p{
 
 </section>
 
+
 <footer>
 
-<div class="footer-name">
-    LORA COLLECTION
-</div>
+<strong>LORA COLLECTION</strong>
 
 <p>زیبایی در سادگی</p>
 
