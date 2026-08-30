@@ -1,11 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>LORA COLLECTION</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -13,93 +16,187 @@
 }
 
 body{
+    background:#ffffff;
+    color:#222;
     font-family:Tahoma,Arial,sans-serif;
-    background:#fff;
-    color:#333;
 }
 
+/* HEADER */
+
 header{
+    width:100%;
     background:#fff;
-    border-bottom:1px solid #f3dfe7;
-    padding:20px;
+    border-bottom:1px solid #f3e3e8;
+    padding:25px 20px 18px;
     text-align:center;
 }
 
+/* LOGO */
+
 .logo{
-    font-family:Georgia,serif;
-    font-size:32px;
-    letter-spacing:5px;
-    color:#333;
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
 }
 
-.subtitle{
-    color:#c98b9f;
-    font-size:12px;
-    letter-spacing:3px;
-    margin-top:6px;
+.logo-symbol{
+    position:relative;
+    width:105px;
+    height:105px;
+    margin-bottom:5px;
 }
+
+/* L مشکی */
+
+.black-l-vertical{
+    position:absolute;
+    width:5px;
+    height:82px;
+    background:#222;
+    left:38px;
+    top:5px;
+}
+
+.black-l-horizontal{
+    position:absolute;
+    width:58px;
+    height:5px;
+    background:#222;
+    left:38px;
+    top:82px;
+}
+
+/* L صورتی دست نویس */
+
+.pink-l{
+    position:absolute;
+    left:49px;
+    top:24px;
+    color:#c9879d;
+    font-family:"Brush Script MT","Segoe Script",cursive;
+    font-size:42px;
+    font-weight:normal;
+    transform:rotate(-5deg);
+}
+
+/* برگ کنار L */
+
+.leaf{
+    position:absolute;
+    left:25px;
+    top:35px;
+    width:16px;
+    height:28px;
+    border:2px solid #c9879d;
+    border-radius:100% 0 100% 0;
+    transform:rotate(-35deg);
+}
+
+.leaf-line{
+    position:absolute;
+    left:31px;
+    top:37px;
+    width:2px;
+    height:25px;
+    background:#c9879d;
+    transform:rotate(-35deg);
+}
+
+/* نوشته لوگو */
+
+.logo-name{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:25px;
+    letter-spacing:6px;
+    color:#222;
+    margin-top:3px;
+}
+
+.logo-collection{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:10px;
+    letter-spacing:5px;
+    color:#c9879d;
+    margin-top:5px;
+}
+
+/* MENU */
 
 nav{
-    margin-top:20px;
+    margin-top:25px;
 }
 
 nav a{
-    color:#555;
     text-decoration:none;
-    margin:0 10px;
-    font-size:14px;
+    color:#444;
+    font-size:13px;
+    margin:0 12px;
 }
 
+nav a:hover{
+    color:#c9879d;
+}
+
+/* HERO */
+
 .hero{
-    min-height:500px;
-    background:#fff7fa;
+    min-height:480px;
+    background:#fff8fa;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:30px;
+    padding:40px 20px;
 }
 
-.hero small{
-    color:#c98b9f;
-    letter-spacing:3px;
+.hero-small{
+    color:#c9879d;
+    font-size:11px;
+    letter-spacing:4px;
 }
 
 .hero h1{
-    font-family:Georgia,serif;
-    font-size:58px;
-    letter-spacing:8px;
-    margin:20px 0 10px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:55px;
+    letter-spacing:9px;
+    margin:18px 0 10px;
 }
 
 .hero p{
     color:#777;
-    font-size:17px;
+    font-size:16px;
     margin-bottom:30px;
 }
 
-.button{
+.shop-button{
     display:inline-block;
-    background:#333;
-    color:white;
     padding:14px 35px;
+    background:#222;
+    color:white;
     text-decoration:none;
-    font-size:14px;
+    font-size:13px;
 }
 
-.section{
+.shop-button:hover{
+    background:#c9879d;
+}
+
+/* CATEGORIES */
+
+.categories-section{
     padding:70px 20px;
     text-align:center;
 }
 
-.section h2{
-    font-family:Georgia,serif;
-    font-size:30px;
+.section-title{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:28px;
     margin-bottom:10px;
 }
 
-.section > p{
+.section-subtitle{
     color:#999;
+    font-size:13px;
     margin-bottom:40px;
 }
 
@@ -112,82 +209,162 @@ nav a{
 
 .category{
     width:280px;
-    height:220px;
-    background:#fdf0f4;
+    height:230px;
+    background:#fff4f7;
     display:flex;
     align-items:center;
     justify-content:center;
+    border:1px solid #f5e3e9;
+}
+
+.category:nth-child(2){
+    background:#fff9fa;
+}
+
+.category:nth-child(3){
+    background:#fdf0f4;
 }
 
 .category h3{
-    font-family:Georgia,serif;
+    font-family:Georgia,"Times New Roman",serif;
     font-size:25px;
-    margin-bottom:8px;
+    margin-bottom:10px;
 }
 
 .category p{
-    color:#888;
-    font-size:13px;
+    color:#999;
+    font-size:12px;
 }
+
+/* FOOTER */
 
 footer{
-    background:#fff7fa;
+    background:#fff8fa;
     text-align:center;
-    padding:40px 20px;
-    color:#888;
+    padding:45px 20px;
+    border-top:1px solid #f3e3e8;
 }
 
-footer strong{
-    font-family:Georgia,serif;
-    color:#333;
-    letter-spacing:3px;
+.footer-logo{
+    font-family:Georgia,"Times New Roman",serif;
+    letter-spacing:4px;
+    font-size:20px;
 }
+
+footer p{
+    color:#999;
+    font-size:12px;
+    margin-top:10px;
+}
+
+/* MOBILE */
 
 @media(max-width:600px){
-    .hero h1{
-        font-size:42px;
+
+    .logo-symbol{
+        transform:scale(.9);
+        margin-bottom:0;
+    }
+
+    nav{
+        line-height:30px;
     }
 
     nav a{
-        display:inline-block;
-        margin:7px;
+        margin:0 7px;
+    }
+
+    .hero{
+        min-height:430px;
+    }
+
+    .hero h1{
+        font-size:42px;
+        letter-spacing:6px;
     }
 
     .category{
         width:100%;
-        max-width:320px;
+        max-width:330px;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
 <header>
-    <div class="logo">LORA</div>
-    <div class="subtitle">COLLECTION</div>
+
+    <div class="logo">
+
+        <div class="logo-symbol">
+
+            <div class="black-l-vertical"></div>
+            <div class="black-l-horizontal"></div>
+
+            <div class="pink-l">L</div>
+
+            <div class="leaf"></div>
+            <div class="leaf-line"></div>
+
+        </div>
+
+        <div class="logo-name">LORA</div>
+        <div class="logo-collection">COLLECTION</div>
+
+    </div>
+
 
     <nav>
+
         <a href="#">خانه</a>
         <a href="#">لباس</a>
         <a href="#">اکسسوری</a>
         <a href="#">آرایشی</a>
         <a href="#">تخفیف‌ها</a>
+
     </nav>
+
 </header>
 
+
 <section class="hero">
+
     <div>
-        <small>NEW COLLECTION</small>
+
+        <div class="hero-small">
+            NEW COLLECTION
+        </div>
+
         <h1>LORA</h1>
-        <p>ظرافت در سادگی</p>
-        <a class="button" href="#">مشاهده محصولات</a>
+
+        <p>
+            ظرافت در سادگی
+        </p>
+
+        <a href="#" class="shop-button">
+            مشاهده محصولات
+        </a>
+
     </div>
+
 </section>
 
-<section class="section">
-    <h2>دسته‌بندی محصولات</h2>
-    <p>انتخابی برای استایل خاص تو</p>
+
+<section class="categories-section">
+
+    <h2 class="section-title">
+        دسته‌بندی محصولات
+    </h2>
+
+    <p class="section-subtitle">
+        انتخابی برای استایل خاص تو
+    </p>
+
 
     <div class="categories">
 
@@ -198,12 +375,14 @@ footer strong{
             </div>
         </div>
 
+
         <div class="category">
             <div>
                 <h3>اکسسوری</h3>
                 <p>جزئیات کوچک، تأثیر بزرگ</p>
             </div>
         </div>
+
 
         <div class="category">
             <div>
@@ -213,12 +392,22 @@ footer strong{
         </div>
 
     </div>
+
 </section>
 
+
 <footer>
-    <strong>LORA COLLECTION</strong>
-    <p>زیبایی در سادگی</p>
+
+    <div class="footer-logo">
+        LORA COLLECTION
+    </div>
+
+    <p>
+        زیبایی در سادگی
+    </p>
+
 </footer>
 
+
 </body>
-  </html>
+                </html>
