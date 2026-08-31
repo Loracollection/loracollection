@@ -1,216 +1,147 @@
-<!-- LORA COLLECTION CATEGORIES -->
+<!-- LORA COLLECTION LOGO -->
+<div class="lora-logo">
+    <div class="lora-logo-mark">
 
-<section class="lora-categories" id="categories">
+        <span class="lora-leaf leaf-1">❧</span>
+        <span class="lora-leaf leaf-2">❧</span>
 
-  <div class="lora-category-heading">
-    <span>Explore</span>
-    <h2>انتخاب تو، داستان توست</h2>
-    <p>جزئیاتی ظریف برای ساختن استایلی که مخصوص توست.</p>
-  </div>
+        <span class="lora-big-l">L</span>
 
-  <div class="lora-category-grid">
+    </div>
 
-    <a href="#products" class="lora-category-card">
-      <div class="lora-category-image">
-        <span>✦</span>
-      </div>
-      <div class="lora-category-content">
-        <small>FASHION</small>
-        <h3>پوشاک</h3>
-        <p>انتخابی ظریف برای استایل روزانه تو</p>
-        <b>مشاهده مجموعه ←</b>
-      </div>
-    </a>
+    <div class="lora-logo-name">
+        LORA
+    </div>
 
-    <a href="#products" class="lora-category-card">
-      <div class="lora-category-image">
-        <span>♡</span>
-      </div>
-      <div class="lora-category-content">
-        <small>ACCESSORIES</small>
-        <h3>اکسسوری</h3>
-        <p>جزئیاتی کوچک، تأثیری بزرگ</p>
-        <b>مشاهده مجموعه ←</b>
-      </div>
-    </a>
-
-    <a href="#products" class="lora-category-card">
-      <div class="lora-category-image">
-        <span>◇</span>
-      </div>
-      <div class="lora-category-content">
-        <small>JEWELRY</small>
-        <h3>زیورآلات</h3>
-        <p>درخشش ظریف برای لحظه‌های تو</p>
-        <b>مشاهده مجموعه ←</b>
-      </div>
-    </a>
-
-    <a href="#products" class="lora-category-card">
-      <div class="lora-category-image">
-        <span>⌁</span>
-      </div>
-      <div class="lora-category-content">
-        <small>BAGS</small>
-        <h3>کیف</h3>
-        <p>همراهی شیک برای هر داستان</p>
-        <b>مشاهده مجموعه ←</b>
-      </div>
-    </a>
-
-  </div>
-
-</section>
-
+    <div class="lora-logo-sub">
+        <span></span>
+        <b>COLLECTION</b>
+        <span></span>
+    </div>
+</div>
 
 <style>
-
-.lora-categories{
-  padding:85px 20px;
-  background:#fff;
+.lora-logo {
+    width: 210px;
+    text-align: center;
+    direction: ltr;
+    display: inline-block;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
-.lora-category-heading{
-  text-align:center;
-  max-width:650px;
-  margin:0 auto 45px;
+/* قسمت L بزرگ */
+.lora-logo-mark {
+    position: relative;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.lora-category-heading span{
-  font-family:Georgia,serif;
-  color:#d58ca2;
-  font-size:12px;
-  letter-spacing:4px;
-  text-transform:uppercase;
+.lora-big-l {
+    position: relative;
+    z-index: 2;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 104px;
+    line-height: 1;
+    font-weight: 400;
+    color: #202020;
+    transform: scaleX(.82);
 }
 
-.lora-category-heading h2{
-  margin:10px 0 8px;
-  font-family:Georgia,serif;
-  font-size:29px;
-  font-weight:normal;
-  color:#222;
+/* شاخه ظریف کنار L */
+.lora-leaf {
+    position: absolute;
+    z-index: 3;
+    color: #d9a1ad;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    line-height: 1;
+    transform-origin: bottom;
 }
 
-.lora-category-heading p{
-  color:#999;
-  font-size:13px;
+.leaf-1 {
+    left: 50px;
+    top: 31px;
+    transform: rotate(-35deg);
 }
 
-.lora-category-grid{
-  max-width:1050px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
+.leaf-2 {
+    left: 59px;
+    top: 51px;
+    font-size: 27px;
+    transform: rotate(-65deg);
 }
 
-.lora-category-card{
-  display:block;
-  background:#fff;
-  border:1px solid #f0dce3;
-  transition:.3s ease;
-  overflow:hidden;
+/* LORA */
+.lora-logo-name {
+    margin-top: 3px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 39px;
+    font-weight: 400;
+    letter-spacing: 7px;
+    color: #191919;
+    padding-left: 7px;
 }
 
-.lora-category-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 12px 30px rgba(0,0,0,.07);
+/* COLLECTION */
+.lora-logo-sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 7px;
 }
 
-.lora-category-image{
-  height:230px;
-  background:#fff7f9;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
+.lora-logo-sub span {
+    width: 38px;
+    height: 1px;
+    background: #e5aeb9;
 }
 
-.lora-category-image:before{
-  content:"";
-  width:115px;
-  height:115px;
-  border:1px solid #e8c9d3;
-  border-radius:50%;
-  position:absolute;
+.lora-logo-sub b {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #d993a3;
+    white-space: nowrap;
 }
 
-.lora-category-image span{
-  color:#d58ca2;
-  font-family:Georgia,serif;
-  font-size:35px;
-  position:relative;
+/* قلب وسط لوگو */
+.lora-logo-sub b::after {
+    content: " ♥ ";
+    color: #e69aaa;
+    font-size: 9px;
+    letter-spacing: 0;
 }
 
-.lora-category-content{
-  text-align:center;
-  padding:22px 15px 25px;
+/* موبایل */
+@media (max-width: 600px) {
+    .lora-logo {
+        width: 175px;
+    }
+
+    .lora-logo-mark {
+        height: 85px;
+    }
+
+    .lora-big-l {
+        font-size: 84px;
+    }
+
+    .lora-logo-name {
+        font-size: 32px;
+        letter-spacing: 5px;
+    }
+
+    .lora-logo-sub span {
+        width: 28px;
+    }
+
+    .lora-logo-sub b {
+        font-size: 8px;
+        letter-spacing: 3px;
+    }
 }
-
-.lora-category-content small{
-  font-family:Georgia,serif;
-  font-size:9px;
-  letter-spacing:3px;
-  color:#b98a98;
-}
-
-.lora-category-content h3{
-  font-family:Georgia,serif;
-  font-size:22px;
-  font-weight:normal;
-  margin:5px 0;
-}
-
-.lora-category-content p{
-  color:#999;
-  font-size:11px;
-  margin-bottom:13px;
-}
-
-.lora-category-content b{
-  font-family:Georgia,serif;
-  font-size:11px;
-  font-weight:normal;
-  color:#333;
-}
-
-@media(max-width:850px){
-
-  .lora-category-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-}
-
-@media(max-width:500px){
-
-  .lora-categories{
-    padding:60px 15px;
-  }
-
-  .lora-category-grid{
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-  }
-
-  .lora-category-image{
-    height:170px;
-  }
-
-  .lora-category-content{
-    padding:17px 8px 20px;
-  }
-
-  .lora-category-content h3{
-    font-size:18px;
-  }
-
-  .lora-category-content p{
-    font-size:10px;
-  }
-
-}
-
-      </style>
-      
+  </style>
