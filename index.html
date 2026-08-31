@@ -1,6 +1,29 @@
 <div class="return-policy">
 
-    <h2>قوانین مرجوعی لورا کالکشن</h2>
+    <div class="return-header">
+        <span class="return-icon">↩</span>
+        <h2>قوانین مرجوعی</h2>
+        <p class="return-subtitle">لورا کالکشن</p>
+    </div>
+
+
+    <div class="return-action-box">
+
+        <h3>درخواست مرجوعی سفارش</h3>
+
+        <p>
+            برای ثبت درخواست مرجوعی، ابتدا وارد
+            <strong>پروفایل کاربری</strong> خود شوید و سفارش موردنظر را انتخاب کنید.
+        </p>
+
+        <a href="#" class="profile-button">
+            ورود به پروفایل
+        </a>
+
+    </div>
+
+
+    <h3>شرایط مرجوعی</h3>
 
     <p>
         فروشگاه اینترنتی <strong>لورا کالکشن</strong> جهت ایجاد رضایتمندی
@@ -14,11 +37,13 @@
         لذا خواهشمند است قبل از ثبت سفارش، قوانین مرجوعی را با دقت مطالعه فرمایید.
     </p>
 
+
     <h3>شرایط مرجوعی</h3>
 
     <p>
         در صورت مطابقت نداشتن کالا با سفارش از نظر رنگ و سایز، مناسب نبودن
-        سایز، کالا حداکثر تا <strong>۷ روز پس از رسیدن بسته به دست مشتری</strong>
+        سایز، کالا حداکثر تا
+        <strong>۷ روز پس از رسیدن بسته به دست مشتری</strong>
         قابل برگشت می‌باشد.
     </p>
 
@@ -28,6 +53,7 @@
         <li>کالا کاملاً سالم و استفاده‌نشده باشد.</li>
         <li>کالا همراه با بسته‌بندی و متعلقات آن بازگردانده شود.</li>
     </ul>
+
 
     <h3>ایراد یا مغایرت کالا</h3>
 
@@ -43,12 +69,14 @@
         ملاک بررسی مغایرت، مشخصات اصلی درج‌شده در وب‌سایت می‌باشد.
     </p>
 
+
     <h3>مرجوعی سلیقه‌ای</h3>
 
     <p>
         در صورت انصراف از خرید یا مرجوعی سلیقه‌ای که شامل موارد فوق نباشد،
         هزینه عودت کالا بر عهده مشتری خواهد بود.
     </p>
+
 
     <h3>کالاهای غیرقابل مرجوعی و تعویض</h3>
 
@@ -72,6 +100,7 @@
         </strong>
     </p>
 
+
     <h3>مسئولیت اطلاعات سفارش</h3>
 
     <p>
@@ -83,6 +112,7 @@
         در صورت اشتباه در آدرس یا کد پستی، هزینه ارسال مجدد بسته به آدرس
         صحیح بر عهده مشتری خواهد بود.
     </p>
+
 
     <h3>عدم دریافت سفارش</h3>
 
@@ -97,6 +127,7 @@
         مطابق رویه فروشگاه به اعتبار کیف پول مشتری منتقل خواهد شد.
     </p>
 
+
     <h3>نحوه درخواست مرجوعی</h3>
 
     <p>
@@ -109,6 +140,7 @@
         لطفاً تا زمان تأیید درخواست توسط پشتیبانی، از ارسال یا تحویل کالا
         خودداری نمایید.
     </p>
+
 
     <h3>مشتریان سایر شهرها</h3>
 
@@ -128,11 +160,13 @@
         تا زمان تأیید یا رد درخواست توسط پشتیبانی، از ارسال کالا خودداری کنید.
     </p>
 
+
     <h3>هزینه ارسال مرجوعی</h3>
 
     <p>
         در صورت وجود ایراد یا مغایرت کالا با مشخصات درج‌شده در سایت،
-        هزینه‌های پستی مرجوعی بر عهده <strong>لورا کالکشن</strong> خواهد بود.
+        هزینه‌های پستی مرجوعی بر عهده
+        <strong>لورا کالکشن</strong> خواهد بود.
     </p>
 
     <p>
@@ -144,6 +178,7 @@
         <strong>بسته مرجوعی را فقط با پست پیشتاز ارسال نمایید.</strong>
     </p>
 
+
     <h3>مرجوعی محصولات حراجی</h3>
 
     <p>
@@ -151,6 +186,7 @@
         فروش فوق‌العاده نیز در صورت دارا بودن شرایط مندرج در قوانین،
         امکان مرجوعی خواهند داشت.
     </p>
+
 
     <div class="return-important">
 
@@ -191,13 +227,37 @@
     box-sizing: border-box;
 }
 
+.return-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.return-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #fff3f6;
+    color: #b76c84;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
 .return-policy h2 {
     text-align: center;
     font-family: Georgia, serif;
     font-size: 28px;
     font-weight: normal;
     color: #222;
-    margin: 0 0 30px;
+    margin: 0;
+}
+
+.return-subtitle {
+    color: #b76c84;
+    font-size: 13px;
+    margin: 4px 0 0;
 }
 
 .return-policy h3 {
@@ -223,6 +283,41 @@
 .return-policy li {
     font-size: 13px;
     margin: 5px 0;
+}
+
+.return-action-box {
+    background: #fff7f9;
+    border: 1px solid #efd9e1;
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    margin: 20px 0 35px;
+}
+
+.return-action-box h3 {
+    border: none;
+    margin: 0 0 8px;
+    padding: 0;
+    font-size: 19px;
+}
+
+.return-action-box p {
+    margin-bottom: 18px;
+}
+
+.profile-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #b76c84;
+    color: #ffffff;
+    padding: 10px 28px;
+    border-radius: 25px;
+    font-size: 13px;
+    transition: opacity 0.2s ease;
+}
+
+.profile-button:hover {
+    opacity: 0.85;
 }
 
 .return-important {
@@ -255,6 +350,10 @@
     .return-policy p,
     .return-policy li {
         font-size: 12px;
+    }
+
+    .return-action-box {
+        padding: 18px 14px;
     }
 
     .return-important {
