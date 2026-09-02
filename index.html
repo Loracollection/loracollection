@@ -1,2 +1,142 @@
-<a href="#payment">پرداخت و ثبت سفارش</a>
-<a href="#admin">مدیریت سفارش‌ها</a>
+<!-- ================= PRIVATE ADMIN ================= -->
+
+<section id="privateAdmin" class="admin-section">
+
+    <h2 class="section-title">
+        مدیریت LORA COLLECTION
+    </h2>
+
+    <div class="admin-box">
+
+        <div id="adminLogin">
+
+            <div class="form-row">
+                <label>رمز مدیریت</label>
+
+                <input
+                    id="adminPassword"
+                    class="admin-input"
+                    type="password"
+                    placeholder="رمز مدیریت"
+                >
+            </div>
+
+            <button
+                id="adminLoginBtn"
+                class="admin-btn">
+                ورود به پنل مدیریت
+            </button>
+
+            <div
+                id="adminLoginMessage"
+                class="payment-message">
+            </div>
+
+        </div>
+
+
+        <div id="adminPanel" style="display:none">
+
+            <!-- افزودن محصول -->
+
+            <h3 class="admin-title">
+                افزودن محصول جدید
+            </h3>
+
+            <div class="form-row">
+                <label>نام محصول</label>
+
+                <input
+                    id="newProductName"
+                    class="admin-input"
+                    type="text"
+                    placeholder="مثلاً کیف دستی لورا"
+                >
+            </div>
+
+            <div class="form-row">
+                <label>دسته‌بندی</label>
+
+                <select
+                    id="newProductCategory"
+                    class="admin-input">
+
+                    <option value="پوشاک">
+                        پوشاک
+                    </option>
+
+                    <option value="اکسسوری">
+                        اکسسوری
+                    </option>
+
+                    <option value="زیورآلات">
+                        زیورآلات
+                    </option>
+
+                    <option value="کیف">
+                        کیف
+                    </option>
+
+                    <option value="آرایشی و بهداشتی">
+                        آرایشی و بهداشتی
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>قیمت</label>
+
+                <input
+                    id="newProductPrice"
+                    class="admin-input"
+                    type="text"
+                    placeholder="مثلاً 850000 تومان"
+                >
+            </div>
+
+            <div class="form-row">
+                <label>عکس محصول</label>
+
+                <input
+                    id="newProductImage"
+                    class="admin-input"
+                    type="file"
+                    accept="image/*"
+                >
+            </div>
+
+            <button
+                id="addProductBtn"
+                class="admin-btn">
+                + افزودن محصول
+            </button>
+
+            <div
+                id="productAdminMessage"
+                class="payment-message">
+            </div>
+
+
+            <!-- محصولات -->
+
+            <h3 class="admin-title">
+                محصولات فعلی
+            </h3>
+
+            <div id="adminProducts"></div>
+
+
+            <!-- سفارش ها -->
+
+            <h3 class="admin-title">
+                سفارش‌های مشتریان
+            </h3>
+
+            <div id="adminOrders"></div>
+
+        </div>
+
+    </div>
+
+  </section>
