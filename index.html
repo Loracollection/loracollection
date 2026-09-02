@@ -1,147 +1,269 @@
-<!-- ================= PAYMENT ================= -->
+/* =====================================================
+   PAYMENT + ORDERS
+===================================================== */
 
-<section class="payment-section" id="payment">
+const orderForm = document.getElementById("orderForm");
 
-    <h2 class="section-title">
-        پرداخت و ثبت سفارش
-    </h2>
+if(orderForm){
 
-    <div class="payment-box">
+    orderForm.addEventListener("submit", function(event){
 
-        <div class="payment-card">
+        event.preventDefault();
 
-            <small>شماره کارت جهت پرداخت</small>
+        const name =
+            document.getElementById("orderName").value.trim();
 
-            <div class="card-number">
-                5022 2915 3813 9682
-            </div>
+        const phone =
+            document.getElementById("orderPhone").value.trim();
 
-            <div class="card-owner">
-                به نام: زهرا علی پور
-            </div>
+        const address =
+            document.getElementById("orderAddress").value.trim();
 
-        </div>
+        const file =
+            document.getElementById("receiptFile").files[0];
 
-        <form id="orderForm" class="order-form">
+        const message =
+            document.getElementById("paymentMessage");
 
-            <h3>
-                اطلاعات سفارش
-            </h3>
+        if(!name || !phone || !address || !file){
 
-            <div class="form-row">
-                <label>نام و نام خانوادگی</label>
+            message.textContent =
+                "لطفاً تمام اطلاعات و رسید پرداخت را وارد کنید.";
 
-                <input
-                    id="orderName"
-                    type="text"
-                    required
-                    placeholder="نام و نام خانوادگی"
-                >
-            </div>
+            return;
+        }
 
-            <div class="form-row">
-                <label>شماره تماس</label>
+        const reader = new FileReader();
 
-                <input
-                    id="orderPhone"
-                    type="tel"
-                    required
-                    placeholder="شماره تماس"
-                >
-            </div>
+        reader.onload = function(){
 
-            <div class="form-row">
-                <label>آدرس</label>
+            const orders =
+                JSON.parse(
+                    localStorage.getItem("lora_orders") || "[]"
+                );
 
-                <input
-                    id="orderAddress"
-                    type="text"
-                    required
-                    placeholder="آدرس کامل"
-                >
-            </div>
+            const order = {
 
-            <div class="receipt-upload">
+                id:
+                    "LORA-" +
+                    Date.now(),
 
-                <strong>
-                    بارگذاری رسید پرداخت
-                </strong>
+                name:name,
 
-                <p>
-                    تصویر رسید پرداخت را انتخاب کنید.
-                </p>
+                phone:phone,
 
-                <input
-                    id="receiptFile"
-                    type="file"
-                    accept="image/*"
-                    required
-                >
+                address:address,
 
-            </div>
+                receipt:reader.result,
 
-            <button
-                type="submit"
-                class="payment-submit"
+                status:"در انتظار تأیید",
+
+                date:new Date().toLocaleString("fa-IR")
+
+            };
+
+            orders.push(order);
+
+            localStorage.setItem(
+                "lora_orders",
+                JSON.stringify(orders)
+            );
+
+            message.textContent =
+                "سفارش شما ثبت شد و پس از بررسی رسید تأیید می‌شود.";
+
+            orderForm.reset();
+
+        };
+
+        reader.readAsDataURL(file);
+
+    });
+
+}
+
+
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+const adminLoginBtn =
+    document.getElementById("adminLoginBtn");
+
+if(adminLoginBtn){
+
+    adminLoginBtn.addEventListener("click",function(){
+
+        const password =
+            document.getElementById("adminPassword").value;
+
+        /*
+          رمز اولیه مدیریت:
+          1234
+
+          بعداً حتماً باید برای امنیت واقعی
+          سیستم ورود سمت سرور اضافه شود.
+        */
+
+        if(password !== "1234"){
+
+            document.getElementById(
+                "adminLoginMessage"
+            ).textContent =
+                "رمز مدیریت صحیح نیست.";
+
+            return;
+        }
+
+        document.getElementById(
+            "adminLogin"
+        ).style.display="none";
+
+        document.getElementById(
+            "adminOrders"
+        ).style.display="block";
+
+        renderAdminOrders();
+
+    });
+
+}
+
+
+/* =====================================================
+   ADMIN ORDERS
+===================================================== */
+
+function renderAdminOrders(){
+
+    const list =
+        document.getElementById("ordersList");
+
+    if(!list)return;
+
+    const orders =
+        JSON.parse(
+            localStorage.getItem("lora_orders") || "[]"
+        );
+
+    list.innerHTML="";
+
+    if(orders.length===0){
+
+        list.innerHTML =
+            '<p style="margin-top:20px;color:#888">هنوز سفارشی ثبت نشده است.</p>';
+
+        return;
+    }
+
+    orders.slice().reverse().forEach(function(order){
+
+        const card =
+            document.createElement("div");
+
+        card.className="order-card";
+
+        card.innerHTML = `
+
+            <strong>
+                شماره سفارش: ${order.id}
+            </strong>
+
+            <p>
+                نام: ${order.name}
+            </p>
+
+            <p>
+                تماس: ${order.phone}
+            </p>
+
+            <p>
+                آدرس: ${order.address}
+            </p>
+
+            <p>
+                تاریخ: ${order.date}
+            </p>
+
+            <span class="order-status">
+                ${order.status}
+            </span>
+
+            <img
+                src="${order.receipt}"
+                alt="رسید پرداخت"
             >
-                ثبت سفارش و ارسال رسید
-            </button>
 
-            <div
-                id="paymentMessage"
-                class="payment-message">
+            <div class="order-actions">
+
+                <button
+                    onclick="approveOrder('${order.id}')">
+                    تأیید سفارش
+                </button>
+
+                <button
+                    onclick="rejectOrder('${order.id}')">
+                    رد سفارش
+                </button>
+
             </div>
 
-        </form>
+        `;
 
-    </div>
+        list.appendChild(card);
 
-</section>
+    });
 
-<!-- ================= ADMIN ================= -->
+}
 
-<section class="admin-section" id="admin">
 
-    <h2 class="section-title">
-        مدیریت سفارش‌ها
-    </h2>
+/* =====================================================
+   APPROVE / REJECT
+===================================================== */
 
-    <div class="admin-box">
+function approveOrder(id){
 
-        <div id="adminLogin" class="admin-login">
+    updateOrderStatus(
+        id,
+        "تأیید نهایی شد"
+    );
 
-            <input
-                id="adminPassword"
-                class="admin-input"
-                type="password"
-                placeholder="رمز مدیریت"
-            >
+}
 
-            <button
-                id="adminLoginBtn"
-                class="admin-btn">
-                ورود به مدیریت
-            </button>
+function rejectOrder(id){
 
-            <div
-                id="adminLoginMessage"
-                class="payment-message">
-            </div>
+    updateOrderStatus(
+        id,
+        "رسید تأیید نشد"
+    );
 
-        </div>
+}
 
-        <div
-            id="adminOrders"
-            style="display:none">
+function updateOrderStatus(id,status){
 
-            <h3>
-                سفارش‌های ثبت‌شده
-            </h3>
+    const orders =
+        JSON.parse(
+            localStorage.getItem("lora_orders") || "[]"
+        );
 
-            <div id="ordersList"></div>
+    const order =
+        orders.find(function(item){
 
-        </div>
+            return item.id===id;
 
-    </div>
+        });
 
-    </section>
+    if(order){
+
+        order.status=status;
+
+        localStorage.setItem(
+            "lora_orders",
+            JSON.stringify(orders)
+        );
+
+    }
+
+    renderAdminOrders();
+
+}
