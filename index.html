@@ -1,61 +1,327 @@
-/* ================= PRIVATE ADMIN ================= */
+/* =====================================================
+   PRIVATE ADMIN PANEL
+===================================================== */
 
-#privateAdmin{
-    display:none;
+const ADMIN_PASSWORD = "1234";
+
+const adminSection =
+    document.getElementById("privateAdmin");
+
+const adminLoginBtn =
+    document.getElementById("adminLoginBtn");
+
+if(adminLoginBtn){
+
+    adminLoginBtn.addEventListener("click",function(){
+
+        const password =
+            document.getElementById("adminPassword").value;
+
+        const message =
+            document.getElementById("adminLoginMessage");
+
+        if(password !== ADMIN_PASSWORD){
+
+            message.textContent =
+                "رمز مدیریت اشتباه است.";
+
+            return;
+        }
+
+        adminSection.style.display = "block";
+
+        document.getElementById("adminLogin").style.display =
+            "none";
+
+        document.getElementById("adminPanel").style.display =
+            "block";
+
+        renderAdminProducts();
+        renderAdminOrders();
+
+    });
+
 }
 
-.admin-title{
-    font-family:Georgia,serif;
-    margin:30px 0 15px;
-    padding-bottom:10px;
-    border-bottom:1px solid #efd0da;
+
+/* ================= ADD PRODUCT ================= */
+
+const addProductBtn =
+    document.getElementById("addProductBtn");
+
+if(addProductBtn){
+
+    addProductBtn.addEventListener("click",function(){
+
+        const name =
+            document.getElementById("newProductName")
+            .value.trim();
+
+        const category =
+            document.getElementById("newProductCategory")
+            .value;
+
+        const price =
+            document.getElementById("newProductPrice")
+            .value.trim();
+
+        const file =
+            document.getElementById("newProductImage")
+            .files[0];
+
+        const message =
+            document.getElementById("productAdminMessage");
+
+        if(!name || !price){
+
+            message.textContent =
+                "نام محصول و قیمت را وارد کنید.";
+
+            return;
+        }
+
+        function saveProduct(image){
+
+            const products =
+                JSON.parse(
+                    localStorage.getItem("lora_products") || "[]"
+                );
+
+            products.push({
+
+                name:name,
+                category:category,
+                price:price,
+                image:image || ""
+
+            });
+
+            localStorage.setItem(
+                "lora_products",
+                JSON.stringify(products)
+            );
+
+            message.textContent =
+                "محصول با موفقیت اضافه شد.";
+
+            document.getElementById("newProductName").value="";
+            document.getElementById("newProductPrice").value="";
+            document.getElementById("newProductImage").value="";
+
+            renderAdminProducts();
+
+            if(typeof renderProducts === "function"){
+                renderProducts();
+            }
+
+        }
+
+
+        if(file){
+
+            const reader = new FileReader();
+
+            reader.onload=function(){
+
+                saveProduct(reader.result);
+
+            };
+
+            reader.readAsDataURL(file);
+
+        }else{
+
+            saveProduct("");
+
+        }
+
+    });
+
 }
 
-.admin-input{
-    width:100%;
-    padding:12px;
-    border:1px solid #e5b8c6;
-    background:#fff;
-    outline:none;
+
+/* ================= ADMIN PRODUCTS ================= */
+
+function renderAdminProducts(){
+
+    const box =
+        document.getElementById("adminProducts");
+
+    if(!box)return;
+
+    const products =
+        JSON.parse(
+            localStorage.getItem("lora_products") || "[]"
+        );
+
+    box.innerHTML="";
+
+    if(products.length===0){
+
+        box.innerHTML =
+            "<p>هنوز محصولی اضافه نشده است.</p>";
+
+        return;
+    }
+
+    products.forEach(function(product,index){
+
+        const item =
+            document.createElement("div");
+
+        item.className="admin-product";
+
+        item.innerHTML = `
+
+            <strong>
+                ${product.name}
+            </strong>
+
+            <p>
+                دسته‌بندی: ${product.category}
+            </p>
+
+            <p>
+                قیمت: ${product.price}
+            </p>
+
+            ${
+                product.image
+                ?
+                `<img src="${product.image}" alt="">`
+                :
+                ""
+            }
+
+            <button
+                class="delete-product"
+                data-index="${index}">
+                حذف محصول
+            </button>
+
+        `;
+
+        box.appendChild(item);
+
+    });
+
+
+    box.querySelectorAll(".delete-product")
+    .forEach(function(button){
+
+        button.addEventListener("click",function(){
+
+            const index =
+                Number(button.dataset.index);
+
+            const products =
+                JSON.parse(
+                    localStorage.getItem("lora_products") || "[]"
+                );
+
+            products.splice(index,1);
+
+            localStorage.setItem(
+                "lora_products",
+                JSON.stringify(products)
+            );
+
+            renderAdminProducts();
+
+            if(typeof renderProducts === "function"){
+                renderProducts();
+            }
+
+        });
+
+    });
+
 }
 
-.admin-btn{
-    width:100%;
-    padding:13px;
-    border:0;
-    background:#cf6688;
-    color:#fff;
-    cursor:pointer;
-}
 
-.admin-product,
-.admin-order{
-    background:#fff7fa;
-    border:1px solid #efd0da;
-    padding:18px;
-    margin:12px 0;
-}
+/* ================= ADMIN ORDERS ================= */
 
-.admin-product img,
-.admin-order img{
-    display:block;
-    max-width:180px;
-    max-height:180px;
-    margin:12px auto;
-    object-fit:contain;
-}
+function renderAdminOrders(){
 
-.delete-product{
-    border:0;
-    background:#222;
-    color:#fff;
-    padding:8px 15px;
-}
+    const box =
+        document.getElementById("adminOrders");
 
-.admin-order button{
-    border:0;
-    background:#cf6688;
-    color:#fff;
-    padding:9px 15px;
-    margin:5px;
+    if(!box)return;
+
+    const orders =
+        JSON.parse(
+            localStorage.getItem("lora_orders") || "[]"
+        );
+
+    box.innerHTML="";
+
+    if(orders.length===0){
+
+        box.innerHTML =
+            "<p>هنوز سفارشی ثبت نشده است.</p>";
+
+        return;
+    }
+
+    orders.slice().reverse()
+    .forEach(function(order){
+
+        const item =
+            document.createElement("div");
+
+        item.className="admin-order";
+
+        item.innerHTML = `
+
+            <strong>
+                شماره سفارش: ${order.id}
+            </strong>
+
+            <p>
+                نام: ${order.name}
+            </p>
+
+            <p>
+                شماره تماس: ${order.phone}
+            </p>
+
+            <p>
+                آدرس: ${order.address}
+            </p>
+
+            <p>
+                وضعیت:
+                <strong>${order.status}</strong>
+            </p>
+
+            <p>
+                تاریخ:
+                ${order.date}
+            </p>
+
+            ${
+                order.receipt
+                ?
+                `<img src="${order.receipt}"
+                      alt="رسید پرداخت">`
+                :
+                "<p>رسیدی ارسال نشده است.</p>"
+            }
+
+            <button
+                onclick="approveOrder('${order.id}')">
+                تأیید سفارش
+            </button>
+
+            <button
+                onclick="rejectOrder('${order.id}')">
+                رد رسید
+            </button>
+
+        `;
+
+        box.appendChild(item);
+
+    });
+
 }
