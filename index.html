@@ -1,142 +1,61 @@
-<!-- ================= PRIVATE ADMIN ================= -->
+/* ================= PRIVATE ADMIN ================= */
 
-<section id="privateAdmin" class="admin-section">
+#privateAdmin{
+    display:none;
+}
 
-    <h2 class="section-title">
-        مدیریت LORA COLLECTION
-    </h2>
+.admin-title{
+    font-family:Georgia,serif;
+    margin:30px 0 15px;
+    padding-bottom:10px;
+    border-bottom:1px solid #efd0da;
+}
 
-    <div class="admin-box">
+.admin-input{
+    width:100%;
+    padding:12px;
+    border:1px solid #e5b8c6;
+    background:#fff;
+    outline:none;
+}
 
-        <div id="adminLogin">
+.admin-btn{
+    width:100%;
+    padding:13px;
+    border:0;
+    background:#cf6688;
+    color:#fff;
+    cursor:pointer;
+}
 
-            <div class="form-row">
-                <label>رمز مدیریت</label>
+.admin-product,
+.admin-order{
+    background:#fff7fa;
+    border:1px solid #efd0da;
+    padding:18px;
+    margin:12px 0;
+}
 
-                <input
-                    id="adminPassword"
-                    class="admin-input"
-                    type="password"
-                    placeholder="رمز مدیریت"
-                >
-            </div>
+.admin-product img,
+.admin-order img{
+    display:block;
+    max-width:180px;
+    max-height:180px;
+    margin:12px auto;
+    object-fit:contain;
+}
 
-            <button
-                id="adminLoginBtn"
-                class="admin-btn">
-                ورود به پنل مدیریت
-            </button>
+.delete-product{
+    border:0;
+    background:#222;
+    color:#fff;
+    padding:8px 15px;
+}
 
-            <div
-                id="adminLoginMessage"
-                class="payment-message">
-            </div>
-
-        </div>
-
-
-        <div id="adminPanel" style="display:none">
-
-            <!-- افزودن محصول -->
-
-            <h3 class="admin-title">
-                افزودن محصول جدید
-            </h3>
-
-            <div class="form-row">
-                <label>نام محصول</label>
-
-                <input
-                    id="newProductName"
-                    class="admin-input"
-                    type="text"
-                    placeholder="مثلاً کیف دستی لورا"
-                >
-            </div>
-
-            <div class="form-row">
-                <label>دسته‌بندی</label>
-
-                <select
-                    id="newProductCategory"
-                    class="admin-input">
-
-                    <option value="پوشاک">
-                        پوشاک
-                    </option>
-
-                    <option value="اکسسوری">
-                        اکسسوری
-                    </option>
-
-                    <option value="زیورآلات">
-                        زیورآلات
-                    </option>
-
-                    <option value="کیف">
-                        کیف
-                    </option>
-
-                    <option value="آرایشی و بهداشتی">
-                        آرایشی و بهداشتی
-                    </option>
-
-                </select>
-            </div>
-
-            <div class="form-row">
-                <label>قیمت</label>
-
-                <input
-                    id="newProductPrice"
-                    class="admin-input"
-                    type="text"
-                    placeholder="مثلاً 850000 تومان"
-                >
-            </div>
-
-            <div class="form-row">
-                <label>عکس محصول</label>
-
-                <input
-                    id="newProductImage"
-                    class="admin-input"
-                    type="file"
-                    accept="image/*"
-                >
-            </div>
-
-            <button
-                id="addProductBtn"
-                class="admin-btn">
-                + افزودن محصول
-            </button>
-
-            <div
-                id="productAdminMessage"
-                class="payment-message">
-            </div>
-
-
-            <!-- محصولات -->
-
-            <h3 class="admin-title">
-                محصولات فعلی
-            </h3>
-
-            <div id="adminProducts"></div>
-
-
-            <!-- سفارش ها -->
-
-            <h3 class="admin-title">
-                سفارش‌های مشتریان
-            </h3>
-
-            <div id="adminOrders"></div>
-
-        </div>
-
-    </div>
-
-  </section>
+.admin-order button{
+    border:0;
+    background:#cf6688;
+    color:#fff;
+    padding:9px 15px;
+    margin:5px;
+}
