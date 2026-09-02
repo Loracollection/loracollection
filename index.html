@@ -1,23 +1,147 @@
-<a href="#products" class="category beauty-category">
+<!-- ================= PAYMENT ================= -->
 
-    <div class="category-bg">
-        <div class="category-circle">
-            <div class="category-symbol">♡</div>
+<section class="payment-section" id="payment">
+
+    <h2 class="section-title">
+        پرداخت و ثبت سفارش
+    </h2>
+
+    <div class="payment-box">
+
+        <div class="payment-card">
+
+            <small>شماره کارت جهت پرداخت</small>
+
+            <div class="card-number">
+                5022 2915 3813 9682
+            </div>
+
+            <div class="card-owner">
+                به نام: زهرا علی پور
+            </div>
+
         </div>
+
+        <form id="orderForm" class="order-form">
+
+            <h3>
+                اطلاعات سفارش
+            </h3>
+
+            <div class="form-row">
+                <label>نام و نام خانوادگی</label>
+
+                <input
+                    id="orderName"
+                    type="text"
+                    required
+                    placeholder="نام و نام خانوادگی"
+                >
+            </div>
+
+            <div class="form-row">
+                <label>شماره تماس</label>
+
+                <input
+                    id="orderPhone"
+                    type="tel"
+                    required
+                    placeholder="شماره تماس"
+                >
+            </div>
+
+            <div class="form-row">
+                <label>آدرس</label>
+
+                <input
+                    id="orderAddress"
+                    type="text"
+                    required
+                    placeholder="آدرس کامل"
+                >
+            </div>
+
+            <div class="receipt-upload">
+
+                <strong>
+                    بارگذاری رسید پرداخت
+                </strong>
+
+                <p>
+                    تصویر رسید پرداخت را انتخاب کنید.
+                </p>
+
+                <input
+                    id="receiptFile"
+                    type="file"
+                    accept="image/*"
+                    required
+                >
+
+            </div>
+
+            <button
+                type="submit"
+                class="payment-submit"
+            >
+                ثبت سفارش و ارسال رسید
+            </button>
+
+            <div
+                id="paymentMessage"
+                class="payment-message">
+            </div>
+
+        </form>
+
     </div>
 
-    <div class="category-content">
+</section>
 
-        <small>BEAUTY & CARE</small>
+<!-- ================= ADMIN ================= -->
 
-        <h3>آرایشی و بهداشتی</h3>
+<section class="admin-section" id="admin">
 
-        <p>
-            انتخابی برای زیبایی و مراقبت روزانه
-        </p>
+    <h2 class="section-title">
+        مدیریت سفارش‌ها
+    </h2>
 
-        <b>مشاهده مجموعه ←</b>
+    <div class="admin-box">
+
+        <div id="adminLogin" class="admin-login">
+
+            <input
+                id="adminPassword"
+                class="admin-input"
+                type="password"
+                placeholder="رمز مدیریت"
+            >
+
+            <button
+                id="adminLoginBtn"
+                class="admin-btn">
+                ورود به مدیریت
+            </button>
+
+            <div
+                id="adminLoginMessage"
+                class="payment-message">
+            </div>
+
+        </div>
+
+        <div
+            id="adminOrders"
+            style="display:none">
+
+            <h3>
+                سفارش‌های ثبت‌شده
+            </h3>
+
+            <div id="ordersList"></div>
+
+        </div>
 
     </div>
 
-</a>
+    </section>
