@@ -2,791 +2,1276 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>LORA COLLECTION | لورا کالکشن</title>
 
 <style>
-
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 :root{
---pink:#f6a8c5;
---light:#fff5f9;
---soft:#fde5ee;
---dark:#242124;
---gray:#777;
---border:#f1d8e2;
+    --pink:#f7b6c9;
+    --pink2:#f9dce6;
+    --pink3:#fff5f8;
+    --dark:#242424;
+    --gray:#777;
+    --line:#eadde2;
+    --white:#fff;
 }
 
 body{
-font-family:Tahoma,Arial,sans-serif;
-background:#fff;
-color:var(--dark);
-line-height:1.8;
+    background:#fff;
+    color:var(--dark);
+    font-family:Tahoma,Arial,sans-serif;
 }
 
 button,
 input{
-font-family:inherit;
+    font-family:inherit;
 }
 
-button{
-cursor:pointer;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-/* TOP BAR */
+/* =========================
+   TOP MESSAGE
+========================= */
 
-.topbar{
-background:#f7abc6;
-color:white;
-text-align:center;
-font-size:12px;
-padding:7px;
+.top-message{
+    width:100%;
+    background:#fff7fa;
+    border-bottom:1px solid #f3e2e8;
+    text-align:center;
+    padding:7px;
+    font-size:11px;
+    color:#777;
 }
 
-/* HEADER */
-
-header{
-background:#fff;
-border-bottom:1px solid #f4dce5;
-position:sticky;
-top:0;
-z-index:100;
-}
+/* =========================
+   HEADER
+========================= */
 
 .header{
-max-width:1250px;
-margin:auto;
-padding:12px 25px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
+    width:100%;
+    background:#fff;
+    border-bottom:1px solid var(--line);
 }
 
-/* LOGO */
+.header-inner{
+    max-width:1280px;
+    margin:auto;
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+    padding:0 25px;
+}
+
+/* =========================
+   LOGO - NUMBER 1 STYLE
+========================= */
 
 .logo{
-display:flex;
-align-items:center;
-gap:9px;
-text-decoration:none;
-color:#222;
+    display:flex;
+    align-items:center;
+    min-width:205px;
 }
 
-.logo-symbol{
-position:relative;
-width:53px;
-height:48px;
+.logo-mark{
+    width:65px;
+    height:62px;
+    position:relative;
+    flex-shrink:0;
 }
 
-.logo-symbol .black{
-position:absolute;
-right:4px;
-top:0;
-font-family:Georgia,serif;
-font-size:43px;
-color:#111;
-line-height:1;
+.logo-mark .l-black{
+    position:absolute;
+    right:12px;
+    top:-5px;
+    font-family:Georgia,serif;
+    font-size:58px;
+    font-weight:400;
+    color:#111;
+    line-height:1;
 }
 
-.logo-symbol .pink{
-position:absolute;
-right:17px;
-top:7px;
-font-family:cursive;
-font-size:38px;
-color:#f19abb;
-line-height:1;
+.logo-mark .l-pink{
+    position:absolute;
+    right:25px;
+    top:5px;
+    font-family:cursive;
+    font-size:45px;
+    font-style:italic;
+    color:#ef9fbb;
+    line-height:1;
 }
 
-.logo-name{
-font-family:Georgia,serif;
-font-size:19px;
-letter-spacing:2px;
-font-weight:bold;
+.logo-mark:after{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
+    border-left:1px solid #efb4c7;
+    border-bottom:1px solid #efb4c7;
+    transform:rotate(-35deg);
+    left:4px;
+    bottom:9px;
+}
+
+.logo-text{
+    text-align:left;
+    direction:ltr;
+}
+
+.logo-main{
+    font-family:Georgia,serif;
+    font-size:22px;
+    letter-spacing:2px;
+    color:#181818;
 }
 
 .logo-sub{
-display:block;
-font-size:8px;
-color:#999;
-letter-spacing:3px;
-margin-top:-4px;
+    font-size:8px;
+    letter-spacing:4px;
+    color:#d995ae;
+    margin-top:2px;
 }
 
-/* ICONS */
+/* =========================
+   SEARCH
+========================= */
+
+.search-box{
+    width:300px;
+    height:38px;
+    border:1px solid #eadde2;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:#fff;
+}
+
+.search-box input{
+    border:0;
+    outline:0;
+    flex:1;
+    padding:0 17px;
+    font-size:11px;
+    color:#555;
+}
+
+.search-box button{
+    width:48px;
+    height:100%;
+    border:0;
+    background:var(--pink);
+    color:#fff;
+    font-size:17px;
+}
+
+/* =========================
+   HEADER ICONS
+========================= */
 
 .header-icons{
-display:flex;
-gap:8px;
+    display:flex;
+    align-items:center;
+    gap:13px;
 }
 
-.header-icon{
-width:39px;
-height:39px;
-border-radius:50%;
-border:1px solid #efd5df;
-background:white;
-font-size:17px;
+.icon-button{
+    width:37px;
+    height:37px;
+    border:0;
+    background:white;
+    position:relative;
+    font-size:21px;
+    cursor:pointer;
 }
 
-.header-icon:hover{
-background:var(--light);
+.badge{
+    position:absolute;
+    top:-3px;
+    right:-4px;
+    min-width:16px;
+    height:16px;
+    padding:0 4px;
+    border-radius:20px;
+    background:#ef9fbb;
+    color:#fff;
+    font-size:9px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-/* NAV */
+/* =========================
+   NAV
+========================= */
 
 .nav{
-border-top:1px solid #faf0f4;
-display:flex;
-justify-content:center;
-gap:5px;
-padding:5px 15px;
+    border-top:1px solid #f8eef2;
+    background:#fff;
+}
+
+.nav-inner{
+    max-width:1100px;
+    margin:auto;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
 }
 
 .nav a{
-text-decoration:none;
-color:#444;
-font-size:12px;
-padding:6px 14px;
-border-radius:20px;
+    font-size:12px;
+    color:#444;
+    position:relative;
+    transition:.2s;
 }
 
-.nav a:hover{
-background:#fde5ee;
-color:#d45d88;
+.nav a:hover,
+.nav a.active{
+    color:#df7899;
 }
 
-/* HERO */
+.nav a.active:after{
+    content:"";
+    position:absolute;
+    bottom:-13px;
+    right:0;
+    left:0;
+    height:2px;
+    background:#ef9fbb;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
-max-width:1250px;
-margin:18px auto;
-padding:0 18px;
+    max-width:1280px;
+    margin:18px auto;
+    padding:0 18px;
 }
 
 .hero-box{
-min-height:340px;
-border-radius:10px;
-overflow:hidden;
-background:
-linear-gradient(90deg,#fff 0%,#fff5f8 48%,#fbd8e5 100%);
-display:flex;
-align-items:center;
-justify-content:space-between;
-position:relative;
-padding:35px 55px;
+    min-height:365px;
+    border-radius:8px;
+    overflow:hidden;
+    position:relative;
+    background:
+        linear-gradient(
+            90deg,
+            #fff1f5 0%,
+            #fde2eb 48%,
+            #f8ccd9 100%
+        );
+    display:flex;
+    align-items:center;
 }
 
-.hero-box:before{
-content:"";
-position:absolute;
-width:260px;
-height:260px;
-border-radius:50%;
-background:#fff;
-left:-80px;
-bottom:-120px;
-}
-
-.hero-text{
-position:relative;
-z-index:2;
-max-width:520px;
+.hero-content{
+    width:47%;
+    padding:40px 55px;
+    z-index:2;
 }
 
 .hero-small{
-font-size:13px;
-color:#d95e89;
-font-weight:bold;
+    font-family:Georgia,serif;
+    color:#df7999;
+    font-size:14px;
+    letter-spacing:2px;
+    margin-bottom:8px;
 }
 
 .hero-title{
-font-family:Georgia,serif;
-font-size:46px;
-letter-spacing:4px;
-line-height:1.15;
-margin:8px 0;
+    font-size:34px;
+    font-weight:500;
+    color:#222;
+    line-height:1.7;
+}
+
+.hero-title strong{
+    font-weight:700;
 }
 
 .hero-description{
-color:#777;
-font-size:14px;
-margin:12px 0 18px;
+    color:#777;
+    font-size:12px;
+    margin:7px 0 20px;
 }
 
 .hero-button{
-border:0;
-background:#222;
-color:white;
-padding:10px 27px;
-border-radius:22px;
-font-size:12px;
+    border:0;
+    background:#ef9fbb;
+    color:white;
+    border-radius:5px;
+    padding:11px 27px;
+    font-size:11px;
+    cursor:pointer;
+    box-shadow:0 5px 15px #e39ab455;
 }
 
 .hero-button:hover{
-background:#e889aa;
+    background:#df7899;
 }
 
-/* HERO LOGO */
+/* لباس‌های سمت راست با CSS */
 
-.hero-logo{
-width:230px;
-height:230px;
-background:#fff;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 12px 35px #dbaabd55;
-position:relative;
-z-index:2;
+.hero-fashion{
+    position:absolute;
+    left:40%;
+    right:0;
+    top:0;
+    bottom:0;
+    overflow:hidden;
 }
 
-.hero-logo-inner{
-text-align:center;
+.clothes{
+    position:absolute;
+    right:9%;
+    bottom:0;
+    width:72%;
+    height:82%;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    gap:7px;
 }
 
-.hero-logo-mark{
-font-family:Georgia,serif;
-font-size:75px;
-line-height:1;
-color:#111;
-text-shadow:22px 7px 0 #f3a4c2;
+.hanger{
+    width:65px;
+    height:230px;
+    background:linear-gradient(
+        90deg,
+        #f8d9e2,
+        #fff,
+        #f2c4d2
+    );
+    border-radius:30px 30px 8px 8px;
+    position:relative;
+    box-shadow:0 5px 12px #c993a533;
 }
 
-.hero-logo-name{
-font-family:Georgia,serif;
-font-size:18px;
-letter-spacing:3px;
+.hanger:nth-child(2){
+    height:255px;
+    background:linear-gradient(90deg,#f4c4d3,#fff,#f1c0d0);
 }
 
-.hero-logo-small{
-font-size:8px;
-letter-spacing:3px;
-color:#999;
+.hanger:nth-child(3){
+    height:245px;
+    background:linear-gradient(90deg,#fff,#f8e8ed,#eab7c8);
 }
 
-/* SECTION */
+.hanger:nth-child(4){
+    height:265px;
+    background:linear-gradient(90deg,#f3d5df,#fff,#f0bdcd);
+}
+
+.hanger:nth-child(5){
+    height:235px;
+    background:linear-gradient(90deg,#fff,#f5dce5,#e9bacb);
+}
+
+.hanger:before{
+    content:"";
+    position:absolute;
+    width:19px;
+    height:19px;
+    border:2px solid #b87960;
+    border-radius:50%;
+    top:-12px;
+    left:23px;
+    background:transparent;
+}
+
+.bag{
+    position:absolute;
+    bottom:8px;
+    left:10%;
+    width:110px;
+    height:105px;
+    border-radius:10px 10px 20px 20px;
+    background:#eab0c1;
+    box-shadow:0 8px 18px #b9798e44;
+}
+
+.bag:before{
+    content:"";
+    position:absolute;
+    width:55px;
+    height:38px;
+    border:5px solid #bd7b67;
+    border-bottom:0;
+    border-radius:30px 30px 0 0;
+    left:25px;
+    top:-30px;
+}
+
+.flower{
+    position:absolute;
+    bottom:8px;
+    right:6%;
+    width:100px;
+    height:130px;
+}
+
+.flower:before{
+    content:"✿";
+    position:absolute;
+    font-size:70px;
+    color:#e9a7b9;
+    top:0;
+    right:10px;
+}
+
+.flower:after{
+    content:"";
+    position:absolute;
+    width:4px;
+    height:95px;
+    background:#a98a67;
+    bottom:0;
+    right:52px;
+    transform:rotate(5deg);
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    max-width:1280px;
+    margin:-18px auto 35px;
+    padding:0 35px;
+    position:relative;
+    z-index:5;
+}
+
+.features-box{
+    background:#fff;
+    border:1px solid #eee1e6;
+    box-shadow:0 7px 25px #d5b9c533;
+    min-height:85px;
+    border-radius:5px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.feature{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    border-left:1px solid #eee1e6;
+    padding:12px;
+}
+
+.feature:last-child{
+    border-left:0;
+}
+
+.feature-icon{
+    font-size:28px;
+    color:#e998b3;
+}
+
+.feature-title{
+    font-size:11px;
+    font-weight:bold;
+    margin-bottom:3px;
+}
+
+.feature-text{
+    font-size:9px;
+    color:#888;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
 
 .section{
-max-width:1250px;
-margin:38px auto;
-padding:0 18px;
+    max-width:1280px;
+    margin:45px auto;
+    padding:0 22px;
 }
 
 .section-title{
-text-align:center;
-margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.section-title:before,
+.section-title:after{
+    content:"";
+    height:1px;
+    background:#ecdde3;
+    width:150px;
 }
 
 .section-title h2{
-font-family:Georgia,serif;
-font-size:25px;
+    font-size:20px;
+    font-weight:500;
 }
 
 .section-title p{
-font-size:11px;
-color:#999;
+    font-size:10px;
+    color:#df7999;
 }
 
-/* CATEGORY */
+/* =========================
+   CATEGORIES
+========================= */
 
 .categories{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:12px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:14px;
 }
 
 .category{
-background:#fff;
-border:1px solid var(--border);
-padding:14px 8px;
-text-align:center;
-border-radius:8px;
-transition:.2s;
+    height:170px;
+    border:1px solid #eee0e6;
+    border-radius:6px;
+    background:linear-gradient(#fff,#fff8fa);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:.25s;
 }
 
 .category:hover{
-transform:translateY(-3px);
-box-shadow:0 7px 20px #efcbd855;
+    transform:translateY(-5px);
+    box-shadow:0 8px 22px #e1bdca55;
 }
 
-.category-image{
-height:95px;
-border-radius:6px;
-background:linear-gradient(135deg,#fff,#fce4ed);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:40px;
-margin-bottom:8px;
+.category-icon{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    background:#fff0f5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    margin-bottom:12px;
 }
 
 .category-name{
-font-size:12px;
-font-weight:bold;
+    font-size:12px;
+    font-weight:bold;
 }
 
-/* QUICK LINKS */
-
-.quick-links{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
-margin-top:20px;
+.category-small{
+    font-size:9px;
+    color:#aaa;
+    margin-top:3px;
 }
 
-.quick{
-border:1px solid #f0d9e2;
-background:#fff;
-padding:12px;
-text-align:center;
-border-radius:7px;
-font-size:11px;
-}
+/* =========================
+   PRODUCTS
+========================= */
 
-.quick b{
-display:block;
-color:#d65f89;
-margin-bottom:2px;
-}
-
-/* PROMO */
-
-.promo{
-background:linear-gradient(90deg,#fff1f6,#f8c9da);
-border-radius:9px;
-padding:25px 35px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.promo-title{
-font-size:25px;
-font-weight:bold;
-color:#cf5a82;
-}
-
-.promo-text{
-font-size:12px;
-color:#777;
-}
-
-.promo-button{
-background:#222;
-color:white;
-border:0;
-border-radius:20px;
-padding:9px 22px;
-font-size:11px;
-}
-
-/* PRODUCTS */
-
-.products{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:17px;
 }
 
 .product{
-border:1px solid #f0dce4;
-background:white;
-border-radius:8px;
-overflow:hidden;
-transition:.2s;
+    border:1px solid #eee0e6;
+    background:#fff;
+    border-radius:6px;
+    overflow:hidden;
+    transition:.25s;
+    position:relative;
 }
 
 .product:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 25px #e7cbd655;
+    transform:translateY(-4px);
+    box-shadow:0 8px 25px #dfbdca55;
 }
 
 .product-image{
-height:220px;
-background:linear-gradient(145deg,#fff,#fbe4ed);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:65px;
+    height:235px;
+    background:linear-gradient(135deg,#fff3f7,#f9dfe8);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:75px;
+    position:relative;
+}
+
+.product-tag{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:#ef9fbb;
+    color:#fff;
+    border-radius:3px;
+    padding:4px 8px;
+    font-size:9px;
+}
+
+.product-heart{
+    position:absolute;
+    top:8px;
+    left:9px;
+    width:28px;
+    height:28px;
+    border:0;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:0 2px 7px #9993;
+    cursor:pointer;
 }
 
 .product-info{
-padding:12px;
+    padding:13px;
 }
 
 .product-name{
-font-size:12px;
-font-weight:bold;
+    font-size:12px;
+    font-weight:bold;
 }
 
 .product-desc{
-font-size:10px;
-color:#999;
-margin-top:2px;
+    font-size:9px;
+    color:#999;
+    margin:4px 0 10px;
 }
 
 .product-bottom{
-display:flex;
-align-items:center;
-justify-content:space-between;
-margin-top:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .price{
-font-size:12px;
-font-weight:bold;
-color:#d25882;
+    font-size:11px;
+    color:#df7899;
+    font-weight:bold;
 }
 
-.add{
-border:0;
-background:#222;
-color:white;
-border-radius:15px;
-padding:6px 12px;
-font-size:10px;
+.add-button{
+    border:0;
+    background:#ef9fbb;
+    color:white;
+    border-radius:4px;
+    padding:7px 12px;
+    font-size:9px;
+    cursor:pointer;
 }
 
-/* THREE BANNERS */
-
-.banner-grid{
-display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:12px;
-}
-
-.banner{
-min-height:150px;
-border-radius:8px;
-padding:20px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-overflow:hidden;
-}
-
-.banner.big{
-background:linear-gradient(120deg,#fbd7e4,#fff);
-}
-
-.banner.pink{
-background:#fce4ed;
-}
-
-.banner.white{
-border:1px solid #f0dbe3;
-}
-
-.banner small{
-font-size:10px;
-color:#c6537c;
-}
-
-.banner strong{
-font-family:Georgia,serif;
-font-size:23px;
-margin:4px 0;
-}
-
-.banner span{
-font-size:10px;
-color:#777;
-}
-
-/* FOOTER */
-
-footer{
-margin-top:50px;
-background:#fff1f6;
-border-top:1px solid #f1d5df;
-padding:35px 20px 15px;
-text-align:center;
-}
-
-.footer-logo{
-font-family:Georgia,serif;
-font-size:23px;
-letter-spacing:3px;
-}
-
-.footer-text{
-font-size:11px;
-color:#777;
-margin:7px auto;
-max-width:500px;
-}
-
-.footer-links{
-margin:15px 0;
-}
-
-.footer-links a{
-color:#555;
-text-decoration:none;
-font-size:11px;
-margin:0 8px;
-}
-
-.copy{
-font-size:9px;
-color:white;
-background:#f3a6c2;
-padding:8px;
-border-radius:15px;
-max-width:600px;
-margin:auto;
-}
-
-/* MOBILE MENU */
-
-.mobile-menu{
-position:fixed;
-top:0;
-right:-320px;
-width:300px;
-max-width:85%;
-height:100%;
-background:#fff;
-z-index:500;
-padding:25px;
-transition:.3s;
-box-shadow:-5px 0 25px #9995;
-}
-
-.mobile-menu.open{
-right:0;
-}
-
-.mobile-menu h3{
-font-family:Georgia,serif;
-margin-bottom:20px;
-}
-
-.mobile-menu button.close{
-float:left;
-border:0;
-background:none;
-font-size:22px;
-}
-
-.mobile-link{
-display:block;
-padding:11px 5px;
-border-bottom:1px solid #f3e0e7;
-text-decoration:none;
-color:#444;
-font-size:13px;
-}
-
-.overlay{
-position:fixed;
-inset:0;
-background:#0006;
-display:none;
-z-index:400;
-}
-
-.overlay.show{
-display:block;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:850px){
-
-.header{
-padding:10px 12px;
-}
-
-.nav{
-display:none;
-}
-
-.hero-box{
-padding:28px;
-}
-
-.categories{
-grid-template-columns:repeat(3,1fr);
-}
-
-.products{
-grid-template-columns:repeat(2,1fr);
-}
-
-.quick-links{
-grid-template-columns:repeat(2,1fr);
-}
-
-.banner-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.banner.big{
-grid-column:1/-1;
-}
-
-}
-
-@media(max-width:550px){
-
-.topbar{
-font-size:10px;
-}
-
-.logo-name{
-font-size:15px;
-}
-
-.logo-sub{
-font-size:6px;
-}
-
-.hero-box{
-display:block;
-text-align:center;
-padding:25px 15px 20px;
-}
-
-.hero-text{
-margin:auto;
-}
-
-.hero-title{
-font-size:32px;
-}
-
-.hero-logo{
-width:150px;
-height:150px;
-margin:20px auto 0;
-}
-
-.hero-logo-mark{
-font-size:50px;
-}
-
-.hero-logo-name{
-font-size:14px;
-}
-
-.categories{
-grid-template-columns:repeat(2,1fr);
-}
-
-.category-image{
-height:80px;
-}
-
-.products{
-grid-template-columns:repeat(2,1fr);
-gap:8px;
-}
-
-.product-image{
-height:150px;
-font-size:45px;
-}
-
-.product-info{
-padding:9px;
-}
-
-.add{
-padding:5px 8px;
-}
+/* =========================
+   PROMO
+========================= */
 
 .promo{
-display:block;
-text-align:center;
-padding:22px;
+    background:#fff0f5;
+    border:1px solid #f0dce4;
+    border-radius:7px;
+    min-height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:25px 45px;
+}
+
+.promo h2{
+    font-size:25px;
+    font-weight:500;
+}
+
+.promo p{
+    color:#888;
+    font-size:11px;
+    margin-top:5px;
 }
 
 .promo-button{
-margin-top:12px;
+    background:#ef9fbb;
+    color:#fff;
+    border:0;
+    padding:11px 25px;
+    border-radius:5px;
+    font-size:11px;
 }
 
-.banner-grid{
-grid-template-columns:1fr;
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    margin-top:70px;
+    background:#fff7fa;
+    border-top:1px solid #ecdde3;
+    padding:40px 20px 15px;
 }
 
-.banner.big{
-grid-column:auto;
+.footer-inner{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:35px;
 }
 
-.quick-links{
-grid-template-columns:repeat(2,1fr);
+.footer-logo{
+    font-family:Georgia,serif;
+    font-size:22px;
+    letter-spacing:2px;
 }
 
-.section{
-margin:28px auto;
+.footer-text{
+    color:#888;
+    font-size:10px;
+    line-height:2;
+    margin-top:8px;
 }
+
+.footer h3{
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.footer a{
+    display:block;
+    font-size:10px;
+    color:#777;
+    margin:7px 0;
+}
+
+.copyright{
+    max-width:1100px;
+    margin:30px auto 0;
+    padding-top:15px;
+    border-top:1px solid #eadde2;
+    text-align:center;
+    font-size:9px;
+    color:#aaa;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+.mobile-menu-button{
+    display:none;
+    border:0;
+    background:#fff;
+    font-size:23px;
+}
+
+.mobile-menu{
+    display:none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .header-inner{
+        height:70px;
+        padding:0 15px;
+    }
+
+    .logo{
+        min-width:auto;
+    }
+
+    .logo-main{
+        font-size:16px;
+    }
+
+    .logo-sub{
+        font-size:6px;
+    }
+
+    .logo-mark{
+        transform:scale(.8);
+        transform-origin:right center;
+        width:53px;
+    }
+
+    .search-box{
+        width:220px;
+    }
+
+    .nav-inner{
+        gap:18px;
+    }
+
+    .hero-content{
+        width:52%;
+        padding:30px;
+    }
+
+    .hero-title{
+        font-size:28px;
+    }
+
+    .clothes{
+        right:0;
+        width:70%;
+    }
+
+    .categories{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
 }
 
+@media(max-width:650px){
+
+    .top-message{
+        font-size:9px;
+    }
+
+    .header-inner{
+        height:65px;
+    }
+
+    .mobile-menu-button{
+        display:block;
+        order:1;
+    }
+
+    .logo{
+        order:2;
+    }
+
+    .header-icons{
+        order:3;
+        gap:3px;
+    }
+
+    .search-box{
+        display:none;
+    }
+
+    .logo-mark{
+        width:45px;
+        transform:scale(.7);
+    }
+
+    .logo-main{
+        font-size:13px;
+        letter-spacing:1px;
+    }
+
+    .logo-sub{
+        display:none;
+    }
+
+    .nav{
+        display:none;
+    }
+
+    .header-icons .user-icon{
+        display:none;
+    }
+
+    .hero{
+        padding:0 10px;
+        margin-top:10px;
+    }
+
+    .hero-box{
+        min-height:450px;
+        display:block;
+    }
+
+    .hero-content{
+        width:100%;
+        text-align:center;
+        padding:35px 20px 10px;
+    }
+
+    .hero-title{
+        font-size:29px;
+        line-height:1.5;
+    }
+
+    .hero-description{
+        font-size:10px;
+    }
+
+    .hero-fashion{
+        position:absolute;
+        left:0;
+        right:0;
+        top:230px;
+        height:220px;
+    }
+
+    .clothes{
+        width:75%;
+        right:12%;
+        height:100%;
+    }
+
+    .hanger{
+        width:35px;
+        height:130px;
+    }
+
+    .hanger:nth-child(2){
+        height:150px;
+    }
+
+    .hanger:nth-child(3){
+        height:140px;
+    }
+
+    .hanger:nth-child(4){
+        height:155px;
+    }
+
+    .hanger:nth-child(5){
+        height:135px;
+    }
+
+    .hanger:before{
+        width:11px;
+        height:11px;
+        left:12px;
+    }
+
+    .bag{
+        width:65px;
+        height:60px;
+    }
+
+    .bag:before{
+        width:32px;
+        height:22px;
+        left:15px;
+        top:-18px;
+        border-width:3px;
+    }
+
+    .flower{
+        transform:scale(.6);
+        transform-origin:bottom right;
+    }
+
+    .features{
+        margin:-5px 10px 30px;
+        padding:0;
+    }
+
+    .features-box{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .feature{
+        border-bottom:1px solid #eee1e6;
+    }
+
+    .feature:nth-child(2){
+        border-left:0;
+    }
+
+    .feature-icon{
+        font-size:22px;
+    }
+
+    .section{
+        padding:0 12px;
+        margin:35px auto;
+    }
+
+    .section-title:before,
+    .section-title:after{
+        width:45px;
+    }
+
+    .section-title h2{
+        font-size:16px;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
+    }
+
+    .category{
+        height:145px;
+    }
+
+    .category-icon{
+        width:65px;
+        height:65px;
+        font-size:28px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
+    }
+
+    .product-image{
+        height:170px;
+        font-size:55px;
+    }
+
+    .product-info{
+        padding:9px;
+    }
+
+    .product-name{
+        font-size:10px;
+    }
+
+    .product-desc{
+        font-size:8px;
+    }
+
+    .price{
+        font-size:9px;
+    }
+
+    .add-button{
+        padding:6px 8px;
+        font-size:8px;
+    }
+
+    .promo{
+        display:block;
+        text-align:center;
+        padding:25px 15px;
+    }
+
+    .promo h2{
+        font-size:20px;
+    }
+
+    .promo-button{
+        margin-top:15px;
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr 1fr;
+        gap:25px;
+    }
+
+    .footer-brand{
+        grid-column:1/-1;
+    }
+
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+@media(max-width:650px){
+
+    .mobile-menu{
+        display:block;
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:280px;
+        max-width:85%;
+        height:100vh;
+        background:#fff;
+        z-index:9999;
+        padding:25px;
+        box-shadow:-5px 0 25px #0002;
+        transition:.3s;
+    }
+
+    .mobile-menu.open{
+        right:0;
+    }
+
+    .mobile-menu-close{
+        border:0;
+        background:none;
+        font-size:25px;
+        margin-bottom:25px;
+    }
+
+    .mobile-menu-logo{
+        font-family:Georgia,serif;
+        font-size:19px;
+        letter-spacing:2px;
+        color:#222;
+        margin-bottom:25px;
+    }
+
+    .mobile-menu a{
+        display:block;
+        padding:13px 5px;
+        border-bottom:1px solid #f0e1e6;
+        font-size:12px;
+    }
+
+    .mobile-overlay{
+        display:block;
+        position:fixed;
+        inset:0;
+        background:#0005;
+        z-index:9998;
+        opacity:0;
+        pointer-events:none;
+        transition:.3s;
+    }
+
+    .mobile-overlay.open{
+        opacity:1;
+        pointer-events:auto;
+    }
+
+}
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-🎀 ارسال سفارش‌ها با بسته‌بندی اختصاصی LORA COLLECTION 🎀
+<!-- TOP -->
+
+<div class="top-message">
+🎀 لورا کالکشن؛ سادگی، آغاز زیبایی است؛ زیبایی، بخشی از داستان توست.
 </div>
 
-<header>
 
-<div class="header">
+<!-- HEADER -->
 
-<button class="header-icon" onclick="openMenu()">☰</button>
+<header class="header">
 
-<a href="#home" class="logo">
+<div class="header-inner">
 
-<div class="logo-symbol">
-<span class="black">L</span>
-<span class="pink">L</span>
+<button class="mobile-menu-button" onclick="openMenu()">
+☰
+</button>
+
+
+<!-- LOGO NUMBER 1 -->
+
+<a href="#" class="logo">
+
+<div class="logo-mark">
+<span class="l-black">L</span>
+<span class="l-pink">L</span>
 </div>
 
-<div>
-<div class="logo-name">LORA COLLECTION</div>
-<span class="logo-sub">BEAUTY • STYLE • YOU</span>
+<div class="logo-text">
+<div class="logo-main">
+LORA COLLECTION
+</div>
+<div class="logo-sub">
+BEAUTY • STYLE • YOU
+</div>
 </div>
 
 </a>
 
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="جستجو در محصولات..."
+>
+
+<button onclick="searchProducts()">
+⌕
+</button>
+
+</div>
+
+
+<!-- ICONS -->
+
 <div class="header-icons">
 
-<button class="header-icon" onclick="searchSite()">⌕</button>
+<button class="icon-button user-icon">
+♙
+</button>
 
-<button class="header-icon" onclick="openCart()">🛍</button>
+<button class="icon-button">
+♡
+<span class="badge">2</span>
+</button>
+
+<button class="icon-button" onclick="showCart()">
+🛍
+<span class="badge">3</span>
+</button>
 
 </div>
 
 </div>
+
+
+<!-- NAV -->
 
 <nav class="nav">
 
-<a href="#home">خانه</a>
-<a href="#categories">دسته‌بندی‌ها</a>
-<a href="#products">محصولات</a>
-<a href="#discount">تخفیفات</a>
-<a href="#about">درباره ما</a>
-<a href="#contact">تماس</a>
+<div class="nav-inner">
+
+<a href="#" class="active">
+خانه
+</a>
+
+<a href="#new">
+جدیدترین‌ها
+</a>
+
+<a href="#clothes">
+لباس‌ها
+</a>
+
+<a href="#bags">
+کیف و اکسسوری
+</a>
+
+<a href="#beauty">
+لوازم آرایشی
+</a>
+
+<a href="#discount">
+تخفیف‌ها
+</a>
+
+<a href="#about">
+درباره ما
+</a>
+
+</div>
 
 </nav>
 
 </header>
 
-
-<main id="home">
 
 <!-- HERO -->
 
@@ -794,43 +1279,126 @@ margin:28px auto;
 
 <div class="hero-box">
 
-<div class="hero-text">
+
+<div class="hero-content">
 
 <div class="hero-small">
-به دنیای لورا خوش آمدی 🎀
+NEW COLLECTION
 </div>
 
 <h1 class="hero-title">
-LORA<br>
-COLLECTION
+زیبایی در <strong>سادگی</strong>
 </h1>
 
 <p class="hero-description">
-سادگی آغاز زیبایی است؛<br>
-زیبایی بخشی از داستان توست.
+جدیدترین انتخاب‌های لورا برای استایل و زیبایی تو
 </p>
 
 <button class="hero-button"
-onclick="location.href='#products'">
-مشاهده محصولات
+onclick="document.getElementById('new').scrollIntoView({behavior:'smooth'})">
+مشاهده کالکشن جدید
 </button>
 
 </div>
 
-<div class="hero-logo">
 
-<div class="hero-logo-inner">
+<div class="hero-fashion">
 
-<div class="hero-logo-mark">L</div>
+<div class="clothes">
 
-<div class="hero-logo-name">
-LORA
+<div class="hanger"></div>
+<div class="hanger"></div>
+<div class="hanger"></div>
+<div class="hanger"></div>
+<div class="hanger"></div>
+
 </div>
 
-<div class="hero-logo-small">
-COLLECTION
+<div class="bag"></div>
+
+<div class="flower"></div>
+
 </div>
 
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="features-box">
+
+<div class="feature">
+
+<div class="feature-icon">
+🚚
+</div>
+
+<div>
+<div class="feature-title">
+ارسال سریع
+</div>
+<div class="feature-text">
+به سراسر کشور
+</div>
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+♢
+</div>
+
+<div>
+<div class="feature-title">
+ضمانت اصالت کالا
+</div>
+<div class="feature-text">
+تضمین کیفیت
+</div>
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+↻
+</div>
+
+<div>
+<div class="feature-title">
+۷ روز ضمانت بازگشت
+</div>
+<div class="feature-text">
+طبق قوانین فروشگاه
+</div>
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+♧
+</div>
+
+<div>
+<div class="feature-title">
+پشتیبانی آنلاین
+</div>
+<div class="feature-text">
+همراه تو هستیم
+</div>
 </div>
 
 </div>
@@ -842,93 +1410,106 @@ COLLECTION
 
 <!-- CATEGORIES -->
 
-<section class="section" id="categories">
+<section class="section" id="clothes">
 
 <div class="section-title">
 
-<h2>دسته‌بندی محصولات</h2>
+<h2>
+دسته‌بندی محصولات
+</h2>
 
 <p>
-هر چیزی برای استایل تو
+انتخاب کن و شروع کن
 </p>
 
 </div>
 
+
 <div class="categories">
 
-<div class="category" onclick="filterProducts('پوشاک')">
 
-<div class="category-image">👗</div>
+<div class="category">
+
+<div class="category-icon">
+👗
+</div>
 
 <div class="category-name">
-پوشاک
+لباس زنانه
+</div>
+
+<div class="category-small">
+استایل‌های جدید
 </div>
 
 </div>
 
-<div class="category" onclick="filterProducts('اکسسوری')">
 
-<div class="category-image">🎀</div>
+<div class="category">
 
-<div class="category-name">
-اکسسوری
+<div class="category-icon">
+👜
 </div>
-
-</div>
-
-<div class="category" onclick="filterProducts('کیف')">
-
-<div class="category-image">👜</div>
 
 <div class="category-name">
 کیف
 </div>
 
+<div class="category-small">
+برای هر استایل
 </div>
 
-<div class="category" onclick="filterProducts('آرایشی')">
+</div>
 
-<div class="category-image">💄</div>
+
+<div class="category">
+
+<div class="category-icon">
+🎀
+</div>
+
+<div class="category-name">
+اکسسوری
+</div>
+
+<div class="category-small">
+جزئیات زیبای استایل
+</div>
+
+</div>
+
+
+<div class="category" id="beauty">
+
+<div class="category-icon">
+💄
+</div>
 
 <div class="category-name">
 لوازم آرایشی
 </div>
 
+<div class="category-small">
+زیبایی بیشتر
 </div>
+
+</div>
+
 
 <div class="category">
 
-<div class="category-image">💎</div>
+<div class="category-icon">
+💎
+</div>
 
 <div class="category-name">
 زیورآلات
 </div>
 
+<div class="category-small">
+درخشش تو
 </div>
 
-</div>
-
-
-<div class="quick-links">
-
-<div class="quick">
-<b>ارسال سریع</b>
-تحویل مطمئن سفارش
-</div>
-
-<div class="quick">
-<b>بسته‌بندی لورا</b>
-زیبا و اختصاصی
-</div>
-
-<div class="quick">
-<b>انتخاب آسان</b>
-دسته‌بندی‌های متنوع
-</div>
-
-<div class="quick">
-<b>پشتیبانی</b>
-همراه تو هستیم
 </div>
 
 </div>
@@ -936,60 +1517,46 @@ COLLECTION
 </section>
 
 
-<!-- PROMO -->
+<!-- NEW PRODUCTS -->
 
-<section class="section" id="discount">
-
-<div class="promo">
-
-<div>
-
-<div class="promo-title">
-تخفیفات ویژه لورا 🎀
-</div>
-
-<div class="promo-text">
-محصولات منتخب با قیمت ویژه
-</div>
-
-</div>
-
-<button class="promo-button"
-onclick="location.href='#products'">
-مشاهده تخفیف‌ها
-</button>
-
-</div>
-
-</section>
-
-
-<!-- PRODUCTS -->
-
-<section class="section" id="products">
+<section class="section" id="new">
 
 <div class="section-title">
 
-<h2>جدیدترین محصولات</h2>
+<h2>
+جدیدترین محصولات
+</h2>
 
 <p>
-انتخابی برای استایل تو
+NEW COLLECTION
 </p>
 
 </div>
 
-<div class="products">
+
+<div class="product-grid">
+
 
 <div class="product">
 
 <div class="product-image">
-👚
+
+<span class="product-tag">
+جدید
+</span>
+
+<button class="product-heart">
+♡
+</button>
+
+👗
+
 </div>
 
 <div class="product-info">
 
 <div class="product-name">
-لباس زنانه لورا
+پیراهن زنانه لورا
 </div>
 
 <div class="product-desc">
@@ -1002,8 +1569,7 @@ onclick="location.href='#products'">
 تماس برای قیمت
 </div>
 
-<button class="add"
-onclick="openCart()">
+<button class="add-button" onclick="addCart()">
 افزودن
 </button>
 
@@ -1017,17 +1583,27 @@ onclick="openCart()">
 <div class="product">
 
 <div class="product-image">
+
+<span class="product-tag">
+جدید
+</span>
+
+<button class="product-heart">
+♡
+</button>
+
 👜
+
 </div>
 
 <div class="product-info">
 
 <div class="product-name">
-کیف زنانه
+کیف زنانه لورا
 </div>
 
 <div class="product-desc">
-مناسب استایل روزمره
+ظریف و کاربردی
 </div>
 
 <div class="product-bottom">
@@ -1036,8 +1612,7 @@ onclick="openCart()">
 تماس برای قیمت
 </div>
 
-<button class="add"
-onclick="openCart()">
+<button class="add-button" onclick="addCart()">
 افزودن
 </button>
 
@@ -1051,17 +1626,23 @@ onclick="openCart()">
 <div class="product">
 
 <div class="product-image">
+
+<button class="product-heart">
+♡
+</button>
+
 🎀
+
 </div>
 
 <div class="product-info">
 
 <div class="product-name">
-اکسسوری لورا
+اکسسوری زنانه
 </div>
 
 <div class="product-desc">
-جزئی کوچک برای زیبایی
+تکمیل‌کننده استایل تو
 </div>
 
 <div class="product-bottom">
@@ -1070,8 +1651,7 @@ onclick="openCart()">
 تماس برای قیمت
 </div>
 
-<button class="add"
-onclick="openCart()">
+<button class="add-button" onclick="addCart()">
 افزودن
 </button>
 
@@ -1085,17 +1665,27 @@ onclick="openCart()">
 <div class="product">
 
 <div class="product-image">
+
+<span class="product-tag">
+ویژه
+</span>
+
+<button class="product-heart">
+♡
+</button>
+
 💄
+
 </div>
 
 <div class="product-info">
 
 <div class="product-name">
-لوازم آرایشی
+محصولات زیبایی
 </div>
 
 <div class="product-desc">
-انتخاب‌های زیبای لورا
+انتخاب‌های لورا
 </div>
 
 <div class="product-bottom">
@@ -1104,8 +1694,7 @@ onclick="openCart()">
 تماس برای قیمت
 </div>
 
-<button class="add"
-onclick="openCart()">
+<button class="add-button" onclick="addCart()">
 افزودن
 </button>
 
@@ -1120,51 +1709,181 @@ onclick="openCart()">
 </section>
 
 
-<!-- BANNERS -->
+<!-- PROMOTION -->
 
-<section class="section">
+<section class="section" id="discount">
 
-<div class="banner-grid">
+<div class="promo">
 
-<div class="banner big">
+<div>
 
-<small>LORA COLLECTION</small>
+<h2>
+تخفیف‌های ویژه لورا 🎀
+</h2>
 
-<strong>
-سادگی، آغاز زیبایی است
-</strong>
-
-<span>
-استایل خودت را پیدا کن.
-</span>
+<p>
+محصولات منتخب با قیمت ویژه برای تو
+</p>
 
 </div>
 
-<div class="banner pink">
-
-<small>NEW</small>
-
-<strong>
-New Style
-</strong>
-
-<span>
-تازه‌های لورا
-</span>
+<button class="promo-button">
+مشاهده تخفیف‌ها
+</button>
 
 </div>
 
-<div class="banner white">
+</section>
 
-<small>SALE</small>
 
-<strong>
-Special
-</strong>
+<!-- MORE PRODUCTS -->
 
-<span>
-تخفیف‌های ویژه
-</span>
+<section class="section" id="bags">
+
+<div class="section-title">
+
+<h2>
+محبوب‌ترین‌های لورا
+</h2>
+
+<p>
+MOST POPULAR
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<div class="product">
+
+<div class="product-image">
+👚
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+شومیز زنانه
+</div>
+
+<div class="product-desc">
+طراحی ظریف و زنانه
+</div>
+
+<div class="product-bottom">
+
+<div class="price">
+تماس برای قیمت
+</div>
+
+<button class="add-button" onclick="addCart()">
+افزودن
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+👛
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+کیف دستی
+</div>
+
+<div class="product-desc">
+مناسب استفاده روزانه
+</div>
+
+<div class="product-bottom">
+
+<div class="price">
+تماس برای قیمت
+</div>
+
+<button class="add-button" onclick="addCart()">
+افزودن
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+💍
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+زیورآلات ظریف
+</div>
+
+<div class="product-desc">
+ساده و شیک
+</div>
+
+<div class="product-bottom">
+
+<div class="price">
+تماس برای قیمت
+</div>
+
+<button class="add-button" onclick="addCart()">
+افزودن
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+🧴
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+محصول زیبایی
+</div>
+
+<div class="product-desc">
+انتخابی برای تو
+</div>
+
+<div class="product-bottom">
+
+<div class="price">
+تماس برای قیمت
+</div>
+
+<button class="add-button" onclick="addCart()">
+افزودن
+</button>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1177,41 +1896,112 @@ Special
 
 <section class="section" id="about">
 
-<div class="section-title">
+<div class="promo">
 
-<h2>داستان لورا</h2>
+<div>
+
+<h2>
+LORA COLLECTION
+</h2>
 
 <p>
-سادگی، آغاز زیبایی است؛ زیبایی بخشی از داستان توست.
+سادگی، آغاز زیبایی است؛ زیبایی، بخشی از داستان توست.
 </p>
+
+</div>
 
 </div>
 
 </section>
 
-</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-inner">
 
 
-<footer id="contact">
+<div class="footer-brand">
 
 <div class="footer-logo">
 LORA COLLECTION
 </div>
 
 <div class="footer-text">
-لورا کالکشن؛ انتخابی برای استایل، زیبایی و سلیقه‌ی تو.
+فروشگاه آنلاین لورا کالکشن؛
+انتخابی برای استایل، زیبایی و سلیقه تو.
 </div>
-
-<div class="footer-links">
-
-<a href="#home">خانه</a>
-<a href="#products">محصولات</a>
-<a href="#discount">تخفیفات</a>
-<a href="#about">درباره ما</a>
 
 </div>
 
-<div class="copy">
+
+<div>
+
+<h3>
+دسترسی سریع
+</h3>
+
+<a href="#">
+خانه
+</a>
+
+<a href="#new">
+جدیدترین محصولات
+</a>
+
+<a href="#discount">
+تخفیف‌ها
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+دسته‌بندی‌ها
+</h3>
+
+<a href="#clothes">
+لباس
+</a>
+
+<a href="#bags">
+کیف
+</a>
+
+<a href="#beauty">
+لوازم آرایشی
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+ارتباط با ما
+</h3>
+
+<a href="#">
+تماس با ما
+</a>
+
+<a href="#">
+پشتیبانی
+</a>
+
+<a href="#">
+اینستاگرام
+</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
 © LORA COLLECTION — تمامی حقوق محفوظ است.
 </div>
 
@@ -1220,49 +2010,45 @@ LORA COLLECTION
 
 <!-- MOBILE MENU -->
 
-<div class="overlay" id="overlay"
-onclick="closeMenu()">
+<div class="mobile-overlay" id="mobileOverlay" onclick="closeMenu()">
 </div>
 
 <div class="mobile-menu" id="mobileMenu">
 
-<button class="close"
-onclick="closeMenu()">
+<button class="mobile-menu-close" onclick="closeMenu()">
 ×
 </button>
 
-<h3>
+<div class="mobile-menu-logo">
 LORA COLLECTION
-</h3>
+</div>
 
-<a class="mobile-link" href="#home"
-onclick="closeMenu()">
+<a href="#" onclick="closeMenu()">
 خانه
 </a>
 
-<a class="mobile-link" href="#categories"
-onclick="closeMenu()">
-دسته‌بندی‌ها
+<a href="#new" onclick="closeMenu()">
+جدیدترین‌ها
 </a>
 
-<a class="mobile-link" href="#products"
-onclick="closeMenu()">
-محصولات
+<a href="#clothes" onclick="closeMenu()">
+لباس‌ها
 </a>
 
-<a class="mobile-link" href="#discount"
-onclick="closeMenu()">
-تخفیفات
+<a href="#bags" onclick="closeMenu()">
+کیف و اکسسوری
 </a>
 
-<a class="mobile-link" href="#about"
-onclick="closeMenu()">
+<a href="#beauty" onclick="closeMenu()">
+لوازم آرایشی
+</a>
+
+<a href="#discount" onclick="closeMenu()">
+تخفیف‌ها
+</a>
+
+<a href="#about" onclick="closeMenu()">
 درباره ما
-</a>
-
-<a class="mobile-link" href="#contact"
-onclick="closeMenu()">
-تماس با ما
 </a>
 
 </div>
@@ -1272,48 +2058,59 @@ onclick="closeMenu()">
 
 function openMenu(){
 
-document.getElementById("mobileMenu")
+document
+.getElementById("mobileMenu")
 .classList.add("open");
 
-document.getElementById("overlay")
-.classList.add("show");
+document
+.getElementById("mobileOverlay")
+.classList.add("open");
 
 }
 
 function closeMenu(){
 
-document.getElementById("mobileMenu")
+document
+.getElementById("mobileMenu")
 .classList.remove("open");
 
-document.getElementById("overlay")
-.classList.remove("show");
+document
+.getElementById("mobileOverlay")
+.classList.remove("open");
 
 }
 
-function openCart(){
 
-alert("سبد خرید لورا به‌زودی فعال می‌شود 🎀");
+function addCart(){
 
-}
-
-function searchSite(){
-
-let text=prompt("چه محصولی را جستجو می‌کنی؟");
-
-if(text){
-
-alert("جستجوی «"+text+"» به‌زودی فعال می‌شود.");
+alert("محصول به سبد خرید اضافه شد 🎀");
 
 }
 
+
+function showCart(){
+
+alert("سبد خرید لورا کالکشن");
+
 }
 
-function filterProducts(category){
 
-document.getElementById("products")
-.scrollIntoView({
-behavior:"smooth"
-});
+function searchProducts(){
+
+let value =
+document.getElementById("searchInput").value.trim();
+
+if(value===""){
+
+alert("نام محصول را وارد کن.");
+
+return;
+
+}
+
+alert(
+"در حال جستجو برای: " + value
+);
 
 }
 
