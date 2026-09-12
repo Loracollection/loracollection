@@ -3,374 +3,1321 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LORA COLLECTION</title>
+
+<title>LORA COLLECTION | لورا کالکشن</title>
 
 <style>
-*{box-sizing:border-box}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
 :root{
 --pink:#f6a8c5;
---pink2:#fde3ed;
---pink3:#fff4f8;
---dark:#222;
+--light:#fff5f9;
+--soft:#fde5ee;
+--dark:#242124;
 --gray:#777;
---white:#fff;
+--border:#f1d8e2;
 }
-body{
-margin:0;font-family:Tahoma,Arial,sans-serif;
-background:#fff;color:var(--dark);line-height:1.8
-}
-button,input,select{font-family:inherit}
-button{cursor:pointer}
 
-.top{
-background:var(--pink);color:#fff;text-align:center;
-padding:7px;font-size:13px
+body{
+font-family:Tahoma,Arial,sans-serif;
+background:#fff;
+color:var(--dark);
+line-height:1.8;
 }
+
+button,
+input{
+font-family:inherit;
+}
+
+button{
+cursor:pointer;
+}
+
+/* TOP BAR */
+
+.topbar{
+background:#f7abc6;
+color:white;
+text-align:center;
+font-size:12px;
+padding:7px;
+}
+
+/* HEADER */
 
 header{
-position:sticky;top:0;z-index:100;
-background:#fff;border-bottom:1px solid #f3d5e0
+background:#fff;
+border-bottom:1px solid #f4dce5;
+position:sticky;
+top:0;
+z-index:100;
 }
-.nav{
-max-width:1200px;margin:auto;padding:13px 20px;
-display:flex;align-items:center;justify-content:space-between;gap:15px
+
+.header{
+max-width:1250px;
+margin:auto;
+padding:12px 25px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
 }
+
+/* LOGO */
+
 .logo{
-display:flex;align-items:center;gap:8px;text-decoration:none;color:#222
+display:flex;
+align-items:center;
+gap:9px;
+text-decoration:none;
+color:#222;
 }
-.logoMark{
-position:relative;width:55px;height:48px
-}
-.logoMark b{
-position:absolute;font-family:Georgia,serif;font-size:43px;
-line-height:1
-}
-.logoMark .l1{right:4px;top:0;color:#111}
-.logoMark .l2{right:17px;top:7px;color:var(--pink)}
-.logoText strong{
-display:block;font-family:Georgia,serif;letter-spacing:2px;font-size:20px
-}
-.logoText small{font-size:9px;color:#999;letter-spacing:3px}
 
-.actions{display:flex;gap:8px}
-.icon{
-border:1px solid #f0d2de;background:#fff;border-radius:50%;
-width:40px;height:40px;font-size:18px
+.logo-symbol{
+position:relative;
+width:53px;
+height:48px;
 }
-.icon:hover{background:var(--pink2)}
 
-nav{
-max-width:1200px;margin:auto;display:flex;
-justify-content:center;gap:8px;padding:0 15px 12px;flex-wrap:wrap
+.logo-symbol .black{
+position:absolute;
+right:4px;
+top:0;
+font-family:Georgia,serif;
+font-size:43px;
+color:#111;
+line-height:1;
 }
-nav a{
-text-decoration:none;color:#444;font-size:13px;
-padding:5px 14px;border-radius:20px
+
+.logo-symbol .pink{
+position:absolute;
+right:17px;
+top:7px;
+font-family:cursive;
+font-size:38px;
+color:#f19abb;
+line-height:1;
 }
-nav a:hover{background:var(--pink2);color:#d85d8a}
+
+.logo-name{
+font-family:Georgia,serif;
+font-size:19px;
+letter-spacing:2px;
+font-weight:bold;
+}
+
+.logo-sub{
+display:block;
+font-size:8px;
+color:#999;
+letter-spacing:3px;
+margin-top:-4px;
+}
+
+/* ICONS */
+
+.header-icons{
+display:flex;
+gap:8px;
+}
+
+.header-icon{
+width:39px;
+height:39px;
+border-radius:50%;
+border:1px solid #efd5df;
+background:white;
+font-size:17px;
+}
+
+.header-icon:hover{
+background:var(--light);
+}
+
+/* NAV */
+
+.nav{
+border-top:1px solid #faf0f4;
+display:flex;
+justify-content:center;
+gap:5px;
+padding:5px 15px;
+}
+
+.nav a{
+text-decoration:none;
+color:#444;
+font-size:12px;
+padding:6px 14px;
+border-radius:20px;
+}
+
+.nav a:hover{
+background:#fde5ee;
+color:#d45d88;
+}
+
+/* HERO */
 
 .hero{
-max-width:1200px;margin:20px auto;padding:0 15px
+max-width:1250px;
+margin:18px auto;
+padding:0 18px;
 }
-.heroBox{
-min-height:330px;border-radius:25px;overflow:hidden;
-background:linear-gradient(90deg,#fff,#fde3ed);
-display:flex;align-items:center;justify-content:space-between;
-padding:35px 55px;position:relative
-}
-.heroText{max-width:520px}
-.heroText span{
-color:#d85d8a;font-size:14px;font-weight:bold
-}
-.heroText h1{
-font-family:Georgia,serif;font-size:45px;margin:5px 0;
-letter-spacing:3px
-}
-.heroText p{color:#666}
-.btn{
-border:0;background:#222;color:#fff;border-radius:25px;
-padding:10px 25px
-}
-.btn.pink{background:var(--pink);color:#fff}
-.heroLogo{
-width:230px;height:230px;border-radius:50%;
-background:#fff;display:flex;align-items:center;justify-content:center;
-box-shadow:0 10px 35px #e7b7ca
-}
-.heroLogo div{text-align:center}
-.heroLogo b{
-font-family:Georgia,serif;font-size:80px;
-color:#111;text-shadow:25px 8px 0 var(--pink)
-}
-.heroLogo strong{display:block;font-family:Georgia,serif;letter-spacing:3px}
 
-section{
-max-width:1200px;margin:45px auto;padding:0 15px
+.hero-box{
+min-height:340px;
+border-radius:10px;
+overflow:hidden;
+background:
+linear-gradient(90deg,#fff 0%,#fff5f8 48%,#fbd8e5 100%);
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:relative;
+padding:35px 55px;
 }
-.title{text-align:center;margin-bottom:25px}
-.title h2{margin:0;font-family:Georgia,serif;font-size:27px}
-.title p{margin:3px;color:#999;font-size:13px}
+
+.hero-box:before{
+content:"";
+position:absolute;
+width:260px;
+height:260px;
+border-radius:50%;
+background:#fff;
+left:-80px;
+bottom:-120px;
+}
+
+.hero-text{
+position:relative;
+z-index:2;
+max-width:520px;
+}
+
+.hero-small{
+font-size:13px;
+color:#d95e89;
+font-weight:bold;
+}
+
+.hero-title{
+font-family:Georgia,serif;
+font-size:46px;
+letter-spacing:4px;
+line-height:1.15;
+margin:8px 0;
+}
+
+.hero-description{
+color:#777;
+font-size:14px;
+margin:12px 0 18px;
+}
+
+.hero-button{
+border:0;
+background:#222;
+color:white;
+padding:10px 27px;
+border-radius:22px;
+font-size:12px;
+}
+
+.hero-button:hover{
+background:#e889aa;
+}
+
+/* HERO LOGO */
+
+.hero-logo{
+width:230px;
+height:230px;
+background:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 12px 35px #dbaabd55;
+position:relative;
+z-index:2;
+}
+
+.hero-logo-inner{
+text-align:center;
+}
+
+.hero-logo-mark{
+font-family:Georgia,serif;
+font-size:75px;
+line-height:1;
+color:#111;
+text-shadow:22px 7px 0 #f3a4c2;
+}
+
+.hero-logo-name{
+font-family:Georgia,serif;
+font-size:18px;
+letter-spacing:3px;
+}
+
+.hero-logo-small{
+font-size:8px;
+letter-spacing:3px;
+color:#999;
+}
+
+/* SECTION */
+
+.section{
+max-width:1250px;
+margin:38px auto;
+padding:0 18px;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:20px;
+}
+
+.section-title h2{
+font-family:Georgia,serif;
+font-size:25px;
+}
+
+.section-title p{
+font-size:11px;
+color:#999;
+}
+
+/* CATEGORY */
 
 .categories{
-display:grid;grid-template-columns:repeat(5,1fr);gap:13px
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px;
 }
-.cat{
-background:var(--pink3);border:1px solid #f7d9e4;
-border-radius:18px;padding:22px 10px;text-align:center;
-transition:.2s
+
+.category{
+background:#fff;
+border:1px solid var(--border);
+padding:14px 8px;
+text-align:center;
+border-radius:8px;
+transition:.2s;
 }
-.cat:hover{transform:translateY(-4px);box-shadow:0 8px 20px #f3d9e3}
-.cat .emoji{font-size:35px}
-.cat b{display:block;margin-top:5px}
+
+.category:hover{
+transform:translateY(-3px);
+box-shadow:0 7px 20px #efcbd855;
+}
+
+.category-image{
+height:95px;
+border-radius:6px;
+background:linear-gradient(135deg,#fff,#fce4ed);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+margin-bottom:8px;
+}
+
+.category-name{
+font-size:12px;
+font-weight:bold;
+}
+
+/* QUICK LINKS */
+
+.quick-links{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-top:20px;
+}
+
+.quick{
+border:1px solid #f0d9e2;
+background:#fff;
+padding:12px;
+text-align:center;
+border-radius:7px;
+font-size:11px;
+}
+
+.quick b{
+display:block;
+color:#d65f89;
+margin-bottom:2px;
+}
+
+/* PROMO */
+
+.promo{
+background:linear-gradient(90deg,#fff1f6,#f8c9da);
+border-radius:9px;
+padding:25px 35px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.promo-title{
+font-size:25px;
+font-weight:bold;
+color:#cf5a82;
+}
+
+.promo-text{
+font-size:12px;
+color:#777;
+}
+
+.promo-button{
+background:#222;
+color:white;
+border:0;
+border-radius:20px;
+padding:9px 22px;
+font-size:11px;
+}
+
+/* PRODUCTS */
 
 .products{
-display:grid;grid-template-columns:repeat(4,1fr);gap:17px
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
 }
+
 .product{
-border:1px solid #f1dce4;border-radius:18px;
-overflow:hidden;background:#fff
+border:1px solid #f0dce4;
+background:white;
+border-radius:8px;
+overflow:hidden;
+transition:.2s;
 }
-.productImg{
-height:210px;background:linear-gradient(135deg,#fff,#fde5ef);
-display:flex;align-items:center;justify-content:center;
-font-size:55px
+
+.product:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px #e7cbd655;
 }
-.productInfo{padding:12px}
-.productInfo h3{font-size:14px;margin:0}
-.price{font-weight:bold;color:#d85d8a;margin-top:5px}
+
+.product-image{
+height:220px;
+background:linear-gradient(145deg,#fff,#fbe4ed);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:65px;
+}
+
+.product-info{
+padding:12px;
+}
+
+.product-name{
+font-size:12px;
+font-weight:bold;
+}
+
+.product-desc{
+font-size:10px;
+color:#999;
+margin-top:2px;
+}
+
+.product-bottom{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-top:8px;
+}
+
+.price{
+font-size:12px;
+font-weight:bold;
+color:#d25882;
+}
+
 .add{
-width:100%;border:0;background:#222;color:#fff;
-padding:8px;border-radius:12px;margin-top:8px
+border:0;
+background:#222;
+color:white;
+border-radius:15px;
+padding:6px 12px;
+font-size:10px;
 }
 
-.sale{
-background:linear-gradient(135deg,#fff,#fbd7e5);
-border-radius:25px;padding:30px;
-display:flex;justify-content:space-between;align-items:center
-}
-.sale strong{font-size:28px;color:#d34f80}
-.sale span{color:#777}
+/* THREE BANNERS */
 
-.box{
-background:#fff;border:1px solid #f0d7e1;border-radius:20px;
-padding:25px;box-shadow:0 5px 20px #f9edf2
-}
-.form{display:grid;gap:10px;max-width:500px;margin:auto}
-.form input,.form textarea,.form select{
-width:100%;border:1px solid #e8cdd8;border-radius:12px;
-padding:11px;outline:0
-}
-.form input:focus,.form textarea:focus{
-border-color:var(--pink)
+.banner-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:12px;
 }
 
-.infoGrid{
-display:grid;grid-template-columns:repeat(3,1fr);gap:15px
+.banner{
+min-height:150px;
+border-radius:8px;
+padding:20px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+overflow:hidden;
 }
-.info{
-background:var(--pink3);padding:20px;border-radius:18px;text-align:center
-}
-.info b{display:block;color:#d85d8a;margin-bottom:5px}
 
-.faq{
-border-bottom:1px solid #f0dce3;padding:13px 5px
+.banner.big{
+background:linear-gradient(120deg,#fbd7e4,#fff);
 }
-.faq button{
-width:100%;border:0;background:none;text-align:right;
-font-weight:bold;font-size:14px
+
+.banner.pink{
+background:#fce4ed;
 }
-.answer{display:none;color:#777;font-size:13px;padding:7px}
-.faq.open .answer{display:block}
+
+.banner.white{
+border:1px solid #f0dbe3;
+}
+
+.banner small{
+font-size:10px;
+color:#c6537c;
+}
+
+.banner strong{
+font-family:Georgia,serif;
+font-size:23px;
+margin:4px 0;
+}
+
+.banner span{
+font-size:10px;
+color:#777;
+}
+
+/* FOOTER */
 
 footer{
-background:#fff0f6;margin-top:50px;padding:35px 20px 15px;
-text-align:center;border-top:1px solid #f4d1df
-}
-.footerLogo{
-font-family:Georgia,serif;font-size:24px;letter-spacing:3px
-}
-.social{margin:15px}
-.social a{
-display:inline-flex;width:40px;height:40px;
-align-items:center;justify-content:center;
-border-radius:50%;background:#fff;
-text-decoration:none;color:#222;margin:4px
-}
-.copy{
-background:var(--pink);color:#fff;
-border-radius:15px;padding:10px;margin:20px auto 0;
-max-width:700px;font-size:12px
+margin-top:50px;
+background:#fff1f6;
+border-top:1px solid #f1d5df;
+padding:35px 20px 15px;
+text-align:center;
 }
 
-.drawer{
-position:fixed;top:0;left:-380px;width:360px;max-width:90%;
-height:100%;background:#fff;z-index:500;
-box-shadow:5px 0 25px #9996;transition:.3s;padding:25px;
-overflow:auto
+.footer-logo{
+font-family:Georgia,serif;
+font-size:23px;
+letter-spacing:3px;
 }
-.drawer.open{left:0}
-.drawer h3{margin-top:0}
-.close{float:left;border:0;background:none;font-size:25px}
-.menuItem{
-display:block;padding:10px;border-bottom:1px solid #f3e0e7;
-color:#333;text-decoration:none
+
+.footer-text{
+font-size:11px;
+color:#777;
+margin:7px auto;
+max-width:500px;
 }
-.cartItem{
-padding:10px 0;border-bottom:1px solid #eee;
-display:flex;justify-content:space-between
+
+.footer-links{
+margin:15px 0;
 }
-.total{font-weight:bold;margin:15px 0}
+
+.footer-links a{
+color:#555;
+text-decoration:none;
+font-size:11px;
+margin:0 8px;
+}
+
+.copy{
+font-size:9px;
+color:white;
+background:#f3a6c2;
+padding:8px;
+border-radius:15px;
+max-width:600px;
+margin:auto;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu{
+position:fixed;
+top:0;
+right:-320px;
+width:300px;
+max-width:85%;
+height:100%;
+background:#fff;
+z-index:500;
+padding:25px;
+transition:.3s;
+box-shadow:-5px 0 25px #9995;
+}
+
+.mobile-menu.open{
+right:0;
+}
+
+.mobile-menu h3{
+font-family:Georgia,serif;
+margin-bottom:20px;
+}
+
+.mobile-menu button.close{
+float:left;
+border:0;
+background:none;
+font-size:22px;
+}
+
+.mobile-link{
+display:block;
+padding:11px 5px;
+border-bottom:1px solid #f3e0e7;
+text-decoration:none;
+color:#444;
+font-size:13px;
+}
 
 .overlay{
-display:none;position:fixed;inset:0;background:#0007;z-index:400
-}
-.overlay.show{display:block}
-
-.empty{
-text-align:center;padding:30px;color:#999;
-background:var(--pink3);border-radius:15px
+position:fixed;
+inset:0;
+background:#0006;
+display:none;
+z-index:400;
 }
 
-@media(max-width:800px){
-.categories{grid-template-columns:repeat(2,1fr)}
-.products{grid-template-columns:repeat(2,1fr)}
-.infoGrid{grid-template-columns:1fr}
-.heroBox{padding:25px;min-height:300px}
-.heroLogo{width:150px;height:150px}
-.heroLogo b{font-size:55px}
-.heroText h1{font-size:32px}
+.overlay.show{
+display:block;
 }
 
-@media(max-width:520px){
-nav{display:none}
-.nav{padding:10px 12px}
-.logoText strong{font-size:16px}
-.heroBox{display:block;text-align:center}
-.heroText{margin:auto}
-.heroLogo{margin:20px auto 0}
-.products{gap:10px}
-.productImg{height:160px}
-section{margin:30px auto}
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+.header{
+padding:10px 12px;
 }
+
+.nav{
+display:none;
+}
+
+.hero-box{
+padding:28px;
+}
+
+.categories{
+grid-template-columns:repeat(3,1fr);
+}
+
+.products{
+grid-template-columns:repeat(2,1fr);
+}
+
+.quick-links{
+grid-template-columns:repeat(2,1fr);
+}
+
+.banner-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.banner.big{
+grid-column:1/-1;
+}
+
+}
+
+@media(max-width:550px){
+
+.topbar{
+font-size:10px;
+}
+
+.logo-name{
+font-size:15px;
+}
+
+.logo-sub{
+font-size:6px;
+}
+
+.hero-box{
+display:block;
+text-align:center;
+padding:25px 15px 20px;
+}
+
+.hero-text{
+margin:auto;
+}
+
+.hero-title{
+font-size:32px;
+}
+
+.hero-logo{
+width:150px;
+height:150px;
+margin:20px auto 0;
+}
+
+.hero-logo-mark{
+font-size:50px;
+}
+
+.hero-logo-name{
+font-size:14px;
+}
+
+.categories{
+grid-template-columns:repeat(2,1fr);
+}
+
+.category-image{
+height:80px;
+}
+
+.products{
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+}
+
+.product-image{
+height:150px;
+font-size:45px;
+}
+
+.product-info{
+padding:9px;
+}
+
+.add{
+padding:5px 8px;
+}
+
+.promo{
+display:block;
+text-align:center;
+padding:22px;
+}
+
+.promo-button{
+margin-top:12px;
+}
+
+.banner-grid{
+grid-template-columns:1fr;
+}
+
+.banner.big{
+grid-column:auto;
+}
+
+.quick-links{
+grid-template-columns:repeat(2,1fr);
+}
+
+.section{
+margin:28px auto;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="top">🎀 ارسال سفارش‌ها با بسته‌بندی اختصاصی LORA COLLECTION 🎀</div>
+<div class="topbar">
+🎀 ارسال سفارش‌ها با بسته‌بندی اختصاصی LORA COLLECTION 🎀
+</div>
 
 <header>
-<div class="nav">
 
-<button class="icon" onclick="openMenu()">☰</button>
+<div class="header">
 
-<a class="logo" href="#home">
-<div class="logoMark">
-<b class="l1">L</b><b class="l2">L</b>
+<button class="header-icon" onclick="openMenu()">☰</button>
+
+<a href="#home" class="logo">
+
+<div class="logo-symbol">
+<span class="black">L</span>
+<span class="pink">L</span>
 </div>
-<div class="logoText">
-<strong>LORA COLLECTION</strong>
-<small>BEAUTY • STYLE • YOU</small>
+
+<div>
+<div class="logo-name">LORA COLLECTION</div>
+<span class="logo-sub">BEAUTY • STYLE • YOU</span>
 </div>
+
 </a>
 
-<div class="actions">
-<button class="icon" onclick="searchSite()">⌕</button>
-<button class="icon" onclick="openCart()">🛍</button>
-</div>
+<div class="header-icons">
+
+<button class="header-icon" onclick="searchSite()">⌕</button>
+
+<button class="header-icon" onclick="openCart()">🛍</button>
 
 </div>
 
-<nav>
+</div>
+
+<nav class="nav">
+
 <a href="#home">خانه</a>
 <a href="#categories">دسته‌بندی‌ها</a>
 <a href="#products">محصولات</a>
 <a href="#discount">تخفیفات</a>
-<a href="#club">باشگاه مشتریان</a>
-<a href="#tracking">پیگیری سفارش</a>
 <a href="#about">درباره ما</a>
-<a href="#faq">سؤالات متداول</a>
 <a href="#contact">تماس</a>
+
 </nav>
+
 </header>
 
 
 <main id="home">
 
-<section class="hero">
-<div class="heroBox">
+<!-- HERO -->
 
-<div class="heroText">
-<span>به دنیای لورا خوش آمدی 🎀</span>
-<h1>LORA<br>COLLECTION</h1>
-<p>
+<section class="hero">
+
+<div class="hero-box">
+
+<div class="hero-text">
+
+<div class="hero-small">
+به دنیای لورا خوش آمدی 🎀
+</div>
+
+<h1 class="hero-title">
+LORA<br>
+COLLECTION
+</h1>
+
+<p class="hero-description">
 سادگی آغاز زیبایی است؛<br>
 زیبایی بخشی از داستان توست.
 </p>
-<button class="btn pink" onclick="location.href='#products'">
+
+<button class="hero-button"
+onclick="location.href='#products'">
 مشاهده محصولات
 </button>
-</div>
-
-<div class="heroLogo">
-<div>
-<b>L</b>
-<strong>LORA</strong>
-<small>COLLECTION</small>
-</div>
-</div>
 
 </div>
+
+<div class="hero-logo">
+
+<div class="hero-logo-inner">
+
+<div class="hero-logo-mark">L</div>
+
+<div class="hero-logo-name">
+LORA
+</div>
+
+<div class="hero-logo-small">
+COLLECTION
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<section id="categories">
-<div class="title">
+<!-- CATEGORIES -->
+
+<section class="section" id="categories">
+
+<div class="section-title">
+
 <h2>دسته‌بندی محصولات</h2>
-<p>انتخاب کن و دنیای لورا را کشف کن</p>
+
+<p>
+هر چیزی برای استایل تو
+</p>
+
 </div>
 
 <div class="categories">
-<div class="cat" onclick="filterProducts('پوشاک')">
-<div class="emoji">👗</div><b>پوشاک</b>
+
+<div class="category" onclick="filterProducts('پوشاک')">
+
+<div class="category-image">👗</div>
+
+<div class="category-name">
+پوشاک
 </div>
-<div class="cat" onclick="filterProducts('اکسسوری')">
-<div class="emoji">👜</div><b>اکسسوری</b>
+
 </div>
-<div class="cat" onclick="filterProducts('زیورآلات')">
-<div class="emoji">💎</div><b>زیورآلات</b>
+
+<div class="category" onclick="filterProducts('اکسسوری')">
+
+<div class="category-image">🎀</div>
+
+<div class="category-name">
+اکسسوری
 </div>
-<div class="cat" onclick="filterProducts('کیف')">
-<div class="emoji">👜</div><b>کیف</b>
+
 </div>
-<div class="cat" onclick="filterProducts('آرایشی')">
-<div class="emoji">💄</div><b>آرایشی و بهداشتی</b>
+
+<div class="category" onclick="filterProducts('کیف')">
+
+<div class="category-image">👜</div>
+
+<div class="category-name">
+کیف
 </div>
+
 </div>
+
+<div class="category" onclick="filterProducts('آرایشی')">
+
+<div class="category-image">💄</div>
+
+<div class="category-name">
+لوازم آرایشی
+</div>
+
+</div>
+
+<div class="category">
+
+<div class="category-image">💎</div>
+
+<div class="category-name">
+زیورآلات
+</div>
+
+</div>
+
+</div>
+
+
+<div class="quick-links">
+
+<div class="quick">
+<b>ارسال سریع</b>
+تحویل مطمئن سفارش
+</div>
+
+<div class="quick">
+<b>بسته‌بندی لورا</b>
+زیبا و اختصاصی
+</div>
+
+<div class="quick">
+<b>انتخاب آسان</b>
+دسته‌بندی‌های متنوع
+</div>
+
+<div class="quick">
+<b>پشتیبانی</b>
+همراه تو هستیم
+</div>
+
+</div>
+
 </section>
 
 
-<section id="discount">
-<div class="sale">
+<!-- PROMO -->
+
+<section class="section" id="discount">
+
+<div class="promo">
+
 <div>
-<strong>تخفیفات ویژه لورا 🎀</strong>
-<br>
-<span>محصولات منتخب با قیمت ویژه</span>
+
+<div class="promo-title">
+تخفیفات ویژه لورا 🎀
 </div>
-<button class="btn" onclick="location.href='#products'">مشاهده تخفیف‌ها</button>
+
+<div class="promo-text">
+محصولات منتخب با قیمت ویژه
 </div>
+
+</div>
+
+<button class="promo-button"
+onclick="location.href='#products'">
+مشاهده تخفیف‌ها
+</button>
+
+</div>
+
 </section>
 
 
-<section id="products">
-<div class="title">
-<h2>محصولات لورا</h2>
-<p>انتخابی برای استایل تو</p>
+<!-- PRODUCTS -->
+
+<section class="section" id="products">
+
+<div class="section-title">
+
+<h2>جدیدترین محصولات</h2>
+
+<p>
+انتخابی برای استایل تو
+</p>
+
 </div>
 
-<div class="products" id="productList"></div>
+<div class="products">
+
+<div class="product">
+
+<div class="product-image">
+👚
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+لباس زنانه لورا
+</div>
+
+<div class="product-desc">
+استایل شیک و مینیمال
+</div>
+
+<div class="product-bottom">
+
+<div class="price">
+تماس برای قیمت
+</div>
+
+<button class="add"
+onclick="openCart()">
+افزودن
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+👜
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+کیف زنانه
+</div>
+
+<div class="product-desc">
+مناسب استایل روزمره
+</div>
+
+<div class="product-bottom">
+
+<div class="price">
+تماس برای قیمت
+</div>
+
+<button class="add"
+onclick="openCart()">
+افزودن
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+🎀
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+اکسسوری لورا
+</div>
+
+<div class="product-desc">
+جزئی کوچک برای زیبایی
+</div>
+
+<div class="product-bottom">
+
+<div class="price">
+تماس برای قیمت
+</div>
+
+<button class="add"
+onclick="openCart()">
+افزودن
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+💄
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+لوازم آرایشی
+</div>
+
+<div class="product-desc">
+انتخاب‌های زیبای لورا
+</div>
+
+<div class="product-bottom">
+
+<div class="price">
+تماس برای قیمت
+</div>
+
+<button class="add"
+onclick="openCart()">
+افزودن
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<section id="club">
-<div class="
+<!-- BANNERS -->
+
+<section class="section">
+
+<div class="banner-grid">
+
+<div class="banner big">
+
+<small>LORA COLLECTION</small>
+
+<strong>
+سادگی، آغاز زیبایی است
+</strong>
+
+<span>
+استایل خودت را پیدا کن.
+</span>
+
+</div>
+
+<div class="banner pink">
+
+<small>NEW</small>
+
+<strong>
+New Style
+</strong>
+
+<span>
+تازه‌های لورا
+</span>
+
+</div>
+
+<div class="banner white">
+
+<small>SALE</small>
+
+<strong>
+Special
+</strong>
+
+<span>
+تخفیف‌های ویژه
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+<div class="section-title">
+
+<h2>داستان لورا</h2>
+
+<p>
+سادگی، آغاز زیبایی است؛ زیبایی بخشی از داستان توست.
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer id="contact">
+
+<div class="footer-logo">
+LORA COLLECTION
+</div>
+
+<div class="footer-text">
+لورا کالکشن؛ انتخابی برای استایل، زیبایی و سلیقه‌ی تو.
+</div>
+
+<div class="footer-links">
+
+<a href="#home">خانه</a>
+<a href="#products">محصولات</a>
+<a href="#discount">تخفیفات</a>
+<a href="#about">درباره ما</a>
+
+</div>
+
+<div class="copy">
+© LORA COLLECTION — تمامی حقوق محفوظ است.
+</div>
+
+</footer>
+
+
+<!-- MOBILE MENU -->
+
+<div class="overlay" id="overlay"
+onclick="closeMenu()">
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+<button class="close"
+onclick="closeMenu()">
+×
+</button>
+
+<h3>
+LORA COLLECTION
+</h3>
+
+<a class="mobile-link" href="#home"
+onclick="closeMenu()">
+خانه
+</a>
+
+<a class="mobile-link" href="#categories"
+onclick="closeMenu()">
+دسته‌بندی‌ها
+</a>
+
+<a class="mobile-link" href="#products"
+onclick="closeMenu()">
+محصولات
+</a>
+
+<a class="mobile-link" href="#discount"
+onclick="closeMenu()">
+تخفیفات
+</a>
+
+<a class="mobile-link" href="#about"
+onclick="closeMenu()">
+درباره ما
+</a>
+
+<a class="mobile-link" href="#contact"
+onclick="closeMenu()">
+تماس با ما
+</a>
+
+</div>
+
+
+<script>
+
+function openMenu(){
+
+document.getElementById("mobileMenu")
+.classList.add("open");
+
+document.getElementById("overlay")
+.classList.add("show");
+
+}
+
+function closeMenu(){
+
+document.getElementById("mobileMenu")
+.classList.remove("open");
+
+document.getElementById("overlay")
+.classList.remove("show");
+
+}
+
+function openCart(){
+
+alert("سبد خرید لورا به‌زودی فعال می‌شود 🎀");
+
+}
+
+function searchSite(){
+
+let text=prompt("چه محصولی را جستجو می‌کنی؟");
+
+if(text){
+
+alert("جستجوی «"+text+"» به‌زودی فعال می‌شود.");
+
+}
+
+}
+
+function filterProducts(category){
+
+document.getElementById("products")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+  </html>
