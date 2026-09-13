@@ -2,34 +2,37 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>LORA COLLECTION | لورا کالکشن</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Vazirmatn:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 :root{
-    --pink:#eeb5c9;
-    --pink-light:#f9e8ee;
-    --pink-soft:#fff7f9;
-    --dark:#242124;
-    --gray:#777277;
-    --border:#eee4e7;
-    --white:#fff;
+    --pink:#f07fa5;
+    --pink2:#f7b6c8;
+    --pink3:#fad6e1;
+    --light:#fff5f8;
+    --light2:#fffafc;
+    --dark:#333333;
+    --gray:#777;
+    --border:#f3dce5;
 }
 
 body{
-    font-family:"Vazirmatn",sans-serif;
     background:#fff;
     color:var(--dark);
+    font-family:"Vazirmatn",sans-serif;
 }
 
 a{
@@ -37,149 +40,154 @@ a{
     color:inherit;
 }
 
-button{
+button,
+input{
     font-family:inherit;
 }
 
-/* TOP BAR */
-.topbar{
-    background:#f9e8ee;
-    text-align:center;
-    padding:9px 15px;
-    font-size:12px;
-    color:#555;
-}
 
-/* HEADER */
-.header{
-    height:92px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 6%;
-    border-bottom:1px solid #f1ebed;
+/* ================= HEADER ================= */
+
+.top{
+    height:34px;
     background:#fff;
 }
 
-.logo{
+.header{
+    height:86px;
+    padding:0 5%;
     display:flex;
     align-items:center;
-    gap:13px;
-    min-width:210px;
+    justify-content:space-between;
+    border-bottom:1px solid #f5e5eb;
+    background:white;
 }
 
-.logo-mark{
-    width:48px;
-    height:58px;
+
+/* LOGO */
+
+.logo{
+    width:180px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-symbol{
+    width:45px;
+    height:52px;
     position:relative;
 }
 
-.logo-mark .l1{
+.logo-symbol .black-l{
     position:absolute;
-    left:5px;
-    top:2px;
+    right:10px;
+    top:0;
     font-family:Georgia,serif;
-    font-size:56px;
-    line-height:1;
+    font-size:55px;
     font-weight:bold;
-    color:#202020;
+    color:#222;
+    line-height:1;
 }
 
-.logo-mark .l2{
+.logo-symbol .pink-l{
     position:absolute;
-    left:18px;
+    left:0;
     top:8px;
     font-family:cursive;
-    font-size:43px;
-    color:#e7a1bb;
-    transform:rotate(-7deg);
+    font-size:47px;
+    color:#efa0b8;
+    transform:rotate(-8deg);
 }
 
-.logo-text{
+.logo-name{
     display:flex;
     flex-direction:column;
-    line-height:1.15;
 }
 
-.logo-text strong{
+.logo-name strong{
     font-family:"Playfair Display",serif;
     font-size:22px;
     letter-spacing:2px;
+    font-weight:500;
 }
 
-.logo-text span{
-    color:#d895af;
-    font-size:9px;
-    letter-spacing:4px;
-    margin-top:4px;
+.logo-name span{
+    color:#e59ab2;
+    letter-spacing:3px;
+    font-size:8px;
 }
+
 
 /* SEARCH */
+
 .search{
-    width:290px;
-    height:42px;
-    border:1px solid #e9e0e4;
-    border-radius:25px;
+    width:270px;
+    height:38px;
+    border:1px solid #f0dfe5;
+    border-radius:5px;
     display:flex;
     align-items:center;
-    padding:0 15px;
-    color:#999;
-    font-size:13px;
+    padding:0 12px;
+    color:#aaa;
 }
 
 .search input{
     border:0;
     outline:0;
     width:100%;
-    font-family:inherit;
-    margin-right:8px;
-    background:transparent;
+    background:none;
+    font-size:11px;
+    margin-right:7px;
 }
 
-/* ICONS */
+
+/* HEADER ICONS */
+
 .header-icons{
     display:flex;
-    gap:18px;
     align-items:center;
+    gap:17px;
 }
 
-.icon{
-    width:35px;
-    height:35px;
-    border:1px solid #eee5e8;
-    border-radius:50%;
+.header-icon{
+    width:27px;
+    height:27px;
     display:flex;
     align-items:center;
     justify-content:center;
-    cursor:pointer;
-    font-size:16px;
+    font-size:17px;
+    color:#555;
     position:relative;
+    cursor:pointer;
 }
 
-.cart-number{
+.cart-count{
     position:absolute;
     top:-5px;
-    right:-4px;
-    width:16px;
-    height:16px;
-    border-radius:50%;
-    background:#e5a2ba;
+    right:-6px;
+    width:14px;
+    height:14px;
+    background:var(--pink);
     color:white;
-    font-size:9px;
+    border-radius:50%;
+    font-size:8px;
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
-/* NAV */
+
+/* ================= NAV ================= */
+
 .nav{
-    height:53px;
+    height:48px;
     display:flex;
     justify-content:center;
     align-items:center;
     gap:42px;
-    border-bottom:1px solid #f0eaec;
-    font-size:13px;
+    border-bottom:1px solid #f4e5ea;
+    font-size:11px;
     background:white;
 }
 
@@ -187,976 +195,691 @@ button{
     transition:.2s;
 }
 
-.nav a:hover{
-    color:#d895af;
+.nav a:hover,
+.nav .active{
+    color:#eb739b;
 }
 
-/* HERO */
+
+/* ================= HERO ================= */
+
 .hero{
-    width:88%;
-    margin:28px auto 0;
-    min-height:430px;
-    border-radius:4px;
-    background:linear-gradient(105deg,#f7dce5 0%,#fcecf1 48%,#f7e1e7 100%);
-    position:relative;
+    width:94%;
+    height:310px;
+    margin:15px auto 0;
+    border-radius:8px;
     overflow:hidden;
+    background:#fbd5e0;
+    position:relative;
     display:flex;
     align-items:center;
 }
 
-.hero-content{
-    width:47%;
-    padding-right:8%;
+.hero-text{
     position:relative;
-    z-index:3;
+    z-index:4;
+    width:42%;
+    padding-right:7%;
 }
 
-.hero-small{
-    color:#a77888;
-    letter-spacing:4px;
-    font-size:12px;
-    margin-bottom:12px;
+.hero-text small{
+    display:block;
+    color:#d77998;
+    font-size:9px;
+    letter-spacing:2px;
+    margin-bottom:10px;
     direction:ltr;
     text-align:right;
 }
 
-.hero h1{
-    font-family:"Playfair Display",serif;
-    font-size:51px;
-    font-weight:600;
-    margin-bottom:12px;
-    direction:ltr;
-    text-align:right;
+.hero-text h1{
+    color:#bd476d;
+    font-size:31px;
+    font-weight:700;
+    margin-bottom:7px;
 }
 
-.hero h2{
-    font-size:22px;
-    font-weight:400;
-    margin-bottom:12px;
-}
-
-.hero p{
-    color:#766a70;
-    font-size:13px;
+.hero-text p{
+    font-size:11px;
+    color:#6e555e;
     line-height:2;
-    margin-bottom:25px;
+    margin-bottom:17px;
 }
 
 .hero-btn{
-    display:inline-block;
-    background:#292629;
-    color:#fff;
-    padding:12px 31px;
-    font-size:12px;
-    transition:.2s;
+    border:0;
+    background:#ed709a;
+    color:white;
+    padding:9px 20px;
+    border-radius:4px;
+    font-size:10px;
+    cursor:pointer;
 }
 
 .hero-btn:hover{
-    background:#d998b0;
+    background:#dc5e89;
 }
 
-/* HERO DECOR */
-.hero-visual{
+
+/* HERO CLOSET */
+
+.hero-scene{
     position:absolute;
-    left:4%;
+    left:2%;
     bottom:0;
-    width:52%;
+    width:57%;
     height:100%;
 }
 
-.rack{
+
+/* flowers */
+
+.flowers{
     position:absolute;
-    left:17%;
-    bottom:55px;
-    width:320px;
-    height:7px;
-    background:#555;
-    transform:rotate(-2deg);
+    left:7%;
+    bottom:42px;
+    width:110px;
+    height:145px;
 }
 
-.rack:before{
-    content:"";
+.flower-stem{
     position:absolute;
-    width:4px;
-    height:270px;
-    background:#555;
-    left:0;
-    top:2px;
-}
-
-.rack:after{
-    content:"";
-    position:absolute;
-    width:4px;
-    height:270px;
-    background:#555;
-    right:0;
-    top:2px;
-}
-
-.clothes{
-    position:absolute;
-    bottom:60px;
-    left:50px;
-    display:flex;
-    gap:22px;
-    align-items:flex-end;
-}
-
-.dress{
-    width:82px;
-    height:225px;
-    background:#fff;
-    clip-path:polygon(35% 0,65% 0,70% 16%,100% 28%,82% 100%,18% 100%,0 28%,30% 16%);
-    box-shadow:0 5px 18px #d7b8c1;
-}
-
-.dress:nth-child(2){
-    height:190px;
-    background:#ead3da;
-}
-
-.dress:nth-child(3){
-    height:210px;
-    background:#f8f8f8;
-}
-
-.dress:nth-child(4){
-    height:175px;
-    background:#d9b7c3;
+    width:2px;
+    height:115px;
+    background:#a87965;
+    bottom:0;
+    left:52px;
+    transform:rotate(-12deg);
 }
 
 .flower{
     position:absolute;
-    width:95px;
-    height:95px;
+    width:21px;
+    height:21px;
     border-radius:50%;
-    background:#fff;
-    opacity:.7;
-    filter:blur(.3px);
+    background:#f2a9bd;
 }
 
-.flower:before,
-.flower:after{
+.flower:nth-child(2){left:25px;top:10px}
+.flower:nth-child(3){left:52px;top:28px}
+.flower:nth-child(4){left:5px;top:45px}
+.flower:nth-child(5){left:60px;top:65px}
+.flower:nth-child(6){left:30px;top:75px}
+
+
+/* rack */
+
+.rack{
+    position:absolute;
+    width:300px;
+    height:4px;
+    background:#7a422b;
+    top:48px;
+    right:7%;
+    border-radius:5px;
+}
+
+.rack:before,
+.rack:after{
     content:"";
     position:absolute;
-    width:55px;
-    height:55px;
-    background:#edb8ca;
+    top:0;
+    width:4px;
+    height:235px;
+    background:#7a422b;
+}
+
+.rack:before{right:0}
+.rack:after{left:0}
+
+
+/* hangers */
+
+.hangers{
+    position:absolute;
+    top:52px;
+    right:11%;
+    width:275px;
+    height:225px;
+    display:flex;
+    gap:8px;
+    align-items:flex-start;
+}
+
+.hanger{
+    width:51px;
+    height:18px;
+    border-top:2px solid #9c684e;
     border-radius:50%;
+    position:relative;
 }
 
-.flower:before{
-    left:8px;
+.hanger:after{
+    content:"";
+    position:absolute;
     top:8px;
+    left:50%;
+    width:2px;
+    height:190px;
+    background:#ddd;
 }
 
-.flower:after{
-    right:8px;
-    bottom:8px;
+
+/* dresses */
+
+.dress{
+    position:absolute;
+    top:76px;
+    width:48px;
+    height:174px;
+    border-radius:4px 4px 15px 15px;
+    clip-path:polygon(30% 0,70% 0,76% 13%,100% 27%,83% 100%,17% 100%,0 27%,24% 13%);
 }
 
-.flower.one{
-    right:7%;
-    top:35px;
+.d1{right:15%;background:#f3a6bc}
+.d2{right:25%;background:#f7d9df}
+.d3{right:35%;background:#fff}
+.d4{right:45%;background:#efc7d2}
+.d5{right:55%;background:#fff5f7}
+
+
+/* bag */
+
+.bag{
+    position:absolute;
+    right:3%;
+    bottom:28px;
+    width:82px;
+    height:65px;
+    background:#e899ae;
+    border-radius:7px 7px 12px 12px;
+    box-shadow:0 8px 20px rgba(150,80,100,.15);
 }
 
-.flower.two{
-    left:6%;
-    bottom:70px;
-    transform:scale(.65);
+.bag:before{
+    content:"";
+    position:absolute;
+    width:45px;
+    height:35px;
+    border:4px solid #bd7187;
+    border-bottom:0;
+    border-radius:30px 30px 0 0;
+    left:16px;
+    top:-29px;
 }
 
-/* BENEFITS */
+
+/* ================= BENEFITS ================= */
+
 .benefits{
-    width:88%;
-    margin:0 auto;
-    border:1px solid #eee6e9;
-    border-top:0;
+    width:94%;
+    height:68px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    min-height:95px;
+    border:1px solid #f3e0e7;
+    border-top:0;
 }
 
 .benefit{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:13px;
-    border-left:1px solid #eee6e9;
-    text-align:right;
+    gap:10px;
+    border-left:1px solid #f3e0e7;
 }
 
 .benefit:last-child{
     border-left:0;
 }
 
-.benefit-icon{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:#faedf1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#c78b9e;
-    font-size:18px;
+.b-icon{
+    color:#ed7ea2;
+    font-size:22px;
 }
 
 .benefit strong{
     display:block;
-    font-size:12px;
-    margin-bottom:5px;
+    font-size:10px;
+    margin-bottom:3px;
 }
 
 .benefit span{
-    font-size:10px;
-    color:#999;
-}
-
-/* SECTION */
-.section{
-    width:88%;
-    margin:70px auto 0;
-}
-
-.section-head{
-    text-align:center;
-    margin-bottom:35px;
-}
-
-.section-head small{
-    color:#d19aaa;
-    letter-spacing:3px;
-    font-size:10px;
-    direction:ltr;
     display:block;
-    margin-bottom:7px;
-}
-
-.section-head h2{
-    font-family:"Playfair Display",serif;
-    font-size:29px;
-    font-weight:600;
-}
-
-.section-head p{
     color:#999;
-    font-size:11px;
-    margin-top:8px;
+    font-size:8px;
 }
 
-/* CATEGORIES */
+
+/* ================= SECTION TITLE ================= */
+
+.section{
+    width:94%;
+    margin:40px auto 0;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:22px;
+}
+
+.title h2{
+    font-size:17px;
+    font-weight:600;
+    margin-bottom:4px;
+}
+
+.title p{
+    color:#aaa;
+    font-size:9px;
+}
+
+
+/* ================= CATEGORIES ================= */
+
 .categories{
     display:grid;
     grid-template-columns:repeat(5,1fr);
-    gap:17px;
+    gap:12px;
 }
 
 .category{
-    height:250px;
+    height:110px;
+    border:1px solid #f3dce5;
+    border-radius:5px;
     background:#fff;
-    border:1px solid #eee5e8;
-    overflow:hidden;
-    position:relative;
-    transition:.3s;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    transition:.25s;
 }
 
 .category:hover{
-    transform:translateY(-5px);
-    box-shadow:0 12px 35px rgba(70,40,50,.08);
+    border-color:#efa0b8;
+    transform:translateY(-3px);
 }
 
-.category-img{
-    height:190px;
-    background:#f9eff2;
-    position:relative;
-    overflow:hidden;
-}
-
-.category-img img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* elegant placeholders */
-.cat-fashion{
-    background:linear-gradient(135deg,#f7e7eb,#f2d2dc);
-}
-
-.cat-fashion:after{
-    content:"";
-    position:absolute;
-    width:80px;
-    height:145px;
-    left:50%;
-    top:25px;
-    transform:translateX(-50%);
-    background:#fff;
-    clip-path:polygon(35% 0,65% 0,72% 17%,100% 28%,84% 100%,16% 100%,0 28%,28% 17%);
-}
-
-.cat-bag{
-    background:linear-gradient(135deg,#f4e2e7,#ead0d8);
-}
-
-.cat-bag:after{
-    content:"";
-    position:absolute;
-    width:105px;
-    height:75px;
-    left:50%;
-    top:62px;
-    transform:translateX(-50%);
-    border:2px solid #8f747d;
-    border-radius:5px 5px 12px 12px;
-    background:#fff;
-}
-
-.cat-bag:before{
-    content:"";
-    position:absolute;
-    width:55px;
-    height:35px;
-    left:50%;
-    top:36px;
-    transform:translateX(-50%);
-    border:2px solid #8f747d;
-    border-bottom:0;
-    border-radius:40px 40px 0 0;
-}
-
-.cat-jewelry{
-    background:linear-gradient(135deg,#fbf1f4,#f2dce3);
-}
-
-.cat-jewelry:after{
-    content:"◇";
-    position:absolute;
-    left:50%;
-    top:30px;
-    transform:translateX(-50%);
-    font-size:110px;
-    color:#c894a5;
-    font-family:serif;
-}
-
-.cat-accessory{
-    background:linear-gradient(135deg,#f9eaef,#f2d4de);
-}
-
-.cat-accessory:after{
-    content:"✦";
-    position:absolute;
-    left:50%;
-    top:35px;
-    transform:translateX(-50%);
-    font-size:105px;
-    color:#b77f91;
-}
-
-.cat-beauty{
-    background:linear-gradient(135deg,#f8e8ed,#efd2dc);
-}
-
-.cat-beauty:after{
-    content:"";
-    position:absolute;
-    width:43px;
-    height:105px;
-    left:50%;
-    top:45px;
-    transform:translateX(-50%);
-    border-radius:6px 6px 12px 12px;
-    background:#fff;
-    box-shadow:28px 18px 0 -7px #d3a4b3;
-}
-
-.category-title{
-    height:60px;
+.category-icon{
+    height:45px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:13px;
-    font-weight:500;
+    color:#ef80a5;
+    font-size:31px;
+    margin-bottom:3px;
 }
 
-/* PRODUCTS */
-.products{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.product{
-    position:relative;
-}
-
-.product-img{
-    height:310px;
-    background:#f8f3f4;
-    overflow:hidden;
-    position:relative;
-}
-
-.product-img:after{
-    content:"";
-    position:absolute;
-    inset:20px 35px;
-    background:linear-gradient(145deg,#eee3e6,#d7c1c8);
-    clip-path:polygon(30% 0,70% 0,78% 18%,100% 30%,85% 100%,15% 100%,0 30%,22% 18%);
-}
-
-.product:nth-child(2) .product-img:after{
-    background:linear-gradient(145deg,#f8e5eb,#ddb9c6);
-}
-
-.product:nth-child(3) .product-img:after{
-    background:linear-gradient(145deg,#ece6e3,#cfc2bc);
-}
-
-.product:nth-child(4) .product-img:after{
-    background:linear-gradient(145deg,#f3dfe5,#cdaab7);
-}
-
-.badge{
-    position:absolute;
-    top:13px;
-    right:13px;
-    z-index:2;
-    background:#e8a8bd;
-    color:white;
-    font-size:9px;
-    padding:6px 10px;
-}
-
-.product-info{
-    padding:14px 3px;
-}
-
-.product-cat{
-    color:#c997a7;
-    font-size:9px;
-    margin-bottom:5px;
-}
-
-.product-name{
-    font-size:13px;
-    margin-bottom:9px;
-}
-
-.price{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-.price strong{
-    font-size:13px;
-}
-
-.old-price{
+.category strong{
     font-size:10px;
-    color:#aaa;
-    text-decoration:line-through;
+    margin-bottom:7px;
 }
 
-.add{
-    position:absolute;
-    bottom:13px;
-    left:3px;
-    width:34px;
-    height:34px;
-    border-radius:50%;
-    border:1px solid #eadfe3;
-    background:#fff;
-    cursor:pointer;
-    font-size:16px;
+.category button{
+    border:0;
+    background:#ed739c;
+    color:#fff;
+    padding:4px 14px;
+    border-radius:3px;
+    font-size:8px;
 }
 
-/* PROMO */
+
+/* ================= BANNERS ================= */
+
+.promo-grid{
+    width:94%;
+    margin:28px auto 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:13px;
+}
+
 .promo{
-    width:88%;
-    margin:80px auto 0;
-    min-height:250px;
-    background:#f8e5eb;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    height:120px;
+    background:#fbdce5;
+    border-radius:6px;
+    position:relative;
     overflow:hidden;
 }
 
 .promo-content{
-    padding-right:8%;
+    position:relative;
+    z-index:2;
+    padding:22px 25px;
 }
 
 .promo small{
-    color:#bd8195;
-    letter-spacing:3px;
-    font-size:10px;
-    direction:ltr;
+    color:#d7819b;
+    font-size:7px;
+    letter-spacing:2px;
     display:block;
-    margin-bottom:10px;
+    margin-bottom:5px;
+    direction:ltr;
+    text-align:right;
 }
 
-.promo h2{
-    font-family:"Playfair Display",serif;
-    font-size:32px;
-    margin-bottom:10px;
+.promo h3{
+    color:#b94e70;
+    font-size:16px;
+    margin-bottom:5px;
 }
 
 .promo p{
-    color:#777;
-    font-size:12px;
-    margin-bottom:20px;
+    font-size:8px;
+    color:#735b63;
+    line-height:1.8;
+    margin-bottom:7px;
 }
 
-.promo-art{
-    width:40%;
-    height:250px;
-    position:relative;
-    background:linear-gradient(135deg,#f2d4df,#edd0da);
+.promo a{
+    display:inline-block;
+    background:#ec739b;
+    color:#fff;
+    font-size:7px;
+    padding:5px 12px;
+    border-radius:3px;
 }
 
-.promo-art:before{
+
+/* promo visual */
+
+.promo-bag:after{
     content:"";
     position:absolute;
-    width:130px;
-    height:170px;
-    background:white;
-    left:35%;
-    top:35px;
-    clip-path:polygon(35% 0,65% 0,72% 18%,100% 30%,83% 100%,17% 100%,0 30%,28% 18%);
+    width:95px;
+    height:67px;
+    left:13%;
+    bottom:18px;
+    background:#eaa1b5;
+    border-radius:8px;
+    box-shadow:0 10px 25px rgba(150,70,90,.12);
 }
 
-/* ABOUT */
-.about{
-    width:88%;
-    margin:80px auto 0;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    min-height:280px;
-    background:#faf7f8;
-}
-
-.about-image{
-    background:linear-gradient(135deg,#f0dce2,#f9eef1);
-    position:relative;
-}
-
-.about-image:after{
-    content:"L";
+.promo-bag:before{
+    content:"";
     position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    font-family:"Playfair Display",serif;
-    font-size:180px;
-    color:rgba(255,255,255,.8);
+    width:55px;
+    height:38px;
+    left:16%;
+    bottom:76px;
+    border:5px solid #c57b91;
+    border-bottom:0;
+    border-radius:40px 40px 0 0;
+    z-index:1;
 }
 
-.about-text{
-    padding:45px 55px;
+.promo-gift:after{
+    content:"🎀";
+    position:absolute;
+    left:13%;
+    bottom:12px;
+    font-size:80px;
 }
 
-.about-text small{
-    color:#d095a7;
-    letter-spacing:3px;
-    font-size:10px;
-    direction:ltr;
-    display:block;
-    margin-bottom:10px;
-}
 
-.about-text h2{
-    font-family:"Playfair Display",serif;
-    font-size:30px;
-    margin-bottom:15px;
-}
+/* ================= FOOTER ================= */
 
-.about-text p{
-    font-size:12px;
-    color:#777;
-    line-height:2.2;
-}
-
-/* NEWSLETTER */
-.newsletter{
-    margin-top:75px;
-    padding:45px 20px;
-    background:#fdf5f7;
-    text-align:center;
-}
-
-.newsletter h2{
-    font-family:"Playfair Display",serif;
-    font-size:26px;
-    margin-bottom:9px;
-}
-
-.newsletter p{
-    color:#888;
-    font-size:11px;
-    margin-bottom:20px;
-}
-
-.news-form{
-    margin:auto;
-    max-width:430px;
-    height:44px;
-    display:flex;
-    background:#fff;
-    border:1px solid #eadfe3;
-}
-
-.news-form input{
-    flex:1;
-    border:0;
-    outline:0;
-    padding:0 15px;
-    font-family:inherit;
-    font-size:11px;
-}
-
-.news-form button{
-    border:0;
-    background:#292629;
-    color:#fff;
-    padding:0 23px;
-    cursor:pointer;
-}
-
-/* FOOTER */
-footer{
-    background:#292629;
-    color:#fff;
-    margin-top:0;
-    padding:50px 7% 20px;
+.footer{
+    margin-top:38px;
+    background:#f9b7cb;
+    padding:28px 6% 0;
+    color:#4e3e44;
 }
 
 .footer-grid{
     display:grid;
     grid-template-columns:1.5fr 1fr 1fr 1fr;
-    gap:50px;
-    padding-bottom:35px;
+    gap:35px;
+    padding-bottom:25px;
+}
+
+.footer h3{
+    font-size:11px;
+    margin-bottom:10px;
+}
+
+.footer p,
+.footer a{
+    display:block;
+    font-size:8px;
+    color:#765d65;
+    line-height:2.5;
 }
 
 .footer-logo{
     font-family:"Playfair Display",serif;
-    font-size:23px;
+    font-size:20px;
     letter-spacing:2px;
-    margin-bottom:12px;
+    margin-bottom:7px;
 }
 
-.footer-col h3{
-    font-size:13px;
-    margin-bottom:17px;
+.footer-news{
+    display:flex;
+    margin-top:8px;
+    max-width:230px;
 }
 
-.footer-col p,
-.footer-col a{
-    display:block;
-    color:#c5bec1;
-    font-size:10px;
-    line-height:2.5;
+.footer-news input{
+    height:30px;
+    border:1px solid #ed9db5;
+    background:#fff;
+    outline:0;
+    flex:1;
+    padding:0 8px;
+    font-size:8px;
+}
+
+.footer-news button{
+    border:0;
+    background:#ed7098;
+    color:white;
+    padding:0 12px;
+    font-size:8px;
 }
 
 .footer-bottom{
-    border-top:1px solid #474347;
-    padding-top:20px;
-    text-align:center;
-    color:#aaa;
-    font-size:9px;
-}
-
-/* TOAST */
-.toast{
-    position:fixed;
-    left:20px;
-    bottom:20px;
-    background:#292629;
+    height:32px;
+    border-top:1px solid rgba(255,255,255,.35);
+    display:flex;
+    justify-content:center;
+    align-items:center;
     color:#fff;
-    padding:12px 18px;
-    font-size:11px;
-    opacity:0;
-    transform:translateY(15px);
-    transition:.3s;
-    z-index:100;
+    font-size:8px;
 }
 
-.toast.show{
-    opacity:1;
-    transform:translateY(0);
-}
 
-/* RESPONSIVE */
-@media(max-width:1000px){
+/* ================= MOBILE ================= */
+
+@media(max-width:750px){
 
     .header{
-        padding:0 3%;
-    }
-
-    .search{
-        width:220px;
-    }
-
-    .nav{
-        gap:20px;
-    }
-
-    .hero{
-        width:94%;
-    }
-
-    .benefits,
-    .section,
-    .promo,
-    .about{
-        width:94%;
-    }
-
-    .categories{
-        grid-template-columns:repeat(3,1fr);
-    }
-}
-
-@media(max-width:700px){
-
-    .topbar{
-        font-size:10px;
-    }
-
-    .header{
-        height:75px;
-        padding:0 16px;
+        height:70px;
+        padding:0 15px;
     }
 
     .logo{
-        min-width:auto;
+        width:auto;
     }
 
-    .logo-text{
+    .logo-name{
         display:none;
     }
 
     .search{
         width:145px;
-        height:36px;
+        height:34px;
     }
 
     .header-icons{
-        gap:7px;
+        gap:5px;
     }
 
     .nav{
         overflow-x:auto;
         justify-content:flex-start;
-        padding:0 18px;
-        gap:25px;
+        padding:0 15px;
+        gap:23px;
         white-space:nowrap;
-        font-size:11px;
     }
 
     .hero{
+        height:410px;
         width:94%;
-        min-height:470px;
-        margin-top:15px;
     }
 
-    .hero-content{
+    .hero-text{
         width:100%;
-        padding:35px 25px 0;
+        padding:25px;
+        text-align:center;
         align-self:flex-start;
+    }
+
+    .hero-text h1{
+        font-size:25px;
+    }
+
+    .hero-text p{
+        font-size:9px;
+    }
+
+    .hero-text small{
         text-align:center;
     }
 
-    .hero h1{
-        font-size:39px;
-        text-align:center;
-    }
-
-    .hero h2{
-        font-size:19px;
-    }
-
-    .hero p{
-        font-size:11px;
-    }
-
-    .hero-visual{
+    .hero-scene{
         width:100%;
         height:220px;
         left:0;
-        bottom:0;
     }
 
     .rack{
-        left:50%;
-        transform:translateX(-50%);
-        width:260px;
-    }
-
-    .clothes{
-        left:50%;
-        transform:translateX(-50%);
-        gap:10px;
+        right:10%;
+        width:245px;
     }
 
     .dress{
-        width:58px;
-        height:150px;
+        transform:scale(.8);
+        transform-origin:top;
     }
 
     .benefits{
-        width:94%;
+        height:auto;
         grid-template-columns:repeat(2,1fr);
     }
 
     .benefit{
-        min-height:80px;
-        border-bottom:1px solid #eee6e9;
-        border-left:1px solid #eee6e9;
-    }
-
-    .section{
-        width:94%;
-        margin-top:50px;
+        min-height:65px;
+        border-bottom:1px solid #f3e0e7;
     }
 
     .categories{
         grid-template-columns:repeat(2,1fr);
-        gap:10px;
     }
 
-    .category{
-        height:210px;
+    .category:last-child{
+        grid-column:span 2;
     }
 
-    .category-img{
-        height:155px;
-    }
-
-    .products{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-    }
-
-    .product-img{
-        height:230px;
-    }
-
-    .product-name{
-        font-size:11px;
-    }
-
-    .promo{
-        width:94%;
-        min-height:350px;
-        position:relative;
-    }
-
-    .promo-content{
-        padding:30px;
-        align-self:flex-start;
-        position:relative;
-        z-index:2;
-    }
-
-    .promo-art{
-        position:absolute;
-        width:100%;
-        bottom:0;
-        height:180px;
-        opacity:.7;
-    }
-
-    .about{
-        width:94%;
+    .promo-grid{
         grid-template-columns:1fr;
-    }
-
-    .about-image{
-        height:190px;
-    }
-
-    .about-text{
-        padding:30px;
     }
 
     .footer-grid{
         grid-template-columns:1fr 1fr;
-        gap:30px;
+        gap:20px;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<div class="topbar">
-    🎀 ارسال سریع سفارش‌ها با بسته‌بندی اختصاصی لورا کالکشن 🎀
-</div>
+
+<!-- HEADER -->
+
+<div class="top"></div>
 
 <header class="header">
 
-    <a class="logo" href="#">
-        <div class="logo-mark">
-            <span class="l1">L</span>
-            <span class="l2">L</span>
+    <a href="#" class="logo">
+
+        <div class="logo-symbol">
+            <span class="black-l">L</span>
+            <span class="pink-l">L</span>
         </div>
 
-        <div class="logo-text">
+        <div class="logo-name">
             <strong>LORA</strong>
             <span>COLLECTION</span>
         </div>
+
     </a>
 
+
     <div class="search">
-        <span>⌕</span>
-        <input id="searchInput" type="text" placeholder="جستجوی محصول...">
+        🔍
+        <input id="search" placeholder="جستجوی محصولات">
     </div>
 
+
     <div class="header-icons">
-        <div class="icon">♡</div>
-        <div class="icon">
-            🛍
-            <span class="cart-number" id="cartCount">0</span>
+
+        <div class="header-icon">♙</div>
+
+        <div class="header-icon">
+            ♡
         </div>
-        <div class="icon">☰</div>
+
+        <div class="header-icon">
+            🛍
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+
     </div>
 
 </header>
 
+
+<!-- NAV -->
+
 <nav class="nav">
-    <a href="#">خانه</a>
-    <a href="#categories">دسته‌بندی‌ها</a>
+
+    <a href="#" class="active">صفحه اصلی</a>
+
     <a href="#products">محصولات</a>
+
+    <a href="#categories">دسته‌بندی‌ها</a>
+
     <a href="#discount">تخفیفات</a>
+
     <a href="#about">درباره ما</a>
-    <a href="#">سؤالات متداول</a>
+
     <a href="#">تماس با ما</a>
+
+    <a href="#">باشگاه مشتریان</a>
+
 </nav>
+
 
 
 <!-- HERO -->
 
 <section class="hero">
 
-    <div class="hero-content">
+    <div class="hero-text">
 
-        <div class="hero-small">
-            NEW COLLECTION
-        </div>
+        <small>NEW COLLECTION</small>
 
-        <h1>LORA COLLECTION</h1>
-
-        <h2>زیبایی در سادگی</h2>
+        <h1>زیبایی در سادگی</h1>
 
         <p>
             جدیدترین کالکشن لباس و اکسسوری
             <br>
-            برای استایل خاص و ظریف تو
+            با انتخابی ظریف برای استایل تو
         </p>
 
         <a href="#products" class="hero-btn">
@@ -1165,23 +888,49 @@ footer{
 
     </div>
 
-    <div class="hero-visual">
 
-        <div class="flower one"></div>
-        <div class="flower two"></div>
+    <div class="hero-scene">
+
+        <div class="flowers">
+
+            <div class="flower-stem"></div>
+
+            <div class="flower"></div>
+            <div class="flower"></div>
+            <div class="flower"></div>
+            <div class="flower"></div>
+            <div class="flower"></div>
+
+        </div>
+
 
         <div class="rack"></div>
 
-        <div class="clothes">
-            <div class="dress"></div>
-            <div class="dress"></div>
-            <div class="dress"></div>
-            <div class="dress"></div>
+
+        <div class="hangers">
+
+            <div class="hanger"></div>
+            <div class="hanger"></div>
+            <div class="hanger"></div>
+            <div class="hanger"></div>
+            <div class="hanger"></div>
+
         </div>
+
+
+        <div class="dress d1"></div>
+        <div class="dress d2"></div>
+        <div class="dress d3"></div>
+        <div class="dress d4"></div>
+        <div class="dress d5"></div>
+
+
+        <div class="bag"></div>
 
     </div>
 
 </section>
+
 
 
 <!-- BENEFITS -->
@@ -1189,332 +938,426 @@ footer{
 <section class="benefits">
 
     <div class="benefit">
-        <div class="benefit-icon">⌁</div>
+
+        <div class="b-icon">🚚</div>
+
         <div>
             <strong>ارسال سریع</strong>
-            <span>ارسال به سراسر کشور</span>
+            <span>به سراسر کشور</span>
         </div>
+
     </div>
 
+
     <div class="benefit">
-        <div class="benefit-icon">✓</div>
+
+        <div class="b-icon">♢</div>
+
         <div>
             <strong>ضمانت اصالت کالا</strong>
-            <span>خریدی مطمئن و باکیفیت</span>
+            <span>تضمین کیفیت</span>
         </div>
+
     </div>
 
+
     <div class="benefit">
-        <div class="benefit-icon">↩</div>
+
+        <div class="b-icon">↻</div>
+
         <div>
             <strong>۷ روز ضمانت بازگشت</strong>
             <span>با خیال راحت خرید کن</span>
         </div>
+
     </div>
 
+
     <div class="benefit">
-        <div class="benefit-icon">♡</div>
+
+        <div class="b-icon">♧</div>
+
         <div>
             <strong>پشتیبانی آنلاین</strong>
             <span>همیشه کنار تو هستیم</span>
         </div>
+
     </div>
 
 </section>
+
 
 
 <!-- CATEGORIES -->
 
 <section class="section" id="categories">
 
-    <div class="section-head">
-        <small>CATEGORIES</small>
+    <div class="title">
+
         <h2>دسته‌بندی محصولات</h2>
-        <p>انتخابی ظریف برای استایل تو</p>
+
+        <p>
+            انتخابی خاص برای استایل تو
+        </p>
+
     </div>
+
 
     <div class="categories">
 
-        <a href="#" class="category">
-            <div class="category-img cat-fashion"></div>
-            <div class="category-title">پوشاک</div>
-        </a>
 
         <a href="#" class="category">
-            <div class="category-img cat-bag"></div>
-            <div class="category-title">کیف</div>
+
+            <div class="category-icon">🎁</div>
+
+            <strong>عطر و ادکلن</strong>
+
+            <button>مشاهده</button>
+
         </a>
 
-        <a href="#" class="category">
-            <div class="category-img cat-jewelry"></div>
-            <div class="category-title">زیورآلات</div>
-        </a>
 
         <a href="#" class="category">
-            <div class="category-img cat-accessory"></div>
-            <div class="category-title">اکسسوری</div>
+
+            <div class="category-icon">💄</div>
+
+            <strong>آرایشی و بهداشتی</strong>
+
+            <button>مشاهده</button>
+
         </a>
 
+
         <a href="#" class="category">
-            <div class="category-img cat-beauty"></div>
-            <div class="category-title">آرایشی و بهداشتی</div>
+
+            <div class="category-icon">♡</div>
+
+            <strong>اکسسوری</strong>
+
+            <button>مشاهده</button>
+
         </a>
+
+
+        <a href="#" class="category">
+
+            <div class="category-icon">👜</div>
+
+            <strong>کیف و کفش</strong>
+
+            <button>مشاهده</button>
+
+        </a>
+
+
+        <a href="#" class="category">
+
+            <div class="category-icon">♧</div>
+
+            <strong>لباس زنانه</strong>
+
+            <button>مشاهده</button>
+
+        </a>
+
 
     </div>
 
 </section>
+
+
+
+<!-- PROMOS -->
+
+<div class="promo-grid" id="discount">
+
+
+    <div class="promo promo-bag">
+
+        <div class="promo-content">
+
+            <small>NEW COLLECTION</small>
+
+            <h3>زیبایی در سادگی</h3>
+
+            <p>
+                جدیدترین محصولات لورا کالکشن
+            </p>
+
+            <a href="#products">
+                مشاهده کالکشن
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="promo promo-gift">
+
+        <div class="promo-content">
+
+            <small>SPECIAL OFFER</small>
+
+            <h3>تخفیف‌های ویژه</h3>
+
+            <p>
+                تا ۲۵٪ تخفیف روی محصولات منتخب
+            </p>
+
+            <a href="#products">
+                مشاهده تخفیف‌ها
+            </a>
+
+        </div>
+
+    </div>
+
+
+</div>
+
 
 
 <!-- PRODUCTS -->
 
 <section class="section" id="products">
 
-    <div class="section-head">
-        <small>NEW ARRIVALS</small>
-        <h2>جدیدترین محصولات</h2>
-        <p>انتخاب‌های تازه لورا کالکشن</p>
-    </div>
+    <div class="title">
 
-    <div class="products">
-
-        <article class="product">
-            <div class="product-img">
-                <span class="badge">جدید</span>
-            </div>
-            <div class="product-info">
-                <div class="product-cat">پوشاک</div>
-                <div class="product-name">پیراهن زنانه ظریف</div>
-                <div class="price">
-                    <strong>۱,۲۸۰,۰۰۰ تومان</strong>
-                </div>
-            </div>
-            <button class="add">+</button>
-        </article>
-
-        <article class="product">
-            <div class="product-img">
-                <span class="badge">جدید</span>
-            </div>
-            <div class="product-info">
-                <div class="product-cat">کیف</div>
-                <div class="product-name">کیف دستی مینیمال</div>
-                <div class="price">
-                    <strong>۹۸۰,۰۰۰ تومان</strong>
-                </div>
-            </div>
-            <button class="add">+</button>
-        </article>
-
-        <article class="product">
-            <div class="product-img">
-                <span class="badge">محبوب</span>
-            </div>
-            <div class="product-info">
-                <div class="product-cat">اکسسوری</div>
-                <div class="product-name">ست اکسسوری ظریف</div>
-                <div class="price">
-                    <strong>۵۸۰,۰۰۰ تومان</strong>
-                </div>
-            </div>
-            <button class="add">+</button>
-        </article>
-
-        <article class="product">
-            <div class="product-img">
-                <span class="badge">جدید</span>
-            </div>
-            <div class="product-info">
-                <div class="product-cat">زیورآلات</div>
-                <div class="product-name">گردنبند مینیمال</div>
-                <div class="price">
-                    <strong>۶۸۰,۰۰۰ تومان</strong>
-                </div>
-            </div>
-            <button class="add">+</button>
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- PROMO -->
-
-<section class="promo" id="discount">
-
-    <div class="promo-content">
-        <small>SPECIAL OFFER</small>
-
-        <h2>تخفیف‌های لورا</h2>
+        <h2>محصولات جدید</h2>
 
         <p>
-            بعضی انتخاب‌ها ارزش بیشتری دارند.
-            <br>
-            کالکشن منتخب را با تخفیف ببین.
+            جدیدترین انتخاب‌های لورا کالکشن
         </p>
 
-        <a href="#products" class="hero-btn">
-            مشاهده تخفیف‌ها
-        </a>
     </div>
 
-    <div class="promo-art"></div>
+
+    <div class="categories">
+
+
+        <div class="category product">
+
+            <div class="category-icon">👗</div>
+
+            <strong>پیراهن زنانه</strong>
+
+            <button onclick="addCart()">
+                افزودن به سبد
+            </button>
+
+        </div>
+
+
+        <div class="category product">
+
+            <div class="category-icon">👜</div>
+
+            <strong>کیف دستی</strong>
+
+            <button onclick="addCart()">
+                افزودن به سبد
+            </button>
+
+        </div>
+
+
+        <div class="category product">
+
+            <div class="category-icon">👠</div>
+
+            <strong>کفش زنانه</strong>
+
+            <button onclick="addCart()">
+                افزودن به سبد
+            </button>
+
+        </div>
+
+
+        <div class="category product">
+
+            <div class="category-icon">💍</div>
+
+            <strong>زیورآلات</strong>
+
+            <button onclick="addCart()">
+                افزودن به سبد
+            </button>
+
+        </div>
+
+
+        <div class="category product">
+
+            <div class="category-icon">🌸</div>
+
+            <strong>محصولات زیبایی</strong>
+
+            <button onclick="addCart()">
+                افزودن به سبد
+            </button>
+
+        </div>
+
+
+    </div>
 
 </section>
+
 
 
 <!-- ABOUT -->
 
-<section class="about" id="about">
+<section class="section" id="about">
 
-    <div class="about-image"></div>
+    <div class="promo" style="height:150px">
 
-    <div class="about-text">
+        <div class="promo-content">
 
-        <small>ABOUT LORA COLLECTION</small>
+            <small>LORA COLLECTION</small>
 
-        <h2>سادگی، آغاز زیبایی است</h2>
+            <h3>لورا کالکشن</h3>
 
-        <p>
-            لورا کالکشن با نگاه به زیبایی‌های ساده و ظریف
-            شکل گرفته است؛ جایی برای انتخاب لباس،
-            اکسسوری، کیف، زیورآلات و محصولات زیبایی
-            که بتوانند بخشی از داستان تو باشند.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- NEWSLETTER -->
-
-<section class="newsletter">
-
-    <h2>همراه لورا باش</h2>
-
-    <p>
-        برای اطلاع از کالکشن‌های جدید و تخفیف‌ها ایمیلت را وارد کن.
-    </p>
-
-    <form class="news-form" onsubmit="subscribe(event)">
-        <input type="email" placeholder="ایمیل شما..." required>
-        <button>عضویت</button>
-    </form>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="footer-grid">
-
-        <div class="footer-col">
-            <div class="footer-logo">LORA COLLECTION</div>
             <p>
                 سادگی آغاز زیبایی است؛
                 زیبایی بخشی از داستان توست.
             </p>
-        </div>
 
-        <div class="footer-col">
-            <h3>دسترسی سریع</h3>
-            <a href="#">خانه</a>
-            <a href="#products">محصولات</a>
-            <a href="#categories">دسته‌بندی‌ها</a>
-            <a href="#discount">تخفیفات</a>
-        </div>
-
-        <div class="footer-col">
-            <h3>راهنما</h3>
-            <a href="#">پیگیری سفارش</a>
-            <a href="#">سؤالات متداول</a>
-            <a href="#">قوانین و مقررات</a>
-            <a href="#">شرایط بازگشت کالا</a>
-        </div>
-
-        <div class="footer-col">
-            <h3>ارتباط با ما</h3>
-            <p>پشتیبانی آنلاین</p>
-            <p>اینستاگرام لورا کالکشن</p>
-            <p>تماس با ما</p>
         </div>
 
     </div>
 
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <div class="footer-logo">
+                LORA
+            </div>
+
+            <p>
+                سادگی آغاز زیبایی است؛
+                زیبایی بخشی از داستان توست.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>دسترسی سریع</h3>
+
+            <a href="#">صفحه اصلی</a>
+            <a href="#products">محصولات</a>
+            <a href="#categories">دسته‌بندی‌ها</a>
+            <a href="#discount">تخفیفات</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>خدمات مشتریان</h3>
+
+            <a href="#">پیگیری سفارش</a>
+            <a href="#">راهنمای خرید</a>
+            <a href="#">پرسش‌های متداول</a>
+            <a href="#">شرایط بازگشت کالا</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>عضویت در خبرنامه</h3>
+
+            <p>
+                برای اطلاع از تخفیف‌ها و محصولات جدید
+                همراه ما باش.
+            </p>
+
+            <form class="footer-news" onsubmit="subscribe(event)">
+
+                <input
+                    type="email"
+                    placeholder="ایمیل شما"
+                    required
+                >
+
+                <button>
+                    عضویت
+                </button>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+
     <div class="footer-bottom">
-        © 2026 LORA COLLECTION — تمامی حقوق محفوظ است.
+
+        © 2026 LORA COLLECTION
+        • تمامی حقوق محفوظ است
+
     </div>
 
 </footer>
 
-<div class="toast" id="toast">
-    محصول به سبد خرید اضافه شد ♡
-</div>
 
 
 <script>
 
-let cart = 0;
+let cart=0;
 
-const count = document.getElementById("cartCount");
-const toast = document.getElementById("toast");
+function addCart(){
 
-document.querySelectorAll(".add").forEach(button => {
+    cart++;
 
-    button.addEventListener("click", () => {
-
-        cart++;
-
-        count.textContent = cart;
-
-        toast.classList.add("show");
-
-        setTimeout(() => {
-            toast.classList.remove("show");
-        },1800);
-
-    });
-
-});
-
-
-function subscribe(e){
-
-    e.preventDefault();
-
-    toast.textContent = "عضویت شما با موفقیت انجام شد ♡";
-
-    toast.classList.add("show");
-
-    setTimeout(() => {
-        toast.classList.remove("show");
-        toast.textContent = "محصول به سبد خرید اضافه شد ♡";
-    },1800);
+    document.getElementById("cartCount").textContent=cart;
 
 }
 
 
 /* SEARCH */
 
-const searchInput = document.getElementById("searchInput");
+document.getElementById("search").addEventListener("input",function(){
 
-searchInput.addEventListener("input",function(){
+    let value=this.value.trim().toLowerCase();
 
-    const value = this.value.trim().toLowerCase();
+    document.querySelectorAll(".product").forEach(function(item){
 
-    document.querySelectorAll(".product").forEach(product => {
+        let text=item.innerText.toLowerCase();
 
-        const text = product.innerText.toLowerCase();
-
-        product.style.display =
-            text.includes(value) ? "" : "none";
+        item.style.display =
+            text.includes(value) ? "flex" : "none";
 
     });
 
 });
+
+
+/* NEWSLETTER */
+
+function subscribe(e){
+
+    e.preventDefault();
+
+    alert("عضویت شما با موفقیت انجام شد ♡");
+
+}
 
 </script>
 
