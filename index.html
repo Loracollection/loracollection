@@ -1,670 +1,378 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LORA COLLECTION</title>
+
+<title>مدیریت LORA COLLECTION</title>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
+
 *{
   box-sizing:border-box;
-  margin:0;
-  padding:0;
 }
 
 body{
+  margin:0;
   font-family:Tahoma,Arial,sans-serif;
   background:#fff5f7;
   color:#333;
 }
 
-button,input,textarea,select{
+.login{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.login-box{
+  background:white;
+  width:400px;
+  max-width:100%;
+  padding:35px;
+  border-radius:25px;
+  box-shadow:0 15px 50px #0001;
+}
+
+.logo{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.logo strong{
+  font-family:Georgia,serif;
+  font-size:32px;
+  letter-spacing:5px;
+}
+
+.logo span{
+  display:block;
+  color:#d8899e;
+  letter-spacing:4px;
+  font-size:12px;
+}
+
+input,textarea,select{
+  width:100%;
+  padding:12px;
+  border:1px solid #ead6dc;
+  border-radius:10px;
+  margin-top:7px;
   font-family:inherit;
 }
 
+label{
+  display:block;
+  margin-top:15px;
+  font-size:13px;
+}
+
 button{
+  border:0;
+  border-radius:10px;
+  padding:12px 18px;
   cursor:pointer;
+  font-family:inherit;
+}
+
+.primary{
+  background:#333;
+  color:#fff;
+}
+
+.pink{
+  background:#e5a0b5;
+  color:#fff;
+}
+
+.danger{
+  background:#d9536f;
+  color:#fff;
+}
+
+.dashboard{
+  display:none;
 }
 
 header{
   background:#fff;
-  border-bottom:1px solid #f3dbe2;
-  position:sticky;
-  top:0;
-  z-index:50;
-}
-
-.topbar{
-  background:#fad6e1;
-  text-align:center;
-  padding:9px;
-  font-size:13px;
-}
-
-.nav{
-  max-width:1200px;
-  margin:auto;
-  height:82px;
+  padding:18px 25px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  padding:0 20px;
-  gap:20px;
-}
-
-.logo{
-  display:flex;
   align-items:center;
-  gap:10px;
-  min-width:190px;
+  border-bottom:1px solid #f0dce2;
 }
 
-.logo-mark{
+header strong{
   font-family:Georgia,serif;
-  font-size:42px;
-  font-style:italic;
-  color:#222;
-}
-
-.logo-text{
-  line-height:1.2;
-}
-
-.logo-text strong{
-  display:block;
-  letter-spacing:3px;
-}
-
-.logo-text span{
-  color:#d8899e;
-  font-size:11px;
   letter-spacing:4px;
 }
 
-.search{
-  flex:1;
-  max-width:450px;
-  position:relative;
-}
-
-.search input{
-  width:100%;
-  border:1px solid #ead6dc;
-  border-radius:30px;
-  padding:13px 45px 13px 18px;
-  outline:none;
-}
-
-.search-icon{
-  position:absolute;
-  right:17px;
-  top:11px;
-}
-
-.actions{
-  display:flex;
-  gap:12px;
-  align-items:center;
-}
-
-.icon-btn{
-  border:0;
-  background:#fff;
-  font-size:22px;
-}
-
-.cart-count{
-  background:#e9a1b5;
-  color:#fff;
-  border-radius:50%;
-  font-size:10px;
-  padding:3px 6px;
-  vertical-align:top;
-}
-
-.menu-btn{
-  border:0;
-  background:#fff;
-  font-size:27px;
-}
-
-.menu{
-  display:none;
-  position:absolute;
-  right:20px;
-  top:75px;
-  width:240px;
-  background:#fff;
-  border:1px solid #f0d9df;
-  border-radius:18px;
-  padding:15px;
-  box-shadow:0 15px 40px #00000018;
-}
-
-.menu.open{
-  display:block;
-}
-
-.menu a{
-  display:block;
-  color:#333;
-  text-decoration:none;
-  padding:13px;
-  border-radius:10px;
-}
-
-.menu a:hover{
-  background:#fff0f4;
-}
-
-.hero{
-  max-width:1200px;
-  margin:25px auto;
-  min-height:390px;
-  border-radius:30px;
-  background:linear-gradient(120deg,#ffe6ec,#fad6e1);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:30px;
-}
-
-.hero h1{
-  font-family:Georgia,serif;
-  font-size:46px;
-  letter-spacing:5px;
-}
-
-.hero p{
-  margin:20px auto;
-  line-height:2;
-  max-width:600px;
-}
-
-.btn{
-  border:0;
-  background:#333;
-  color:#fff;
-  border-radius:25px;
-  padding:13px 25px;
-}
-
-.section{
-  max-width:1200px;
-  margin:55px auto;
+.container{
+  max-width:1250px;
+  margin:30px auto;
   padding:0 20px;
 }
 
-.section-title{
-  text-align:center;
-  margin-bottom:30px;
+.tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:25px;
 }
 
-.section-title h2{
-  font-family:Georgia,serif;
-  font-size:30px;
+.tab{
+  background:white;
 }
 
-.section-title p{
-  color:#999;
-  margin-top:8px;
-}
-
-.products{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
-
-.card{
-  background:#fff;
-  border:1px solid #f0dce2;
-  border-radius:18px;
-  padding:10px;
-  position:relative;
-  transition:.2s;
-}
-
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 30px #00000010;
-}
-
-.product-image{
-  height:245px;
-  background:#fff5f7;
-  border-radius:14px;
-  overflow:hidden;
-}
-
-.product-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.badge{
-  position:absolute;
-  top:17px;
-  right:17px;
-  background:#e8a0b5;
-  color:white;
-  padding:5px 9px;
-  border-radius:12px;
-  font-size:10px;
-}
-
-.heart{
-  position:absolute;
-  left:18px;
-  top:17px;
-  border:0;
-  background:#fff;
-  border-radius:50%;
-  width:32px;
-  height:32px;
-}
-
-.card h3{
-  font-size:14px;
-  margin:14px 5px 8px;
-}
-
-.price{
-  color:#c77d93;
-  font-weight:bold;
-  margin:0 5px 12px;
-}
-
-.card button{
-  width:100%;
-}
-
-.categories{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:15px;
-}
-
-.category{
-  background:#fff;
-  border:1px solid #f0dce2;
-  border-radius:18px;
-  padding:25px 10px;
-  text-align:center;
-  cursor:pointer;
-}
-
-.category:hover{
-  background:#ffe6ec;
-}
-
-footer{
-  margin-top:70px;
+.tab.active{
   background:#333;
   color:#fff;
-  padding:50px 20px;
 }
 
-.footer-grid{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:35px;
-}
-
-footer h3{
-  margin-bottom:15px;
-}
-
-footer p{
-  color:#ddd;
-  line-height:2;
-}
-
-.social{
-  color:#f7b6c2;
-  display:block;
-  margin:8px 0;
-}
-
-.modal{
+.panel{
   display:none;
-  position:fixed;
-  inset:0;
-  background:#0008;
-  z-index:100;
-  align-items:center;
-  justify-content:center;
-  padding:15px;
 }
 
-.modal.show{
-  display:flex;
+.panel.active{
+  display:block;
 }
 
-.modal-box{
+.box{
   background:#fff;
-  width:min(600px,100%);
-  max-height:90vh;
-  overflow:auto;
-  border-radius:22px;
-  padding:25px;
-}
-
-.modal-head{
-  display:flex;
-  justify-content:space-between;
+  border-radius:18px;
+  padding:20px;
   margin-bottom:20px;
 }
 
-.close{
-  border:0;
-  background:#fff;
-  font-size:25px;
-}
-
-.form-group{
-  margin-bottom:15px;
-}
-
-.form-group label{
-  display:block;
-  margin-bottom:7px;
-  font-size:13px;
-}
-
-.form-group input,
-.form-group textarea{
+table{
   width:100%;
-  border:1px solid #ead6dc;
-  border-radius:10px;
+  border-collapse:collapse;
+}
+
+th,td{
   padding:12px;
-  outline:none;
-}
-
-.cart-item{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
   border-bottom:1px solid #eee;
-  padding:12px 0;
+  text-align:right;
 }
 
-.qty button{
-  border:1px solid #ddd;
-  background:#fff;
-  border-radius:5px;
-  width:25px;
-}
-
-.total{
-  font-weight:bold;
-  font-size:18px;
-  margin:20px 0;
-}
-
-.payment{
-  background:#fff5f7;
-  border:1px solid #f1d4dd;
-  border-radius:15px;
-  padding:18px;
-  margin:20px 0;
-}
-
-.card-number{
-  direction:ltr;
-  text-align:center;
-  font-size:20px;
-  letter-spacing:2px;
-  background:#fff;
-  padding:15px;
+.status{
+  padding:5px 9px;
   border-radius:10px;
-  margin-top:10px;
+  background:#fff0f4;
 }
 
-@media(max-width:900px){
-  .products{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .categories{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .search{
-    display:none;
-  }
+.receipt{
+  max-width:120px;
+  max-height:120px;
+  border-radius:10px;
 }
 
-@media(max-width:600px){
-  .nav{
-    height:70px;
-  }
+.products-list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
 
-  .logo-mark{
-    font-size:32px;
-  }
+.product{
+  border:1px solid #eee;
+  padding:12px;
+  border-radius:15px;
+}
 
-  .hero{
-    min-height:300px;
-    margin:15px;
-  }
+.product img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+}
 
-  .hero h1{
-    font-size:30px;
-  }
-
-  .products{
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-  }
-
-  .product-image{
-    height:190px;
-  }
-
-  .categories{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .footer-grid{
+@media(max-width:700px){
+  .products-list{
     grid-template-columns:1fr;
   }
+
+  table{
+    font-size:11px;
+  }
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="topbar">🎀 ارسال سفارش‌ها با بسته‌بندی اختصاصی LORA COLLECTION 🎀</div>
+<!-- LOGIN -->
 
-  <div class="nav">
+<section id="login" class="login">
+
+  <div class="login-box">
 
     <div class="logo">
-      <div class="logo-mark">L</div>
-      <div class="logo-text">
-        <strong>LORA</strong>
-        <span>COLLECTION</span>
-      </div>
+      <strong>LORA</strong>
+      <span>COLLECTION</span>
     </div>
 
-    <div class="search">
-      <span class="search-icon">⌕</span>
-      <input id="searchInput" placeholder="جستجوی محصول...">
-    </div>
+    <h3>ورود مدیر</h3>
 
-    <div class="actions">
-      <button class="icon-btn" onclick="openCart()">🛒<sup id="cartCount" class="cart-count">0</sup></button>
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
-    </div>
+    <label>ایمیل مدیر</label>
+    <input id="email" type="email">
 
-    <div id="menu" class="menu">
-      <a href="#home">صفحه اصلی</a>
-      <a href="#products">محصولات</a>
-      <a href="#categories">دسته‌بندی‌ها</a>
-      <a href="#about">درباره ما</a>
-      <a href="#contact">تماس با ما</a>
-      <a href="#faq">سوالات متداول</a>
-      <a href="#club">باشگاه مشتریان</a>
-    </div>
+    <label>رمز عبور</label>
+    <input id="password" type="password">
+
+    <br><br>
+
+    <button class="primary" style="width:100%" onclick="login()">
+      ورود به پنل
+    </button>
+
+    <p id="loginError"></p>
 
   </div>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard" class="dashboard">
+
+<header>
+
+  <strong>LORA COLLECTION — ADMIN</strong>
+
+  <button class="danger" onclick="logout()">
+    خروج
+  </button>
+
 </header>
 
-<main id="home">
+<div class="container">
 
-<section class="hero">
-  <div>
-    <h1>LORA COLLECTION</h1>
-    <p>
-      سادگی،آغاز زیبایی است؛<br>
-      زیبایی،بخشی از داستان توست.
-    </p>
-    <button class="btn" onclick="document.getElementById('products').scrollIntoView()">
-      مشاهده محصولات
+  <div class="tabs">
+
+    <button class="tab active" onclick="showTab('orders',this)">
+      📦 سفارش‌ها
     </button>
-  </div>
-</section>
 
-<section class="section" id="categories">
-  <div class="section-title">
-    <h2>دسته‌بندی‌ها</h2>
-    <p>محصول مورد علاقه‌ات را پیدا کن</p>
-  </div>
+    <button class="tab" onclick="showTab('products',this)">
+      👗 محصولات
+    </button>
 
-  <div class="categories">
-    <div class="category" onclick="filterCategory('لباس زنانه')">👗<br>لباس زنانه</div>
-    <div class="category" onclick="filterCategory('کیف و کفش')">👜<br>کیف و کفش</div>
-    <div class="category" onclick="filterCategory('اکسسوری')">🎀<br>اکسسوری</div>
-    <div class="category" onclick="filterCategory('آرایشی و بهداشتی')">💄<br>آرایشی و بهداشتی</div>
-    <div class="category" onclick="filterCategory('عطر و ادکلن')">🌸<br>عطر و ادکلن</div>
-  </div>
-</section>
-
-<section class="section" id="products">
-  <div class="section-title">
-    <h2>همه محصولات</h2>
-    <p>انتخاب‌های لورا برای تو</p>
-  </div>
-
-  <div id="productsGrid" class="products">
-    <p>در حال دریافت محصولات...</p>
-  </div>
-</section>
-
-<section class="section" id="about">
-  <div class="section-title">
-    <h2>درباره LORA COLLECTION</h2>
-    <p>
-      لورا کالکشن با هدف ارائه انتخاب‌هایی ساده، ظریف و زنانه ساخته شده است.
-    </p>
-  </div>
-</section>
-
-</main>
-
-<footer id="contact">
-  <div class="footer-grid">
-
-    <div>
-      <h3>LORA COLLECTION</h3>
-      <p>
-        سادگی،آغاز زیبایی است؛<br>
-        زیبایی،بخشی از داستان توست.
-      </p>
-    </div>
-
-    <div>
-      <h3>تماس با ما</h3>
-      <p>📞 09300797179</p>
-    </div>
-
-    <div>
-      <h3>شبکه‌های اجتماعی</h3>
-      <span class="social">Instagram: lora.collection@</span>
-      <span class="social">Telegram: lora.collection@</span>
-      <span class="social">Rubika: lora.collection@</span>
-      <span class="social">Eitaa: lora.collection@</span>
-    </div>
-
-  </div>
-</footer>
-
-<!-- CART -->
-
-<div id="cartModal" class="modal">
-  <div class="modal-box">
-
-    <div class="modal-head">
-      <h2>سبد خرید</h2>
-      <button class="close" onclick="closeModal('cartModal')">×</button>
-    </div>
-
-    <div id="cartItems"></div>
-
-    <div id="cartTotal" class="total"></div>
-
-    <button class="btn" style="width:100%" onclick="openCheckout()">
-      ادامه ثبت سفارش
+    <button class="tab" onclick="showTab('add',this)">
+      ➕ افزودن محصول
     </button>
 
   </div>
-</div>
 
-<!-- CHECKOUT -->
+  <!-- ORDERS -->
 
-<div id="checkoutModal" class="modal">
-  <div class="modal-box">
+  <div id="orders" class="panel active">
 
-    <div class="modal-head">
-      <h2>ثبت سفارش</h2>
-      <button class="close" onclick="closeModal('checkoutModal')">×</button>
-    </div>
+    <div class="box">
 
-    <div class="form-group">
-      <label>نام و نام خانوادگی</label>
-      <input id="customerName">
-    </div>
+      <h2>سفارش‌ها</h2>
 
-    <div class="form-group">
-      <label>شماره تماس</label>
-      <input id="customerPhone" type="tel">
-    </div>
+      <div style="overflow:auto">
 
-    <div class="form-group">
-      <label>آدرس</label>
-      <textarea id="customerAddress" rows="4"></textarea>
-    </div>
+        <table>
 
-    <div class="payment">
-      <strong>پرداخت کارت به کارت</strong>
+          <thead>
+            <tr>
+              <th>شماره</th>
+              <th>مشتری</th>
+              <th>تلفن</th>
+              <th>مبلغ</th>
+              <th>وضعیت</th>
+              <th>رسید</th>
+              <th>عملیات</th>
+            </tr>
+          </thead>
 
-      <p style="margin-top:10px">
-        مبلغ سفارش را به شماره کارت زیر واریز کن و تصویر رسید را ارسال کن.
-      </p>
+          <tbody id="ordersTable"></tbody>
 
-      <div class="card-number">
-        5022291538139682
+        </table>
+
       </div>
 
-      <div class="form-group" style="margin-top:15px">
-        <label>تصویر رسید واریز</label>
-        <input id="receipt" type="file" accept="image/*">
-      </div>
     </div>
 
-    <button class="btn" style="width:100%" onclick="submitOrder()">
-      ثبت سفارش و ارسال رسید
-    </button>
+  </div>
+
+  <!-- PRODUCTS -->
+
+  <div id="products" class="panel">
+
+    <div class="box">
+
+      <h2>محصولات</h2>
+
+      <div id="productsList" class="products-list"></div>
+
+    </div>
 
   </div>
+
+  <!-- ADD PRODUCT -->
+
+  <div id="add" class="panel">
+
+    <div class="box">
+
+      <h2>افزودن محصول</h2>
+
+      <label>نام محصول</label>
+      <input id="pName">
+
+      <label>دسته‌بندی</label>
+      <select id="pCategory">
+        <option>لباس زنانه</option>
+        <option>کیف و کفش</option>
+        <option>اکسسوری</option>
+        <option>آرایشی و بهداشتی</option>
+        <option>عطر و ادکلن</option>
+      </select>
+
+      <label>قیمت</label>
+      <input id="pPrice" type="number">
+
+      <label>قیمت قبلی</label>
+      <input id="pOldPrice" type="number">
+
+      <label>موجودی</label>
+      <input id="pStock" type="number">
+
+      <label>توضیحات</label>
+      <textarea id="pDescription"></textarea>
+
+      <label>لینک عکس محصول</label>
+      <input id="pImage">
+
+      <br><br>
+
+      <label>
+        <input id="pNew" type="checkbox" style="width:auto">
+        محصول جدید
+      </label>
+
+      <br><br>
+
+      <button class="pink" onclick="addProduct()">
+        ذخیره محصول
+      </button>
+
+    </div>
+
+  </div>
+
 </div>
+
+</section>
 
 <script>
 
@@ -674,19 +382,248 @@ const SUPABASE_KEY = "YOUR_SUPABASE_ANON_KEY";
 const supabaseClient =
   supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
 
-let products = [];
-let cart = JSON.parse(localStorage.getItem("lora_cart") || "[]");
+async function checkLogin(){
 
-async function loadProducts(){
+  const {data} =
+    await supabaseClient.auth.getSession();
 
-  if(SUPABASE_URL.includes("YOUR_")){
-    document.getElementById("productsGrid").innerHTML =
-      "<p>ابتدا اطلاعات Supabase را در کد وارد کن.</p>";
-    updateCart();
+  if(data.session){
+
+    showDashboard();
+
+  }
+
+}
+
+async function login(){
+
+  const email=document.getElementById("email").value;
+  const password=document.getElementById("password").value;
+
+  const {error}=
+    await supabaseClient.auth.signInWithPassword({
+      email,
+      password
+    });
+
+  if(error){
+
+    document.getElementById("loginError").textContent =
+      "ایمیل یا رمز عبور اشتباه است.";
+
     return;
   }
 
-  const {data,error} =
+  showDashboard();
+}
+
+async function logout(){
+
+  await supabaseClient.auth.signOut();
+
+  location.reload();
+
+}
+
+function showDashboard(){
+
+  document.getElementById("login").style.display="none";
+  document.getElementById("dashboard").style.display="block";
+
+  loadOrders();
+  loadProducts();
+}
+
+function showTab(id,button){
+
+  document.querySelectorAll(".panel")
+    .forEach(x=>x.classList.remove("active"));
+
+  document.querySelectorAll(".tab")
+    .forEach(x=>x.classList.remove("active"));
+
+  document.getElementById(id)
+    .classList.add("active");
+
+  button.classList.add("active");
+}
+
+async function loadOrders(){
+
+  const {data:orders,error}=
+    await supabaseClient
+      .from("orders")
+      .select(`
+        *,
+        receipts(*)
+      `)
+      .order("created_at",{ascending:false});
+
+  if(error){
+    console.error(error);
+    return;
+  }
+
+  const table=document.getElementById("ordersTable");
+
+  table.innerHTML=(orders||[]).map((o,i)=>{
+
+    const receipt=o.receipts?.[0];
+
+    return `
+
+      <tr>
+
+        <td>${i+1}</td>
+
+        <td>${escapeHtml(o.customer_name)}</td>
+
+        <td>${escapeHtml(o.phone)}</td>
+
+        <td>${Number(o.total).toLocaleString("fa-IR")} تومان</td>
+
+        <td>
+          <span class="status">
+            ${escapeHtml(o.status)}
+          </span>
+        </td>
+
+        <td>
+          ${
+            receipt
+            ?
+            `<a href="${receipt.image_url}" target="_blank">
+              <img class="receipt" src="${receipt.image_url}">
+            </a>`
+            :
+            "بدون رسید"
+          }
+        </td>
+
+        <td>
+
+          <button
+            class="pink"
+            onclick="approveOrder('${o.id}','${receipt?.id || ""}')">
+            تأیید
+          </button>
+
+          <button
+            class="danger"
+            onclick="rejectOrder('${o.id}','${receipt?.id || ""}')">
+            رد
+          </button>
+
+        </td>
+
+      </tr>
+
+    `;
+
+  }).join("");
+
+}
+
+async function approveOrder(orderId,receiptId){
+
+  await supabaseClient
+    .from("orders")
+    .update({
+      status:"تأیید نهایی شده"
+    })
+    .eq("id",orderId);
+
+  if(receiptId){
+
+    await supabaseClient
+      .from("receipts")
+      .update({
+        status:"تأیید شده"
+      })
+      .eq("id",receiptId);
+
+  }
+
+  loadOrders();
+
+}
+
+async function rejectOrder(orderId,receiptId){
+
+  await supabaseClient
+    .from("orders")
+    .update({
+      status:"پرداخت رد شده"
+    })
+    .eq("id",orderId);
+
+  if(receiptId){
+
+    await supabaseClient
+      .from("receipts")
+      .update({
+        status:"رد شده"
+      })
+      .eq("id",receiptId);
+
+  }
+
+  loadOrders();
+
+}
+
+async function addProduct(){
+
+  const product={
+
+    name:document.getElementById("pName").value,
+    category:document.getElementById("pCategory").value,
+    price:Number(document.getElementById("pPrice").value),
+    old_price:Number(document.getElementById("pOldPrice").value)||null,
+    stock:Number(document.getElementById("pStock").value)||0,
+    description:document.getElementById("pDescription").value,
+    image_url:document.getElementById("pImage").value,
+    is_new:document.getElementById("pNew").checked
+
+  };
+
+  if(!product.name || !product.price){
+
+    alert("نام و قیمت محصول را وارد کن.");
+    return;
+
+  }
+
+  const {error}=
+    await supabaseClient
+      .from("products")
+      .insert(product);
+
+  if(error){
+
+    console.error(error);
+    alert("محصول ذخیره نشد.");
+    return;
+
+  }
+
+  alert("محصول با موفقیت اضافه شد 🎀");
+
+  document.getElementById("pName").value="";
+  document.getElementById("pPrice").value="";
+  document.getElementById("pOldPrice").value="";
+  document.getElementById("pStock").value="";
+  document.getElementById("pDescription").value="";
+  document.getElementById("pImage").value="";
+  document.getElementById("pNew").checked=false;
+
+  loadProducts();
+
+}
+
+async function loadProducts(){
+
+  const {data,error}=
     await supabaseClient
       .from("products")
       .select("*")
@@ -694,306 +631,68 @@ async function loadProducts(){
 
   if(error){
     console.error(error);
-    document.getElementById("productsGrid").innerHTML =
-      "<p>خطا در دریافت محصولات</p>";
     return;
   }
 
-  products=data || [];
-  renderProducts(products);
-  updateCart();
-}
+  document.getElementById("productsList").innerHTML =
+    (data||[]).map(p=>`
 
-function renderProducts(list){
+      <div class="product">
 
-  const grid=document.getElementById("productsGrid");
+        <img src="${p.image_url || 'https://via.placeholder.com/500x500/FAD6E1/333333?text=LORA'}">
 
-  if(!list.length){
-    grid.innerHTML="<p>محصولی پیدا نشد.</p>";
-    return;
-  }
+        <h3>${escapeHtml(p.name)}</h3>
 
-  grid.innerHTML=list.map(p=>`
+        <p>${Number(p.price).toLocaleString("fa-IR")} تومان</p>
 
-    <div class="card">
+        <p>موجودی: ${p.stock}</p>
 
-      ${p.is_new ? '<span class="badge">جدید</span>' : ''}
+        <button
+          class="danger"
+          onclick="deleteProduct('${p.id}')">
+          حذف محصول
+        </button>
 
-      <button class="heart">♡</button>
-
-      <div class="product-image">
-        <img src="${p.image_url || 'https://via.placeholder.com/500x600/FAD6E1/333333?text=LORA'}">
       </div>
 
-      <h3>${escapeHtml(p.name)}</h3>
-
-      <div class="price">
-        ${Number(p.price).toLocaleString('fa-IR')} تومان
-      </div>
-
-      <button class="btn" onclick="addToCart('${p.id}')">
-        افزودن به سبد
-      </button>
-
-    </div>
-
-  `).join("");
-}
-
-function addToCart(id){
-
-  const product=products.find(p=>p.id===id);
-
-  if(!product)return;
-
-  const existing=cart.find(x=>x.id===id);
-
-  if(existing){
-    existing.quantity++;
-  }else{
-    cart.push({
-      id:product.id,
-      name:product.name,
-      price:Number(product.price),
-      quantity:1
-    });
-  }
-
-  saveCart();
-
-  alert("محصول به سبد خرید اضافه شد 🎀");
-}
-
-function saveCart(){
-  localStorage.setItem("lora_cart",JSON.stringify(cart));
-  updateCart();
-}
-
-function updateCart(){
-
-  document.getElementById("cartCount").textContent =
-    cart.reduce((a,b)=>a+b.quantity,0);
+    `).join("");
 
 }
 
-function openCart(){
+async function deleteProduct(id){
 
-  renderCart();
+  if(!confirm("این محصول حذف شود؟")) return;
 
-  document.getElementById("cartModal")
-    .classList.add("show");
-}
-
-function renderCart(){
-
-  const box=document.getElementById("cartItems");
-
-  if(!cart.length){
-    box.innerHTML="<p>سبد خرید خالی است.</p>";
-    document.getElementById("cartTotal").textContent="";
-    return;
-  }
-
-  box.innerHTML=cart.map((item,index)=>`
-
-    <div class="cart-item">
-
-      <div>
-        <strong>${escapeHtml(item.name)}</strong>
-        <br>
-        ${item.price.toLocaleString('fa-IR')} تومان
-      </div>
-
-      <div class="qty">
-        <button onclick="changeQty(${index},1)">+</button>
-        ${item.quantity}
-        <button onclick="changeQty(${index},-1)">−</button>
-      </div>
-
-    </div>
-
-  `).join("");
-
-  const total=cart.reduce(
-    (sum,item)=>sum+(item.price*item.quantity),0
-  );
-
-  document.getElementById("cartTotal").textContent =
-    "مبلغ کل: "+total.toLocaleString("fa-IR")+" تومان";
-}
-
-function changeQty(index,value){
-
-  cart[index].quantity+=value;
-
-  if(cart[index].quantity<=0)
-    cart.splice(index,1);
-
-  saveCart();
-  renderCart();
-}
-
-function openCheckout(){
-
-  if(!cart.length){
-    alert("سبد خرید خالی است.");
-    return;
-  }
-
-  closeModal("cartModal");
-
-  document.getElementById("checkoutModal")
-    .classList.add("show");
-}
-
-async function submitOrder(){
-
-  if(!cart.length){
-    alert("سبد خرید خالی است.");
-    return;
-  }
-
-  const name=document.getElementById("customerName").value.trim();
-  const phone=document.getElementById("customerPhone").value.trim();
-  const address=document.getElementById("customerAddress").value.trim();
-  const receipt=document.getElementById("receipt").files[0];
-
-  if(!name || !phone || !address || !receipt){
-    alert("لطفاً تمام اطلاعات و تصویر رسید را وارد کن.");
-    return;
-  }
-
-  const total=cart.reduce(
-    (sum,item)=>sum+(item.price*item.quantity),0
-  );
-
-  const {data:order,error:orderError}=
+  const {error}=
     await supabaseClient
-      .from("orders")
-      .insert({
-        customer_name:name,
-        phone:phone,
-        address:address,
-        total:total
-      })
-      .select()
-      .single();
+      .from("products")
+      .delete()
+      .eq("id",id);
 
-  if(orderError){
-    console.error(orderError);
-    alert("ثبت سفارش انجام نشد.");
+  if(error){
+
+    alert("حذف محصول انجام نشد.");
+    console.error(error);
     return;
+
   }
 
-  const items=cart.map(item=>({
-    order_id:order.id,
-    product_id:item.id,
-    product_name:item.name,
-    price:item.price,
-    quantity:item.quantity
-  }));
+  loadProducts();
 
-  const {error:itemError}=
-    await supabaseClient
-      .from("order_items")
-      .insert(items);
-
-  if(itemError){
-    console.error(itemError);
-    alert("ثبت محصولات سفارش با خطا مواجه شد.");
-    return;
-  }
-
-  const fileName =
-    order.id+"-"+Date.now()+"-"+receipt.name.replace(/\s/g,"_");
-
-  const {error:uploadError}=
-    await supabaseClient.storage
-      .from("receipts")
-      .upload(fileName,receipt);
-
-  if(uploadError){
-    console.error(uploadError);
-    alert("آپلود رسید انجام نشد.");
-    return;
-  }
-
-  const {data:fileData}=
-    supabaseClient.storage
-      .from("receipts")
-      .getPublicUrl(fileName);
-
-  const {error:receiptError}=
-    await supabaseClient
-      .from("receipts")
-      .insert({
-        order_id:order.id,
-        image_url:fileData.publicUrl
-      });
-
-  if(receiptError){
-    console.error(receiptError);
-    alert("ثبت رسید انجام نشد.");
-    return;
-  }
-
-  alert(
-    "سفارش با موفقیت ثبت شد 🎀\n\n"+
-    "وضعیت: در انتظار بررسی واریز"
-  );
-
-  cart=[];
-  saveCart();
-
-  closeModal("checkoutModal");
-}
-
-function filterCategory(category){
-
-  const result=products.filter(
-    p=>p.category===category
-  );
-
-  renderProducts(result);
-
-  document.getElementById("products")
-    .scrollIntoView({behavior:"smooth"});
-}
-
-document.getElementById("searchInput")
-.addEventListener("input",function(){
-
-  const q=this.value.trim().toLowerCase();
-
-  renderProducts(
-    products.filter(p=>
-      p.name.toLowerCase().includes(q) ||
-      p.category.toLowerCase().includes(q)
-    )
-  );
-
-});
-
-function toggleMenu(){
-  document.getElementById("menu")
-    .classList.toggle("open");
-}
-
-function closeModal(id){
-  document.getElementById(id).classList.remove("show");
 }
 
 function escapeHtml(text){
 
-  return String(text)
+  return String(text || "")
     .replace(/&/g,"&amp;")
     .replace(/</g,"&lt;")
     .replace(/>/g,"&gt;")
     .replace(/"/g,"&quot;")
     .replace(/'/g,"&#039;");
+
 }
 
-loadProducts();
+checkLogin();
 
 </script>
 
