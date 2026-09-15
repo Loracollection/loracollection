@@ -2,1440 +2,1242 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LORA COLLECTION | لورا کالکشن</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-:root{
- --pink:#f5b4c4;
- --pink2:#f9d9e2;
- --pink3:#fff1f5;
- --pink4:#ffe5ec;
- --text:#353136;
- --muted:#8d7c82;
- --white:#fff;
- --border:#f0dfe4;
+html{
+    scroll-behavior:smooth;
 }
 
 body{
- font-family:Vazirmatn,sans-serif;
- background:#fff8fa;
- color:var(--text);
+    font-family:'Vazirmatn',sans-serif;
+    background:#fff7f9;
+    color:#333;
 }
 
-a{text-decoration:none;color:inherit}
-button,input{font-family:inherit}
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-.wrap{
- width:92%;
- max-width:1250px;
- margin:auto;
+button,
+input{
+    font-family:inherit;
+}
+
+:root{
+    --pink:#f7b6c2;
+    --light-pink:#ffe6ec;
+    --soft:#fff5f7;
+    --dark:#333;
+    --border:#f0d9df;
 }
 
 /* TOP */
-.top{
- background:#363236;
- color:#fff;
- text-align:center;
- font-size:11px;
- padding:9px;
+.topbar{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:9px;
+    font-size:13px;
 }
 
 /* HEADER */
 header{
- background:#fff;
- border-bottom:1px solid var(--border);
+    background:#fff;
+    border-bottom:1px solid #f3e3e7;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.head{
- height:86px;
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:25px;
+.header-inner{
+    max-width:1250px;
+    margin:auto;
+    min-height:88px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:12px 25px;
 }
 
-.brand{
- display:flex;
- align-items:center;
- gap:12px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-width:220px;
 }
 
-.brand-mark{
- width:48px;
- height:55px;
- position:relative;
- font-family:Georgia,serif;
- font-size:53px;
- line-height:55px;
- font-weight:bold;
- color:#242124;
+.logo-mark{
+    position:relative;
+    width:58px;
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.brand-mark:after{
- content:"L";
- position:absolute;
- right:10px;
- top:5px;
- color:#e98ca5;
- font-family:cursive;
- font-size:47px;
- transform:rotate(-8deg);
+.logo-mark .l1{
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+    line-height:1;
+    color:#222;
 }
 
-.brand-name{
- font-family:"Playfair Display",serif;
- font-size:27px;
- letter-spacing:2px;
+.logo-mark .l2{
+    position:absolute;
+    right:8px;
+    top:13px;
+    font-family:cursive;
+    font-size:37px;
+    color:#f29bad;
+    transform:rotate(-13deg);
 }
 
-.brand-sub{
- color:#e4879e;
- font-family:"Playfair Display",serif;
- font-size:9px;
- letter-spacing:5px;
- margin-top:4px;
+.logo-text{
+    line-height:1.1;
 }
 
-.search{
- width:390px;
- position:relative;
+.logo-text strong{
+    display:block;
+    font-family:'Playfair Display',serif;
+    font-size:22px;
+    letter-spacing:2px;
 }
 
-.search input{
- width:100%;
- height:42px;
- border:1px solid var(--border);
- border-radius:25px;
- background:#fffafa;
- outline:none;
- padding:0 20px 0 45px;
- font-size:11px;
+.logo-text span{
+    font-size:10px;
+    letter-spacing:4px;
+    color:#f19aaa;
 }
 
-.search i{
- position:absolute;
- left:18px;
- top:13px;
- color:#d77d95;
+.search-box{
+    width:min(390px,35vw);
+    position:relative;
 }
 
-.icons{
- display:flex;
- gap:17px;
- font-size:17px;
+.search-box input{
+    width:100%;
+    border:1px solid var(--border);
+    background:#fffafb;
+    border-radius:30px;
+    padding:12px 45px 12px 18px;
+    outline:none;
 }
 
-.icons i{
- cursor:pointer;
- transition:.2s;
+.search-box i{
+    position:absolute;
+    right:17px;
+    top:14px;
+    color:#b98b95;
 }
 
-.icons i:hover{color:#df7893}
+.header-icons{
+    display:flex;
+    align-items:center;
+    gap:17px;
+    color:#555;
+}
+
+.header-icons a{
+    font-size:18px;
+    transition:.2s;
+}
+
+.header-icons a:hover{
+    color:#e993a5;
+}
 
 /* NAV */
 nav{
- border-top:1px solid #fbf0f3;
+    border-top:1px solid #f8edf0;
+    background:white;
 }
 
-.nav{
- height:46px;
- display:flex;
- justify-content:center;
- align-items:center;
- gap:42px;
+.nav-inner{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:5px;
 }
 
-.nav a{
- font-size:11px;
- transition:.2s;
+.nav-inner a{
+    padding:13px 16px;
+    font-size:14px;
+    color:#555;
 }
 
-.nav a:hover,
-.nav .active{
- color:#df7893;
+.nav-inner a:hover{
+    color:#e58c9f;
 }
 
 /* HERO */
 .hero{
- margin-top:24px;
- height:390px;
- border-radius:20px;
- overflow:hidden;
- position:relative;
- background:#f8d5df;
+    max-width:1250px;
+    margin:28px auto;
+    padding:0 25px;
 }
 
-.hero-photo{
- position:absolute;
- left:0;
- top:0;
- width:53%;
- height:100%;
- background:
- linear-gradient(90deg,rgba(248,213,223,0) 35%,rgba(248,213,223,.95) 100%),
- url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1100&q=85")
- center/cover;
+.hero-box{
+    min-height:430px;
+    border-radius:28px;
+    overflow:hidden;
+    position:relative;
+    background:
+    linear-gradient(90deg,rgba(255,255,255,.97),rgba(255,245,248,.65)),
+    url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1500&q=85');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
 }
 
 .hero-content{
- position:absolute;
- right:0;
- top:0;
- width:55%;
- height:100%;
- padding:75px 70px;
- z-index:2;
+    width:50%;
+    padding:60px;
 }
 
-.hero-over{
- color:#c66b83;
- font-size:11px;
- letter-spacing:2px;
- margin-bottom:10px;
+.hero-content small{
+    color:#df8c9f;
+    font-size:15px;
 }
 
-.hero h1{
- font-family:"Playfair Display",serif;
- font-size:44px;
- color:#a84964;
- margin-bottom:8px;
+.hero-content h1{
+    font-family:'Playfair Display',serif;
+    font-size:55px;
+    margin:13px 0;
+    letter-spacing:3px;
 }
 
-.hero h2{
- font-size:22px;
- font-weight:500;
- margin-bottom:14px;
+.hero-content h2{
+    font-size:24px;
+    font-weight:500;
+    margin-bottom:15px;
 }
 
-.hero p{
- max-width:420px;
- font-size:12px;
- line-height:2.3;
- color:#705962;
+.hero-content p{
+    color:#777;
+    line-height:2;
+    max-width:450px;
 }
 
-.hero-btn{
- display:inline-block;
- margin-top:24px;
- background:#df7894;
- color:white;
- padding:11px 28px;
- border-radius:7px;
- font-size:11px;
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 30px;
+    background:#f4b2bf;
+    color:white;
+    border-radius:30px;
+    border:none;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.btn:hover{
+    background:#e79aaa;
+}
+
+/* SECTION */
+.section{
+    max-width:1250px;
+    margin:65px auto;
+    padding:0 25px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:32px;
+}
+
+.section-title span{
+    color:#e99aaa;
+    font-size:13px;
+}
+
+.section-title h2{
+    font-family:'Playfair Display',serif;
+    font-size:32px;
+    margin:7px 0;
+}
+
+.section-title p{
+    color:#888;
+    font-size:13px;
 }
 
 /* SERVICES */
 .services{
- background:#fff;
- border:1px solid var(--border);
- border-radius:15px;
- margin-top:17px;
- display:grid;
- grid-template-columns:repeat(4,1fr);
- padding:18px 5px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
 }
 
 .service{
- text-align:center;
- border-left:1px solid #f2e7ea;
+    background:white;
+    border:1px solid #f1dfe4;
+    border-radius:18px;
+    padding:25px 15px;
+    text-align:center;
 }
-
-.service:last-child{border:0}
 
 .service i{
- display:block;
- color:#dc8198;
- font-size:20px;
- margin-bottom:8px;
+    font-size:25px;
+    color:#e99aaa;
+    margin-bottom:13px;
 }
 
-.service b{
- font-size:11px;
- font-weight:500;
+.service h3{
+    font-size:15px;
+    margin-bottom:5px;
 }
 
-.service small{
- display:block;
- color:#aaa;
- font-size:9px;
- margin-top:4px;
-}
-
-/* TITLES */
-.title{
- text-align:center;
- margin:48px 0 24px;
-}
-
-.title small{
- color:#d87991;
- font-size:9px;
- letter-spacing:3px;
-}
-
-.title h2{
- font-size:21px;
- font-weight:500;
- margin-top:7px;
-}
-
-.title-line{
- width:45px;
- height:2px;
- background:#efb0bf;
- margin:10px auto 0;
+.service p{
+    font-size:12px;
+    color:#999;
 }
 
 /* CATEGORIES */
 .categories{
- display:grid;
- grid-template-columns:repeat(5,1fr);
- gap:14px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.cat{
- background:#fff;
- border:1px solid var(--border);
- border-radius:14px;
- text-align:center;
- padding:25px 8px;
- transition:.25s;
+.category{
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    border:1px solid #f0dce2;
+    transition:.3s;
+    cursor:pointer;
 }
 
-.cat:hover{
- transform:translateY(-4px);
- box-shadow:0 10px 25px rgba(200,110,135,.12);
+.category:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(200,140,155,.13);
 }
 
-.cat-icon{
- width:67px;
- height:67px;
- border-radius:50%;
- margin:auto auto 12px;
- background:#fff0f4;
- color:#df7894;
- display:flex;
- align-items:center;
- justify-content:center;
- font-size:25px;
+.category-img{
+    height:250px;
+    background-size:cover;
+    background-position:center;
 }
 
-.cat h3{
- font-size:11px;
- font-weight:500;
+.category-info{
+    padding:17px;
+    text-align:center;
 }
 
-.cat a{
- display:inline-block;
- margin-top:10px;
- color:#d87991;
- font-size:9px;
+.category-info h3{
+    font-size:16px;
+    font-weight:500;
 }
 
-/* PRODUCTS */
-.products{
- background:#fff;
- border:1px solid var(--border);
- border-radius:16px;
- min-height:270px;
- display:flex;
- align-items:center;
- justify-content:center;
+.category-info span{
+    display:block;
+    color:#df91a2;
+    font-size:12px;
+    margin-top:5px;
 }
 
-.empty{
- text-align:center;
- color:#aaa;
+/* PRODUCT EMPTY */
+.products-empty{
+    background:white;
+    border:1px dashed #e8cbd2;
+    border-radius:22px;
+    padding:60px 20px;
+    text-align:center;
+    color:#aaa;
 }
 
-.empty i{
- color:#efb1c1;
- font-size:38px;
- margin-bottom:13px;
-}
-
-.empty h3{
- color:#777;
- font-size:13px;
- font-weight:500;
- margin-bottom:6px;
-}
-
-.empty p{
- font-size:10px;
+.products-empty i{
+    color:#edabb8;
+    font-size:40px;
+    margin-bottom:15px;
 }
 
 /* BANNERS */
 .banners{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:16px;
- margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
 .banner{
- height:175px;
- border-radius:15px;
- padding:30px;
- background:#f8d5df;
- position:relative;
- overflow:hidden;
+    min-height:210px;
+    border-radius:24px;
+    padding:35px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:#ffe6ec;
 }
 
 .banner:nth-child(2){
- background:#fff0f4;
+    background:#f8e8e7;
 }
 
-.banner small{
- color:#bf6b81;
- font-size:9px;
- letter-spacing:2px;
+.banner span{
+    color:#d98698;
+    font-size:13px;
 }
 
 .banner h3{
- font-size:18px;
- margin:9px 0;
+    font-size:25px;
+    margin:10px 0;
 }
 
 .banner p{
- font-size:10px;
- line-height:2;
- color:#775d65;
- max-width:350px;
-}
-
-.banner a{
- display:inline-block;
- background:#df7894;
- color:#fff;
- padding:7px 16px;
- border-radius:5px;
- margin-top:10px;
- font-size:9px;
+    color:#777;
+    font-size:13px;
 }
 
 /* ABOUT */
 .about{
- background:#fff;
- border:1px solid var(--border);
- border-radius:16px;
- padding:38px;
- text-align:center;
- line-height:2.4;
- color:#766169;
- font-size:11px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
 }
 
-.about-logo{
- font-family:"Playfair Display",serif;
- color:#333;
- font-size:29px;
- letter-spacing:3px;
+.about-img{
+    height:350px;
+    border-radius:25px;
+    background:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=85') center/cover;
 }
 
-.about-logo span{
- color:#df7894;
- font-size:9px;
- display:block;
- letter-spacing:5px;
+.about-text h2{
+    font-family:'Playfair Display',serif;
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.about-text p{
+    line-height:2.2;
+    color:#777;
+    font-size:14px;
+}
+
+/* CONTACT */
+.contact-box{
+    background:white;
+    border:1px solid #f0dce2;
+    border-radius:25px;
+    padding:35px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.contact-item i{
+    font-size:25px;
+    color:#e89aaa;
+    margin-bottom:10px;
+}
+
+.contact-item h3{
+    font-size:15px;
+    margin-bottom:7px;
+}
+
+.contact-item p{
+    color:#777;
+    font-size:13px;
+    direction:rtl;
+}
+
+/* FAQ */
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+details{
+    background:white;
+    border:1px solid #f0dce2;
+    border-radius:15px;
+    padding:17px 20px;
+    margin-bottom:12px;
+}
+
+summary{
+    cursor:pointer;
+    font-size:14px;
+    font-weight:500;
+}
+
+details p{
+    padding-top:13px;
+    color:#777;
+    font-size:13px;
+    line-height:2;
+}
+
+/* CLUB */
+.club{
+    background:linear-gradient(135deg,#ffe6ec,#fff);
+    border-radius:28px;
+    padding:50px;
+    text-align:center;
+}
+
+.club h2{
+    font-family:'Playfair Display',serif;
+    font-size:32px;
+}
+
+.club p{
+    color:#777;
+    margin-top:10px;
 }
 
 /* FOOTER */
 footer{
- margin-top:55px;
- background:#ffe3eb;
- border-top:1px solid #f3cbd5;
+    background:#302d2e;
+    color:#fff;
+    margin-top:80px;
 }
 
-.footer{
- padding:40px 0 30px;
- display:grid;
- grid-template-columns:1.3fr 1fr 1.3fr 1.4fr;
- gap:35px;
+.footer-main{
+    max-width:1250px;
+    margin:auto;
+    padding:55px 25px;
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1.2fr;
+    gap:40px;
 }
 
-.footer h3{
- font-size:13px;
- margin-bottom:15px;
+.footer-logo{
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    letter-spacing:3px;
 }
 
-.footer p,
-.footer li{
- list-style:none;
- font-size:10px;
- color:#745b63;
- line-height:2.4;
+.footer-column h3{
+    color:#f5b6c2;
+    font-size:15px;
+    margin-bottom:18px;
 }
 
-.flogo{
- font-family:"Playfair Display",serif;
- font-size:28px;
- letter-spacing:2px;
+.footer-column p,
+.footer-column a{
+    color:#ddd;
+    font-size:13px;
+    line-height:2.2;
+    display:block;
 }
 
-.flogo span{
- display:block;
- color:#dc7892;
- font-size:9px;
- letter-spacing:5px;
+.socials{
+    display:flex;
+    gap:9px;
+    margin-top:15px;
+    flex-wrap:wrap;
 }
 
-.phone{
- margin-top:13px;
- direction:ltr;
- display:flex;
- gap:8px;
- align-items:center;
- color:#555;
- font-size:11px;
-}
-
-.phone i{color:#dd7993}
-
-/* SOCIAL */
 .social{
- display:flex;
- gap:12px;
- margin-top:13px;
+    width:42px;
+    height:42px;
+    border:1px solid #74676b;
+    border-radius:50%;
+    display:flex!important;
+    align-items:center;
+    justify-content:center;
+    color:#f5b6c2!important;
 }
 
-.social-box{
- text-align:center;
+.social:hover{
+    background:#f5b6c2;
+    color:#333!important;
 }
 
-.social-icon{
- width:42px;
- height:42px;
- border-radius:50%;
- background:#fff;
- border:1px solid #efc8d2;
- display:flex;
- justify-content:center;
- align-items:center;
- color:#d9708b;
- font-size:18px;
- transition:.2s;
+.trust-boxes{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+    flex-wrap:wrap;
 }
 
-.social-icon:hover{
- background:#df7894;
- color:#fff;
+.trust{
+    width:100px;
+    height:90px;
+    border:1px solid #74676b;
+    border-radius:12px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:10px;
+    color:#ddd;
 }
 
-.social-name{
- direction:ltr;
- font-size:8px;
- color:#777;
- margin-top:5px;
+.trust i{
+    font-size:25px;
+    color:#f5b6c2;
+    margin-bottom:7px;
 }
 
-/* BADGES */
-.badges{
- display:flex;
- gap:10px;
- margin-top:10px;
+.footer-bottom{
+    border-top:1px solid #4b4547;
+    padding:18px;
+    text-align:center;
+    color:#bbb;
+    font-size:11px;
 }
 
-.badge{
- width:105px;
- min-height:112px;
- background:#fff;
- border:1px solid #edc8d2;
- border-radius:12px;
- display:flex;
- flex-direction:column;
- align-items:center;
- justify-content:center;
- text-align:center;
-}
-
-.badge-icon{
- width:50px;
- height:50px;
- border-radius:50%;
- border:2px solid #df849b;
- color:#df7894;
- display:flex;
- align-items:center;
- justify-content:center;
- font-size:19px;
- margin-bottom:7px;
-}
-
-.badge strong{
- font-size:9px;
-}
-
-.badge small{
- color:#aaa;
- font-size:7px;
- margin-top:3px;
-}
-
-.bottom{
- background:#e77d99;
- color:#fff;
- text-align:center;
- font-size:9px;
- padding:11px;
-}
-
-/* HAMBURGER */
+/* FLOATING MENU */
 .menu-btn{
- position:fixed;
- right:20px;
- bottom:22px;
- width:54px;
- height:54px;
- border:0;
- border-radius:50%;
- background:#df7894;
- color:#fff;
- font-size:20px;
- box-shadow:0 7px 22px rgba(205,100,130,.3);
- z-index:3000;
- cursor:pointer;
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:none;
+    background:#333;
+    color:white;
+    font-size:22px;
+    z-index:2000;
+    cursor:pointer;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
 }
 
-.overlay{
- position:fixed;
- inset:0;
- background:rgba(40,20,25,.3);
- opacity:0;
- visibility:hidden;
- transition:.3s;
- z-index:2000;
+.side-menu{
+    position:fixed;
+    top:0;
+    right:-330px;
+    width:310px;
+    height:100vh;
+    background:white;
+    z-index:1999;
+    padding:35px 25px;
+    box-shadow:-10px 0 40px rgba(0,0,0,.12);
+    transition:.35s;
+    overflow-y:auto;
 }
 
-.overlay.show{
- opacity:1;
- visibility:visible;
+.side-menu.open{
+    right:0;
 }
 
-.menu{
- position:fixed;
- right:-340px;
- top:0;
- width:320px;
- max-width:86%;
- height:100vh;
- background:#fff;
- z-index:2500;
- padding:28px 23px;
- transition:.35s;
- box-shadow:-8px 0 30px rgba(0,0,0,.1);
- overflow-y:auto;
+.side-menu-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #f1dfe4;
+    padding-bottom:20px;
+    margin-bottom:15px;
 }
 
-.menu.open{right:0}
-
-.menu-top{
- display:flex;
- align-items:center;
- justify-content:space-between;
- margin-bottom:23px;
+.side-menu-head h3{
+    font-family:'Playfair Display',serif;
+    font-size:23px;
 }
 
-.menu-logo{
- font-family:"Playfair Display",serif;
- font-size:25px;
- letter-spacing:2px;
+.close-menu{
+    border:none;
+    background:none;
+    font-size:22px;
+    cursor:pointer;
+    color:#777;
 }
 
-.close{
- width:34px;
- height:34px;
- border:0;
- border-radius:50%;
- background:#fff0f4;
- color:#dc7791;
- cursor:pointer;
+.side-menu a{
+    display:block;
+    padding:14px 5px;
+    border-bottom:1px solid #f5e8eb;
+    color:#555;
+    font-size:14px;
 }
 
-.menu-label{
- font-size:10px;
- color:#d87991;
- margin:20px 0 7px;
+.side-menu a:hover{
+    color:#e590a1;
 }
 
-.menu a{
- display:block;
- padding:13px 4px;
- border-bottom:1px solid #f4e6ea;
- font-size:11px;
+/* RESPONSIVE */
+@media(max-width:900px){
+    .header-inner{
+        flex-wrap:wrap;
+    }
+
+    .logo{
+        min-width:auto;
+    }
+
+    .search-box{
+        order:3;
+        width:100%;
+    }
+
+    .hero-content{
+        width:65%;
+        padding:40px;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .services,
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-main{
+        grid-template-columns:1fr 1fr;
+    }
 }
 
-.menu a i{
- width:27px;
- color:#df7894;
-}
+@media(max-width:600px){
+    .topbar{
+        font-size:11px;
+    }
 
-/* MOBILE */
-@media(max-width:850px){
+    .header-inner{
+        padding:10px 15px;
+    }
 
- .wrap{width:94%}
+    .logo-text strong{
+        font-size:18px;
+    }
 
- .head{
-  height:70px;
- }
+    .logo-mark{
+        transform:scale(.8);
+        margin-left:-8px;
+    }
 
- .search{display:none}
+    .nav-inner{
+        display:none;
+    }
 
- .brand-name{font-size:22px}
+    .hero{
+        padding:0 13px;
+    }
 
- .brand-mark{
-  transform:scale(.8);
-  transform-origin:right center;
-  margin-left:-8px;
- }
+    .hero-box{
+        min-height:460px;
+        background:
+        linear-gradient(90deg,rgba(255,255,255,.92),rgba(255,245,248,.55)),
+        url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85') center/cover;
+    }
 
- .nav{display:none}
+    .hero-content{
+        width:100%;
+        padding:35px 25px;
+    }
 
- .hero{
-  height:480px;
- }
+    .hero-content h1{
+        font-size:40px;
+    }
 
- .hero-photo{
-  width:100%;
-  height:58%;
-  bottom:0;
-  top:auto;
- }
+    .hero-content h2{
+        font-size:20px;
+    }
 
- .hero-content{
-  width:100%;
-  height:52%;
-  padding:35px 25px;
-  text-align:center;
- }
+    .section{
+        margin:45px auto;
+        padding:0 13px;
+    }
 
- .hero p{margin:auto}
+    .services,
+    .categories{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
 
- .hero h1{font-size:36px}
+    .category-img{
+        height:170px;
+    }
 
- .services{
-  grid-template-columns:repeat(2,1fr);
-  row-gap:16px;
- }
+    .banners{
+        grid-template-columns:1fr;
+    }
 
- .service:nth-child(2){
-  border-left:0;
- }
+    .about{
+        grid-template-columns:1fr;
+    }
 
- .categories{
-  grid-template-columns:repeat(3,1fr);
- }
+    .about-img{
+        height:280px;
+    }
 
- .footer{
-  grid-template-columns:1fr 1fr;
- }
+    .contact-box{
+        grid-template-columns:1fr;
+    }
 
-}
+    .footer-main{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
 
-@media(max-width:560px){
+    .club{
+        padding:35px 20px;
+    }
 
- .top{font-size:8px}
-
- .head{
-  gap:8px;
- }
-
- .icons{
-  gap:11px;
-  font-size:15px;
- }
-
- .brand-name{
-  font-size:19px;
- }
-
- .brand-sub{
-  font-size:7px;
-  letter-spacing:3px;
- }
-
- .brand-mark{
-  display:none;
- }
-
- .hero{
-  height:455px;
- }
-
- .hero h1{
-  font-size:31px;
- }
-
- .hero h2{
-  font-size:17px;
- }
-
- .hero p{
-  font-size:10px;
- }
-
- .categories{
-  grid-template-columns:repeat(2,1fr);
- }
-
- .banners{
-  grid-template-columns:1fr;
- }
-
- .footer{
-  grid-template-columns:1fr;
-  text-align:center;
- }
-
- .phone{
-  justify-content:center;
- }
-
- .social{
-  justify-content:center;
- }
-
- .badges{
-  justify-content:center;
- }
-
- .about{
-  padding:25px 18px;
- }
-
+    .side-menu{
+        width:280px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="top">
+<div class="topbar">
 🎀 ارسال سفارش‌ها با بسته‌بندی اختصاصی LORA COLLECTION 🎀
 </div>
 
 <header>
+    <div class="header-inner">
 
-<div class="wrap head">
+        <a href="#home" class="logo">
+            <div class="logo-mark">
+                <span class="l1">L</span>
+                <span class="l2">L</span>
+            </div>
+            <div class="logo-text">
+                <strong>LORA</strong>
+                <span>COLLECTION</span>
+            </div>
+        </a>
 
-<a href="#" class="brand">
+        <div class="search-box">
+            <input type="text" placeholder="جستجوی محصول...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
 
-<div class="brand-mark">L</div>
+        <div class="header-icons">
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
 
-<div>
-<div class="brand-name">LORA</div>
-<div class="brand-sub">COLLECTION</div>
-</div>
+    </div>
 
-</a>
-
-<div class="search">
-<input placeholder="جستجوی محصولات...">
-<i class="fa-solid fa-magnifying-glass"></i>
-</div>
-
-<div class="icons">
-<i class="fa-regular fa-user"></i>
-<i class="fa-regular fa-heart"></i>
-<i class="fa-solid fa-bag-shopping"></i>
-</div>
-
-</div>
-
-<nav>
-<div class="wrap nav">
-<a href="#" class="active">صفحه اصلی</a>
-<a href="#products">محصولات</a>
-<a href="#categories">دسته‌بندی‌ها</a>
-<a href="#about">درباره ما</a>
-<a href="#contact">تماس با ما</a>
-<a href="#faq">سوالات متداول</a>
-<a href="#club">باشگاه مشتریان</a>
-</div>
-</nav>
-
+    <nav>
+        <div class="nav-inner">
+            <a href="#home">صفحه اصلی</a>
+            <a href="#products">محصولات</a>
+            <a href="#categories">دسته‌بندی‌ها</a>
+            <a href="#about">درباره ما</a>
+            <a href="#contact">تماس با ما</a>
+            <a href="#faq">سوالات متداول</a>
+            <a href="#club">باشگاه مشتریان</a>
+        </div>
+    </nav>
 </header>
 
+<main>
 
-<main class="wrap">
+<section class="hero" id="home">
+    <div class="hero-box">
+        <div class="hero-content">
+            <small>WELCOME TO LORA COLLECTION 🎀</small>
+            <h1>LORA</h1>
+            <h2>زیبایی در سادگی</h2>
+            <p>
+                به دنیای لورا خوش آمدی؛ جایی برای انتخاب‌هایی
+                ظریف، زنانه و خاص.
+            </p>
+            <a href="#products" class="btn">مشاهده محصولات</a>
+        </div>
+    </div>
+</section>
 
-<section class="hero">
+<section class="section">
+    <div class="services">
 
-<div class="hero-photo"></div>
+        <div class="service">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>ارسال سریع</h3>
+            <p>ارسال سفارش در کوتاه‌ترین زمان</p>
+        </div>
 
-<div class="hero-content">
+        <div class="service">
+            <i class="fa-solid fa-gem"></i>
+            <h3>کیفیت محصولات</h3>
+            <p>انتخاب با دقت برای لورا</p>
+        </div>
 
-<div class="hero-over">LORA COLLECTION</div>
+        <div class="service">
+            <i class="fa-solid fa-headset"></i>
+            <h3>پشتیبانی</h3>
+            <p>همیشه کنار شما هستیم</p>
+        </div>
 
-<h1>زیبایی در سادگی</h1>
+        <div class="service">
+            <i class="fa-solid fa-gift"></i>
+            <h3>بسته‌بندی خاص</h3>
+            <p>بسته‌بندی اختصاصی لورا</p>
+        </div>
 
-<h2>به دنیای لورا خوش آمدی 🎀</h2>
+    </div>
+</section>
 
-<p>
-لورا کالکشن، جایی برای انتخاب‌های ظریف،
-زنانه و خاص؛ انتخاب‌هایی که بخشی از
-داستان زیبایی تو می‌شوند.
-</p>
+<section class="section" id="categories">
 
-<a class="hero-btn" href="#products">
-مشاهده محصولات
-</a>
+    <div class="section-title">
+        <span>LORA COLLECTION</span>
+        <h2>دسته‌بندی محصولات</h2>
+        <p>انتخابت را از میان دسته‌های لورا شروع کن</p>
+    </div>
 
-</div>
+    <div class="categories">
+
+        <a class="category" href="#products">
+            <div class="category-img"
+            style="background-image:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=85')"></div>
+            <div class="category-info">
+                <h3>لباس زنانه</h3>
+                <span>مشاهده محصولات</span>
+            </div>
+        </a>
+
+        <a class="category" href="#products">
+            <div class="category-img"
+            style="background-image:url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=85')"></div>
+            <div class="category-info">
+                <h3>کیف</h3>
+                <span>مشاهده محصولات</span>
+            </div>
+        </a>
+
+        <a class="category" href="#products">
+            <div class="category-img"
+            style="background-image:url('https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=85')"></div>
+            <div class="category-info">
+                <h3>اکسسوری</h3>
+                <span>مشاهده محصولات</span>
+            </div>
+        </a>
+
+        <a class="category" href="#products">
+            <div class="category-img"
+            style="background-image:url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=85')"></div>
+            <div class="category-info">
+                <h3>آرایشی و بهداشتی</h3>
+                <span>مشاهده محصولات</span>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<section class="section" id="products">
+
+    <div class="section-title">
+        <span>SHOP LORA</span>
+        <h2>محصولات</h2>
+        <p>محصولات جدید به‌زودی در لورا قرار می‌گیرند</p>
+    </div>
+
+    <div class="products-empty">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>هنوز محصولی اضافه نشده است</h3>
+        <p style="margin-top:8px">
+            محصولات فروشگاه بعداً از بخش مدیریت اضافه خواهند شد.
+        </p>
+    </div>
 
 </section>
 
+<section class="section">
+    <div class="banners">
 
-<section class="services">
+        <div class="banner">
+            <span>LORA SPECIAL</span>
+            <h3>انتخابی خاص برای تو 🎀</h3>
+            <p>سادگی، آغاز زیبایی است.</p>
+        </div>
 
-<div class="service">
-<i class="fa-solid fa-truck-fast"></i>
-<b>ارسال سریع</b>
-<small>به سراسر کشور</small>
-</div>
+        <div class="banner">
+            <span>LORA COLLECTION</span>
+            <h3>زیبایی بخشی از داستان توست</h3>
+            <p>با لورا، سبک خودت را بساز.</p>
+        </div>
 
-<div class="service">
-<i class="fa-solid fa-gem"></i>
-<b>تضمین کیفیت</b>
-<small>انتخاب با دقت</small>
-</div>
+    </div>
+</section>
 
-<div class="service">
-<i class="fa-solid fa-headset"></i>
-<b>پشتیبانی</b>
-<small>همراه شما هستیم</small>
-</div>
+<section class="section" id="about">
 
-<div class="service">
-<i class="fa-solid fa-box-open"></i>
-<b>بسته‌بندی اختصاصی</b>
-<small>با عشق برای تو</small>
-</div>
+    <div class="section-title">
+        <span>ABOUT LORA</span>
+        <h2>درباره لورا</h2>
+    </div>
+
+    <div class="about">
+
+        <div class="about-img"></div>
+
+        <div class="about-text">
+            <h2>LORA COLLECTION</h2>
+            <p>
+                لورا کالکشن با هدف ایجاد فضایی برای انتخاب
+                محصولات زنانه، ظریف و خاص شکل گرفته است.
+            </p>
+
+            <p style="margin-top:15px">
+                سادگی، آغاز زیبایی است؛ زیبایی، بخشی از داستان توست.
+            </p>
+        </div>
+
+    </div>
 
 </section>
 
+<section class="section" id="contact">
 
-<section id="categories">
+    <div class="section-title">
+        <span>CONTACT US</span>
+        <h2>تماس با ما</h2>
+    </div>
 
-<div class="title">
-<small>CATEGORIES</small>
-<h2>دسته‌بندی محصولات</h2>
-<div class="title-line"></div>
-</div>
+    <div class="contact-box">
 
-<div class="categories">
+        <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <h3>شماره تماس</h3>
+            <p>09300797179</p>
+        </div>
 
-<div class="cat">
-<div class="cat-icon">
-<i class="fa-solid fa-shirt"></i>
-</div>
-<h3>لباس زنانه</h3>
-<a href="#products">مشاهده ←</a>
-</div>
+        <div class="contact-item">
+            <i class="fa-brands fa-instagram"></i>
+            <h3>اینستاگرام</h3>
+            <p>@lora.collection</p>
+        </div>
 
-<div class="cat">
-<div class="cat-icon">
-<i class="fa-solid fa-bag-shopping"></i>
-</div>
-<h3>کیف و کفش</h3>
-<a href="#products">مشاهده ←</a>
-</div>
+        <div class="contact-item">
+            <i class="fa-solid fa-paper-plane"></i>
+            <h3>شبکه‌های اجتماعی</h3>
+            <p>@lora.collection</p>
+        </div>
 
-<div class="cat">
-<div class="cat-icon">
-<i class="fa-regular fa-gem"></i>
-</div>
-<h3>اکسسوری</h3>
-<a href="#products">مشاهده ←</a>
-</div>
-
-<div class="cat">
-<div class="cat-icon">
-<i class="fa-solid fa-wand-magic-sparkles"></i>
-</div>
-<h3>آرایشی و بهداشتی</h3>
-<a href="#products">مشاهده ←</a>
-</div>
-
-<div class="cat">
-<div class="cat-icon">
-<i class="fa-solid fa-spray-can-sparkles"></i>
-</div>
-<h3>عطر و ادکلن</h3>
-<a href="#products">مشاهده ←</a>
-</div>
-
-</div>
+    </div>
 
 </section>
 
+<section class="section" id="faq">
 
-<section id="products">
+    <div class="section-title">
+        <span>FAQ</span>
+        <h2>سوالات متداول</h2>
+    </div>
 
-<div class="title">
-<small>OUR PRODUCTS</small>
-<h2>محصولات لورا</h2>
-<div class="title-line"></div>
-</div>
+    <div class="faq">
 
-<div class="products">
+        <details>
+            <summary>چطور سفارش خود را ثبت کنم؟</summary>
+            <p>
+                محصول موردنظر را انتخاب کرده و به سبد خرید اضافه کنید،
+                سپس مراحل ثبت سفارش را انجام دهید.
+            </p>
+        </details>
 
-<div class="empty">
+        <details>
+            <summary>نحوه پرداخت سفارش چگونه است؟</summary>
+            <p>
+                پرداخت سفارش از طریق انتقال وجه انجام می‌شود و
+                تصویر رسید پرداخت در مرحله ثبت سفارش ارسال خواهد شد.
+            </p>
+        </details>
 
-<i class="fa-regular fa-heart"></i>
+        <details>
+            <summary>چطور با پشتیبانی تماس بگیرم؟</summary>
+            <p>
+                از طریق شماره تماس یا شبکه‌های اجتماعی لورا
+                می‌توانید با ما در ارتباط باشید.
+            </p>
+        </details>
 
-<h3>محصولات لورا به‌زودی اینجا قرار می‌گیرند</h3>
-
-<p>
-هنوز محصولی برای نمایش اضافه نشده است.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="banners">
-
-<div class="banner">
-
-<small>LORA COLLECTION</small>
-
-<h3>سادگی، آغاز زیبایی است</h3>
-
-<p>
-زیبایی همیشه در جزئیات کوچک و
-انتخاب‌های ساده پیدا می‌شود.
-</p>
-
-<a href="#about">درباره لورا</a>
-
-</div>
-
-<div class="banner">
-
-<small>FOR YOU</small>
-
-<h3>بخشی از داستان تو 🎀</h3>
-
-<p>
-انتخاب‌هایی ظریف برای استایلی که
-خاصِ خود توست.
-</p>
-
-<a href="#contact">ارتباط با ما</a>
-
-</div>
+    </div>
 
 </section>
 
+<section class="section" id="club">
 
-<section id="about">
-
-<div class="title">
-<small>ABOUT US</small>
-<h2>درباره لورا کالکشن</h2>
-<div class="title-line"></div>
-</div>
-
-<div class="about">
-
-<div class="about-logo">
-LORA
-<span>COLLECTION</span>
-</div>
-
-<p style="margin-top:15px">
-لورا کالکشن با الهام از سادگی، ظرافت و زیبایی
-برای دخترانی ساخته شده که می‌خواهند انتخاب‌هایشان
-بازتابی از شخصیت و داستان خودشان باشد.
-</p>
-
-<p style="color:#d87892;margin-top:8px">
-«سادگی، آغاز زیبایی است؛ زیبایی، بخشی از داستان توست»
-</p>
-
-</div>
-
-</section>
-
-
-<section id="contact">
-
-<div class="title">
-<small>CONTACT</small>
-<h2>تماس با ما</h2>
-<div class="title-line"></div>
-</div>
-
-<div class="about">
-
-<p>برای ارتباط با لورا کالکشن:</p>
-
-<div class="phone"
-style="justify-content:center;margin-top:14px">
-
-<i class="fa-solid fa-phone"></i>
-
-<a href="tel:09300797179">
-09300797179
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="faq">
-
-<div class="title">
-<small>FAQ</small>
-<h2>سوالات متداول</h2>
-<div class="title-line"></div>
-</div>
-
-<div class="about">
-سوالات متداول لورا کالکشن به‌زودی در این بخش قرار می‌گیرد.
-</div>
-
-</section>
-
-
-<section id="club">
-
-<div class="title">
-<small>LORA CLUB</small>
-<h2>باشگاه مشتریان</h2>
-<div class="title-line"></div>
-</div>
-
-<div class="about">
-باشگاه مشتریان لورا به‌زودی فعال خواهد شد 🎀
-</div>
+    <div class="club">
+        <h2>باشگاه مشتریان لورا 🎀</h2>
+        <p>
+            با عضویت در باشگاه مشتریان، از پیشنهادها و تخفیف‌های ویژه باخبر شو.
+        </p>
+        <button class="btn">عضویت در باشگاه</button>
+    </div>
 
 </section>
 
 </main>
 
-
-<footer id="footer">
-
-<div class="wrap footer">
-
-
-<div>
-
-<div class="flogo">
-LORA
-<span>COLLECTION</span>
-</div>
-
-<p style="margin-top:13px">
-سادگی، آغاز زیبایی است؛
-زیبایی، بخشی از داستان توست.
-</p>
-
-<div class="phone">
-<i class="fa-solid fa-phone"></i>
-<a href="tel:09300797179">09300797179</a>
-</div>
-
-</div>
-
-
-<div>
-
-<h3>دسترسی سریع</h3>
-
-<ul>
-<li><a href="#">صفحه اصلی</a></li>
-<li><a href="#products">محصولات</a></li>
-<li><a href="#categories">دسته‌بندی‌ها</a></li>
-<li><a href="#about">درباره ما</a></li>
-<li><a href="#contact">تماس با ما</a></li>
-</ul>
-
-</div>
-
-
-<div>
-
-<h3>ما را دنبال کنید</h3>
-
-<p>برای اطلاع از محصولات و اخبار لورا همراه ما باشید.</p>
-
-<div class="social">
-
-
-<div class="social-box">
-
-<a class="social-icon" href="#">
-<i class="fa-brands fa-instagram"></i>
-</a>
-
-<div class="social-name">@lora.collection</div>
-
-</div>
-
-
-<div class="social-box">
-
-<a class="social-icon" href="#">
-<i class="fa-brands fa-telegram"></i>
-</a>
-
-<div class="social-name">@lora.collection</div>
-
-</div>
-
-
-<div class="social-box">
-
-<a class="social-icon" href="#">
-<i class="fa-solid fa-paper-plane"></i>
-</a>
-
-<div class="social-name">@lora.collection</div>
-
-</div>
-
-
-<div class="social-box">
-
-<a class="social-icon" href="#">
-<i class="fa-solid fa-comment"></i>
-</a>
-
-<div class="social-name">@lora.collection</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<div>
-
-<h3>اعتماد و رضایت</h3>
-
-<p>
-اعتماد و رضایت شما برای ما ارزشمند است.
-</p>
-
-<div class="badges">
-
-
-<div class="badge">
-
-<div class="badge-icon">
-<i class="fa-solid fa-shield-halved"></i>
-</div>
-
-<strong>نماد اعتماد</strong>
-
-<small>پس از دریافت نماد</small>
-
-</div>
-
-
-<div class="badge">
-
-<div class="badge-icon">
-<i class="fa-regular fa-face-smile"></i>
-</div>
-
-<strong>نماد رضایت</strong>
-
-<small>رضایت مشتریان</small>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="bottom">
-© تمامی حقوق برای LORA COLLECTION محفوظ است.
-</div>
+<footer>
+
+    <div class="footer-main">
+
+        <div class="footer-column">
+            <div class="footer-logo">LORA COLLECTION</div>
+
+            <p style="margin-top:15px">
+                سادگی آغاز زیبایی است؛<br>
+                زیبایی بخشی از داستان توست.
+            </p>
+
+            <div class="socials">
+
+                <a class="social" href="#" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a class="social" href="#" title="Telegram">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+
+                <a class="social" href="#" title="Rubika">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </a>
+
+                <a class="social" href="#" title="Eitaa">
+                    <i class="fa-solid fa-comment"></i>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>دسترسی سریع</h3>
+            <a href="#home">صفحه اصلی</a>
+            <a href="#products">محصولات</a>
+            <a href="#categories">دسته‌بندی‌ها</a>
+            <a href="#about">درباره ما</a>
+            <a href="#contact">تماس با ما</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>دسته‌بندی‌ها</h3>
+            <a href="#products">لباس زنانه</a>
+            <a href="#products">کیف</a>
+            <a href="#products">اکسسوری</a>
+            <a href="#products">آرایشی و بهداشتی</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>ارتباط با لورا</h3>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                09300797179
+            </p>
+
+            <p>
+                Instagram: @lora.collection
+            </p>
+
+            <p>
+                Telegram: @lora.collection
+            </p>
+
+            <p>
+                Rubika: @lora.collection
+            </p>
+
+            <p>
+                Eitaa: @lora.collection
+            </p>
+
+            <div class="trust-boxes">
+
+                <div class="trust">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    <span>نماد اعتماد</span>
+                    <small>پس از دریافت نماد</small>
+                </div>
+
+                <div class="trust">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>نماد رضایت</span>
+                    <small>رضایت مشتریان</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 LORA COLLECTION — تمامی حقوق محفوظ است.
+    </div>
 
 </footer>
 
-
-<!-- OVERLAY -->
-<div class="overlay" id="overlay"></div>
-
-
-<!-- HAMBURGER -->
-<button class="menu-btn" id="menuBtn">
-<i class="fa-solid fa-bars"></i>
-</button>
-
-
 <!-- SIDE MENU -->
-<aside class="menu" id="menu">
-
-<div class="menu-top">
-
-<div>
-<div class="menu-logo">LORA</div>
-<div style="font-size:8px;color:#df7894;letter-spacing:4px">
-COLLECTION
-</div>
-</div>
-
-<button class="close" id="close">
-<i class="fa-solid fa-xmark"></i>
+<button class="menu-btn" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
 </button>
 
-</div>
+<div class="side-menu" id="sideMenu">
 
+    <div class="side-menu-head">
+        <h3>LORA</h3>
 
-<div class="menu-label">منوی اصلی</div>
+        <button class="close-menu" onclick="toggleMenu()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
 
-<a href="#">
-<i class="fa-solid fa-house"></i>
-صفحه اصلی
-</a>
+    <a href="#home" onclick="toggleMenu()">صفحه اصلی</a>
+    <a href="#products" onclick="toggleMenu()">محصولات</a>
 
-<a href="#products">
-<i class="fa-solid fa-bag-shopping"></i>
-محصولات
-</a>
+    <a href="#categories" onclick="toggleMenu()">
+        دسته‌بندی‌ها
+    </a>
 
-<a href="#categories">
-<i class="fa-solid fa-layer-group"></i>
-دسته‌بندی‌ها
-</a>
+    <a href="#products" onclick="toggleMenu()">
+        لباس زنانه
+    </a>
 
-<a href="#about">
-<i class="fa-regular fa-heart"></i>
-درباره ما
-</a>
+    <a href="#products" onclick="toggleMenu()">
+        کیف
+    </a>
 
-<a href="#contact">
-<i class="fa-solid fa-phone"></i>
-تماس با ما
-</a>
+    <a href="#products" onclick="toggleMenu()">
+        اکسسوری
+    </a>
 
-<a href="#faq">
-<i class="fa-regular fa-circle-question"></i>
-سوالات متداول
-</a>
+    <a href="#products" onclick="toggleMenu()">
+        آرایشی و بهداشتی
+    </a>
 
-<a href="#club">
-<i class="fa-solid fa-crown"></i>
-باشگاه مشتریان
-</a>
-
-
-<div class="menu-label">دسته‌بندی محصولات</div>
-
-<a href="#products">
-<i class="fa-solid fa-shirt"></i>
-لباس زنانه
-</a>
-
-<a href="#products">
-<i class="fa-solid fa-bag-shopping"></i>
-کیف و کفش
-</a>
-
-<a href="#products">
-<i class="fa-regular fa-gem"></i>
-اکسسوری
-</a>
-
-<a href="#products">
-<i class="fa-solid fa-wand-magic-sparkles"></i>
-آرایشی و بهداشتی
-</a>
-
-<a href="#products">
-<i class="fa-solid fa-spray-can-sparkles"></i>
-عطر و ادکلن
-</a>
-
-
-<div style="
-margin-top:20px;
-padding:15px;
-border-radius:12px;
-background:#fff2f5;
-text-align:center;
-">
-
-<div style="font-size:10px;color:#888">
-ارتباط با لورا
-</div>
-
-<div style="
-direction:ltr;
-color:#d97691;
-font-size:12px;
-margin-top:6px
-">
-09300797179
-</div>
-
-<div style="
-direction:ltr;
-font-size:10px;
-color:#999;
-margin-top:5px
-">
-@lora.collection
-</div>
+    <a href="#about" onclick="toggleMenu()">درباره ما</a>
+    <a href="#contact" onclick="toggleMenu()">تماس با ما</a>
+    <a href="#faq" onclick="toggleMenu()">سوالات متداول</a>
+    <a href="#club" onclick="toggleMenu()">باشگاه مشتریان</a>
 
 </div>
-
-</aside>
-
 
 <script>
 
-const menuBtn=document.getElementById("menuBtn");
-const menu=document.getElementById("menu");
-const close=document.getElementById("close");
-const overlay=document.getElementById("overlay");
-
-function openMenu(){
- menu.classList.add("open");
- overlay.classList.add("show");
+function toggleMenu(){
+    document.getElementById('sideMenu').classList.toggle('open');
 }
-
-function closeMenu(){
- menu.classList.remove("open");
- overlay.classList.remove("show");
-}
-
-menuBtn.onclick=openMenu;
-close.onclick=closeMenu;
-overlay.onclick=closeMenu;
-
-document.querySelectorAll(".menu a").forEach(function(link){
- link.addEventListener("click",closeMenu);
-});
 
 </script>
 
 </body>
-</html>
+ </html>
